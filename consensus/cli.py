@@ -4,6 +4,8 @@ from .core import UTC, analyse, upcoming_previews
 from .sources import collect
 from .history import load_json, record, apply_results, auto_results, summary
 from .free_results import collect_free_results
+from .fixture_catalog import collect_fixture_catalog, verify_fixture
+from scripts.pipeline_health import collect_pipeline_health
 import argparse
 import json
 import os
@@ -22,7 +24,14 @@ def main():
     settings = load_json(args.settings, {})
     payload = analyse(tips, now, settings)
     payload["previews"] = upcoming_previews(tips, now, settings)
-    history = record(load_json(args.history, {"schema_version": 1, "records": []}), payload)
+    prior_history = load_json(args.history, {"schema_version": 1, "records": []})
+    catalog = collect_fixture_catalog(prior_history.get("fixture_catalog"), now)
+    payload["fixture_catalog"] = catalog
+    for snapshot in [payload, *payload["previews"]]:
+        for pick in [*snapshot.get("data", []), *snapshot.get("candidates", []), *snapshot.get("watchlist", [])]:
+            pick["fixture_verification"] = verify_fixture(pick, catalog)
+    history = record(prior_history, payload)
+    history["fixture_catalog"] = catalog
     free_results, free_statuses = collect_free_results(history, now)
     history["result_sources"] = free_statuses
     automatic, outcome_note = auto_results(history, now)
@@ -42,7 +51,10 @@ def main():
         source["eligible"] = counts.get("eligible", 0)
     payload["request_id"] = os.environ.get("REQUEST_ID", "")[:100]
     payload["run_url"] = os.environ.get("RUN_URL", "")
-    payload["status"] = "error" if all(s["status"] in {"error", "not_configured"} for s in sources) else "ok"
+    configured = [s for s in sources if s["status"] != "not_configured"]
+    payload["status"] = "error" if all(s["status"] == "error" for s in configured) else "partial" if any(s["status"] != "ok" for s in configured) else "ok"
+    payload["pipeline_health"] = collect_pipeline_health(now=now)
+    payload["run_event"] = os.environ.get("RUN_EVENT", "unknown")
     path = Path(args.output)
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_suffix(".tmp")

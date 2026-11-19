@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths-ignore: ['README.md', 'docs/**']
   schedule:
-    - cron: '7,37 * * * *'
+    - cron: '13,43 * * * *'
   workflow_dispatch:
     inputs:
       request_id:
@@ -54,6 +54,7 @@ jobs:
           API_FOOTBALL_MAX_FIXTURES: '1'
           REQUEST_ID: ${{ inputs.request_id }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          RUN_EVENT: ${{ github.event_name }}
         run: python -m consensus.cli
       - name: Guardar análise e histórico
         run: python scripts/save_data.py

@@ -17,6 +17,12 @@ ALIASES = {
     "atletico madrid": "atletico de madrid", "fc fredericia": "fredericia",
     "montevideo city": "montevideo city torque", "rb bragantino": "bragantino",
     "red bull bragantino": "bragantino", "lyon": "olympique lyonnais",
+    "bayern munchen": "bayern munich", "fc bayern munchen": "bayern munich",
+    "1 fc koln": "cologne", "tottenham hotspur": "tottenham", "ipswich town": "ipswich",
+    "newcastle united": "newcastle", "sl benfica w": "benfica w", "as roma w": "roma w",
+    "ol lyonnes": "olympique lyonnais w", "lyon w": "olympique lyonnais w",
+    "bos celtics": "boston celtics", "den nuggets": "denver nuggets",
+    "la lakers": "los angeles lakers", "uta jazz": "utah jazz",
 }
 
 
@@ -93,7 +99,7 @@ class Tip:
             if self.votes_total < settings["min_votes"]:
                 return "insufficient_votes"
             return None if 100 * self.votes_for / self.votes_total >= settings["min_olbg"] else "below_source_threshold"
-        if self.source in {"protipster", "forebet", "api_football"}:
+        if self.source in {"protipster", "forebet", "api_football", "betclan"}:
             kind = "tip_score" if self.source == "protipster" else "model_pct"
             if self.metric_kind != kind or self.metric is None:
                 return "missing_metric"
@@ -306,6 +312,12 @@ def _analyse_day(tips: list[Tip], now: datetime, settings: dict | None, target_d
     source_counts = [{"id": source, "collected": sum(t.source == source for t in tips),
                       "today": sum(t.source == source for t in today_tips),
                       "eligible": sum(t.source == source for t in eligible)} for source in sorted({t.source for t in tips})]
+    sport_counts = [{"id": sport, "forecasts": sum(t.sport == sport for t in today_tips),
+                     "eligible": sum(t.sport == sport for t in eligible),
+                     "events": len(group_events([t for t in today_tips if t.sport == sport], settings)),
+                     "confirmed": sum(p["sport"] == sport for p in final),
+                     "sources": sorted({t.source for t in today_tips if t.sport == sport})}
+                    for sport in ["football", "tennis", "basketball", "hockey", "american_football"]]
     watchlist.sort(key=lambda p: (-p["source_count"], p["kickoff"], p["match"], p["market"]))
     return {"date": today, "timezone": "Europe/Lisbon", "updated_at": now.astimezone(UTC).isoformat(),
             "schema_version": 1, "score_is_probability": False, "settings": settings,
@@ -315,4 +327,4 @@ def _analyse_day(tips: list[Tip], now: datetime, settings: dict | None, target_d
                             "today_forecasts": len(today_tips), "today_events": len(group_events(today_tips, settings)),
                             "eligible_forecasts": len(eligible), "eligible_events": len(groups),
                             "threshold_reasons": threshold_reasons, "comparison_rejections": comparison,
-                            "watchlist_total": len(watchlist), "by_source": source_counts}}
+                            "watchlist_total": len(watchlist), "by_source": source_counts, "by_sport": sport_counts}}

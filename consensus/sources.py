@@ -467,4 +467,12 @@ def collect(now):
     except Exception as exc:
         sources.append({"id": "api_football", "name": "API-Football", "status": "error", "collected": 0,
                         "message": str(exc) if isinstance(exc, FetchError) else "Falha ao consultar API-Football"})
+    try:
+        from .extra_predictions import collect_betclan
+        data, status = collect_betclan(client, datetime.now(UTC), tips)
+        tips.extend(data)
+        sources.append(status)
+    except Exception as exc:
+        sources.append({"id": "betclan", "name": "BetClan", "status": "error", "collected": 0,
+                        "message": str(exc) if isinstance(exc, FetchError) else "Falha do adaptador BetClan"})
     return tips, sources
