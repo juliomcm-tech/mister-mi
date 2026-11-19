@@ -61,8 +61,29 @@ jobs:
         env:
           REFRESH_API_URL: ${{ vars.REFRESH_API_URL }}
         run: node scripts/build.mjs --pages
+      - name: Detetar modo de publicação do Pages
+        id: page_mode
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from urllib.request import Request, urlopen
+          from urllib.error import HTTPError
+          request = Request('https://api.github.com/repos/' + os.environ['GH_REPO'] + '/pages', headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28'})
+          try:
+              with urlopen(request, timeout=15) as response:
+                  mode = json.load(response).get('build_type', 'legacy')
+          except HTTPError:
+              mode = 'unavailable'
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('build_type=' + mode + '\n')
+          print('Modo Pages:', mode)
+          PY
       - name: Preparar Pages se já estiver ativo
         id: pages
+        if: steps.page_mode.outputs.build_type == 'workflow'
         continue-on-error: true
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - name: Guardar site para publicação

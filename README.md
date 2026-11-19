@@ -31,7 +31,7 @@ O GitHub Pages serve ficheiros estáticos e não executa Python quando o visitan
 
 ## Arranque no GitHub
 
-1. Em **Settings → Pages → Build and deployment**, escolher **GitHub Actions**.
+1. Em **Settings → Pages → Build and deployment**, escolher **main / (root)** ou **GitHub Actions**. Em modo main, a entrada abre `web/`; ambos os modos leem a análise mais recente na branch `data`.
 2. Abrir **Actions → Mister Mi — analisar e publicar → Run workflow** para a primeira execução, caso ainda não tenha ocorrido automaticamente.
 3. A branch `data` guarda `consenso_hoje.json` e `history.json`. Cada execução recupera o histórico anterior antes de acrescentar registos.
 4. O agendamento corre aos minutos 07 e 37 de cada hora UTC. O GitHub pode atrasar execuções; a página rejeita dados antigos em vez de os chamar atuais.

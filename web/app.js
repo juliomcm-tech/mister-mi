@@ -16,7 +16,7 @@ let preferences = {...emptyPreferences,...read('mister-mi.preferences',{})};
 let connection = {apiBase:window.APP_CONFIG?.apiBase??'',auto:false,...read('mister-mi.connection',{})};
 let refreshToken = read('mister-mi.refresh-token','',sessionStorage);
 let favorites = new Set(read('mister-mi.favorites',[]));
-let payload=null, history={records:[]}, health=null, activeSport='all', onlyFavorites=false, busy=false, loadFailed=false, latestMessage='';
+let payload=null, history={records:[]}, health=null, activeSport='all', onlyFavorites=false, busy=false, loadFailed=false, latestMessage='', lastReadError='';
 let policy={...DEFAULT_POLICY,...read('mister-mi.policy',{})};
 let view='hoje';
 
@@ -49,7 +49,7 @@ function freshness(){
  const age=(Date.now()-new Date(payload.updated_at).getTime())/60000;
  if(!Number.isFinite(age)||age < -1)return {valid:false,reason:'A data da recolha não é válida. As opções foram ocultadas.'};
  if(age>(payload.settings?.max_age_minutes??45))return {valid:false,reason:'A última recolha ultrapassou o limite de frescura. As opções ficam ocultas até existir uma análise recente.'};
- if(loadFailed)return {valid:false,reason:'A atualização falhou. Os dados anteriores não são apresentados como uma análise atual.'};
+ if(loadFailed)return {valid:false,reason:lastReadError||'Não foi possível ler a análise publicada. Verifica a ligação e tenta atualizar.'};
  if(payload.status==='error')return {valid:false,reason:'As fontes estão indisponíveis. Ainda não existe uma análise validada para apresentar.'};
  return {valid:true,age};
 }
@@ -145,12 +145,22 @@ function readPreferences(){
  return {excluded_sports:[...document.querySelectorAll('[name="excluded-sport"]:checked')].map(el=>el.value),excluded_countries:$('country-exclusions').value.split(',').map(x=>x.trim()).filter(Boolean),excluded_combinations:combinations,min_odds:min,max_odds:max};
 }
 async function request(url,options={}){
- const response=await fetch(url,{cache:'no-store',...options,signal:AbortSignal.timeout(options.method?25000:15000)});
- let result;try{result=await response.json();}catch{throw new Error('O serviço não devolveu uma resposta válida.');}
- if(!response.ok)throw new Error(result.message??`Pedido falhou (${response.status}).`);
- return result;
+ const controller=typeof AbortController!=='undefined'?new AbortController():null;
+ const timer=controller?setTimeout(()=>controller.abort(),options.method?25000:15000):null;
+ try{
+  const response=await fetch(url,{cache:'no-store',...options,...(controller?{signal:controller.signal}:{})});
+  let result;try{result=await response.json();}catch{throw new Error(`A resposta não contém dados de análise válidos (HTTP ${response.status}).`);}
+  if(!response.ok)throw new Error(result.message??`Pedido falhou (HTTP ${response.status}).`);
+  return result;
+ }catch(error){
+  if(controller?.signal.aborted)throw new Error('A ligação demorou demasiado. Tenta atualizar novamente.');
+  if(navigator.onLine===false)throw new Error('Sem ligação à Internet. As previsões atuais precisam de uma ligação ativa.');
+  if(error instanceof TypeError)throw new Error('Não foi possível ligar à publicação dos dados. Verifica a rede e tenta novamente.');
+  throw error;
+ }finally{if(timer!==null)clearTimeout(timer);}
 }
 const apiURL=path=>connection.apiBase.replace(/\/$/,'')+path;
+const publishedFile=name=>`https://raw.githubusercontent.com/${window.APP_CONFIG?.repository??'juliomcm-tech/mister-mi'}/data/${name}?t=${Date.now()}`;
 async function authorised(path,method,body){
  if(!connection.apiBase||!refreshToken)throw new Error('Configura o serviço e a chave de atualização nas definições.');
  return request(apiURL(path),{method,headers:{'Content-Type':'application/json','Authorization':`Bearer ${refreshToken}`},body:JSON.stringify(body)});
@@ -161,15 +171,17 @@ function validatePayload(value){
 }
 async function loadSnapshot({quiet=false}={}){
  try{
-  let data;
+  let data,apiReadIssue='';
   if(connection.apiBase){
-   data=await request(apiURL('/today'));
-  }else data=await request(`./data/consenso_hoje.json?t=${Date.now()}`);
-  payload=validatePayload(data);loadFailed=Boolean(data.snapshot_fallback);
+   try{data=await request(apiURL('/today'));}
+   catch(error){apiReadIssue=error.message;data=await request(publishedFile('consenso_hoje.json'));}
+  }else data=await request(publishedFile('consenso_hoje.json'));
+  payload=validatePayload(data);loadFailed=Boolean(data.snapshot_fallback);lastReadError='';
+  if(apiReadIssue&&!quiet)notice('O serviço personalizado não respondeu. Foi carregada a última publicação do GitHub; as escritas e novas execuções continuam a exigir a ligação configurada.');
   if(data.snapshot_fallback&&!quiet)notice('A publicação atual do GitHub está indisponível. A cópia inicial não é apresentada como uma análise atual.');
-  try{const h=await request(connection.apiBase?apiURL('/history'):`./data/history.json?t=${Date.now()}`);if(Array.isArray(h.records))history=h;}catch{history={records:[]};}
+  try{const h=await request(connection.apiBase&&!apiReadIssue?apiURL('/history'):publishedFile('history.json'));if(Array.isArray(h.records))history=h;}catch{history={records:[]};}
   render();return true;
- }catch(error){loadFailed=true;render();if(!quiet)notice(error.message);return false;}
+ }catch(error){loadFailed=true;lastReadError=error.message;render();if(!quiet)notice(error.message);return false;}
 }
 async function loadHealth(){
  if(!connection.apiBase){$('connection-status').textContent='Modo GitHub Pages: o refresh recarrega a última publicação. A recolha corre no GitHub Actions.';return;}
@@ -193,7 +205,7 @@ async function refreshAnalysis(run=true){
   }else{
    const ok=await loadSnapshot();if(ok)notice(freshness().valid?'Última análise publicada recarregada. Para executar uma nova recolha ao fazer refresh, configura a ligação nas definições.':freshness().reason);
   }
- }catch(error){notice(error.message);}finally{busy=false;$('refresh').disabled=false;$('hero-analyse').disabled=false;render();}
+ }catch(error){const message=error.message;const readOkay=await loadSnapshot({quiet:true});notice(readOkay?`Não foi possível iniciar uma nova execução: ${message} A última publicação do GitHub foi recarregada.`:message);}finally{busy=false;$('refresh').disabled=false;$('hero-analyse').disabled=false;render();}
 }
 document.addEventListener('click',e=>{
  const analysis=e.target.closest('[data-analysis]');if(analysis)showAnalysis(analysis.dataset.analysis);
