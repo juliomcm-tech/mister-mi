@@ -2,7 +2,7 @@ import unittest
 from dataclasses import replace
 from datetime import datetime, timedelta
 from consensus.core import Tip, UTC, LISBON, analyse, team_equal
-from consensus.sources import parse_forebet, parse_protipster, SameHostRedirect, FetchError, market_selection
+from consensus.sources import parse_forebet, parse_protipster, parse_olbg, SameHostRedirect, FetchError, market_selection
 from consensus.history import record, apply_results, metrics, settlement
 from urllib.request import Request
 
@@ -90,6 +90,12 @@ class ConsensusTests(unittest.TestCase):
     def test_half_time_and_corners_are_not_full_time_goals(self):
         for label in ["Goals in First Half 2.5", "Total corners 2.5", "Asian Handicap 2.5"]:
             self.assertIsNone(market_selection(label, "Over", "Porto", "Benfica", "football"))
+
+    def test_away_at_home_notation_is_reversed_with_moneyline_scope(self):
+        html = '''<div class="grd tip"><div class="ev"><a itemprop="url" href="https://www.olbg.com/betting-tips/Basketball/NBA/Visitors_@_Hosts/4"><h5>Visitors @ Hosts</h5></a><time datetime="2026-11-19T23:00:00Z"></time><p>United States NBA</p></div><div class="sel"><h4>Hosts</h4><p>Moneyline</p></div><div class="tips">20/25 Win Tips</div></div>'''
+        rows, _, _ = parse_olbg(html, "https://www.olbg.com", NOW)
+        self.assertEqual((rows[0].home, rows[0].away), ("Hosts", "Visitors"))
+        self.assertEqual((rows[0].market, rows[0].outcome), ("MATCH_WINNER", "HOME"))
 
     def test_protipster_odd_is_never_a_tip_score(self):
         html = '''<script>mutation:'TIPS_SECTIONS',args:[{"today":{"picks":[{"hostName":"Porto","opponentName":"Benfica","sportSlug":"football","marketPhrase":"Team to Win","outcome":"1","fixtureDate":"2026-11-19T20:00:00Z","fixtureId":12,"currentRawOdd":8.7}]}}]</script>'''

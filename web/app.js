@@ -165,7 +165,8 @@ async function loadSnapshot({quiet=false}={}){
   if(connection.apiBase){
    data=await request(apiURL('/today'));
   }else data=await request(`./data/consenso_hoje.json?t=${Date.now()}`);
-  payload=validatePayload(data);loadFailed=false;
+  payload=validatePayload(data);loadFailed=Boolean(data.snapshot_fallback);
+  if(data.snapshot_fallback&&!quiet)notice('A publicação atual do GitHub está indisponível. A cópia inicial não é apresentada como uma análise atual.');
   try{const h=await request(connection.apiBase?apiURL('/history'):`./data/history.json?t=${Date.now()}`);if(Array.isArray(h.records))history=h;}catch{history={records:[]};}
   render();return true;
  }catch(error){loadFailed=true;render();if(!quiet)notice(error.message);return false;}

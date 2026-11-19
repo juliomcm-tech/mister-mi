@@ -100,7 +100,7 @@ def country_for(value):
 
 def market_selection(label, selection, home, away, sport):
     m, s = name_key(label), name_key(selection)
-    if m in {"full time result", "match result", "team to win", "win match", "match winner"}:
+    if m in {"full time result", "match result", "team to win", "win match", "match winner", "moneyline", "money line", "to win"}:
         market = "FT_1X2" if sport == "football" or m == "full time result" else "MATCH_WINNER"
         if s in {"1", "home"} or team_equal(selection, home, sport):
             return market, "HOME"
@@ -131,10 +131,12 @@ def parse_olbg(html, url, now):
                 continue
             event_url = urljoin(url, event["href"])
             sport = next((v for k, v in SPORTS.items() if f"/betting-tips/{k}/" in event_url), None)
-            parts = re.split(r"\s+(?:v|vs|@)\s+", event.get_text(" ", strip=True), flags=re.I)
-            if sport is None or len(parts) != 2 or " @ " in event.get_text():
-                continue  # Away-first US notation needs an explicit mapping; never guess.
-            home, away = parts
+            event_name = event.get_text(" ", strip=True)
+            parts = re.split(r"\s+(?:v|vs|@)\s+", event_name, flags=re.I)
+            if sport is None or len(parts) != 2:
+                continue
+            # In the explicit American notation, visitor @ host: reverse both sides once.
+            home, away = reversed(parts) if " @ " in event_name else parts
             kickoff = iso_time(dt["datetime"])
             competition = text(row, ".ev p")
             selection = text(row, ".sel h4")
@@ -170,6 +172,8 @@ def parse_forebet(html, url, now, sport="football", market="FT_1X2"):
             probs = [number(x.get_text(strip=True)) for x in row.select(".fprc > span")]
             if not home or not away or not probs or any(x is None for x in probs):
                 continue
+            if sport == "hockey" and len(probs) != 3:
+                continue  # Two-way winner scope is not interchangeable with regulation 1X2.
             if abs(sum(probs) - 100) > 2:
                 continue
             if market.startswith("FT_TOTAL_"):
@@ -308,9 +312,11 @@ def collect(now):
         try:
             html = client.get(url)
             data, rows, missing = parser(html, url, datetime.now(UTC), **kwargs)
-            return data, {"id": source, "url": url, "status": "partial" if missing else "ok", "raw_rows": rows,
+            partial = bool(missing or rows and not data)
+            return data, {"id": source, "url": url, "status": "partial" if partial else "ok", "raw_rows": rows,
                           "collected": len(data), "missing_scores": missing,
-                          "message": f"{missing} tips sem Tip Score público; excluídas do consenso" if missing else "Recolha concluída"}
+                          "message": f"{missing} tips sem Tip Score público; excluídas do consenso" if missing else
+                          "Sem mercados suportados nas linhas publicadas" if rows and not data else "Recolha concluída"}
         except Exception as exc:
             message = str(exc) if isinstance(exc, FetchError) else f"Falha do adaptador ({type(exc).__name__})"
             return [], {"id": source, "url": url, "status": "error", "raw_rows": 0, "collected": 0, "message": message}

@@ -6,7 +6,7 @@ O teu analista desportivo: recolhe prognósticos, compara o mesmo evento e merca
 
 ## O que está implementado
 
-- Futebol, ténis, basquetebol e hóquei nas fontes suportadas; futebol americano preparado, com notação ambígua excluída.
+- Futebol, ténis, basquetebol, hóquei e futebol americano nas fontes suportadas. A notação explícita visitante @ anfitrião é normalizada sem inverter a seleção.
 - OLBG, Forebet, ProTipster e PredictZ; API-Football opcional, mediante chave e cobertura do plano.
 - Data corrente em `Europe/Lisbon`, timestamps com fuso, apenas jogos ainda por começar e recolhas recentes.
 - Identificação de participantes, segmento feminino/sub-idade, país conhecido e horários compatíveis. Abreviaturas de tenistas ambíguas são excluídas.
@@ -38,6 +38,8 @@ O GitHub Pages serve ficheiros estáticos e não executa Python quando o visitan
 5. A primeira recolha pode terminar sem seleções. Consultar **Fontes** para distinguir filtros exigentes, dados em falta e falhas dos fornecedores.
 
 Uma fonte bloqueada, alterada ou sem métricas não é contornada. O adaptador regista a falha e o filtro continua com a evidência disponível.
+
+**Verificação real em 19/11/2026:** a primeira execução no GitHub Actions passou os testes e guardou a branch `data`. Forebet e PredictZ devolveram HTTP 403 nesse ambiente, enquanto OLBG respondeu e as tips ProTipster disponíveis não publicaram Tip Score. Não houve consenso suficiente. Isto é uma limitação de cobertura atual, não demonstração de que os jogos desse dia são bons ou maus. Os adaptadores funcionaram na recolha de desenvolvimento, mas isso não prova disponibilidade permanente nos runners do GitHub.
 
 ## Atualização imediata e configurações partilhadas
 
