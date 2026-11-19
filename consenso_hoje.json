@@ -1,7 +1,7 @@
 {
   "date": "2026-11-19",
   "timezone": "Europe/Lisbon",
-  "updated_at": "2026-11-19T15:51:50.062460+00:00",
+  "updated_at": "2026-11-19T15:55:25.778848+00:00",
   "schema_version": 1,
   "score_is_probability": false,
   "settings": {
@@ -60,7 +60,7 @@
           "market": "MATCH_WINNER",
           "outcome": "HOME",
           "url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Alexander_Zverev_v_Arthur_Fils/3?event_id=906388",
-          "fetched_at": "2026-11-19T15:51:48.224122+00:00",
+          "fetched_at": "2026-11-19T15:55:24.735796+00:00",
           "competition": "",
           "metric": 86.36,
           "metric_kind": "vote_pct",
@@ -306,6 +306,6 @@
     }
   ],
   "request_id": "",
-  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/44559528785",
+  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/44560156366",
   "status": "ok"
 }
