@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, asdict
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from difflib import SequenceMatcher
 from hashlib import sha256
 from statistics import mean
@@ -161,8 +161,32 @@ def group_events(tips: list[Tip], settings: dict) -> list[list[Tip]]:
 
 
 def analyse(tips: list[Tip], now: datetime, settings: dict | None = None) -> dict:
+    """Production analysis is always restricted to the actual current Lisbon day."""
+    return _analyse_day(tips, now, settings, now.astimezone(LISBON).date().isoformat())
+
+
+def upcoming_previews(tips: list[Tip], now: datetime, settings: dict | None = None) -> list[dict]:
+    """Inspect already-published future forecasts, using the real collection clock.
+
+    These are current observations about future fixtures, not a blind backtest,
+    a prediction of tomorrow's data, or production recommendations.
+    """
+    previews = []
+    current_day = now.astimezone(LISBON).date()
+    for offset in (1, 2):
+        day = (current_day + timedelta(days=offset)).isoformat()
+        result = _analyse_day(tips, now, settings, day)
+        candidates = [{**pick, "status": "preliminary_consensus", "is_recommendation": False}
+                      for pick in result.pop("data")]
+        result.update(analysis_mode="future_preview", is_preview=True, day_offset=offset,
+                      total_consensus_candidates=len(candidates), total_selected=0, data=[], candidates=candidates)
+        previews.append(result)
+    return previews
+
+
+def _analyse_day(tips: list[Tip], now: datetime, settings: dict | None, target_day: str) -> dict:
     settings = DEFAULTS | (settings or {})
-    today = now.astimezone(LISBON).date().isoformat()
+    today = target_day
     tennis_roster = {}
     for tip in tips:
         if tip.sport == "tennis" and tip.event_date == today:

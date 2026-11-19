@@ -1,6 +1,6 @@
 from datetime import datetime
 from pathlib import Path
-from .core import UTC, analyse
+from .core import UTC, analyse, upcoming_previews
 from .sources import collect
 from .history import load_json, record, apply_results, auto_results, summary
 from .free_results import collect_free_results
@@ -21,6 +21,7 @@ def main():
     now = datetime.now(UTC)
     settings = load_json(args.settings, {})
     payload = analyse(tips, now, settings)
+    payload["previews"] = upcoming_previews(tips, now, settings)
     history = record(load_json(args.history, {"schema_version": 1, "records": []}), payload)
     free_results, free_statuses = collect_free_results(history, now)
     history["result_sources"] = free_statuses

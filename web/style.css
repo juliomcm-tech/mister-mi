@@ -48,3 +48,20 @@ table{font-size:.875rem}th{font-size:.75rem}.rail-button{min-height:68px}.sort-l
 .watch-card>small{display:block;color:#567183;font-size:.75rem;border-top:1px solid #d7e5ec;padding-top:12px;line-height:1.7}
 @media(max-width:850px){.coverage-funnel{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:18px}}
 @media(max-width:640px){.coverage-panel{padding:20px}.coverage-panel h2{font-size:1.1rem}.coverage-funnel{grid-template-columns:repeat(2,minmax(0,1fr))}.coverage-funnel>div{padding-left:10px}.coverage-funnel strong{font-size:1.4rem}.coverage-funnel>div:last-child{grid-column:1/-1}.coverage-details summary{line-height:1.7;min-height:44px}.watchlist-grid{grid-template-columns:1fr}.watch-card{padding:17px}}
+.analysis-days{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:4px 0 24px}
+.analysis-days p{margin:7px 0 0;color:#567183;font-size:.875rem}
+.day-tabs{display:flex;gap:6px;padding:6px;border:1px solid #d1e2ed;border-radius:18px;background:#eff7fc}
+.day-tab{display:flex;flex-direction:column;gap:5px;align-items:center;justify-content:center;border:0;background:transparent;padding:11px 20px;border-radius:13px;color:#456577;font:600 .8rem Manrope,sans-serif;cursor:pointer;min-height:55px}
+.day-tab small{font-size:.7rem;font-weight:450}
+.day-tab.active{background:#0c7fa6;color:#fff;box-shadow:0 4px 12px #00627c18}
+.day-tab:focus-visible{outline:3px solid #91c9de;outline-offset:2px}
+.future-panel{margin-bottom:32px}.future-panel .section-heading{flex-wrap:wrap;gap:15px}
+.future-panel h2{font-size:1.5rem}.future-panel h3{font-size:1.15rem;margin-top:30px}
+.future-intro{line-height:1.9;color:#567183;max-width:900px;font-size:.875rem}
+.future-metrics{grid-template-columns:repeat(4,minmax(0,1fr));margin:26px 0 20px}
+.future-source-note{background:#e6f1f8;border-radius:13px;padding:13px 16px;color:#38657b;line-height:1.8;font-size:.8rem}
+.future-empty{border:1px dashed #cbdfe9;border-radius:15px;padding:20px;color:#567183;font-size:.85rem;line-height:1.9}
+.future-panel .coverage-details{margin-top:26px}.future-panel>.muted,#future-content>.muted{line-height:1.9}
+.preview-confirmed{border-color:#85bdcd;background:#ecf7f8}
+@media(max-width:850px){.analysis-days{align-items:flex-start;flex-direction:column;gap:14px}.day-tabs{width:100%}.day-tab{flex:1;padding:11px 12px}}
+@media(max-width:640px){.analysis-days{margin-bottom:20px}.analysis-days p{font-size:.8rem}.day-tabs{gap:3px;padding:4px;border-radius:15px}.day-tab{font-size:.72rem;padding:10px 5px;border-radius:11px}.day-tab small{font-size:.7rem}.future-panel{padding:20px}.future-panel h2{font-size:1.2rem}.future-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.future-metrics>div:last-child{grid-column:auto}.future-source-note{font-size:.8rem}}

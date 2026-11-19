@@ -14,6 +14,7 @@ O teu analista desportivo: recolhe prognósticos, compara o mesmo evento e merca
 - Leitura das previsões adicionais já incluídas nos dados públicos da página OLBG, além das primeiras linhas visíveis, com validação de datas, votos e domínio e sem executar JavaScript externo.
 - Funil de cobertura: previsões recolhidas, previsões de hoje, jogos distintos identificados, evidências aptas e opções confirmadas, com motivos das exclusões.
 - Candidatos **Em observação** quando uma previsão passa a regra da fonte mas falta confirmação independente. Não são recomendações e não entram no histórico de acerto nem na carteira simulada.
+- Botões **Hoje**, **Amanhã** e **Depois de amanhã**: as vistas futuras usam as previsões já publicadas na mesma recolha e os mesmos limiares. Candidatos com consenso prévio continuam preliminares e ficam fora da carteira e do histórico de recomendações. Ver [PREVIEWS.md](docs/PREVIEWS.md).
 - ProTipster sem Tip Score público fica excluído. Uma odd nunca é interpretada como Tip Score.
 - Estatísticas por desporto, país, mercado e desporto × país, com amostra e intervalo de Wilson de 95%.
 - Livro imutável de primeiras recomendações, preços observados, resultados confirmados, ROI e drawdown em posições de simulação de uma unidade.
@@ -37,6 +38,8 @@ As animações usam CSS e três imagens WebP, cerca de 120 KB no total, sem víd
 O separador **Histórico** inclui um laboratório experimental com previsão cronológica de jogos de 2024/25, usando apenas resultados de dias anteriores. O modelo Poisson de referência acertou **103 de 150 seleções (68,67%)**, com **47 erros** e intervalo de 95% **60,86%–75,55%**; foram avaliados 662 jogos. Não é a taxa de sucesso real do consenso Mister Mi, que ainda não tem resultados liquidados suficientes. Não há ROI sem odds históricas verificadas.
 
 O método, os dados imutáveis e o registo completo estão em [BACKTEST.md](docs/BACKTEST.md); a reprodução e verificação por outro agente estão em [AUDIT.md](docs/AUDIT.md).
+
+A simulação histórica não altera automaticamente o código, as definições ou os limiares do consenso. A comparação das primeiras recolhas com as atuais está documentada em [PREVIEWS.md](docs/PREVIEWS.md).
 
 ## Como funciona a atualização
 

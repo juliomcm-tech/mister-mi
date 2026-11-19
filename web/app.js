@@ -2,6 +2,7 @@ import {planPortfolio, DEFAULT_POLICY} from './portfolio.js';
 import {initPWA} from './pwa.js';
 import {getAnalystMood} from './mood.js';
 import {coverageView,visibleWatchlist} from './coverage.js';
+import {futureDate,outlookState,outlookCandidates} from './outlook.js';
 
 const $ = id => document.getElementById(id);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -24,6 +25,8 @@ let policy={...DEFAULT_POLICY,...read('mister-mi.policy',{})};
 let view='hoje';
 let experiment=null,experimentRequested=false;
 let motionEnabled=read('mister-mi.motion',true)===true;
+const requestedDay=new URLSearchParams(location.search).get('day');
+let previewOffset=requestedDay==='tomorrow'?1:requestedDay==='after'?2:0;
 
 function lisbonDay(date=new Date()) {
  const p=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Lisbon',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date);
@@ -73,9 +76,31 @@ function visiblePicks(){
 function sorter(a,b){const sort=$('sort').value;return sort==='time'?new Date(a.kickoff)-new Date(b.kickoff):sort==='score'?b.score-a.score:b.source_count-a.source_count||b.score-a.score;}
 function emptyState(title,copy,action=''){return `<div class="empty-state"><span class="empty-icon">${icon('shield')}</span><h3>${esc(title)}</h3><p>${esc(copy)}</p>${action}</div>`;}
 function initials(s){return s.split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();}
+function previewCard(p,confirmed=false){
+ return `<article class="watch-card ${confirmed?'preview-confirmed':''}"><div class="watch-meta"><span>${esc(sports[p.sport]??p.sport)} · ${esc(countryNames[p.country]??p.country)}</span><span>${time(p.kickoff)} · Lisboa</span></div><h4>${esc(p.match)}</h4><strong>${esc(p.selection)}</strong><p>${esc(p.competition||marketNames[p.market]||p.market)}${p.odds?` · Odd observada ${num(p.odds,2)}`:''}</p>${p.sources.map(s=>`<div class="watch-evidence"><span>${esc(sourceNames[s.source]??s.source)} · ${esc(metricLabel(s))}</span><a href="${safeURL(s.url)}" target="_blank" rel="noopener noreferrer">Ver fonte</a></div>`).join('')}<small>${confirmed?`${p.source_count} fontes concordam nesta recolha. Exige nova análise no dia do jogo.`:'Aguarda outra fonte independente.'}</small></article>`;
+}
+function renderOutlook(fresh){
+ const shortDate=day=>new Intl.DateTimeFormat('pt-PT',{day:'numeric',month:'short',timeZone:'Europe/Lisbon'}).format(new Date(day+'T12:00:00Z'));
+ for(const offset of [0,1,2]){
+  const day=offset?futureDate(offset):lisbonDay();
+  $(`day-label-${offset}`).textContent=shortDate(day);
+ }
+ document.querySelectorAll('[data-preview-day]').forEach(button=>{const active=Number(button.dataset.previewDay)===previewOffset;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});
+ $('future-panel').hidden=previewOffset===0;$('today-workspace').hidden=previewOffset!==0;
+ if(!previewOffset)return;
+ const state=outlookState(payload,previewOffset);
+ $('future-heading').textContent=`${previewOffset===1?'Amanhã':'Depois de amanhã'} · ${shortDate(state.date)}`;
+ if(!state.valid||!fresh.valid){$('future-content').innerHTML=emptyState('Primeiro, uma recolha atual.',!fresh.valid?fresh.reason:state.reason);return;}
+ const s=state.snapshot,d=s.diagnostics,c=outlookCandidates(s,{preferences});
+ const metrics=[['Previsões para esta data',d.today_forecasts],['Jogos identificados',d.today_events],['Passam a regra da fonte',s.total_eligible],['Com consenso prévio',s.total_consensus_candidates]];
+ const reasons=coverageView({...s,sources:payload.sources})?.reasons??[];
+ const unavailable=(payload.sources??[]).filter(source=>source.status==='error').length;
+ const availableSignals=(d.by_source??[]).filter(source=>source.eligible>0).length;
+ $('future-content').innerHTML=`<div class="coverage-funnel future-metrics">${metrics.map(([label,value])=>`<div><strong>${value??0}</strong><span>${esc(label)}</span></div>`).join('')}</div><p class="future-source-note">${availableSignals} ${availableSignals===1?'fonte com previsões aptas':'fontes com previsões aptas'} para esta data · ${unavailable} ${unavailable===1?'fonte indisponível':'fontes indisponíveis'} na recolha. Cobertura parcial.</p><h3>Com consenso prévio</h3>${c.confirmed.length?`<div class="watchlist-grid">${c.confirmed.map(p=>previewCard(p,true)).join('')}</div>`:`<p class="future-empty">${s.total_consensus_candidates?'Os candidatos com consenso prévio ficaram excluídos pelos teus filtros.':'Ainda não há candidatos confirmados por fontes independentes para esta data.'}</p>`}<h3>A aguardar confirmação</h3>${c.watchlist.length?`<div class="watchlist-grid">${c.watchlist.map(p=>previewCard(p)).join('')}</div><p class="muted">${c.watchlist.length} apresentados · ${d.watchlist_total??0} candidatos no total da recolha, antes dos filtros locais. Ordenados por horário.</p>`:`<p class="future-empty">${d.today_forecasts?'Ainda não há candidatos que passem o filtro da fonte e os teus filtros para esta data.':'As páginas consultadas ainda não forneceram previsões suportadas para esta data.'}</p>`}${reasons.length?`<details class="coverage-details"><summary>Ver motivos das exclusões nesta data</summary>${reasons.map(([label,value])=>`<div class="coverage-reason"><span>${esc(label)}</span><strong>${value}</strong></div>`).join('')}</details>`:''}<p class="muted">Observado em ${dateTime(s.updated_at)}. Este é o estado publicado agora para jogos futuros. A análise é refeita em cada recolha.</p>`;
+}
 function renderCoverage(fresh){
  const c=coverageView(payload);
- $('coverage-panel').hidden=!c;
+ $('coverage-panel').hidden=previewOffset!==0||!c;
  if(c){
   $('coverage-funnel').innerHTML=c.metrics.map(([label,value])=>`<div><strong>${value}</strong><span>${esc(label)}</span></div>`).join('');
   $('coverage-note').textContent=`${c.usable} ${c.usable===1?'fonte com previsões aptas':'fontes com previsões aptas'} nesta recolha. ${c.unavailable} ${c.unavailable===1?'fonte indisponível':'fontes indisponíveis'}. A recolha cobre as previsões acessíveis; ainda não abrange todos os jogos do dia.`;
@@ -98,6 +123,7 @@ function renderPicks(){
  const d=payload?.diagnostics;
  $('mi-summary').textContent=!fresh.valid?fresh.reason:d?`Recolhi ${payload.total_collected} previsões; ${d.today_forecasts} são de hoje, para ${d.today_events} jogos identificados. ${d.eligible_forecasts} ${d.eligible_forecasts===1?'previsão passou':'previsões passaram'} a regra da sua fonte e ${all.length} opções têm confirmação suficiente. A cobertura ainda é parcial.`:all.length?`De ${payload.total_collected} previsões recolhidas, ${all.length} passaram os critérios. Consulta a evidência de cada opção antes de a incluir na tua simulação.`:'A recolha ainda não fornece confirmação suficiente entre fontes. Consulta o estado e as falhas em Fontes.';
  renderCoverage(fresh);
+ renderOutlook(fresh);
  if(!fresh.valid){$('picks').innerHTML=emptyState('Primeiro, dados atuais.',fresh.reason);return;}
  if(!picks.length){$('picks').innerHTML=emptyState(all.length?'Os teus filtros são exigentes.':'Ainda sem confirmação suficiente.',all.length?'Não há opções que correspondam a estes filtros. Podes ajustá-los nas definições.':'A cobertura das fontes está incompleta. A contagem acima mostra os dados disponíveis e os motivos das exclusões.',`<button class="text-button blue" data-view="${all.length?'definicoes':'fontes'}">${all.length?'Ajustar filtros':'Ver a recolha do Mister Mi'}</button>`);return;}
  $('picks').innerHTML=picks.map(p=>`<article class="pick-card"><div class="pick-top"><div class="pick-meta"><span class="tier ${p.tier==='gold'?'gold':''}">${p.source_count>=3?'OURO':'PRATA'} · ${p.source_count} FONTES</span><span>${esc(sports[p.sport]??p.sport)} · ${esc(countryNames[p.country]??p.country)}</span><span>${time(p.kickoff)}</span></div><button class="favorite ${favorites.has(p.id)?'on':''}" data-favorite="${esc(p.id)}" aria-label="${favorites.has(p.id)?'Remover dos':'Adicionar aos'} favoritos" aria-pressed="${favorites.has(p.id)}">${icon('star')}</button></div><div class="pick-match"><div class="team"><span class="team-avatar">${esc(initials(p.home))}</span><span class="team-name">${esc(p.home)}</span></div><span class="versus">VS</span><div class="team"><span class="team-avatar">${esc(initials(p.away))}</span><span class="team-name">${esc(p.away)}</span></div></div><div class="pick-bottom"><div class="selection"><small>${esc(p.competition||marketNames[p.market]||p.market)}</small><strong>${esc(p.selection)}</strong></div><div class="score">${num(p.score)}<small>CONSENSO / 98</small></div><button class="button outline" data-analysis="${esc(p.id)}">Ver análise</button></div><div class="pick-sources">${p.sources.map(s=>`<span>${esc(sourceNames[s.source]??s.source)}</span>`).join(' · ')}${p.odds?` · Odd observada ${num(p.odds,2)}`:' · Sem odd observada'}</div></article>`).join('');
@@ -245,6 +271,7 @@ async function refreshAnalysis(run=true){
  }catch(error){const message=error.message;const readOkay=await loadSnapshot({quiet:true});notice(readOkay?`Não foi possível iniciar uma nova execução: ${message} A última publicação do GitHub foi recarregada.`:message);}finally{busy=false;$('refresh').disabled=false;$('hero-analyse').disabled=false;render();}
 }
 document.addEventListener('click',e=>{
+ const day=e.target.closest('[data-preview-day]');if(day){previewOffset=Number(day.dataset.previewDay);const url=new URL(location.href);if(previewOffset)url.searchParams.set('day',previewOffset===1?'tomorrow':'after');else url.searchParams.delete('day');window.history.replaceState(null,'',url);renderPicks();}
  const analysis=e.target.closest('[data-analysis]');if(analysis)showAnalysis(analysis.dataset.analysis);
  const fav=e.target.closest('[data-favorite]');if(fav){favorites.has(fav.dataset.favorite)?favorites.delete(fav.dataset.favorite):favorites.add(fav.dataset.favorite);write('mister-mi.favorites',[...favorites]);renderPicks();}
  const exclude=e.target.closest('[data-exclude-combo]');if(exclude){const [sport,country]=exclude.dataset.excludeCombo.split('|');if(!preferences.excluded_combinations.some(r=>r.sport===sport&&r.country===country))preferences.excluded_combinations.push({sport,country});write('mister-mi.preferences',preferences);fillPreferences();render();toast('Combinação excluída na tua seleção. O histórico foi preservado.');}

@@ -17,6 +17,8 @@ def load_json(path, default):
 
 
 def record(history, payload):
+    if payload.get("is_preview") or payload.get("analysis_mode") == "future_preview":
+        raise ValueError("Uma pré-visualização futura não pode entrar no histórico de recomendações")
     records = {r["id"]: r for r in history.get("records", [])}
     config_hash = sha256(json.dumps(payload["settings"], sort_keys=True).encode()).hexdigest()[:12]
     for pick in payload["data"]:
