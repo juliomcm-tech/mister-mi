@@ -319,7 +319,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-19T19:32:12.914049+00:00",
+    "generated_at": "2026-11-19T19:51:23.380229+00:00",
     "window_from": "2026-11-19",
     "window_through": "2026-11-21",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
@@ -1047,5 +1047,31 @@
       }
     ],
     "complete_within_configured_resources": true
+  },
+  "oddspedia_feed": {
+    "id": "oddspedia",
+    "name": "Oddspedia API",
+    "configured": true,
+    "checked_at": "2026-11-19T19:51:23.380229+00:00",
+    "url": "https://widgets.oddspedia.com/",
+    "counts_as_prediction": false,
+    "used_in_analysis": false,
+    "strategy": "documented_catalogue_and_search",
+    "endpoint": "/api/sports",
+    "status": "error",
+    "reason": "provider_challenge",
+    "http_status": 403,
+    "response_type": "html",
+    "message": "A resposta exige verificação de navegador ou recusa tráfego automatizado. O coletor não tenta contornar essa verificação.",
+    "catalogue": {
+      "endpoint": "/api/sports",
+      "status": "error",
+      "reason": "provider_challenge",
+      "http_status": 403,
+      "response_type": "html",
+      "message": "A resposta exige verificação de navegador ou recusa tráfego automatizado. O coletor não tenta contornar essa verificação."
+    },
+    "searches": [],
+    "next_check_at": "2026-11-20T01:51:23.380229+00:00"
   }
 }
