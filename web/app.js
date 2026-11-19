@@ -1,4 +1,6 @@
 import {planPortfolio, DEFAULT_POLICY} from './portfolio.js';
+import {initPWA} from './pwa.js';
+import {getAnalystMood} from './mood.js';
 
 const $ = id => document.getElementById(id);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -19,6 +21,8 @@ let favorites = new Set(read('mister-mi.favorites',[]));
 let payload=null, history={records:[]}, health=null, activeSport='all', onlyFavorites=false, busy=false, loadFailed=false, latestMessage='', lastReadError='';
 let policy={...DEFAULT_POLICY,...read('mister-mi.policy',{})};
 let view='hoje';
+let experiment=null,experimentRequested=false;
+let motionEnabled=read('mister-mi.motion',true)===true;
 
 function lisbonDay(date=new Date()) {
  const p=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Lisbon',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date);
@@ -112,6 +116,20 @@ function renderPerformance(){
  $('performance-table').innerHTML=`<table><thead><tr><th>SEGMENTO</th><th>AMOSTRA</th><th>ACERTO</th><th>INTERVALO 95%</th><th>ROI SIMULADO</th><th>COM ODDS</th></tr></thead><tbody>${rows.length?rows.map(r=>`<tr><td><strong>${esc(dimension==='by_combination'?`${sports[r.sport]??r.sport} × ${countryNames[r.country]??r.country}`:sports[r.key]??countryNames[r.key]??marketNames[r.key]??r.key)}</strong></td><td>${r.settled}${r.sufficient_sample?'':' · inicial'}</td><td>${pct(r.hit_rate)}</td><td>${r.settled?`${num(r.hit_rate_interval_95[0])}%–${num(r.hit_rate_interval_95[1])}%`:'—'}</td><td class="${(r.paper_roi_pct??0)<0?'negative':'positive'}">${pct(r.paper_roi_pct)}</td><td>${r.priced_settled??0}</td></tr>`).join(''):'<tr><td class="no-data-cell" colspan="6">O Mister Mi ainda não tem resultados confirmados. As estatísticas começam com as primeiras opções registadas e liquidadas.</td></tr>'}</tbody></table>`;
  const suggestions=performance?.by_combination?.filter(r=>r.review_suggested)??[];
  $('review-suggestions').innerHTML=`<h2>Segmentos a rever</h2><p>O Mister Mi sinaliza combinações com pelo menos ${performance?.min_sample??30} entradas liquidadas com odds e cobertura de preços suficiente. Um alerta pede revisão; não demonstra uma desvantagem futura.</p>${suggestions.length?suggestions.map(r=>`<div class="review-item"><p><strong>${esc(sports[r.sport]??r.sport)} × ${esc(countryNames[r.country]??r.country)}</strong><br>${r.priced_settled} com odds · ROI ${pct(r.paper_roi_pct)}</p><button class="button outline" data-exclude-combo="${esc(r.sport)}|${esc(r.country)}">Excluir na minha seleção</button></div>`).join(''):'<p class="muted">Ainda não há amostra suficiente para identificar os segmentos mais fortes ou mais fracos com este critério.</p>'}<p class="muted">ROI antes de comissões. Apenas preços observados, sem garantia de execução. Pendentes e devolvidas não entram na taxa de acerto; preços em falta não são inventados.</p>`;
+ renderExperiment();
+}
+async function loadExperiment(){
+ experimentRequested=true;
+ try{const value=await request('./data/backtest.json');if(value.kind!=='experimental_poisson_baseline'||value.is_live_consensus_backtest!==false)throw new Error('Relatório experimental inválido.');experiment=value;}
+ catch{experiment={error:true};}
+ if(view==='estatisticas')renderExperiment();
+}
+function renderExperiment(){
+ if(!experimentRequested){loadExperiment();return;}
+ if(!experiment)return;
+ if(experiment.error){$('backtest-results').innerHTML='<p class="muted">O relatório histórico está temporariamente indisponível. Este estado não altera as estatísticas reais.</p>';return;}
+ const s=experiment.overall,interval=s.selected_hit_rate_wilson95_pct;
+ $('backtest-results').innerHTML=`<div class="backtest-kpis"><div><strong>${pct(s.selected_hit_rate_pct)}</strong><span>${s.selected_correct} acertos / ${s.selected} seleções</span></div><div><strong>${s.selected_incorrect}</strong><span>seleções erradas</span></div><div><strong>${s.evaluated}</strong><span>jogos avaliados</span></div><div><strong>${pct(s.coverage_pct)}</strong><span>dos jogos selecionados</span></div></div><p>Treino: ${esc(experiment.config.training_season)} · Teste: ${esc(experiment.config.test_season)} · Apenas informação de dias anteriores. Intervalo de 95%: <strong>${pct(interval[0])} a ${pct(interval[1])}</strong>.</p><div class="table-wrap"><table><thead><tr><th>LIGA</th><th>ACERTOS / SELEÇÕES</th><th>TAXA</th><th>INTERVALO 95%</th></tr></thead><tbody>${Object.entries(experiment.by_league).map(([key,r])=>`<tr><td>${esc(experiment.leagues[key].name)}</td><td>${r.selected_correct} / ${r.selected}</td><td>${pct(r.selected_hit_rate_pct)}</td><td>${pct(r.selected_hit_rate_wilson95_pct[0])}–${pct(r.selected_hit_rate_wilson95_pct[1])}</td></tr>`).join('')}</tbody></table></div><p>O modelo selecionou apenas jogos com probabilidade estimada de pelo menos 65%. Nos ${s.evaluated} jogos, sem esse filtro, acertou ${pct(s.top1_accuracy_pct)}. A referência «sempre casa» acertou ${pct(s.always_home_on_selected_accuracy_pct)} nas mesmas seleções.</p><p class="muted">Probabilidades experimentais sem calibração. Não existem odds históricas verificadas para medir lucro ou ROI. A simulação retrospetiva não demonstra segurança nem o desempenho do consenso atual.</p><div class="report-links"><a class="text-link" href="https://github.com/juliomcm-tech/mister-mi/blob/main/docs/BACKTEST.md" target="_blank" rel="noopener noreferrer">Método e resultados</a><a class="text-link" href="https://github.com/juliomcm-tech/mister-mi/blob/main/docs/AUDIT.md" target="_blank" rel="noopener noreferrer">Auditoria independente</a></div>`;
 }
 function renderPortfolio(){
  const picks=visiblePicks();const planned=planPortfolio(picks,policy);const byId=new Map(picks.map(p=>[p.id,p]));
@@ -128,7 +146,9 @@ function showAnalysis(id){
  $('analysis-detail').innerHTML=`<h2>${esc(pick.match)}</h2><p>${esc(sports[pick.sport]??pick.sport)} · ${esc(countryNames[pick.country]??pick.country)} · ${dateTime(pick.kickoff)}</p><div class="portfolio-total"><div><span>${esc(marketNames[pick.market]??pick.market)}</span><h3>${esc(pick.selection)}</h3></div><div><strong>${num(pick.score)}</strong><span> / 98 · consenso</span></div></div><p>${esc(pick.reason)}</p><h3>O que cada fonte diz</h3>${pick.sources.map(s=>`<div class="evidence-row"><strong>${esc(sourceNames[s.source]??s.source)}<span>${esc(metricLabel(s))}</span></strong><small>Recolhido ${dateTime(s.fetched_at)}${s.odds?` · Odd observada ${num(s.odds,2)}`:''}</small><a href="${safeURL(s.url)}" target="_blank" rel="noopener noreferrer">Ver evidência na fonte</a></div>`).join('')}<p>O Mister Mi verifica a concordância, a identidade do evento, os limiares e a frescura. Sem validação histórica suficiente, não estima uma probabilidade de acerto nem retorno esperado.</p>`;
  $('analysis-dialog').showModal();
 }
-function render(){renderPicks();sourceSummary();if(view==='fontes')renderSources();if(view==='estatisticas')renderPerformance();if(view==='carteira'||view==='definicoes')renderPortfolio();}
+function updateClock(){const now=new Date();$('date-label').textContent=new Intl.DateTimeFormat('pt-PT',{timeZone:'Europe/Lisbon',weekday:'long',day:'numeric',month:'long'}).format(now);$('calendar-day').textContent=new Intl.DateTimeFormat('pt-PT',{timeZone:'Europe/Lisbon',day:'2-digit'}).format(now);$('calendar-month').textContent=new Intl.DateTimeFormat('pt-PT',{timeZone:'Europe/Lisbon',month:'long',year:'numeric'}).format(now);}
+function renderMood(){const mood=getAnalystMood(payload?.performance,payload?.settings);$('mi-avatar').dataset.miMood=mood.state;$('mi-mood-label').textContent=mood.label;$('mi-mood-note').textContent=mood.note;document.querySelectorAll('.mini-mi img,.rail-bottom img').forEach(img=>{const path=mood.state==='review'?'./assets/mister-mi-upset.webp':'./assets/mister-mi.webp';if(img.getAttribute('src')!==path)img.src=path;});}
+function render(){updateClock();renderPicks();sourceSummary();renderMood();if(view==='fontes')renderSources();if(view==='estatisticas')renderPerformance();if(view==='carteira'||view==='definicoes')renderPortfolio();}
 function fillPreferences(){
  $('sport-exclusions').innerHTML=Object.entries(sports).map(([key,label])=>`<label><input type="checkbox" name="excluded-sport" value="${key}" ${preferences.excluded_sports.includes(key)?'checked':''}>${label}</label>`).join('');
  $('country-exclusions').value=preferences.excluded_countries.join(', ');
@@ -228,7 +248,14 @@ $('portfolio-form').onsubmit=e=>{e.preventDefault();policy={...DEFAULT_POLICY,ba
 $('settlement-form').onsubmit=async e=>{e.preventDefault();const id=$('settlement-pick').value;if(!id){toast('Seleciona um registo pendente.');return;}try{const result=await authorised('/settlements','POST',{id,status:'final',home_score:Number($('home-score').value),away_score:Number($('away-score').value)});if(result.success)toast('Confirmação guardada no GitHub. O livro será atualizado na próxima execução.');}catch(error){toast(error.message);}};
 $('export-history').onclick=()=>{const columns=['id','first_seen','date','sport','country','match','market','selection','odds','odds_source','result','settlement_source'];const cell=v=>`"${String(v??'').replace(/"/g,'""').replace(/^[=+@-]/,"'$&")}"`;const csv='\uFEFF'+[columns,...(history.records??[]).map(r=>columns.map(k=>r[k]))].map(row=>row.map(cell).join(';')).join('\r\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=`mister-mi-historico-${lisbonDay()}.csv`;a.click();URL.revokeObjectURL(url);};
 
-const now=new Date();$('date-label').textContent=new Intl.DateTimeFormat('pt-PT',{timeZone:'Europe/Lisbon',weekday:'long',day:'numeric',month:'long'}).format(now);$('calendar-day').textContent=new Intl.DateTimeFormat('pt-PT',{timeZone:'Europe/Lisbon',day:'2-digit'}).format(now);$('calendar-month').textContent=new Intl.DateTimeFormat('pt-PT',{timeZone:'Europe/Lisbon',month:'long',year:'numeric'}).format(now);
+function applyMotion(){document.body.classList.toggle('mi-paused',!motionEnabled||document.hidden);}
+$('mi-motion').checked=motionEnabled;$('mi-motion').onchange=()=>{motionEnabled=$('mi-motion').checked;write('mister-mi.motion',motionEnabled);applyMotion();};
+document.addEventListener('visibilitychange',()=>{applyMotion();if(!document.hidden&&!busy)loadSnapshot({quiet:true});});
+if('IntersectionObserver' in window)new IntersectionObserver(entries=>{for(const entry of entries)$('mi-avatar').classList.toggle('mi-resting',!entry.isIntersecting);},{threshold:0.05}).observe($('mi-avatar'));
+applyMotion();
+function closeInstall(){const d=$('install-dialog');if(typeof d.close==='function')d.close();else{d.removeAttribute('open');d.hidden=true;}}
+$('close-install').onclick=closeInstall;$('install-done').onclick=closeInstall;
+initPWA({onOffline:offline=>{if(offline){loadFailed=true;lastReadError='Sem ligação à Internet. As previsões atuais precisam de uma ligação ativa.';notice(lastReadError);render();}else if(loadFailed)loadSnapshot({quiet:true});}});
 fillPreferences();changeView(location.hash.slice(1)||'hoje');
 await loadSnapshot();await loadHealth();
 if(connection.auto&&refreshToken&&connection.apiBase)refreshAnalysis();

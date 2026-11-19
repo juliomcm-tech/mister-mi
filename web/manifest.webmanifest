@@ -1,0 +1,23 @@
+{
+  "id": "./",
+  "name": "Mister Mi",
+  "short_name": "Mister Mi",
+  "description": "O teu analista desportivo: dados do dia, comparação de fontes e carteira de simulação.",
+  "lang": "pt-PT",
+  "start_url": "./?source=installed#hoje",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#097db2",
+  "background_color": "#edf5fa",
+  "icons": [
+    { "src": "./assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Análise de hoje", "short_name": "Hoje", "url": "./#hoje", "icons": [{ "src": "./assets/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Carteira de simulação", "short_name": "Carteira", "url": "./#carteira", "icons": [{ "src": "./assets/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Estatísticas do Mister Mi", "short_name": "Estatísticas", "url": "./#estatisticas", "icons": [{ "src": "./assets/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

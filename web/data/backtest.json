@@ -1,0 +1,1539 @@
+{
+  "schema_version": 1,
+  "name": "Mister Mi · laboratório histórico",
+  "kind": "experimental_poisson_baseline",
+  "is_live_consensus_backtest": false,
+  "production_history_evaluated": 0,
+  "probabilities_are_calibrated": false,
+  "method_frozen_at": "2026-11-19T14:46:41.462485+00:00",
+  "config_sha256": "5f51eb509fc1a85d703c5a5ebee55ee557d71a7e4bad88f71303450690083851",
+  "config": {
+    "training_season": "2023-24",
+    "test_season": "2024-25",
+    "test_start": "2024-07-01",
+    "test_end": "2025-06-30",
+    "min_league_games": 60,
+    "min_team_games": 5,
+    "team_shrinkage_games": 5,
+    "selection_threshold": 0.65,
+    "lambda_min": 0.15,
+    "lambda_max": 5.0,
+    "max_goals": 20,
+    "update_frequency": "strictly_earlier_completed_day",
+    "tuned_on_holdout": false
+  },
+  "script_sha256": "a86d99632fde7b24c9c9e1d854126a054e3ec1565be602c362abdf2eb50978a9",
+  "upstream_commit": "e6744429ee395bc86f247348c6184bb08d4eb361",
+  "leagues": {
+    "en.1": {
+      "name": "English Premier League",
+      "country": "England"
+    },
+    "de.1": {
+      "name": "Bundesliga",
+      "country": "Germany"
+    }
+  },
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2023-24/en.1.json",
+      "league": "en.1",
+      "season": "2023-24",
+      "sha256": "03e13eafbf78dfe00d7e89dd3bf6643986eb6e8fd86c7664aeb8c5bc0bed88d0",
+      "size_bytes": 116669,
+      "etag": "\"a0aa564e4a0a34490d4649e487477ce382d8052e96b5c753ec7c222746a70557\"",
+      "fetched_at": "2026-11-19T14:46:51.857485+00:00",
+      "included_fulltime_matches": 380,
+      "excluded_rows": 0,
+      "license": "CC0-1.0",
+      "license_url": "https://github.com/openfootball/football.json/blob/master/LICENSE.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2024-25/en.1.json",
+      "league": "en.1",
+      "season": "2024-25",
+      "sha256": "c3d18f552d83382cd4b6b21127adbbfe38e7f8618ddc979fb5404f2df07d0a75",
+      "size_bytes": 110141,
+      "etag": "\"2595452b3bab8db7d5096748c0a1b19c8cb9282a90fdeda8e8ad07f942a5cddb\"",
+      "fetched_at": "2026-11-19T14:46:51.812773+00:00",
+      "included_fulltime_matches": 380,
+      "excluded_rows": 0,
+      "license": "CC0-1.0",
+      "license_url": "https://github.com/openfootball/football.json/blob/master/LICENSE.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2023-24/de.1.json",
+      "league": "de.1",
+      "season": "2023-24",
+      "sha256": "d104edde48a5e254545eac3d3ed379a09801e1ebcef5c6480e28bc36fcfa202d",
+      "size_bytes": 93743,
+      "etag": "\"23e48313628e0594a458a64b2539bbd6d33d38e126e34bbcffa3e7196b8760cf\"",
+      "fetched_at": "2026-11-19T14:46:51.807598+00:00",
+      "included_fulltime_matches": 306,
+      "excluded_rows": 0,
+      "license": "CC0-1.0",
+      "license_url": "https://github.com/openfootball/football.json/blob/master/LICENSE.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/e6744429ee395bc86f247348c6184bb08d4eb361/2024-25/de.1.json",
+      "league": "de.1",
+      "season": "2024-25",
+      "sha256": "f473d6595e6c29ebedc08b09177aed6a6b2ff0fa8378b82f51dea469139f44c3",
+      "size_bytes": 88232,
+      "etag": "\"0159fdb5fb1b268ba1f85d3cda9b9f241eaa1808baecaf0258d06921bef7b716\"",
+      "fetched_at": "2026-11-19T14:46:51.831911+00:00",
+      "included_fulltime_matches": 306,
+      "excluded_rows": 0,
+      "license": "CC0-1.0",
+      "license_url": "https://github.com/openfootball/football.json/blob/master/LICENSE.md"
+    }
+  ],
+  "overall": {
+    "evaluated": 662,
+    "selected": 150,
+    "selected_correct": 103,
+    "selected_incorrect": 47,
+    "coverage_pct": 22.66,
+    "selected_hit_rate_pct": 68.67,
+    "selected_hit_rate_wilson95_pct": [
+      60.86,
+      75.55
+    ],
+    "top1_accuracy_pct": 50.76,
+    "brier_multiclass_sum": 0.601315,
+    "log_loss_natural": 1.004583,
+    "always_home_accuracy_pct": 40.18,
+    "always_home_on_selected_accuracy_pct": 49.33,
+    "historical_prior_brier": 0.656884,
+    "historical_prior_log_loss": 1.082928
+  },
+  "by_league": {
+    "de.1": {
+      "evaluated": 296,
+      "selected": 73,
+      "selected_correct": 52,
+      "selected_incorrect": 21,
+      "coverage_pct": 24.66,
+      "selected_hit_rate_pct": 71.23,
+      "selected_hit_rate_wilson95_pct": [
+        59.99,
+        80.35
+      ],
+      "top1_accuracy_pct": 47.97,
+      "brier_multiclass_sum": 0.618208,
+      "log_loss_natural": 1.031371,
+      "always_home_accuracy_pct": 38.85,
+      "always_home_on_selected_accuracy_pct": 52.05,
+      "historical_prior_brier": 0.660902,
+      "historical_prior_log_loss": 1.089105
+    },
+    "en.1": {
+      "evaluated": 366,
+      "selected": 77,
+      "selected_correct": 51,
+      "selected_incorrect": 26,
+      "coverage_pct": 21.04,
+      "selected_hit_rate_pct": 66.23,
+      "selected_hit_rate_wilson95_pct": [
+        55.12,
+        75.8
+      ],
+      "top1_accuracy_pct": 53.01,
+      "brier_multiclass_sum": 0.587653,
+      "log_loss_natural": 0.982918,
+      "always_home_accuracy_pct": 41.26,
+      "always_home_on_selected_accuracy_pct": 46.75,
+      "historical_prior_brier": 0.653635,
+      "historical_prior_log_loss": 1.077933
+    }
+  },
+  "training_completed_matches": 686,
+  "test_completed_matches": 686,
+  "warmup_excluded": 24,
+  "prediction_ledger_sha256": "516fba1332a97920ea63e0cb2037ee6d91fc53c5a6836a5227d50c6aacc384b4",
+  "first_test_date": "2024-08-16",
+  "last_test_date": "2025-05-25",
+  "sample_predictions": [
+    {
+      "league": "en.1",
+      "date": "2024-08-16",
+      "home": "Manchester United FC",
+      "away": "Fulham FC",
+      "probabilities": [
+        0.46481875355446667,
+        0.24359704236570978,
+        0.2915842040798236
+      ],
+      "historical_prior_probabilities": [
+        0.4595300261096606,
+        0.21671018276762402,
+        0.3237597911227154
+      ],
+      "home_lambda": 1.633978504420259,
+      "away_lambda": 1.2449348574763273,
+      "training_games": 380,
+      "home_team_training_games": 38,
+      "away_team_training_games": 38,
+      "trained_through": "2024-05-19",
+      "prediction": "HOME",
+      "selected": false,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        1,
+        0
+      ],
+      "brier": 0.4307798336651803,
+      "log_loss": 0.7661077266799206,
+      "prior_brier": 0.4438914983400254,
+      "prior_log_loss": 0.7775509941424942
+    },
+    {
+      "league": "en.1",
+      "date": "2024-08-17",
+      "home": "Arsenal FC",
+      "away": "Wolverhampton Wanderers FC",
+      "probabilities": [
+        0.7977867017975908,
+        0.1343919610782495,
+        0.06782133712415962
+      ],
+      "historical_prior_probabilities": [
+        0.4609375,
+        0.21614583333333334,
+        0.3229166666666667
+      ],
+      "home_lambda": 2.635403588793056,
+      "away_lambda": 0.6444374881211683,
+      "training_games": 381,
+      "home_team_training_games": 38,
+      "away_team_training_games": 38,
+      "trained_through": "2024-08-16",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        2,
+        0
+      ],
+      "brier": 0.0635511509416631,
+      "log_loss": 0.2259140082413918,
+      "prior_brier": 0.4415825737847222,
+      "prior_log_loss": 0.7744928200138977
+    },
+    {
+      "league": "en.1",
+      "date": "2024-08-17",
+      "home": "Everton FC",
+      "away": "Brighton & Hove Albion FC",
+      "probabilities": [
+        0.3878519735528651,
+        0.2801027382237525,
+        0.33204528822338236
+      ],
+      "historical_prior_probabilities": [
+        0.4609375,
+        0.21614583333333334,
+        0.3229166666666667
+      ],
+      "home_lambda": 1.227785748670378,
+      "away_lambda": 1.1138850240008407,
+      "training_games": 381,
+      "home_team_training_games": 38,
+      "away_team_training_games": 38,
+      "trained_through": "2024-08-16",
+      "prediction": "HOME",
+      "selected": false,
+      "actual": "AWAY",
+      "correct": false,
+      "final_score": [
+        0,
+        3
+      ],
+      "brier": 0.6750501943338806,
+      "log_loss": 1.1024839090572964,
+      "prior_brier": 0.7176242404513888,
+      "prior_log_loss": 1.1303609869826898
+    },
+    {
+      "league": "en.1",
+      "date": "2024-08-17",
+      "home": "Nottingham Forest FC",
+      "away": "AFC Bournemouth",
+      "probabilities": [
+        0.4151165891058771,
+        0.24422689539030618,
+        0.34065651550381676
+      ],
+      "historical_prior_probabilities": [
+        0.4609375,
+        0.21614583333333334,
+        0.3229166666666667
+      ],
+      "home_lambda": 1.5609337877019855,
+      "away_lambda": 1.3926286241489179,
+      "training_games": 381,
+      "home_team_training_games": 38,
+      "away_team_training_games": 38,
+      "trained_through": "2024-08-16",
+      "prediction": "HOME",
+      "selected": false,
+      "actual": "DRAW",
+      "correct": false,
+      "final_score": [
+        1,
+        1
+      ],
+      "brier": 0.859561629757475,
+      "log_loss": 1.409657586636697,
+      "prior_brier": 0.9311659071180556,
+      "prior_log_loss": 1.5318019447911289
+    },
+    {
+      "league": "en.1",
+      "date": "2024-08-17",
+      "home": "West Ham United FC",
+      "away": "Aston Villa FC",
+      "probabilities": [
+        0.32588405142616234,
+        0.21080166278475057,
+        0.46331428578908707
+      ],
+      "historical_prior_probabilities": [
+        0.4609375,
+        0.21614583333333334,
+        0.3229166666666667
+      ],
+      "home_lambda": 1.712670489021219,
+      "away_lambda": 2.060875427480499,
+      "training_games": 381,
+      "home_team_training_games": 38,
+      "away_team_training_games": 38,
+      "trained_through": "2024-08-16",
+      "prediction": "AWAY",
+      "selected": false,
+      "actual": "AWAY",
+      "correct": true,
+      "final_score": [
+        1,
+        2
+      ],
+      "brier": 0.43866931184482305,
+      "log_loss": 0.7693496521782663,
+      "prior_brier": 0.7176242404513888,
+      "prior_log_loss": 1.1303609869826898
+    },
+    {
+      "league": "en.1",
+      "date": "2024-08-18",
+      "home": "Brentford FC",
+      "away": "Crystal Palace FC",
+      "probabilities": [
+        0.40273936352837986,
+        0.24372065590049258,
+        0.35353998057112757
+      ],
+      "historical_prior_probabilities": [
+        0.45897435897435895,
+        0.2153846153846154,
+        0.32564102564102565
+      ],
+      "home_lambda": 1.5435794512253187,
+      "away_lambda": 1.432071355715994,
+      "training_games": 387,
+      "home_team_training_games": 38,
+      "away_team_training_games": 38,
+      "trained_through": "2024-08-17",
+      "prediction": "HOME",
+      "selected": false,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        2,
+        1
+      ],
+      "brier": 0.5411105438532844,
+      "log_loss": 0.9094656668867546,
+      "prior_brier": 0.4451413543721237,
+      "prior_log_loss": 0.7787609332829372
+    },
+    {
+      "league": "en.1",
+      "date": "2024-08-18",
+      "home": "Chelsea FC",
+      "away": "Manchester City FC",
+      "probabilities": [
+        0.2172654860576375,
+        0.20003737032785515,
+        0.5826971436145073
+      ],
+      "historical_prior_probabilities": [
+        0.45897435897435895,
+        0.2153846153846154,
+        0.32564102564102565
+      ],
+      "home_lambda": 1.3054584591832885,
+      "away_lambda": 2.2268679547233634,
+      "training_games": 387,
+      "home_team_training_games": 38,
+      "away_team_training_games": 38,
+      "trained_through": "2024-08-17",
+      "prediction": "AWAY",
+      "selected": false,
+      "actual": "AWAY",
+      "correct": true,
+      "final_score": [
+        0,
+        2
+      ],
+      "brier": 0.26136091490703606,
+      "log_loss": 0.5400877068281209,
+      "prior_brier": 0.7118080210387903,
+      "prior_log_loss": 1.1219596526651008
+    },
+    {
+      "league": "de.1",
+      "date": "2024-08-23",
+      "home": "Borussia Mönchengladbach",
+      "away": "Bayer 04 Leverkusen",
+      "probabilities": [
+        0.11279571445234449,
+        0.1563124851450519,
+        0.7308918004026036
+      ],
+      "historical_prior_probabilities": [
+        0.4368932038834951,
+        0.26537216828478966,
+        0.2977346278317152
+      ],
+      "home_lambda": 0.9414535275306848,
+      "away_lambda": 2.6096538024506217,
+      "training_games": 306,
+      "home_team_training_games": 34,
+      "away_team_training_games": 34,
+      "trained_through": "2024-05-18",
+      "prediction": "AWAY",
+      "selected": true,
+      "actual": "AWAY",
+      "correct": true,
+      "final_score": [
+        2,
+        3
+      ],
+      "brier": 0.10957568930158904,
+      "log_loss": 0.31348984605289915,
+      "prior_brier": 0.7544747122464155,
+      "prior_log_loss": 1.2115526998487052
+    },
+    {
+      "league": "de.1",
+      "date": "2024-08-24",
+      "home": "1. FSV Mainz 05",
+      "away": "1. FC Union Berlin",
+      "probabilities": [
+        0.4994881524557581,
+        0.2706004559649179,
+        0.22991139157932403
+      ],
+      "historical_prior_probabilities": [
+        0.43548387096774194,
+        0.2645161290322581,
+        0.3
+      ],
+      "home_lambda": 1.42138619708303,
+      "away_lambda": 0.8690290267839753,
+      "training_games": 307,
+      "home_team_training_games": 34,
+      "away_team_training_games": 34,
+      "trained_through": "2024-08-23",
+      "prediction": "HOME",
+      "selected": false,
+      "actual": "DRAW",
+      "correct": false,
+      "final_score": [
+        1,
+        1
+      ],
+      "brier": 0.8343713572601936,
+      "log_loss": 1.3071118782323905,
+      "prior_brier": 0.8205827263267429,
+      "prior_log_loss": 1.3298530502149388
+    },
+    {
+      "league": "de.1",
+      "date": "2024-08-24",
+      "home": "Borussia Dortmund",
+      "away": "Eintracht Frankfurt",
+      "probabilities": [
+        0.5906993953844242,
+        0.21195501323186425,
+        0.19734559138371155
+      ],
+      "historical_prior_probabilities": [
+        0.43548387096774194,
+        0.2645161290322581,
+        0.3
+      ],
+      "home_lambda": 2.0190636872236127,
+      "away_lambda": 1.0806678584694271,
+      "training_games": 307,
+      "home_team_training_games": 34,
+      "away_team_training_games": 34,
+      "trained_through": "2024-08-23",
+      "prediction": "HOME",
+      "selected": false,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        2,
+        0
+      ],
+      "brier": 0.2513971950113825,
+      "log_loss": 0.5264480282272431,
+      "prior_brier": 0.47864724245577517,
+      "prior_log_loss": 0.8312975190407624
+    },
+    {
+      "league": "en.1",
+      "date": "2025-05-25",
+      "home": "AFC Bournemouth",
+      "away": "Leicester City FC",
+      "probabilities": [
+        0.6490789762586585,
+        0.20127451494666454,
+        0.1496465087946769
+      ],
+      "historical_prior_probabilities": [
+        0.43691899070385126,
+        0.23107569721115537,
+        0.33200531208499334
+      ],
+      "home_lambda": 2.0649980941178,
+      "away_lambda": 0.8755456269428122,
+      "training_games": 750,
+      "home_team_training_games": 75,
+      "away_team_training_games": 37,
+      "trained_through": "2025-05-20",
+      "prediction": "HOME",
+      "selected": false,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        2,
+        0
+      ],
+      "brier": 0.18605107286512154,
+      "log_loss": 0.43220088053109573,
+      "prior_brier": 0.48068372812424487,
+      "prior_log_loss": 0.8280074770345217
+    },
+    {
+      "league": "en.1",
+      "date": "2025-05-25",
+      "home": "Fulham FC",
+      "away": "Manchester City FC",
+      "probabilities": [
+        0.20381651780401022,
+        0.21714391354377433,
+        0.5790395686522155
+      ],
+      "historical_prior_probabilities": [
+        0.43691899070385126,
+        0.23107569721115537,
+        0.33200531208499334
+      ],
+      "home_lambda": 1.0749201281204634,
+      "away_lambda": 1.9584350114208249,
+      "training_games": 750,
+      "home_team_training_games": 75,
+      "away_team_training_games": 75,
+      "trained_through": "2025-05-20",
+      "prediction": "AWAY",
+      "selected": false,
+      "actual": "AWAY",
+      "correct": true,
+      "final_score": [
+        0,
+        2
+      ],
+      "brier": 0.2659003368793713,
+      "log_loss": 0.5463844641030565,
+      "prior_brier": 0.6905110853619608,
+      "prior_log_loss": 1.1026043099376472
+    },
+    {
+      "league": "en.1",
+      "date": "2025-05-25",
+      "home": "Ipswich Town FC",
+      "away": "West Ham United FC",
+      "probabilities": [
+        0.2800090967257183,
+        0.23799394112958966,
+        0.4819969621446921
+      ],
+      "historical_prior_probabilities": [
+        0.43691899070385126,
+        0.23107569721115537,
+        0.33200531208499334
+      ],
+      "home_lambda": 1.2485750309179862,
+      "away_lambda": 1.708694208291087,
+      "training_games": 750,
+      "home_team_training_games": 37,
+      "away_team_training_games": 75,
+      "trained_through": "2025-05-20",
+      "prediction": "AWAY",
+      "selected": false,
+      "actual": "AWAY",
+      "correct": true,
+      "final_score": [
+        1,
+        3
+      ],
+      "brier": 0.4033733574908748,
+      "log_loss": 0.7298174675557715,
+      "prior_brier": 0.6905110853619608,
+      "prior_log_loss": 1.1026043099376472
+    },
+    {
+      "league": "en.1",
+      "date": "2025-05-25",
+      "home": "Liverpool FC",
+      "away": "Crystal Palace FC",
+      "probabilities": [
+        0.6616660983916215,
+        0.1897603095640417,
+        0.1485735920443368
+      ],
+      "historical_prior_probabilities": [
+        0.43691899070385126,
+        0.23107569721115537,
+        0.33200531208499334
+      ],
+      "home_lambda": 2.2209978967067423,
+      "away_lambda": 0.9508708020219329,
+      "training_games": 750,
+      "home_team_training_games": 75,
+      "away_team_training_games": 75,
+      "trained_through": "2025-05-20",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "DRAW",
+      "correct": false,
+      "final_score": [
+        1,
+        1
+      ],
+      "brier": 1.1163644939715054,
+      "log_loss": 1.6619935318290306,
+      "prior_brier": 0.8923703151096366,
+      "prior_log_loss": 1.4650099285853646
+    },
+    {
+      "league": "en.1",
+      "date": "2025-05-25",
+      "home": "Manchester United FC",
+      "away": "Aston Villa FC",
+      "probabilities": [
+        0.32577601926741695,
+        0.24424143500169126,
+        0.42998254573089184
+      ],
+      "historical_prior_probabilities": [
+        0.43691899070385126,
+        0.23107569721115537,
+        0.33200531208499334
+      ],
+      "home_lambda": 1.3494999638325085,
+      "away_lambda": 1.5845996930466546,
+      "training_games": 750,
+      "home_team_training_games": 75,
+      "away_team_training_games": 75,
+      "trained_through": "2025-05-20",
+      "prediction": "AWAY",
+      "selected": false,
+      "actual": "HOME",
+      "correct": false,
+      "final_score": [
+        2,
+        0
+      ],
+      "brier": 0.6991168443997944,
+      "log_loss": 1.1215451912094823,
+      "prior_brier": 0.48068372812424487,
+      "prior_log_loss": 0.8280074770345217
+    },
+    {
+      "league": "en.1",
+      "date": "2025-05-25",
+      "home": "Newcastle United FC",
+      "away": "Everton FC",
+      "probabilities": [
+        0.5652314276447935,
+        0.23269123177343684,
+        0.2020773405817697
+      ],
+      "historical_prior_probabilities": [
+        0.43691899070385126,
+        0.23107569721115537,
+        0.33200531208499334
+      ],
+      "home_lambda": 1.7731430340518908,
+      "away_lambda": 0.9591543702946215,
+      "training_games": 750,
+      "home_team_training_games": 75,
+      "away_team_training_games": 75,
+      "trained_through": "2025-05-20",
+      "prediction": "HOME",
+      "selected": false,
+      "actual": "AWAY",
+      "correct": false,
+      "final_score": [
+        0,
+        1
+      ],
+      "brier": 1.010312346554672,
+      "log_loss": 1.599104780691366,
+      "prior_brier": 0.6905110853619608,
+      "prior_log_loss": 1.1026043099376472
+    },
+    {
+      "league": "en.1",
+      "date": "2025-05-25",
+      "home": "Nottingham Forest FC",
+      "away": "Chelsea FC",
+      "probabilities": [
+        0.3262198533970259,
+        0.2385872049852533,
+        0.4351929416177208
+      ],
+      "historical_prior_probabilities": [
+        0.43691899070385126,
+        0.23107569721115537,
+        0.33200531208499334
+      ],
+      "home_lambda": 1.4013351713525455,
+      "away_lambda": 1.6516537741403843,
+      "training_games": 750,
+      "home_team_training_games": 75,
+      "away_team_training_games": 75,
+      "trained_through": "2025-05-20",
+      "prediction": "AWAY",
+      "selected": false,
+      "actual": "AWAY",
+      "correct": true,
+      "final_score": [
+        0,
+        1
+      ],
+      "brier": 0.4823502603314957,
+      "log_loss": 0.8319658022812101,
+      "prior_brier": 0.6905110853619608,
+      "prior_log_loss": 1.1026043099376472
+    },
+    {
+      "league": "en.1",
+      "date": "2025-05-25",
+      "home": "Southampton FC",
+      "away": "Arsenal FC",
+      "probabilities": [
+        0.04284578834295577,
+        0.11425472817175332,
+        0.842899483485291
+      ],
+      "historical_prior_probabilities": [
+        0.43691899070385126,
+        0.23107569721115537,
+        0.33200531208499334
+      ],
+      "home_lambda": 0.46763733896797793,
+      "away_lambda": 2.7042559755624125,
+      "training_games": 750,
+      "home_team_training_games": 37,
+      "away_team_training_games": 75,
+      "trained_through": "2025-05-20",
+      "prediction": "AWAY",
+      "selected": true,
+      "actual": "AWAY",
+      "correct": true,
+      "final_score": [
+        1,
+        2
+      ],
+      "brier": 0.039570476777518966,
+      "log_loss": 0.17090756476179142,
+      "prior_brier": 0.6905110853619608,
+      "prior_log_loss": 1.1026043099376472
+    },
+    {
+      "league": "en.1",
+      "date": "2025-05-25",
+      "home": "Tottenham Hotspur FC",
+      "away": "Brighton & Hove Albion FC",
+      "probabilities": [
+        0.4880150823307907,
+        0.216976878128781,
+        0.2950080395404283
+      ],
+      "historical_prior_probabilities": [
+        0.43691899070385126,
+        0.23107569721115537,
+        0.33200531208499334
+      ],
+      "home_lambda": 1.9850402041920094,
+      "away_lambda": 1.5110346283990235,
+      "training_games": 750,
+      "home_team_training_games": 75,
+      "away_team_training_games": 75,
+      "trained_through": "2025-05-20",
+      "prediction": "HOME",
+      "selected": false,
+      "actual": "AWAY",
+      "correct": false,
+      "final_score": [
+        1,
+        4
+      ],
+      "brier": 0.7822513505374706,
+      "log_loss": 1.2207526703342468,
+      "prior_brier": 0.6905110853619608,
+      "prior_log_loss": 1.1026043099376472
+    },
+    {
+      "league": "en.1",
+      "date": "2025-05-25",
+      "home": "Wolverhampton Wanderers FC",
+      "away": "Brentford FC",
+      "probabilities": [
+        0.34949298380337035,
+        0.23257618886128537,
+        0.4179308273353443
+      ],
+      "historical_prior_probabilities": [
+        0.43691899070385126,
+        0.23107569721115537,
+        0.33200531208499334
+      ],
+      "home_lambda": 1.530793376838002,
+      "away_lambda": 1.6916376877602615,
+      "training_games": 750,
+      "home_team_training_games": 75,
+      "away_team_training_games": 75,
+      "trained_through": "2025-05-20",
+      "prediction": "AWAY",
+      "selected": false,
+      "actual": "DRAW",
+      "correct": false,
+      "final_score": [
+        1,
+        1
+      ],
+      "brier": 0.8857508280676578,
+      "log_loss": 1.4585374136076532,
+      "prior_brier": 0.8923703151096366,
+      "prior_log_loss": 1.4650099285853646
+    }
+  ],
+  "selected_predictions": [
+    {
+      "league": "en.1",
+      "date": "2024-08-17",
+      "home": "Arsenal FC",
+      "away": "Wolverhampton Wanderers FC",
+      "probabilities": [
+        0.7977867017975908,
+        0.1343919610782495,
+        0.06782133712415962
+      ],
+      "historical_prior_probabilities": [
+        0.4609375,
+        0.21614583333333334,
+        0.3229166666666667
+      ],
+      "home_lambda": 2.635403588793056,
+      "away_lambda": 0.6444374881211683,
+      "training_games": 381,
+      "home_team_training_games": 38,
+      "away_team_training_games": 38,
+      "trained_through": "2024-08-16",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        2,
+        0
+      ],
+      "brier": 0.0635511509416631,
+      "log_loss": 0.2259140082413918,
+      "prior_brier": 0.4415825737847222,
+      "prior_log_loss": 0.7744928200138977
+    },
+    {
+      "league": "de.1",
+      "date": "2024-08-23",
+      "home": "Borussia Mönchengladbach",
+      "away": "Bayer 04 Leverkusen",
+      "probabilities": [
+        0.11279571445234449,
+        0.1563124851450519,
+        0.7308918004026036
+      ],
+      "historical_prior_probabilities": [
+        0.4368932038834951,
+        0.26537216828478966,
+        0.2977346278317152
+      ],
+      "home_lambda": 0.9414535275306848,
+      "away_lambda": 2.6096538024506217,
+      "training_games": 306,
+      "home_team_training_games": 34,
+      "away_team_training_games": 34,
+      "trained_through": "2024-05-18",
+      "prediction": "AWAY",
+      "selected": true,
+      "actual": "AWAY",
+      "correct": true,
+      "final_score": [
+        2,
+        3
+      ],
+      "brier": 0.10957568930158904,
+      "log_loss": 0.31348984605289915,
+      "prior_brier": 0.7544747122464155,
+      "prior_log_loss": 1.2115526998487052
+    },
+    {
+      "league": "de.1",
+      "date": "2024-08-24",
+      "home": "RB Leipzig",
+      "away": "VfL Bochum 1848",
+      "probabilities": [
+        0.8265117574866638,
+        0.10878368632046612,
+        0.06470455619287005
+      ],
+      "historical_prior_probabilities": [
+        0.43548387096774194,
+        0.2645161290322581,
+        0.3
+      ],
+      "home_lambda": 3.1913047760148174,
+      "away_lambda": 0.8442374495448457,
+      "training_games": 307,
+      "home_team_training_games": 34,
+      "away_team_training_games": 34,
+      "trained_through": "2024-08-23",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        1,
+        0
+      ],
+      "brier": 0.04611874029195199,
+      "log_loss": 0.19054113618804455,
+      "prior_brier": 0.47864724245577517,
+      "prior_log_loss": 0.8312975190407624
+    },
+    {
+      "league": "en.1",
+      "date": "2024-08-25",
+      "home": "Liverpool FC",
+      "away": "Brentford FC",
+      "probabilities": [
+        0.7123098318652484,
+        0.16600152649447245,
+        0.1216886416402792
+      ],
+      "historical_prior_probabilities": [
+        0.46,
+        0.2125,
+        0.3275
+      ],
+      "home_lambda": 2.486370395651763,
+      "away_lambda": 0.9355432680614456,
+      "training_games": 397,
+      "home_team_training_games": 39,
+      "away_team_training_games": 39,
+      "trained_through": "2024-08-24",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        2,
+        0
+      ],
+      "brier": 0.12513026514415296,
+      "log_loss": 0.3392423051094469,
+      "prior_brier": 0.44401250000000003,
+      "prior_log_loss": 0.7765287894989963
+    },
+    {
+      "league": "de.1",
+      "date": "2024-08-31",
+      "home": "VfB Stuttgart",
+      "away": "1. FSV Mainz 05",
+      "probabilities": [
+        0.702887184120064,
+        0.17791601968779286,
+        0.1191967961921431
+      ],
+      "historical_prior_probabilities": [
+        0.438871473354232,
+        0.26332288401253917,
+        0.29780564263322884
+      ],
+      "home_lambda": 2.2795511475516625,
+      "away_lambda": 0.820462896898895,
+      "training_games": 316,
+      "home_team_training_games": 35,
+      "away_team_training_games": 35,
+      "trained_through": "2024-08-30",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "DRAW",
+      "correct": false,
+      "final_score": [
+        3,
+        3
+      ],
+      "brier": 1.1840803405086655,
+      "log_loss": 1.72644363952924,
+      "prior_brier": 0.8239895441279075,
+      "prior_log_loss": 1.334374303941531
+    },
+    {
+      "league": "en.1",
+      "date": "2024-08-31",
+      "home": "Arsenal FC",
+      "away": "Brighton & Hove Albion FC",
+      "probabilities": [
+        0.7576607687741643,
+        0.15543700060448096,
+        0.08690223062135465
+      ],
+      "historical_prior_probabilities": [
+        0.45905707196029777,
+        0.21339950372208435,
+        0.32754342431761785
+      ],
+      "home_lambda": 2.438129427598573,
+      "away_lambda": 0.6973518546832936,
+      "training_games": 400,
+      "home_team_training_games": 40,
+      "away_team_training_games": 40,
+      "trained_through": "2024-08-25",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "DRAW",
+      "correct": false,
+      "final_score": [
+        1,
+        1
+      ],
+      "brier": 1.2948884981743802,
+      "log_loss": 1.8615147702617547,
+      "prior_brier": 0.9367584308751362,
+      "prior_log_loss": 1.5445892656931752
+    },
+    {
+      "league": "en.1",
+      "date": "2024-08-31",
+      "home": "West Ham United FC",
+      "away": "Manchester City FC",
+      "probabilities": [
+        0.12980410673663287,
+        0.16485979331999084,
+        0.7053360999433763
+      ],
+      "historical_prior_probabilities": [
+        0.45905707196029777,
+        0.21339950372208435,
+        0.32754342431761785
+      ],
+      "home_lambda": 1.0194954191770746,
+      "away_lambda": 2.554736019026148,
+      "training_games": 400,
+      "home_team_training_games": 40,
+      "away_team_training_games": 40,
+      "trained_through": "2024-08-25",
+      "prediction": "AWAY",
+      "selected": true,
+      "actual": "AWAY",
+      "correct": true,
+      "final_score": [
+        1,
+        3
+      ],
+      "brier": 0.13085467157578518,
+      "log_loss": 0.3490808522647546,
+      "prior_brier": 0.7084705896840693,
+      "prior_log_loss": 1.1161346393603122
+    },
+    {
+      "league": "de.1",
+      "date": "2024-09-01",
+      "home": "FC Bayern München",
+      "away": "SC Freiburg",
+      "probabilities": [
+        0.771466941258971,
+        0.13068437836380523,
+        0.09784868037722386
+      ],
+      "historical_prior_probabilities": [
+        0.4338461538461538,
+        0.26461538461538464,
+        0.30153846153846153
+      ],
+      "home_lambda": 3.0583434418372826,
+      "away_lambda": 1.0591095899470897,
+      "training_games": 322,
+      "home_team_training_games": 35,
+      "away_team_training_games": 35,
+      "trained_through": "2024-08-31",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        2,
+        0
+      ],
+      "brier": 0.07888012993742895,
+      "log_loss": 0.25946145805297477,
+      "prior_brier": 0.48147692307692314,
+      "prior_log_loss": 0.8350652919515692
+    },
+    {
+      "league": "de.1",
+      "date": "2024-09-14",
+      "home": "RB Leipzig",
+      "away": "1. FC Union Berlin",
+      "probabilities": [
+        0.7666456236322228,
+        0.15096941826430194,
+        0.08238495810347529
+      ],
+      "historical_prior_probabilities": [
+        0.43902439024390244,
+        0.2621951219512195,
+        0.29878048780487804
+      ],
+      "home_lambda": 2.477056862658432,
+      "away_lambda": 0.6838801217328248,
+      "training_games": 325,
+      "home_team_training_games": 36,
+      "away_team_training_games": 36,
+      "trained_through": "2024-09-13",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "DRAW",
+      "correct": false,
+      "final_score": [
+        0,
+        0
+      ],
+      "brier": 1.315385722278609,
+      "log_loss": 1.8906779907297684,
+      "prior_brier": 0.826368233194527,
+      "prior_log_loss": 1.338666312130636
+    },
+    {
+      "league": "de.1",
+      "date": "2024-09-14",
+      "home": "TSG 1899 Hoffenheim",
+      "away": "Bayer 04 Leverkusen",
+      "probabilities": [
+        0.15462024472477465,
+        0.16875212063663791,
+        0.6766276346385874
+      ],
+      "historical_prior_probabilities": [
+        0.43902439024390244,
+        0.2621951219512195,
+        0.29878048780487804
+      ],
+      "home_lambda": 1.1997401794151672,
+      "away_lambda": 2.612446119572867,
+      "training_games": 325,
+      "home_team_training_games": 36,
+      "away_team_training_games": 36,
+      "trained_through": "2024-09-13",
+      "prediction": "AWAY",
+      "selected": true,
+      "actual": "AWAY",
+      "correct": true,
+      "final_score": [
+        1,
+        4
+      ],
+      "brier": 0.1569543849775465,
+      "log_loss": 0.3906341800782475,
+      "prior_brier": 0.75319750148721,
+      "prior_log_loss": 1.2080461297135718
+    },
+    {
+      "league": "en.1",
+      "date": "2024-09-14",
+      "home": "Liverpool FC",
+      "away": "Nottingham Forest FC",
+      "probabilities": [
+        0.7435583049864661,
+        0.15819288064802664,
+        0.09824881436550725
+      ],
+      "historical_prior_probabilities": [
+        0.45278450363196127,
+        0.2179176755447942,
+        0.32929782082324455
+      ],
+      "home_lambda": 2.4731950976948247,
+      "away_lambda": 0.7848119486917162,
+      "training_games": 410,
+      "home_team_training_games": 41,
+      "away_team_training_games": 41,
+      "trained_through": "2024-09-01",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "AWAY",
+      "correct": false,
+      "final_score": [
+        0,
+        1
+      ],
+      "brier": 1.3910591411952808,
+      "log_loss": 2.3202520958322235,
+      "prior_brier": 0.7023433331965363,
+      "prior_log_loss": 1.1107927072249808
+    },
+    {
+      "league": "en.1",
+      "date": "2024-09-14",
+      "home": "Manchester City FC",
+      "away": "Brentford FC",
+      "probabilities": [
+        0.7811759547311953,
+        0.1358723339735185,
+        0.08295171129528625
+      ],
+      "historical_prior_probabilities": [
+        0.45278450363196127,
+        0.2179176755447942,
+        0.32929782082324455
+      ],
+      "home_lambda": 2.7667387894060256,
+      "away_lambda": 0.8104505190453013,
+      "training_games": 410,
+      "home_team_training_games": 41,
+      "away_team_training_games": 41,
+      "trained_through": "2024-09-01",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        2,
+        1
+      ],
+      "brier": 0.07322624033403177,
+      "log_loss": 0.246954860367309,
+      "prior_brier": 0.4553699675791028,
+      "prior_log_loss": 0.7923389761064461
+    },
+    {
+      "league": "en.1",
+      "date": "2024-09-21",
+      "home": "Liverpool FC",
+      "away": "AFC Bournemouth",
+      "probabilities": [
+        0.724007730213365,
+        0.16400060406197042,
+        0.11199166572466468
+      ],
+      "historical_prior_probabilities": [
+        0.44680851063829785,
+        0.2198581560283688,
+        0.3333333333333333
+      ],
+      "home_lambda": 2.4634614314170347,
+      "away_lambda": 0.8656028018206126,
+      "training_games": 420,
+      "home_team_training_games": 42,
+      "away_team_training_games": 42,
+      "trained_through": "2024-09-15",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        3,
+        0
+      ],
+      "brier": 0.11561006430645496,
+      "log_loss": 0.32295320956313733,
+      "prior_brier": 0.4654695437855239,
+      "prior_log_loss": 0.8056251639866356
+    },
+    {
+      "league": "de.1",
+      "date": "2024-09-22",
+      "home": "Bayer 04 Leverkusen",
+      "away": "VfL Wolfsburg",
+      "probabilities": [
+        0.8223307514478894,
+        0.1190615176458792,
+        0.05860773090623143
+      ],
+      "historical_prior_probabilities": [
+        0.4327485380116959,
+        0.2573099415204678,
+        0.30994152046783624
+      ],
+      "home_lambda": 2.83266313494357,
+      "away_lambda": 0.6465352316691165,
+      "training_games": 339,
+      "home_team_training_games": 37,
+      "away_team_training_games": 37,
+      "trained_through": "2024-09-21",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        4,
+        3
+      ],
+      "brier": 0.04917687298718891,
+      "log_loss": 0.19561259083247962,
+      "prior_brier": 0.4840463732430491,
+      "prior_log_loss": 0.8375984632984902
+    },
+    {
+      "league": "de.1",
+      "date": "2024-09-27",
+      "home": "Borussia Dortmund",
+      "away": "VfL Bochum 1848",
+      "probabilities": [
+        0.7541067786177217,
+        0.14550021332747745,
+        0.10039300805480085
+      ],
+      "historical_prior_probabilities": [
+        0.43478260869565216,
+        0.2579710144927536,
+        0.3072463768115942
+      ],
+      "home_lambda": 2.7308036745693154,
+      "away_lambda": 0.9179255612451107,
+      "training_games": 342,
+      "home_team_training_games": 38,
+      "away_team_training_games": 38,
+      "trained_through": "2024-09-22",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        4,
+        2
+      ],
+      "brier": 0.0917125444663869,
+      "log_loss": 0.2822213047969341,
+      "prior_brier": 0.48042007981516494,
+      "prior_log_loss": 0.832909122935104
+    },
+    {
+      "league": "de.1",
+      "date": "2024-09-28",
+      "home": "RB Leipzig",
+      "away": "FC Augsburg",
+      "probabilities": [
+        0.7222841283581447,
+        0.1603146270275003,
+        0.11740124461435505
+      ],
+      "historical_prior_probabilities": [
+        0.43641618497109824,
+        0.25722543352601157,
+        0.3063583815028902
+      ],
+      "home_lambda": 2.5642604577750605,
+      "away_lambda": 0.9480795976100196,
+      "training_games": 343,
+      "home_team_training_games": 38,
+      "away_team_training_games": 38,
+      "trained_through": "2024-09-27",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        4,
+        0
+      ],
+      "brier": 0.1166099372377616,
+      "log_loss": 0.32533668791985015,
+      "prior_brier": 0.4776470981322463,
+      "prior_log_loss": 0.8291589382428
+    },
+    {
+      "league": "en.1",
+      "date": "2024-09-28",
+      "home": "Arsenal FC",
+      "away": "Leicester City FC",
+      "probabilities": [
+        0.7611176934576872,
+        0.15534375631414693,
+        0.08353855022816589
+      ],
+      "historical_prior_probabilities": [
+        0.4457274826789838,
+        0.22632794457274827,
+        0.3279445727482679
+      ],
+      "home_lambda": 2.4150356351084317,
+      "away_lambda": 0.666247499454055,
+      "training_games": 430,
+      "home_team_training_games": 43,
+      "away_team_training_games": 5,
+      "trained_through": "2024-09-22",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        4,
+        2
+      ],
+      "brier": 0.08817512837898836,
+      "log_loss": 0.272967276760915,
+      "prior_brier": 0.46599000474694513,
+      "prior_log_loss": 0.8080475390976043
+    },
+    {
+      "league": "en.1",
+      "date": "2024-09-28",
+      "home": "Wolverhampton Wanderers FC",
+      "away": "Liverpool FC",
+      "probabilities": [
+        0.14207415511173646,
+        0.18716556081512545,
+        0.670760284073138
+      ],
+      "historical_prior_probabilities": [
+        0.4457274826789838,
+        0.22632794457274827,
+        0.3279445727482679
+      ],
+      "home_lambda": 0.9245810763007712,
+      "away_lambda": 2.236759568685057,
+      "training_games": 430,
+      "home_team_training_games": 43,
+      "away_team_training_games": 43,
+      "trained_through": "2024-09-22",
+      "prediction": "AWAY",
+      "selected": true,
+      "actual": "AWAY",
+      "correct": true,
+      "final_score": [
+        1,
+        2
+      ],
+      "brier": 0.16361480324955494,
+      "log_loss": 0.39934345759395834,
+      "prior_brier": 0.701555824608377,
+      "prior_log_loss": 1.1149106704012293
+    },
+    {
+      "league": "de.1",
+      "date": "2024-10-05",
+      "home": "Bayer 04 Leverkusen",
+      "away": "Holstein Kiel",
+      "probabilities": [
+        0.9198965463214598,
+        0.05366331820826263,
+        0.02644013547027756
+      ],
+      "historical_prior_probabilities": [
+        0.43380281690140843,
+        0.2563380281690141,
+        0.30985915492957744
+      ],
+      "home_lambda": 4.298027384931652,
+      "away_lambda": 0.7978786975303099,
+      "training_games": 352,
+      "home_team_training_games": 39,
+      "away_team_training_games": 5,
+      "trained_through": "2024-10-04",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "DRAW",
+      "correct": false,
+      "final_score": [
+        2,
+        2
+      ],
+      "brier": 1.7424618520024322,
+      "log_loss": 2.9250255982472053,
+      "prior_brier": 0.8372307081928189,
+      "prior_log_loss": 1.3612582829585658
+    },
+    {
+      "league": "en.1",
+      "date": "2024-10-05",
+      "home": "Arsenal FC",
+      "away": "Southampton FC",
+      "probabilities": [
+        0.8473829410835618,
+        0.11002041571243258,
+        0.042596643204005566
+      ],
+      "historical_prior_probabilities": [
+        0.44469525959367945,
+        0.22799097065462753,
+        0.327313769751693
+      ],
+      "home_lambda": 2.784038974266443,
+      "away_lambda": 0.4900891033216047,
+      "training_games": 440,
+      "home_team_training_games": 44,
+      "away_team_training_games": 6,
+      "trained_through": "2024-09-30",
+      "prediction": "HOME",
+      "selected": true,
+      "actual": "HOME",
+      "correct": true,
+      "final_score": [
+        3,
+        1
+      ],
+      "brier": 0.037210932558089396,
+      "log_loss": 0.16560257188260488,
+      "prior_brier": 0.46747754128683455,
+      "prior_log_loss": 0.8103660413071472
+    }
+  ],
+  "ledger_artifact": {
+    "path": "docs/backtest-ledger.json",
+    "sha256": "2c7f955f0d5966bd4bfcfe183ec5391323bcf87290089bb28b6b4e2cdc3e0f04",
+    "prediction_rows": 662,
+    "evaluation_rows": 662
+  },
+  "odds_available": false,
+  "roi": null,
+  "kelly_staking": null,
+  "limits": [
+    "Este ensaio avalia um modelo Poisson experimental; não mede o desempenho real do consenso OLBG/Forebet/ProTipster.",
+    "Não existem previsões históricas pré-jogo arquivadas dessas fontes nem recomendações de produção liquidadas neste ensaio.",
+    "Simulação cronológica retrospetiva; não é uma experiência prospetiva cega.",
+    "Só resultados anteriores ao dia de previsão entram no modelo; jogos do mesmo dia são previstos em lote.",
+    "Probabilidades do modelo não calibradas; uma taxa de acerto não demonstra rentabilidade nem segurança.",
+    "Sem odds históricas pré-jogo verificadas não se calcula retorno, valor esperado ou Kelly.",
+    "Só duas ligas de futebol e uma época de teste; os resultados não representam ténis, NBA ou hóquei.",
+    "A disponibilidade original e eventuais correções posteriores dos dados históricos não são reconstruídas."
+  ]
+}

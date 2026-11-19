@@ -18,6 +18,22 @@ O teu analista desportivo: recolhe prognósticos, compara o mesmo evento e merca
 - Exclusões locais e regras partilhadas no GitHub; a remoção de uma categoria não apaga resultados antigos.
 - Resultados OpenLigaDB para Bundesliga 1/2 e API-Football opcional para futebol; outros resultados permanecem pendentes até confirmação manual verificável.
 - GitHub Actions a cada 30 minutos, mais execução manual e por alteração da configuração.
+- App instalável no smartphone, com ícone M.Mi., abertura standalone, atalhos e navegação inferior adaptada ao ecrã.
+- Avatar com piscar de olhos e movimento ligeiro do cabelo; expressão preocupada apenas com resultados reais suficientes e negativos. O ensaio experimental não altera esse estado.
+
+## Instalar no smartphone
+
+Abrir [Mister Mi no GitHub Pages](https://juliomcm-tech.github.io/mister-mi/) e tocar em **Instalar app**. Em Android/Chrome compatível, o botão abre o pedido de instalação quando o navegador o disponibiliza. Em iPhone, abrir no Safari e usar **Partilhar → Adicionar ao ecrã principal**; a app mostra essas instruções quando não existe pedido nativo.
+
+O manifest, os ícones PNG 192/512 e maskable, o ícone Apple e o service worker usam caminhos relativos, compatíveis com `main / (root)` e com publicação pelo Actions. O modo offline guarda apenas a interface: análises, odds, histórico e APIs nunca são servidos de uma cache antiga. A app continua a precisar de Internet para previsões atuais. Atualizações da interface são aplicadas pelo botão de atualização, sem recarregar formulários automaticamente.
+
+As animações usam CSS e três imagens WebP, cerca de 120 KB no total, sem vídeo nem JavaScript por frame. Param quando o avatar sai do ecrã ou a página fica oculta; podem ser desligadas e respeitam a preferência do sistema por movimento reduzido. O lettering usa Dela Gothic One e a interface usa Manrope, em subconjuntos latinos WOFF2 alojados no próprio projeto, com as licenças OFL incluídas.
+
+## Simulação histórica e auditoria
+
+O separador **Histórico** inclui um laboratório experimental com previsão cronológica de jogos de 2024/25, usando apenas resultados de dias anteriores. O modelo Poisson de referência acertou **103 de 150 seleções (68,67%)**, com **47 erros** e intervalo de 95% **60,86%–75,55%**; foram avaliados 662 jogos. Não é a taxa de sucesso real do consenso Mister Mi, que ainda não tem resultados liquidados suficientes. Não há ROI sem odds históricas verificadas.
+
+O método, os dados imutáveis e o registo completo estão em [BACKTEST.md](docs/BACKTEST.md); a reprodução e verificação por outro agente estão em [AUDIT.md](docs/AUDIT.md).
 
 ## Como funciona a atualização
 
