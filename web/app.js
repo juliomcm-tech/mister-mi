@@ -101,18 +101,16 @@ function renderOutlook(fresh){
  $('future-heading').textContent=`${previewOffset===1?'Amanhã':'Depois de amanhã'} · ${shortDate(state.date)}`;
  if(!state.valid||!fresh.valid){$('future-content').innerHTML=emptyState('É necessária uma nova recolha.',!fresh.valid?fresh.reason:state.reason);return;}
  const snap=state.snapshot,d=snap.diagnostics,c=outlookCandidates(snap,{preferences});
- const metrics=[['Previsões desta data',d.today_forecasts],['Eventos identificados',d.today_events],['Sinais aptos',snap.total_eligible],['Consensos preliminares',snap.total_consensus_candidates]];
- const reasons=coverageView({...snap,sources:payload.sources})?.reasons??[];
  const total=c.confirmed.length+c.watchlist.length;
  const callout=`<div class="candidate-callout"><img src="./assets/logo-mmi.webp" width="58" height="58" alt="M.Mi."><div><strong>${total} ${total===1?'jogo em foco':'jogos em foco'}</strong><span>${c.confirmed.length} com consenso preliminar · ${c.watchlist.length} a aguardar outra fonte</span></div></div>`;
  const confirmed=c.confirmed.length?`<h3 class="game-section-title">Com consenso preliminar</h3><div class="game-grid">${c.confirmed.map(p=>previewCard(p,true)).join('')}</div>`:'';
  const watch=c.watchlist.length?`<h3 class="game-section-title">O olhar do Mister Mi</h3><div class="game-grid">${c.watchlist.map(p=>previewCard(p)).join('')}</div>`:'';
  const empty=total?'':emptyState('Ainda sem candidatos para apresentar.',d.today_forecasts?'As previsões disponíveis não cumprem os critérios e os teus filtros.':'As fontes consultadas ainda não publicaram previsões suportadas para esta data.');
- $('future-content').innerHTML=callout+confirmed+watch+empty+`<details class="coverage-details future-diagnostics"><summary>Ver cobertura, desportos e motivos das exclusões</summary><div class="coverage-funnel future-metrics">${metrics.map(([label,value])=>`<div><strong>${value??0}</strong><span>${esc(label)}</span></div>`).join('')}</div>${sportCoverage(snap)}${reasons.map(([label,value])=>`<div class="coverage-reason"><span>${esc(label)}</span><strong>${value}</strong></div>`).join('')}<p class="muted">Cobertura parcial. ${d.watchlist_total??0} candidatos em observação antes dos filtros locais; são apresentados até 8 por recolha.</p></details><p class="muted">Observado em ${dateTime(snap.updated_at)}. Os jogos futuros são reavaliados em cada recolha e ficam fora da carteira simulada.</p>`;
+ $('future-content').innerHTML=callout+confirmed+watch+empty+`<p class="muted">Observado em ${dateTime(snap.updated_at)}. Os jogos futuros são reavaliados em cada recolha e ficam fora da carteira simulada.</p>`;
 }
 function renderCoverage(fresh){
  const c=coverageView(payload);
- $('coverage-panel').hidden=previewOffset!==0||!c;
+ $('coverage-panel').hidden=!c;
  if(c){
   $('coverage-funnel').innerHTML=c.metrics.map(([label,value])=>`<div><strong>${value}</strong><span>${esc(label)}</span></div>`).join('');
   $('coverage-note').textContent=`${c.usable} ${c.usable===1?'fonte com previsões aptas':'fontes com previsões aptas'} nesta recolha. ${c.unavailable} ${c.unavailable===1?'fonte indisponível':'fontes indisponíveis'}. A recolha cobre as previsões acessíveis; ainda não abrange todos os jogos do dia.`;
@@ -139,7 +137,7 @@ function renderPicks(){
  renderCoverage(fresh);
  renderOutlook(fresh);
  if(!fresh.valid){$('picks').innerHTML=emptyState('Primeiro, dados atuais.',fresh.reason);return;}
- if(!picks.length){$('picks').innerHTML=emptyState(all.length?'Os teus filtros são exigentes.':'Ainda sem confirmação suficiente.',all.length?'Não há opções que correspondam a estes filtros. Podes ajustá-los nas definições.':'A cobertura das fontes está incompleta. A contagem acima mostra os dados disponíveis e os motivos das exclusões.',`<button class="text-button blue" data-view="${all.length?'definicoes':'fontes'}">${all.length?'Ajustar filtros':'Ver a recolha do Mister Mi'}</button>`);return;}
+ if(!picks.length){$('picks').innerHTML=emptyState(all.length?'Os teus filtros são exigentes.':'Ainda sem confirmação suficiente.',all.length?'Não há opções que correspondam a estes filtros. Podes ajustá-los nas definições.':'Ainda não há opções com confirmação suficiente. Podes consultar o estado das fontes no separador Fontes.',`<button class="text-button blue" data-view="${all.length?'definicoes':'fontes'}">${all.length?'Ajustar filtros':'Ver a recolha do Mister Mi'}</button>`);return;}
  $('picks').innerHTML=picks.map(p=>gameCard(p,{sports,countries:countryNames,markets:marketNames,sources:sourceNames,phase:'today',featured:picks.length===1,favorite:favorites.has(p.id)})).join('');
 }
 function sourceSummary(){
@@ -158,6 +156,7 @@ const descriptors={
 function renderSources(){
  $('source-details').innerHTML=(payload?.sources??Object.keys(descriptors).map(id=>({id,name:sourceNames[id],status:'not_configured',message:'A aguardar dados'}))).map(s=>{const d=descriptors[s.id]??{};return `<article class="panel source-card"><span class="source-kind">${esc(d.kind??'RESULTADOS')}</span><h2>${esc(s.name)}<span class="tiny-badge">${esc(stateLabels[s.status]??s.status)}</span></h2><p>${esc(d.description??'Verificação de resultados finais, separada dos prognósticos.')}</p><p><strong>${s.collected??0}</strong> previsões extraídas${s.today!==undefined?` · ${s.today} de hoje · ${s.eligible??0} aptas`:""}</p><div class="source-error">${esc(s.message??'')}${s.pages?`<details><summary>Ver páginas consultadas</summary>${s.pages.map(p=>`<p><a href="${safeURL(p.url)}" target="_blank" rel="noopener noreferrer">Página da fonte</a> · ${esc(stateLabels[p.status])}<br>${esc(p.message)}</p>`).join('')}</details>`:''}</div><p><a href="${safeURL(d.url??'https://github.com/juliomcm-tech/mister-mi')}" target="_blank" rel="noopener noreferrer">Consultar a fonte</a></p></article>`;}).join('');
  const resources=[
+ ['Oddspedia','API e widgets anunciados como gratuitos para calendários, resultados e comparação de odds. Exigem conta, configuração do domínio e atribuição visível. Ainda não ligada ao Mister Mi.','https://widgets.oddspedia.com/','Disponível após registo · não conta como previsão de consenso'],
  ['OpenLigaDB','Integrado para resultados finais da Bundesliga 1/2, quando há correspondência inequívoca. Dados comunitários ODbL 1.0; não conta como previsão.','https://www.openligadb.de/en/license','Dados de OpenLigaDB · ODbL 1.0'],
  ['openfootball','JSON CC0 para investigação histórica e validação. Atualização diária; sem garantia de resultados completos no próprio dia.','https://github.com/openfootball/football.json','Referência · não conta para o consenso'],
  ['scikit-learn','Referência para calibração e avaliação futura com períodos cronológicos separados. Não há modelo calibrado ativo nesta versão.','https://scikit-learn.org/stable/modules/calibration.html','Investigação futura · BSD'],
@@ -205,7 +204,7 @@ function showAnalysis(id){
  $('analysis-dialog').showModal();
 }
 function updateClock(){const now=new Date();$('date-label').textContent=new Intl.DateTimeFormat('pt-PT',{timeZone:'Europe/Lisbon',weekday:'long',day:'numeric',month:'long'}).format(now);$('calendar-day').textContent=new Intl.DateTimeFormat('pt-PT',{timeZone:'Europe/Lisbon',day:'2-digit'}).format(now);$('calendar-month').textContent=new Intl.DateTimeFormat('pt-PT',{timeZone:'Europe/Lisbon',month:'long',year:'numeric'}).format(now);}
-function renderMood(){const mood=getAnalystMood(payload?.performance,payload?.settings);$('mi-avatar').dataset.miMood=mood.state;$('mi-mood-label').textContent=mood.label;$('mi-mood-note').textContent=mood.note;document.querySelectorAll('.mini-mi img,.rail-bottom img').forEach(img=>{const path=mood.state==='review'?'./assets/mister-mi-upset.webp':'./assets/mister-mi.webp';if(img.getAttribute('src')!==path)img.src=path;});}
+function renderMood(){const mood=getAnalystMood(payload?.performance,payload?.settings);$('mi-avatar').dataset.miMood=mood.state;document.querySelectorAll('.mini-mi img,.rail-bottom img').forEach(img=>{const path=mood.state==='review'?'./assets/mister-mi-upset.webp':'./assets/mister-mi.webp';if(img.getAttribute('src')!==path)img.src=path;});}
 function render(){updateClock();renderPicks();sourceSummary();renderMood();if(view==='fontes')renderSources();if(view==='estatisticas')renderPerformance();if(view==='carteira'||view==='definicoes')renderPortfolio();}
 function fillPreferences(){
  $('sport-exclusions').innerHTML=Object.entries(sports).map(([key,label])=>`<label><input type="checkbox" name="excluded-sport" value="${key}" ${preferences.excluded_sports.includes(key)?'checked':''}>${label}</label>`).join('');
@@ -317,6 +316,6 @@ $('close-install').onclick=closeInstall;$('install-done').onclick=closeInstall;
 initPWA({onOffline:offline=>{if(offline){loadFailed=true;lastReadError='Sem ligação à Internet. As previsões atuais precisam de uma ligação ativa.';notice(lastReadError);render();}else if(loadFailed)loadSnapshot({quiet:true});}});
 fillPreferences();changeView(location.hash.slice(1)||'hoje');
 await loadSnapshot();await loadHealth();renderPicks();
-if(previewOffset)document.querySelector('.analysis-days')?.scrollIntoView({block:'start'});
+
 if(connection.auto&&refreshToken&&connection.apiBase)refreshAnalysis();
 setInterval(()=>{render();},60000);
