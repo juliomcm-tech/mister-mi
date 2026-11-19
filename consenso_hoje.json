@@ -1,7 +1,7 @@
 {
   "date": "2026-11-19",
   "timezone": "Europe/Lisbon",
-  "updated_at": "2026-11-19T16:12:53.943156+00:00",
+  "updated_at": "2026-11-19T16:15:42.347452+00:00",
   "schema_version": 1,
   "score_is_probability": false,
   "settings": {
@@ -60,7 +60,7 @@
           "market": "MATCH_WINNER",
           "outcome": "HOME",
           "url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Alexander_Zverev_v_Arthur_Fils/3?event_id=906388",
-          "fetched_at": "2026-11-19T16:12:52.054003+00:00",
+          "fetched_at": "2026-11-19T16:15:42.037061+00:00",
           "competition": "",
           "metric": 82.61,
           "metric_kind": "vote_pct",
@@ -115,7 +115,7 @@
     {
       "date": "2026-11-20",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-19T16:12:53.943156+00:00",
+      "updated_at": "2026-11-19T16:15:42.347452+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -173,7 +173,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.olbg.com/betting-tips/Football/European_Competitions/Germany_Bundesliga_I/Bayern_Munich_v_Cologne/1?event_id=2046707",
-              "fetched_at": "2026-11-19T16:12:53.652792+00:00",
+              "fetched_at": "2026-11-19T16:15:41.394162+00:00",
               "competition": "Germany Bundesliga I",
               "metric": 86.67,
               "metric_kind": "vote_pct",
@@ -233,7 +233,7 @@
     {
       "date": "2026-11-21",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-19T16:12:53.943156+00:00",
+      "updated_at": "2026-11-19T16:15:42.347452+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -291,7 +291,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Man_City_v_Fulham/1?event_id=2046621",
-              "fetched_at": "2026-11-19T16:12:53.652792+00:00",
+              "fetched_at": "2026-11-19T16:15:41.394162+00:00",
               "competition": "England Premier League",
               "metric": 80.56,
               "metric_kind": "vote_pct",
@@ -331,7 +331,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Tottenham_v_Ipswich/1?event_id=2046626",
-              "fetched_at": "2026-11-19T16:12:53.652792+00:00",
+              "fetched_at": "2026-11-19T16:15:41.394162+00:00",
               "competition": "England Premier League",
               "metric": 76.0,
               "metric_kind": "vote_pct",
@@ -371,7 +371,7 @@
               "market": "FT_1X2",
               "outcome": "AWAY",
               "url": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Newcastle_v_Arsenal/1?event_id=2046627",
-              "fetched_at": "2026-11-19T16:12:53.652792+00:00",
+              "fetched_at": "2026-11-19T16:15:41.394162+00:00",
               "competition": "England Premier League",
               "metric": 78.95,
               "metric_kind": "vote_pct",
@@ -624,6 +624,6 @@
     }
   ],
   "request_id": "",
-  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/44563470639",
+  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/44564013094",
   "status": "ok"
 }
