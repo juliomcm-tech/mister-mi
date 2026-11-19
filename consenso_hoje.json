@@ -1,7 +1,7 @@
 {
   "date": "2026-11-19",
   "timezone": "Europe/Lisbon",
-  "updated_at": "2026-11-19T14:30:41.673442+00:00",
+  "updated_at": "2026-11-19T14:43:21.896379+00:00",
   "schema_version": 1,
   "score_is_probability": false,
   "settings": {
@@ -220,6 +220,6 @@
     }
   ],
   "request_id": "",
-  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/44544477628",
+  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/44546784298",
   "status": "ok"
 }
