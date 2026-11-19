@@ -5,6 +5,7 @@ from .sources import collect
 from .history import load_json, record, apply_results, auto_results, summary
 from .free_results import collect_free_results
 from .fixture_catalog import collect_fixture_catalog, verify_fixture
+from .oddspedia import collect_oddspedia_feed
 from scripts.pipeline_health import collect_pipeline_health
 import argparse
 import json
@@ -23,6 +24,7 @@ def main():
     now = datetime.now(UTC)
     settings = load_json(args.settings, {})
     payload = analyse(tips, now, settings)
+    payload["oddspedia_feed"] = collect_oddspedia_feed(now)
     payload["previews"] = upcoming_previews(tips, now, settings)
     prior_history = load_json(args.history, {"schema_version": 1, "records": []})
     catalog = collect_fixture_catalog(prior_history.get("fixture_catalog"), now)
@@ -66,7 +68,8 @@ def main():
     history_temp.write_text(json.dumps(history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     history_temp.replace(history_path)
     print(json.dumps({"date": payload["date"], "selected": payload["total_selected"], "collected": len(tips),
-                      "sources": [{"id": s["id"], "status": s["status"], "collected": s["collected"]} for s in sources]}, ensure_ascii=False))
+                      "sources": [{"id": s["id"], "status": s["status"], "collected": s["collected"]} for s in sources],
+                      "oddspedia_feed": payload["oddspedia_feed"]}, ensure_ascii=False))
 
 
 if __name__ == "__main__":

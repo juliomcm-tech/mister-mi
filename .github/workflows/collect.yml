@@ -52,6 +52,7 @@ jobs:
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
           API_FOOTBALL_MAX_FIXTURES: '1'
+          ODDSPEDIA_FEED_URL: ${{ secrets.ODDSPEDIA_FEED_URL }}
           REQUEST_ID: ${{ inputs.request_id }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           RUN_EVENT: ${{ github.event_name }}
