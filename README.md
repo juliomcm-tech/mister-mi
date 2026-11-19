@@ -11,6 +11,9 @@ O teu analista desportivo: recolhe prognósticos, compara o mesmo evento e merca
 - Data corrente em `Europe/Lisbon`, timestamps com fuso, apenas jogos ainda por começar e recolhas recentes.
 - Identificação de participantes, segmento feminino/sub-idade, país conhecido e horários compatíveis. Abreviaturas de tenistas ambíguas são excluídas.
 - Mesmo mercado e seleção em pelo menos duas fontes distintas; páginas duplicadas e vários tipsters não são votos adicionais.
+- Leitura das previsões adicionais já incluídas nos dados públicos da página OLBG, além das primeiras linhas visíveis, com validação de datas, votos e domínio e sem executar JavaScript externo.
+- Funil de cobertura: previsões recolhidas, previsões de hoje, jogos distintos identificados, evidências aptas e opções confirmadas, com motivos das exclusões.
+- Candidatos **Em observação** quando uma previsão passa a regra da fonte mas falta confirmação independente. Não são recomendações e não entram no histórico de acerto nem na carteira simulada.
 - ProTipster sem Tip Score público fica excluído. Uma odd nunca é interpretada como Tip Score.
 - Estatísticas por desporto, país, mercado e desporto × país, com amostra e intervalo de Wilson de 95%.
 - Livro imutável de primeiras recomendações, preços observados, resultados confirmados, ROI e drawdown em posições de simulação de uma unidade.
@@ -56,6 +59,8 @@ O GitHub Pages serve ficheiros estáticos e não executa Python quando o visitan
 Uma fonte bloqueada, alterada ou sem métricas não é contornada. O adaptador regista a falha e o filtro continua com a evidência disponível.
 
 **Verificação real em 19/11/2026:** a primeira execução no GitHub Actions passou os testes e guardou a branch `data`. Forebet e PredictZ devolveram HTTP 403 nesse ambiente, enquanto OLBG respondeu e as tips ProTipster disponíveis não publicaram Tip Score. Não houve consenso suficiente. Isto é uma limitação de cobertura atual, não demonstração de que os jogos desse dia são bons ou maus. Os adaptadores funcionaram na recolha de desenvolvimento, mas isso não prova disponibilidade permanente nos runners do GitHub.
+
+O painel identifica esta cobertura como parcial. Os adaptadores não constituem um calendário global de jogos: podem publicar apenas algumas seleções, incluir vários mercados do mesmo evento ou listar eventos de outros dias. Os contadores distinguem essas situações. A auditoria da expansão OLBG encontra-se em [COVERAGE_AUDIT.md](docs/COVERAGE_AUDIT.md).
 
 ## Atualização imediata e configurações partilhadas
 

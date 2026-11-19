@@ -34,6 +34,11 @@ def main():
     payload["result_sources"] = free_statuses
     payload["analyst"] = "Mister Mi"
     payload["sources"] = sources
+    source_counts = {s["id"]: s for s in payload["diagnostics"]["by_source"]}
+    for source in sources:
+        counts = source_counts.get(source["id"], {})
+        source["today"] = counts.get("today", 0)
+        source["eligible"] = counts.get("eligible", 0)
     payload["request_id"] = os.environ.get("REQUEST_ID", "")[:100]
     payload["run_url"] = os.environ.get("RUN_URL", "")
     payload["status"] = "error" if all(s["status"] in {"error", "not_configured"} for s in sources) else "ok"

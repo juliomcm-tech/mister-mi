@@ -1,9 +1,9 @@
 /* Bump VERSION with app-shell releases. Only static presentation files are cached. */
-const VERSION = "v3";
+const VERSION = "v4";
 const SCOPE = new URL(self.registration.scope);
 const PREFIX = `mister-mi-shell:${encodeURIComponent(SCOPE.href)}:`;
 const CACHE = PREFIX + VERSION;
-const APP_FILES = new Set(["", "index.html", "style.css", "app.js", "portfolio.js", "pwa.js", "mood.js", "manifest.webmanifest",
+const APP_FILES = new Set(["", "index.html", "style.css", "app.js", "portfolio.js", "pwa.js", "mood.js", "coverage.js", "manifest.webmanifest",
   "assets/mister-mi.webp", "assets/mister-mi-blink.webp", "assets/mister-mi-upset.webp", "assets/logo-mmi.webp",
   "assets/fonts/manrope-latin.woff2", "assets/fonts/dela-gothic-latin.woff2", "assets/apple-touch-icon.png",
   "assets/icon-192.png", "assets/icon-512.png", "assets/icon-maskable-512.png"]);

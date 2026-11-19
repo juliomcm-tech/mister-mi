@@ -80,19 +80,29 @@ class Tip:
     status: str = "scheduled"
     country: str = "Desconhecido"
 
-    def eligible(self, settings: dict) -> bool:
-        if self.status != "scheduled" or self.market not in {
+    def rejection_reason(self, settings: dict) -> str | None:
+        if self.status != "scheduled":
+            return "not_scheduled"
+        if self.market not in {
             "FT_1X2", "MATCH_WINNER", "FT_TOTAL_1.5", "FT_TOTAL_2.5", "FT_TOTAL_3.5", "FT_BTTS"
         }:
-            return False
+            return "unsupported_market"
         if self.source == "olbg":
-            return (0 < self.votes_for <= self.votes_total and self.votes_total >= settings["min_votes"]
-                    and 100 * self.votes_for / self.votes_total >= settings["min_olbg"])
-        if self.source == "protipster":
-            return self.metric_kind == "tip_score" and self.metric is not None and settings["min_protipster"] <= self.metric <= 10
-        if self.source in {"forebet", "api_football"}:
-            return self.metric_kind == "model_pct" and self.metric is not None and settings["min_model"] <= self.metric <= 100
-        return self.source == "predictz" and self.metric_kind == "categorical"
+            if not 0 < self.votes_for <= self.votes_total:
+                return "invalid_votes"
+            if self.votes_total < settings["min_votes"]:
+                return "insufficient_votes"
+            return None if 100 * self.votes_for / self.votes_total >= settings["min_olbg"] else "below_source_threshold"
+        if self.source in {"protipster", "forebet", "api_football"}:
+            kind = "tip_score" if self.source == "protipster" else "model_pct"
+            if self.metric_kind != kind or self.metric is None:
+                return "missing_metric"
+            minimum, maximum = (settings["min_protipster"], 10) if self.source == "protipster" else (settings["min_model"], 100)
+            return None if minimum <= self.metric <= maximum else "below_source_threshold"
+        return None if self.source == "predictz" and self.metric_kind == "categorical" else "unsupported_source"
+
+    def eligible(self, settings: dict) -> bool:
+        return self.rejection_reason(settings) is None
 
 
 DEFAULTS = {"min_votes": 15, "min_olbg": 75, "min_protipster": 8, "min_model": 65,
@@ -132,6 +142,24 @@ def selection_label(tip: Tip) -> str:
     return "Ambas marcam: " + ("sim" if tip.outcome == "YES" else "não")
 
 
+def group_events(tips: list[Tip], settings: dict) -> list[list[Tip]]:
+    groups: list[list[Tip]] = []
+    # Stable ordering keeps diagnostics and tie-breaking independent of network completion order.
+    for tip in sorted(tips, key=lambda t: (t.kickoff is None, t.kickoff or "", t.source,
+                                           t.home, t.away, t.market, t.outcome, t.url)):
+        try:
+            if tip.kickoff:
+                iso_time(tip.kickoff)
+            group = next((g for g in groups if all(same_event(tip, t, settings) for t in g)), None)
+            if group is None:
+                groups.append([tip])
+            else:
+                group.append(tip)
+        except (ValueError, TypeError, OverflowError):
+            continue
+    return groups
+
+
 def analyse(tips: list[Tip], now: datetime, settings: dict | None = None) -> dict:
     settings = DEFAULTS | (settings or {})
     today = now.astimezone(LISBON).date().isoformat()
@@ -144,6 +172,13 @@ def analyse(tips: list[Tip], now: datetime, settings: dict | None = None) -> dic
                     tennis_roster.setdefault((parts[0][0], parts[-1]), set()).add(name_key(player))
     eligible = []
     discarded = {"other_day": 0, "started_or_soon": 0, "stale": 0, "threshold": 0, "conflict": 0, "excluded": 0}
+    threshold_reasons: dict[str, int] = {}
+    comparison = {"insufficient_sources": 0, "missing_kickoff": 0, "odds_filter": 0, "below_consensus_score": 0}
+
+    def reject_threshold(reason):
+        discarded["threshold"] += 1
+        threshold_reasons[reason] = threshold_reasons.get(reason, 0) + 1
+
     for tip in tips:
         try:
             if tip.event_date != today:
@@ -156,7 +191,7 @@ def analyse(tips: list[Tip], now: datetime, settings: dict | None = None) -> dic
                     if len(parts) > 1 and len(parts[0]) == 1 and len(tennis_roster.get((parts[0], parts[-1]), set())) > 1:
                         ambiguous = True
                 if ambiguous:
-                    discarded["threshold"] += 1
+                    reject_threshold("ambiguous_identity")
                     continue
             age = (now - iso_time(tip.fetched_at)).total_seconds()
             if age < -60 or age > settings["max_age_minutes"] * 60:
@@ -166,22 +201,17 @@ def analyse(tips: list[Tip], now: datetime, settings: dict | None = None) -> dic
                                 or (iso_time(tip.kickoff) - now).total_seconds() <= settings["lead_minutes"] * 60):
                 discarded["started_or_soon"] += 1
                 continue
-            if not tip.eligible(settings):
-                discarded["threshold"] += 1
+            reason = tip.rejection_reason(settings)
+            if reason:
+                reject_threshold(reason)
                 continue
             eligible.append(tip)
         except (ValueError, TypeError, OverflowError):
-            discarded["threshold"] += 1
+            reject_threshold("invalid_record")
 
-    groups: list[list[Tip]] = []
     # Timed records are anchors. Undated/untimed categorical pages only corroborate.
-    for tip in sorted(eligible, key=lambda t: t.kickoff is None):
-        group = next((g for g in groups if all(same_event(tip, t, settings) for t in g)), None)
-        if group is None:
-            groups.append([tip])
-        else:
-            group.append(tip)
-    selected = []
+    groups = group_events(eligible, settings)
+    selected, watchlist = [], []
     for group in groups:
         by_market: dict[str, list[Tip]] = {}
         for tip in group:
@@ -198,7 +228,8 @@ def analyse(tips: list[Tip], now: datetime, settings: dict | None = None) -> dic
                     by_source[tip.source] = tip
             evidence = list(by_source.values())
             anchors = [t for t in evidence if t.kickoff and t.source != "predictz"]
-            if len(evidence) < settings["min_sources"] or not anchors:
+            if not anchors:
+                comparison["missing_kickoff"] += 1
                 continue
             anchor = min(anchors, key=lambda t: iso_time(t.kickoff))
             country = next((t.country for t in evidence if t.country != "Desconhecido"), "Desconhecido")
@@ -210,9 +241,22 @@ def analyse(tips: list[Tip], now: datetime, settings: dict | None = None) -> dic
             observed = min((t for t in evidence if t.odds is not None and t.odds > 1), key=lambda t: (t.odds, t.source), default=None)
             if ((settings["min_odds"] is not None and (observed is None or observed.odds < settings["min_odds"]))
                     or (settings["max_odds"] is not None and (observed is None or observed.odds > settings["max_odds"]))):
+                comparison["odds_filter"] += 1
+                continue
+            if len(evidence) < settings["min_sources"]:
+                comparison["insufficient_sources"] += 1
+                # Visible research candidates never enter data, history or the simulated portfolio.
+                watchlist.append({"sport": anchor.sport, "home": anchor.home, "away": anchor.away,
+                                  "match": f"{anchor.home} vs {anchor.away}", "kickoff": anchor.kickoff,
+                                  "country": country, "competition": anchor.competition,
+                                  "market": market, "outcome": anchor.outcome, "selection": selection_label(anchor),
+                                  "odds": observed.odds if observed else None,
+                                  "source_count": len(evidence), "sources": [asdict(t) for t in evidence],
+                                  "status": "awaiting_independent_source", "is_recommendation": False})
                 continue
             score = score_tips(evidence)
             if score < settings["min_score"]:
+                comparison["below_consensus_score"] += 1
                 continue
             identity = f"{today}|{anchor.kickoff}|{anchor.sport}|{country}|{anchor.segment}|{name_key(anchor.home)}|{name_key(anchor.away)}|{market}|{anchor.outcome}"
             selected.append({
@@ -234,7 +278,17 @@ def analyse(tips: list[Tip], now: datetime, settings: dict | None = None) -> dic
         if key not in unique_events and len(final) < settings["max_picks"]:
             final.append(tip)
             unique_events.add(key)
+    today_tips = [t for t in tips if t.event_date == today]
+    source_counts = [{"id": source, "collected": sum(t.source == source for t in tips),
+                      "today": sum(t.source == source for t in today_tips),
+                      "eligible": sum(t.source == source for t in eligible)} for source in sorted({t.source for t in tips})]
+    watchlist.sort(key=lambda p: (-p["source_count"], p["kickoff"], p["match"], p["market"]))
     return {"date": today, "timezone": "Europe/Lisbon", "updated_at": now.astimezone(UTC).isoformat(),
             "schema_version": 1, "score_is_probability": False, "settings": settings,
             "total_collected": len(tips), "total_eligible": len(eligible), "total_selected": len(final),
-            "discarded": discarded, "data": final}
+            "discarded": discarded, "data": final, "watchlist": watchlist[:8],
+            "diagnostics": {"coverage": "partial", "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
+                            "today_forecasts": len(today_tips), "today_events": len(group_events(today_tips, settings)),
+                            "eligible_forecasts": len(eligible), "eligible_events": len(groups),
+                            "threshold_reasons": threshold_reasons, "comparison_rejections": comparison,
+                            "watchlist_total": len(watchlist), "by_source": source_counts}}

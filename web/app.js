@@ -1,6 +1,7 @@
 import {planPortfolio, DEFAULT_POLICY} from './portfolio.js';
 import {initPWA} from './pwa.js';
 import {getAnalystMood} from './mood.js';
+import {coverageView,visibleWatchlist} from './coverage.js';
 
 const $ = id => document.getElementById(id);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -72,6 +73,20 @@ function visiblePicks(){
 function sorter(a,b){const sort=$('sort').value;return sort==='time'?new Date(a.kickoff)-new Date(b.kickoff):sort==='score'?b.score-a.score:b.source_count-a.source_count||b.score-a.score;}
 function emptyState(title,copy,action=''){return `<div class="empty-state"><span class="empty-icon">${icon('shield')}</span><h3>${esc(title)}</h3><p>${esc(copy)}</p>${action}</div>`;}
 function initials(s){return s.split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();}
+function renderCoverage(fresh){
+ const c=coverageView(payload);
+ $('coverage-panel').hidden=!c;
+ if(c){
+  $('coverage-funnel').innerHTML=c.metrics.map(([label,value])=>`<div><strong>${value}</strong><span>${esc(label)}</span></div>`).join('');
+  $('coverage-note').textContent=`${c.usable} ${c.usable===1?'fonte com previsões aptas':'fontes com previsões aptas'} nesta recolha. ${c.unavailable} ${c.unavailable===1?'fonte indisponível':'fontes indisponíveis'}. A recolha cobre as previsões acessíveis; ainda não abrange todos os jogos do dia.`;
+  const d=payload.discarded??{};
+  const rows=[['Previsões de outros dias',d.other_day??0],['Início passado ou demasiado próximo',d.started_or_soon??0],['Dados fora do limite de frescura',d.stale??0],...c.reasons,...c.comparisons].filter(([,n])=>n>0);
+  $('coverage-reasons').innerHTML=rows.map(([label,value])=>`<div class="coverage-reason"><span>${esc(label)}</span><strong>${value}</strong></div>`).join('')||'<p>Sem exclusões registadas.</p>';
+ }
+ const candidates=fresh.valid&&!onlyFavorites?visibleWatchlist(payload,{today:lisbonDay(),now:Date.now(),preferences,sport:activeSport,query:$('search').value.toLocaleLowerCase('pt-PT').trim()}):[];
+ $('watchlist-panel').hidden=!candidates.length;
+ $('watchlist').innerHTML=candidates.map(p=>`<article class="watch-card"><div class="watch-meta"><span>${esc(sports[p.sport]??p.sport)}</span><span>${time(p.kickoff)} · Lisboa</span></div><h4>${esc(p.match)}</h4><strong>${esc(p.selection)}</strong><p>${esc(p.competition||marketNames[p.market]||p.market)}</p>${p.sources.map(s=>`<div class="watch-evidence"><span>${esc(sourceNames[s.source]??s.source)} · ${esc(metricLabel(s))}</span><a href="${safeURL(s.url)}" target="_blank" rel="noopener noreferrer">Ver fonte</a></div>`).join('')}<small>Aguarda outra fonte independente.</small></article>`).join('');
+}
 function renderPicks(){
  const fresh=freshness(),all=todaysPicks(),picks=visiblePicks();
  $('pick-count').textContent=picks.length;
@@ -80,14 +95,16 @@ function renderPicks(){
  $('hero-selected').textContent=all.length;
  $('freshness-status').textContent=busy?'Mister Mi a analisar…':fresh.valid?'Recolha recente · só hoje':'A recolha precisa de atualização';
  $('last-update').textContent=payload?`Última recolha: ${dateTime(payload.updated_at)} · Lisboa`:'A aguardar a primeira recolha.';
- $('mi-summary').textContent=!fresh.valid?fresh.reason:all.length?`De ${payload.total_collected} previsões recolhidas, ${all.length} passaram os critérios. Consulta a evidência de cada opção antes de a incluir na tua simulação.`:'Analisei as previsões disponíveis. Nenhuma opção cumpre todos os critérios neste momento. Prefiro esperar por evidência suficiente.';
+ const d=payload?.diagnostics;
+ $('mi-summary').textContent=!fresh.valid?fresh.reason:d?`Recolhi ${payload.total_collected} previsões; ${d.today_forecasts} são de hoje, para ${d.today_events} jogos identificados. ${d.eligible_forecasts} passaram a regra da sua fonte e ${all.length} opções têm confirmação suficiente. A cobertura ainda é parcial.`:all.length?`De ${payload.total_collected} previsões recolhidas, ${all.length} passaram os critérios. Consulta a evidência de cada opção antes de a incluir na tua simulação.`:'A recolha ainda não fornece confirmação suficiente entre fontes. Consulta o estado e as falhas em Fontes.';
+ renderCoverage(fresh);
  if(!fresh.valid){$('picks').innerHTML=emptyState('Primeiro, dados atuais.',fresh.reason);return;}
- if(!picks.length){$('picks').innerHTML=emptyState(all.length?'Os teus filtros são exigentes.':'Hoje, a exigência vem primeiro.',all.length?'Não há opções que correspondam a estes filtros. Podes ajustá-los nas definições.':'Ainda não há opções validadas por fontes suficientes. As falhas de recolha e as métricas em falta estão visíveis em Fontes.',`<button class="text-button blue" data-view="${all.length?'definicoes':'fontes'}">${all.length?'Ajustar filtros':'Ver a recolha do Mister Mi'}</button>`);return;}
+ if(!picks.length){$('picks').innerHTML=emptyState(all.length?'Os teus filtros são exigentes.':'Ainda sem confirmação suficiente.',all.length?'Não há opções que correspondam a estes filtros. Podes ajustá-los nas definições.':'A cobertura das fontes está incompleta. A contagem acima mostra os dados disponíveis e os motivos das exclusões.',`<button class="text-button blue" data-view="${all.length?'definicoes':'fontes'}">${all.length?'Ajustar filtros':'Ver a recolha do Mister Mi'}</button>`);return;}
  $('picks').innerHTML=picks.map(p=>`<article class="pick-card"><div class="pick-top"><div class="pick-meta"><span class="tier ${p.tier==='gold'?'gold':''}">${p.source_count>=3?'OURO':'PRATA'} · ${p.source_count} FONTES</span><span>${esc(sports[p.sport]??p.sport)} · ${esc(countryNames[p.country]??p.country)}</span><span>${time(p.kickoff)}</span></div><button class="favorite ${favorites.has(p.id)?'on':''}" data-favorite="${esc(p.id)}" aria-label="${favorites.has(p.id)?'Remover dos':'Adicionar aos'} favoritos" aria-pressed="${favorites.has(p.id)}">${icon('star')}</button></div><div class="pick-match"><div class="team"><span class="team-avatar">${esc(initials(p.home))}</span><span class="team-name">${esc(p.home)}</span></div><span class="versus">VS</span><div class="team"><span class="team-avatar">${esc(initials(p.away))}</span><span class="team-name">${esc(p.away)}</span></div></div><div class="pick-bottom"><div class="selection"><small>${esc(p.competition||marketNames[p.market]||p.market)}</small><strong>${esc(p.selection)}</strong></div><div class="score">${num(p.score)}<small>CONSENSO / 98</small></div><button class="button outline" data-analysis="${esc(p.id)}">Ver análise</button></div><div class="pick-sources">${p.sources.map(s=>`<span>${esc(sourceNames[s.source]??s.source)}</span>`).join(' · ')}${p.odds?` · Odd observada ${num(p.odds,2)}`:' · Sem odd observada'}</div></article>`).join('');
 }
 function sourceSummary(){
  const sources=payload?.sources??[];const okay=sources.filter(s=>s.status==='ok').length;
- $('sources-ok').textContent=`${okay}/${sources.length||'—'}`;
+ $('sources-ok').textContent=`${okay}/${sources.length||'—'} recolhidas`;
  $('source-summary').innerHTML=sources.length?sources.map(s=>`<div class="source-row"><span><span class="source-dot ${esc(s.status)}"></span>${esc(s.name)}</span><span class="source-state">${esc(stateLabels[s.status]??s.status)}${s.collected?` · ${s.collected}`:''}</span></div>`).join(''):'<p class="muted">A carregar a recolha…</p>';
 }
 const descriptors={
@@ -98,7 +115,7 @@ const descriptors={
  api_football:{kind:'API OPCIONAL · REQUER CHAVE',url:'https://www.api-football.com/',description:'Previsões e resultados de futebol. A disponibilidade da época e das competições depende do plano. Quota limitada por execução.'}
 };
 function renderSources(){
- $('source-details').innerHTML=(payload?.sources??Object.keys(descriptors).map(id=>({id,name:sourceNames[id],status:'not_configured',message:'A aguardar dados'}))).map(s=>{const d=descriptors[s.id]??{};return `<article class="panel source-card"><span class="source-kind">${esc(d.kind??'RESULTADOS')}</span><h2>${esc(s.name)}<span class="tiny-badge">${esc(stateLabels[s.status]??s.status)}</span></h2><p>${esc(d.description??'Verificação de resultados finais, separada dos prognósticos.')}</p><p><strong>${s.collected??0}</strong> registos extraídos</p><div class="source-error">${esc(s.message??'')}${s.pages?`<details><summary>Ver páginas consultadas</summary>${s.pages.map(p=>`<p><a href="${safeURL(p.url)}" target="_blank" rel="noopener noreferrer">Página da fonte</a> · ${esc(stateLabels[p.status])}<br>${esc(p.message)}</p>`).join('')}</details>`:''}</div><p><a href="${safeURL(d.url??'https://github.com/juliomcm-tech/mister-mi')}" target="_blank" rel="noopener noreferrer">Consultar a fonte</a></p></article>`;}).join('');
+ $('source-details').innerHTML=(payload?.sources??Object.keys(descriptors).map(id=>({id,name:sourceNames[id],status:'not_configured',message:'A aguardar dados'}))).map(s=>{const d=descriptors[s.id]??{};return `<article class="panel source-card"><span class="source-kind">${esc(d.kind??'RESULTADOS')}</span><h2>${esc(s.name)}<span class="tiny-badge">${esc(stateLabels[s.status]??s.status)}</span></h2><p>${esc(d.description??'Verificação de resultados finais, separada dos prognósticos.')}</p><p><strong>${s.collected??0}</strong> previsões extraídas${s.today!==undefined?` · ${s.today} de hoje · ${s.eligible??0} aptas`:""}</p><div class="source-error">${esc(s.message??'')}${s.pages?`<details><summary>Ver páginas consultadas</summary>${s.pages.map(p=>`<p><a href="${safeURL(p.url)}" target="_blank" rel="noopener noreferrer">Página da fonte</a> · ${esc(stateLabels[p.status])}<br>${esc(p.message)}</p>`).join('')}</details>`:''}</div><p><a href="${safeURL(d.url??'https://github.com/juliomcm-tech/mister-mi')}" target="_blank" rel="noopener noreferrer">Consultar a fonte</a></p></article>`;}).join('');
  const resources=[
  ['OpenLigaDB','Integrado para resultados finais da Bundesliga 1/2, quando há correspondência inequívoca. Dados comunitários ODbL 1.0; não conta como previsão.','https://www.openligadb.de/en/license','Dados de OpenLigaDB · ODbL 1.0'],
  ['openfootball','JSON CC0 para investigação histórica e validação. Atualização diária; sem garantia de resultados completos no próprio dia.','https://github.com/openfootball/football.json','Referência · não conta para o consenso'],
@@ -140,7 +157,7 @@ function renderPortfolio(){
  $('settlement-note').textContent=payload?.settlement_note??'Sem resultado verificável, a opção mantém-se pendente.';
  $('settlement-pick').innerHTML='<option value="">Selecionar registo pendente</option>'+(history.records??[]).filter(r=>r.result==='pending'&&new Date(r.kickoff)<new Date()).map(r=>`<option value="${esc(r.id)}">${esc(r.match)} · ${esc(r.selection)}</option>`).join('');
 }
-function metricLabel(s){return s.metric_kind==='vote_pct'?`${num(s.metric)}% · ${s.votes_for}/${s.votes_total} votos`:s.metric_kind==='model_pct'?`${num(s.metric)}% · modelo da fonte`:s.metric_kind==='tip_score'?`${num(s.metric)}/10 · Tip Score`:'Previsão categórica';}
+function metricLabel(s){return s.metric_kind==='vote_pct'?`${num(s.metric)}% de apoio · ${s.votes_for}/${s.votes_total} votos`:s.metric_kind==='model_pct'?`${num(s.metric)}% · modelo da fonte`:s.metric_kind==='tip_score'?`${num(s.metric)}/10 · Tip Score`:'Previsão categórica';}
 function showAnalysis(id){
  const pick=todaysPicks().find(p=>p.id===id);if(!pick){toast('Esta opção já não está válida para hoje.');return;}
  $('analysis-detail').innerHTML=`<h2>${esc(pick.match)}</h2><p>${esc(sports[pick.sport]??pick.sport)} · ${esc(countryNames[pick.country]??pick.country)} · ${dateTime(pick.kickoff)}</p><div class="portfolio-total"><div><span>${esc(marketNames[pick.market]??pick.market)}</span><h3>${esc(pick.selection)}</h3></div><div><strong>${num(pick.score)}</strong><span> / 98 · consenso</span></div></div><p>${esc(pick.reason)}</p><h3>O que cada fonte diz</h3>${pick.sources.map(s=>`<div class="evidence-row"><strong>${esc(sourceNames[s.source]??s.source)}<span>${esc(metricLabel(s))}</span></strong><small>Recolhido ${dateTime(s.fetched_at)}${s.odds?` · Odd observada ${num(s.odds,2)}`:''}</small><a href="${safeURL(s.url)}" target="_blank" rel="noopener noreferrer">Ver evidência na fonte</a></div>`).join('')}<p>O Mister Mi verifica a concordância, a identidade do evento, os limiares e a frescura. Sem validação histórica suficiente, não estima uma probabilidade de acerto nem retorno esperado.</p>`;

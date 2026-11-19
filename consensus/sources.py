@@ -117,32 +117,112 @@ def market_selection(label, selection, home, away, sport):
     return None
 
 
+def _olbg_public_tips(soup):
+    """Read the bounded literal sent to every public page, without running JavaScript.
+
+    OLBG renders only the first 20 tips, while its Svelte page data can already
+    contain 100. Only JSON values plus unquoted object keys are accepted here;
+    references, calls, functions and other executable expressions fail closed.
+    A changed/unsupported payload falls back to the rendered rows.
+    """
+    def reject_constant(value):
+        raise ValueError("Constante JSON não suportada")
+
+    for script in soup.find_all("script", src=False):
+        source = script.get_text()
+        if "__sveltekit_" not in source or "kit.start(" not in source:
+            continue
+        match = re.search(r"\bdata\s*:\s*\{\s*tips\s*:\s*(\[)", source)
+        if not match:
+            continue
+        start = match.start(1)
+        depth, quoted, escaped = 0, False, False
+        for end in range(start, min(len(source), start + 2_000_000)):
+            char = source[end]
+            if quoted:
+                if escaped:
+                    escaped = False
+                elif char == "\\":
+                    escaped = True
+                elif char == '"':
+                    quoted = False
+            elif char == '"':
+                quoted = True
+            elif char == "[":
+                depth += 1
+            elif char == "]":
+                depth -= 1
+                if depth == 0:
+                    literal = source[start:end + 1]
+                    # Match quoted strings FIRST, leaving every escaped value intact.
+                    literal = re.sub(r'("(?:\\.|[^"\\])*")|([A-Za-z_$][\w$]*)(?=\s*:)',
+                                     lambda m: m[1] or json.dumps(m[2]), literal)
+                    try:
+                        rows = json.loads(literal, parse_constant=reject_constant)
+                    except (ValueError, RecursionError):
+                        return None
+                    return rows if isinstance(rows, list) and len(rows) <= 1000 and all(isinstance(x, dict) for x in rows) else None
+    return None
+
+
+def _olbg_event(url, event_url, event_name):
+    if not isinstance(event_url, str) or not isinstance(event_name, str):
+        raise ValueError("Evento OLBG inválido")
+    event_url = urljoin(url, event_url)
+    parsed = urlparse(event_url)
+    if parsed.scheme != "https" or parsed.netloc != "www.olbg.com":
+        raise ValueError("Evento fora do domínio OLBG")
+    sport = next((v for k, v in SPORTS.items() if parsed.path.startswith(f"/betting-tips/{k}/")), None)
+    parts = re.split(r"\s+(?:v|vs|@)\s+", event_name.strip(), flags=re.I)
+    if sport is None or len(parts) != 2 or not all(part.strip() for part in parts):
+        raise ValueError("Participantes ou desporto OLBG inválidos")
+    # Explicit American notation is visitor @ host, in both HTML and page data.
+    home, away = reversed(parts) if " @ " in event_name else parts
+    return event_url, sport, home.strip(), away.strip()
+
+
+def _olbg_tip_key(tip):
+    return (tip.sport, name_key(tip.home), name_key(tip.away), tip.kickoff, tip.market, tip.outcome, tip.segment, tip.country)
+
+
+def _olbg_raw_key(url, event_url, stamp, label, selection, competition):
+    """Count each public market row once, before status/market validation."""
+    event_url = urljoin(url, event_url) if isinstance(event_url, str) else repr(event_url)
+    try:
+        stamp = float(stamp)
+    except (TypeError, ValueError, OverflowError):
+        stamp = repr(stamp)
+    return (event_url, stamp, repr(label), repr(selection), repr(competition or ""))
+
+
 def parse_olbg(html, url, now):
     soup = BeautifulSoup(html, "html.parser")
     rows = soup.select(".grd.tip")
-    if not rows:
+    public_rows = _olbg_public_tips(soup)
+    if not rows and not public_rows:
         raise FetchError("Estrutura OLBG alterada: não foram encontradas linhas de tips")
-    result = []
-    for row in rows:
+    result, raw_keys, rendered_keys = [], set(), {}
+    for index, row in enumerate(rows):
         try:
             event = row.select_one(".ev a[itemprop=url]")
             dt = row.select_one("time[datetime]")
             if not event or not dt:
+                raw_keys.add(("html-invalid", index))
                 continue
-            event_url = urljoin(url, event["href"])
-            sport = next((v for k, v in SPORTS.items() if f"/betting-tips/{k}/" in event_url), None)
+            try:
+                raw_stamp = iso_time(dt["datetime"]).timestamp()
+            except (ValueError, TypeError):
+                raw_stamp = dt.get("datetime")
+            raw_key = _olbg_raw_key(url, event.get("href"), raw_stamp, text(row, ".sel p"), text(row, ".sel h4"), text(row, ".ev p"))
+            raw_keys.add(raw_key)
             event_name = event.get_text(" ", strip=True)
-            parts = re.split(r"\s+(?:v|vs|@)\s+", event_name, flags=re.I)
-            if sport is None or len(parts) != 2:
-                continue
-            # In the explicit American notation, visitor @ host: reverse both sides once.
-            home, away = reversed(parts) if " @ " in event_name else parts
+            event_url, sport, home, away = _olbg_event(url, event["href"], event_name)
             kickoff = iso_time(dt["datetime"])
             competition = text(row, ".ev p")
             selection = text(row, ".sel h4")
             market = market_selection(text(row, ".sel p"), selection, home, away, sport)
             votes = re.search(r"(\d+)\s*/\s*(\d+)\s*Win Tips", text(row, ".tips"))
-            if not market or not votes or int(votes[2]) == 0:
+            if not market or not votes or int(votes[2]) == 0 or int(votes[1]) > int(votes[2]):
                 continue
             odds_node = row.select_one("[data-decimal]")
             result.append(Tip("olbg", sport, home, away, kickoff.astimezone(LISBON).date().isoformat(),
@@ -150,9 +230,56 @@ def parse_olbg(html, url, now):
                               round(100 * int(votes[1]) / int(votes[2]), 2), "vote_pct", int(votes[1]), int(votes[2]),
                               number(odds_node.get("data-decimal")) if odds_node else None,
                               segment=segment_for(competition, home, away), country=country_for(competition)))
+            rendered_keys.setdefault(raw_key, set()).add(_olbg_tip_key(result[-1]))
         except (ValueError, TypeError, KeyError):
             continue
-    return result, len(rows), 0
+    # Keep rendered values for repeated rows; loading more of the same community
+    # never adds a source, sums votes or creates a second confirmation.
+    unique = {_olbg_tip_key(tip): tip for tip in result}
+    blocked_keys, public_raw_keys = set(), set()
+    for item in public_rows or []:
+        try:
+            raw_key = _olbg_raw_key(url, item.get("eventUrl"), item.get("event_start_unix_timestamp"),
+                                    item.get("market_alias"), item.get("selection"), item.get("menu_league"))
+            raw_keys.add(raw_key)
+            public_raw_keys.add(raw_key)
+            inactive = item.get("expired") or item.get("cancelled") or item.get("postponed")
+            if inactive:
+                for key in rendered_keys.get(raw_key, set()):
+                    blocked_keys.add(key)
+                    unique.pop(key, None)
+            event_url, sport, home, away = _olbg_event(url, item["eventUrl"], item["event_name_alias"])
+            stamp = item["event_start_unix_timestamp"]
+            if isinstance(stamp, bool) or not isinstance(stamp, (int, float)) or stamp <= 0:
+                continue
+            kickoff = datetime.fromtimestamp(stamp, UTC)
+            votes_for, votes_total = item["win_tips"], item["win_tips_count"]
+            if (type(votes_for) is not int or type(votes_total) is not int
+                    or not 0 <= votes_for <= votes_total or votes_total <= 0):
+                continue
+            selection, label = item["selection"], item["market_alias"]
+            competition = item.get("menu_league") or ""
+            if not all(isinstance(value, str) for value in (selection, label, competition)):
+                continue
+            market = market_selection(label, selection, home, away, sport)
+            if not market:
+                continue
+            tip = Tip("olbg", sport, home, away, kickoff.astimezone(LISBON).date().isoformat(),
+                      kickoff.isoformat(), *market, event_url, now.isoformat(), competition,
+                      round(100 * votes_for / votes_total, 2), "vote_pct", votes_for, votes_total,
+                      number(item.get("odds")), segment=segment_for(competition, home, away), country=country_for(competition))
+            key = _olbg_tip_key(tip)
+            if inactive:
+                blocked_keys.add(key)
+                unique.pop(key, None)
+            elif key not in blocked_keys:
+                unique.setdefault(key, tip)
+        except (ValueError, TypeError, KeyError, OverflowError, OSError):
+            continue
+    # Hydration is the underlying list, not another page. Include genuine HTML
+    # fallback additions without counting the initial display rows twice.
+    raw_count = len(public_rows or []) + len(raw_keys - public_raw_keys)
+    return list(unique.values()), raw_count, 0
 
 
 def parse_forebet(html, url, now, sport="football", market="FT_1X2"):
