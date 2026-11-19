@@ -1,7 +1,7 @@
 {
   "date": "2026-11-19",
   "timezone": "Europe/Lisbon",
-  "updated_at": "2026-11-19T14:43:21.896379+00:00",
+  "updated_at": "2026-11-19T15:08:11.275503+00:00",
   "schema_version": 1,
   "score_is_probability": false,
   "settings": {
@@ -23,14 +23,14 @@
     "history_min_sample": 30,
     "history_warning_roi": -10
   },
-  "total_collected": 87,
-  "total_eligible": 1,
+  "total_collected": 83,
+  "total_eligible": 0,
   "total_selected": 0,
   "discarded": {
     "other_day": 56,
     "started_or_soon": 0,
     "stale": 0,
-    "threshold": 30,
+    "threshold": 27,
     "conflict": 0,
     "excluded": 0
   },
@@ -72,8 +72,8 @@
       "id": "olbg",
       "name": "OLBG",
       "status": "ok",
-      "collected": 83,
-      "raw_rows": 85,
+      "collected": 79,
+      "raw_rows": 84,
       "message": "Recolha concluída",
       "pages": [
         {
@@ -116,8 +116,8 @@
           "id": "olbg",
           "url": "https://www.olbg.com/betting-tips/Tennis/3",
           "status": "ok",
-          "raw_rows": 7,
-          "collected": 5,
+          "raw_rows": 6,
+          "collected": 1,
           "missing_scores": 0,
           "message": "Recolha concluída"
         }
@@ -220,6 +220,6 @@
     }
   ],
   "request_id": "",
-  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/44546784298",
+  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/44551332114",
   "status": "ok"
 }
