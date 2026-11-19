@@ -72,3 +72,17 @@ votes/dates/hosts, market scope, null tennis leagues and Lisbon midnight.
 
 This audit used only allowed public OLBG pages and their linked static assets.
 It did not retry blocked prediction sites through another network or access path.
+
+## Verified GitHub execution after the correction
+
+The [15:51 UTC production run](https://github.com/juliomcm-tech/mister-mi/actions/runs/44559528785)
+completed successfully with 169 OLBG and 5 ProTipster normalized forecasts:
+174 total, 32 for the current Lisbon date, 29 identified events, one eligible
+forecast, one candidate awaiting an independent source, and zero confirmed picks.
+Of the 31 current-day forecasts rejected at the source stage, 23 had insufficient
+votes, 3 had support below the source threshold, and 5 lacked a public metric.
+Forebet and PredictZ still returned HTTP 403 on the GitHub runner; API-Football
+remained unconfigured. The pipeline's success does not imply complete coverage.
+All 57 Python and 35 Node tests passed. The new dashboard displays the funnel
+and per-reason exclusions; unconfirmed candidates remain outside the immutable
+recommendation history and paper portfolio.
