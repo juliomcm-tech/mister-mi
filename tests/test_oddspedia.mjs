@@ -14,3 +14,11 @@ test('only a recent successful response is shown as received, without claiming a
  for(const date of ['bad','2026-11-19T18:00:00Z','2026-11-20T20:00:00Z'])assert.equal(oddspediaView({...feed,checked_at:date},now).level,'pending');
  assert.ok(!oddspediaView({...feed,records_received:-1},now).message.includes('-1'));
 });
+test('empty responses and catalogue-only access stay distinct from a refusal',()=>{
+ const empty=oddspediaView({...feed,status:'empty',message:'Empty data',catalogue:{status:'ok'}},now);
+ assert.equal(empty.label,'Sem registos no pedido');assert.equal(empty.level,'pending');assert.equal(empty.attribution,true);
+ const catalogue=oddspediaView({...feed,status:'partial',reason:'catalogue_only',catalogue:{status:'ok'}},now);
+ assert.equal(catalogue.label,'Catálogo recebido');assert.equal(catalogue.level,'pending');
+ const refused=oddspediaView({...feed,status:'error',http_status:403,message:'HTTP 403'},now);
+ assert.equal(refused.level,'error');assert.equal(refused.attribution,false);
+});

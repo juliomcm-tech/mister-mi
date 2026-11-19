@@ -24,8 +24,10 @@ def main():
     now = datetime.now(UTC)
     settings = load_json(args.settings, {})
     payload = analyse(tips, now, settings)
-    payload["oddspedia_feed"] = collect_oddspedia_feed(now)
     payload["previews"] = upcoming_previews(tips, now, settings)
+    api_candidates = payload.get("data", []) + [pick for snapshot in payload["previews"]
+                      for key in ("data", "candidates", "watchlist") for pick in snapshot.get(key, [])]
+    payload["oddspedia_feed"] = collect_oddspedia_feed(now, queries=[pick.get("home") for pick in api_candidates])
     prior_history = load_json(args.history, {"schema_version": 1, "records": []})
     catalog = collect_fixture_catalog(prior_history.get("fixture_catalog"), now)
     payload["fixture_catalog"] = catalog

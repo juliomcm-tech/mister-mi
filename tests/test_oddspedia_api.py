@@ -2,6 +2,7 @@ from datetime import datetime, timezone
 import json
 import unittest
 from unittest.mock import patch
+from urllib.parse import urlsplit, parse_qs
 
 from consensus.oddspedia import collect_oddspedia_feed, validate_feed_url
 
@@ -10,15 +11,23 @@ TOKEN = "fixture-test-token-123456789"
 URL = "https://widgets.oddspedia.com/api/matches?api_token=" + TOKEN + "&lang=en"
 
 
+CATALOGUE = [{"id":1,"name":"Football","slug":"football","match_count":286},
+             {"id":5,"name":"Tennis","slug":"tennis","match_count":209}]
+
+
 class Client:
-    def __init__(self, response="[]", error=None):
-        self.response, self.error, self.calls = response, error, []
+    def __init__(self, response=None, error=None, search=None):
+        self.response, self.error, self.calls, self.search = response, error, [], search
 
     def get(self, url, **options):
         self.calls.append((url, options))
         if self.error:
             raise self.error
-        return self.response
+        if urlsplit(url).path == "/api/search":
+            if isinstance(self.search, Exception):
+                raise self.search
+            return self.search if self.search is not None else "[]"
+        return self.response if self.response is not None else json.dumps(CATALOGUE)
 
 
 class OddspediaApiTests(unittest.TestCase):
@@ -47,18 +56,63 @@ class OddspediaApiTests(unittest.TestCase):
         self.assertFalse(result["configured"])
         self.assertFalse(client.calls)
 
-    def test_json_response_is_read_only_and_never_a_prediction(self):
-        client=Client(json.dumps({"data":[{"id":1,"home":"A","away":"B","api_token":TOKEN,"url":URL}]}))
+    def test_documented_catalogue_is_used_instead_of_the_unfiltered_matches_url(self):
+        rows=[{**CATALOGUE[0],"api_token":TOKEN,"url":URL}]
+        client=Client(json.dumps({"data":rows}))
         with patch.dict("os.environ",{"GITHUB_ACTIONS":"false"}):
             result=collect_oddspedia_feed(NOW,feed_url=URL,client=client)
-        self.assertEqual(result["status"],"ok")
+        self.assertEqual(result["status"],"partial")
+        self.assertEqual(result["sports_count"],1)
         self.assertEqual(result["records_received"],1)
         self.assertFalse(result["counts_as_prediction"])
         self.assertFalse(result["used_in_analysis"])
         self.assertNotIn(TOKEN,json.dumps(result))
         self.assertNotIn("api_token",json.dumps(result))
-        self.assertEqual(result["response_shape"],{"data":[{"id":"number","home":"string","away":"string"}]})
+        self.assertEqual(result["response_shape"],{"data":[{"id":"number","name":"string","slug":"string","match_count":"number"}]})
+        self.assertEqual(urlsplit(client.calls[0][0]).path,"/api/sports")
         self.assertEqual(client.calls[0][1],{"check_robots":False,"headers":{"Accept":"application/json"}})
+
+    def test_search_has_one_lowercase_team_per_request_and_is_bounded(self):
+        client=Client(search=json.dumps({"data":[{"id":42,"home":"Example","api_token":TOKEN}]}))
+        queries=["BAYERN Munich","  bayern   munich  ","Carlos Alcaraz",*["Team "+str(i) for i in range(12)]]
+        result=collect_oddspedia_feed(NOW,feed_url=URL,client=client,queries=queries)
+        self.assertEqual(len(client.calls),7)
+        self.assertEqual(len(result["searches"]),6)
+        self.assertEqual(result["status"],"ok")
+        for url,options in client.calls[1:]:
+            parsed=urlsplit(url);params=parse_qs(parsed.query)
+            self.assertEqual(parsed.path,"/api/search")
+            self.assertEqual(params["q"],[params["q"][0].lower()])
+            self.assertEqual(params["api_token"],[TOKEN])
+            self.assertNotIn("from",params)
+            self.assertNotIn("to",params)
+        self.assertEqual(parse_qs(urlsplit(client.calls[1][0]).query)["q"],["bayern munich"])
+        self.assertFalse(result["used_in_analysis"])
+        self.assertNotIn(TOKEN,json.dumps(result))
+        self.assertEqual(result["search_records_received"],6)
+
+    def test_empty_data_text_and_json_empty_results_are_not_403_or_malformed_json(self):
+        for raw in ["Empty data", '"Empty data"',"[]",'{"data":[]}']:
+            client=Client(search=raw)
+            result=collect_oddspedia_feed(NOW,feed_url=URL,client=client,queries=["Example Team"])
+            self.assertEqual(result["status"],"empty")
+            self.assertEqual(result["searches"][0]["reason"],"empty_response")
+            self.assertEqual(result["search_records_received"],0)
+        result=collect_oddspedia_feed(NOW,feed_url=URL,client=Client("Empty data"),queries=["Example Team"])
+        self.assertEqual(result["status"],"empty")
+        self.assertEqual(result["endpoint"],"/api/sports")
+
+    def test_refusal_stops_requests_and_does_not_probe_other_routes(self):
+        client=Client(error=RuntimeError("HTTP 403"))
+        result=collect_oddspedia_feed(NOW,feed_url=URL,client=client,queries=["One","Two"])
+        self.assertEqual(len(client.calls),1)
+        self.assertEqual(result["http_status"],403)
+        self.assertEqual(result["endpoint"],"/api/sports")
+        client=Client(search=RuntimeError("HTTP 403"))
+        result=collect_oddspedia_feed(NOW,feed_url=URL,client=client,queries=["One","Two"])
+        self.assertEqual(len(client.calls),2)
+        self.assertEqual(result["status"],"partial")
+        self.assertEqual(result["reason"],"search_failed")
 
     def test_catalogue_counts_are_not_presented_as_individual_fixtures(self):
         data=[{"id":1,"name":"Football","slug":"football","match_count":286}]

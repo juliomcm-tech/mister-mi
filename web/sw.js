@@ -1,5 +1,5 @@
 /* Bump VERSION with app-shell releases. Only static presentation files are cached. */
-const VERSION = "v9";
+const VERSION = "v10";
 const SCOPE = new URL(self.registration.scope);
 const PREFIX = `mister-mi-shell:${encodeURIComponent(SCOPE.href)}:`;
 const CACHE = PREFIX + VERSION;
