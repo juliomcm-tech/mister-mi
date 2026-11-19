@@ -108,14 +108,14 @@ function target() {
     async emit(type, event = {}) { for (const fn of [...(listeners.get(type) || [])]) await fn({ preventDefault() {}, ...event }); } };
 }
 
-function browser({ ios = false, standalone = false, waiting = false } = {}) {
+function browser({ ios = false, standalone = false, waiting = false, firstInstall = false } = {}) {
   const names = ["install-app", "install-app-settings", "install-status", "install-dialog", "install-instructions", "app-update", "apply-update"];
   const elements = Object.fromEntries(names.map(id => [id, { ...target(), hidden: true, dataset: {}, textContent: "", open: false,
     showModal() { this.open = true; }, setAttribute() {} }]));
   let reloads = 0; const registrations = [], messages = [], statuses = [], offline = [];
   const registration = { ...target(), waiting: waiting ? { postMessage: message => messages.push(message) } : null };
   const navigator = { userAgent: ios ? "iPhone" : "Chrome", platform: "", maxTouchPoints: 0, onLine: true,
-    serviceWorker: { ...target(), controller: {}, register: async (url, options) => { registrations.push({ url, options }); return registration; } } };
+    serviceWorker: { ...target(), controller: firstInstall ? null : {}, register: async (url, options) => { registrations.push({ url, options }); return registration; } } };
   const window = { ...target(), isSecureContext: true, matchMedia: () => ({ matches: standalone }),
     location: { reload: () => { reloads++; } }, requestIdleCallback: fn => { queueMicrotask(fn); return 1; }, cancelIdleCallback() {} };
   const context = vm.createContext({ window, navigator, document: { getElementById: id => elements[id] } });
@@ -134,6 +134,16 @@ test("native installation prompts only on explicit click and acceptance does not
   await b.window.emit("appinstalled");
   assert.equal(b.statuses.at(-1).state, "installed"); assert.equal(b.elements["install-app"].hidden, true);
   b.app.dispose();
+});
+
+test('first offline setup does not claim that a newer app version is waiting',async()=>{
+  const b=browser({firstInstall:true,waiting:true});
+  const registration=await b.app.registration;
+  assert.equal(b.elements['app-update'].hidden,true);
+  registration.waiting=null;b.navigator.serviceWorker.controller={};
+  await b.navigator.serviceWorker.emit('controllerchange');
+  assert.equal(b.elements['app-update'].hidden,true);
+  assert.equal(b.reloads(),0);
 });
 
 test("iOS gets manual instructions, standalone hides install buttons, registration stays relative", async () => {

@@ -127,3 +127,20 @@ Oito testes adicionais passaram, incluindo alteração do resultado do próprio 
 Os intervalos das duas ligas sobrepõem-se: as diferenças observadas entre Alemanha e Inglaterra não justificam uma conclusão segura de que um país será superior no futuro. O ensaio também não mede ténis, NBA, hóquei ou todas as competições de futebol.
 
 Sem preços históricos pré-jogo, as seleções podem favorecer resultados prováveis com odds demasiado baixas para produzir lucro. Taxa de acerto e melhoria contra um baseline estatístico não demonstram vantagem sobre o mercado. Nenhum resultado experimental foi acrescentado ao livro real de recomendações como se tivesse sido publicado antes dos jogos.
+
+## Publicação posterior — 19/11/2026, 15:10 UTC / Lisboa
+
+Foi confirmada a publicação do commit [`ee21fdcbe4376e1ba8d114817859f46df62e0b03`](https://github.com/juliomcm-tech/mister-mi/commit/ee21fdcbe4376e1ba8d114817859f46df62e0b03): a [execução Pages](https://github.com/juliomcm-tech/mister-mi/actions/runs/44551330446) terminou com sucesso às 15:08:24 UTC e a [recolha](https://github.com/juliomcm-tech/mister-mi/actions/runs/44551332114) terminou com sucesso às 15:08:17 UTC.
+
+- A raiz pública contém agora o redirecionamento para `/web/`. O HTML publicado responde HTTP 200 e declara o manifesto da aplicação.
+- O manifesto responde com o tipo `application/manifest+json`; os ícones descarregados têm efetivamente 192×192, 512×512, 512×512 para o formato maskable e 180×180 para Apple. As duas fontes locais respondem HTTP 200, tipo `font/woff2` e assinatura binária `wOF2`.
+- O JavaScript público lê a análise no ramo persistente `data`, deixou de chamar `AbortSignal.timeout()` e contém a alternativa com `AbortController`. `app.js`, `pwa.js`, `sw.js` e `mood.js` passaram a verificação de sintaxe.
+- A análise pública obtida às 15:10:01 UTC tinha sido recolhida às **15:08:11 UTC**, no dia corrente, com **1,84 minutos** de idade perante o limite de 45 minutos: **83 registos recolhidos e zero opções selecionadas**. O histórico real continuava com zero recomendações. Forebet e PredictZ continuavam a devolver HTTP 403; isso não foi ocultado pela publicação da interface.
+- O resumo experimental publicado conserva 150 seleções, 103 acertos e os hashes já auditados. Não foi misturado com o histórico de produção.
+- A bateria atual foi novamente executada: **37 testes Python e 31 testes Node aprovados**. Entre eles estão o âmbito relativo da PWA, o impedimento de colocar previsões/histórico/configuração/API na cache offline e a instalação apenas após ação explícita.
+
+Esta verificação foi feita por HTTP, leitura do código publicado e testes. Não representa uma instalação observada num telefone real nem uma certificação de compatibilidade de todos os dispositivos. Não foi identificada uma nova falha material nas verificações limitadas da PWA; os dados de análise continuam a exigir rede e não são substituídos por previsões antigas em modo offline.
+
+### Ajuste posterior da primeira abertura
+
+Na verificação visual posterior foi corrigido um aviso de atualização que podia aparecer durante a primeira preparação offline, antes de existir uma versão anterior a substituir. O aviso passa a exigir um service worker anterior a controlar a página e uma atualização realmente em espera. A ativação inicial limpa o aviso sem recarregar formulários. Um teste adicional cobre esse caso; a bateria passa a **37 testes Python e 32 testes Node**. Esta nota descreve o ajuste posterior feito pelo agente principal, sem alterar a experiência histórica, os seus dados ou os hashes auditados.

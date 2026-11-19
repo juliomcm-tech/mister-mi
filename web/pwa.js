@@ -72,9 +72,9 @@ export function initPWA({ onStatus, onOffline } = {}) {
   else status("available", "Instala o Mister Mi para o abrir a partir do ecrã principal.");
 
   const updateAvailable = () => {
-    if (disposed || !registration?.waiting) return;
+    if (disposed) return;
     const banner = $("app-update");
-    if (banner) banner.hidden = false;
+    if (banner) banner.hidden = !(registration?.waiting && navigator.serviceWorker.controller);
   };
   listen($("apply-update"), "click", event => {
     event.preventDefault();
@@ -96,6 +96,7 @@ export function initPWA({ onStatus, onOffline } = {}) {
       watchInstalling();
       listen(navigator.serviceWorker, "controllerchange", () => {
         if (applyingUpdate) window.location.reload();
+        else updateAvailable();
       });
       resolveRegistration(registration);
     } catch {
