@@ -1,0 +1,9 @@
+{
+  "name": "mister-mi",
+  "main": "dist/server/index.js",
+  "compatibility_date": "2026-11-01",
+  "vars": {
+    "GITHUB_REPOSITORY": "juliomcm-tech/mister-mi",
+    "ALLOWED_ORIGINS": "https://juliomcm-tech.github.io"
+  }
+}

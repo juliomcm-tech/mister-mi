@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import worker from '../worker/index.js';
+const env={GITHUB_TOKEN:'server-only-github-token',REFRESH_TOKEN:'my-refresh-key',GITHUB_REPOSITORY:'juliomcm-tech/mister-mi'};
+test('health never exposes secrets',async()=>{const res=await worker.fetch(new Request('https://mi.example/api/health'),env);const text=await res.text();assert.equal(JSON.parse(text).configured,true);assert.ok(!text.includes(env.GITHUB_TOKEN));assert.ok(!text.includes(env.REFRESH_TOKEN));});
+test('unconfigured refresh fails explicitly',async()=>{const res=await worker.fetch(new Request('https://mi.example/api/refresh',{method:'POST'}),{});assert.equal(res.status,503);});
+test('foreign Origin cannot write',async()=>{const res=await worker.fetch(new Request('https://mi.example/api/settings',{method:'PUT',headers:{Origin:'https://attacker.example',Authorization:'Bearer my-refresh-key'},body:'{}'}),env);assert.equal(res.status,403);});
+test('origin alone cannot authorise writes',async()=>{const res=await worker.fetch(new Request('https://mi.example/api/refresh',{method:'POST',headers:{Origin:'https://mi.example'}}),env);assert.equal(res.status,401);});
+test('invalid settings rejected before provider write',async()=>{const res=await worker.fetch(new Request('https://mi.example/api/settings',{method:'PUT',headers:{Origin:'https://mi.example',Authorization:'Bearer my-refresh-key'},body:JSON.stringify({excluded_sports:[],excluded_countries:[],excluded_combinations:[],min_odds:5,max_odds:2})}),env);assert.equal(res.status,400);assert.match((await res.json()).message,/Intervalo/);});
+test('static routing refuses unknown paths',async()=>{const res=await worker.fetch(new Request('https://mi.example/.env'),{});assert.equal(res.status,404);});
+test('unknown write operation is denied',async()=>{const res=await worker.fetch(new Request('https://mi.example/api/arbitrary',{method:'POST',headers:{Origin:'https://mi.example',Authorization:'Bearer my-refresh-key'},body:'{}'}),env);assert.equal(res.status,404);});

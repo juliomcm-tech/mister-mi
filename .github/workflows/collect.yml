@@ -1,0 +1,90 @@
+name: Mister Mi — analisar e publicar
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['README.md', 'docs/**']
+  schedule:
+    - cron: '7,37 * * * *'
+  workflow_dispatch:
+    inputs:
+      request_id:
+        description: Identificador do pedido feito pelo painel
+        required: false
+        type: string
+
+concurrency:
+  group: mister-mi-pipeline
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  analyse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22'
+      - name: Instalar dependências
+        run: python -m pip install -r requirements.txt
+      - name: Validar identidades, datas, mercados, resultados e limites
+        run: |
+          python -m unittest discover -s tests -p 'test_*.py'
+          node --test tests/*.mjs
+          node --check web/app.js
+          node --check worker/index.js
+      - name: Recuperar histórico persistente
+        shell: bash
+        run: |
+          if git fetch origin data; then
+            git show FETCH_HEAD:history.json > web/data/history.json
+          fi
+      - name: Recolher e analisar o dia corrente em Lisboa
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          API_FOOTBALL_MAX_FIXTURES: '1'
+          REQUEST_ID: ${{ inputs.request_id }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python -m consensus.cli
+      - name: Guardar análise e histórico
+        run: python scripts/save_data.py
+      - name: Preparar GitHub Pages
+        env:
+          REFRESH_API_URL: ${{ vars.REFRESH_API_URL }}
+        run: node scripts/build.mjs --pages
+      - name: Preparar Pages se já estiver ativo
+        id: pages
+        continue-on-error: true
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+      - name: Guardar site para publicação
+        if: steps.pages.outcome == 'success'
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: dist
+      - name: Estado da execução
+        if: always()
+        run: |
+          python -c "import json,os; p=json.load(open('web/data/consenso_hoje.json')); f=open(os.environ['GITHUB_STEP_SUMMARY'],'a'); f.write('## Mister Mi\n\nDia: '+p['date']+' (Lisboa)\n\nOpções validadas: '+str(p['total_selected'])+'\n\nNenhuma opção também é uma conclusão válida.\n')"
+    outputs:
+      pages_ready: ${{ steps.pages.outcome }}
+  publish:
+    needs: analyse
+    if: needs.analyse.outputs.pages_ready == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar o painel
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

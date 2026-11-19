@@ -1,0 +1,19 @@
+{
+  "min_votes": 15,
+  "min_olbg": 75,
+  "min_protipster": 8,
+  "min_model": 65,
+  "min_sources": 2,
+  "min_score": 70,
+  "max_picks": 6,
+  "max_age_minutes": 45,
+  "kickoff_tolerance_minutes": 20,
+  "lead_minutes": 5,
+  "excluded_sports": [],
+  "excluded_countries": [],
+  "excluded_combinations": [],
+  "min_odds": null,
+  "max_odds": null,
+  "history_min_sample": 30,
+  "history_warning_roi": -10
+}

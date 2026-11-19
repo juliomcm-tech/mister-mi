@@ -1,0 +1,231 @@
+{
+  "date": "2026-11-19",
+  "timezone": "Europe/Lisbon",
+  "updated_at": "2026-11-19T14:14:02.833876+00:00",
+  "schema_version": 1,
+  "score_is_probability": false,
+  "settings": {
+    "min_votes": 15,
+    "min_olbg": 75,
+    "min_protipster": 8,
+    "min_model": 65,
+    "min_sources": 2,
+    "min_score": 70,
+    "max_picks": 6,
+    "max_age_minutes": 45,
+    "kickoff_tolerance_minutes": 20,
+    "lead_minutes": 5,
+    "excluded_sports": [],
+    "excluded_countries": [],
+    "excluded_combinations": [],
+    "min_odds": null,
+    "max_odds": null,
+    "history_min_sample": 30,
+    "history_warning_roi": -10
+  },
+  "total_collected": 275,
+  "total_eligible": 69,
+  "total_selected": 0,
+  "discarded": {
+    "other_day": 19,
+    "started_or_soon": 78,
+    "stale": 0,
+    "threshold": 109,
+    "conflict": 0,
+    "excluded": 0
+  },
+  "data": [],
+  "performance": {
+    "overall": {
+      "total": 0,
+      "settled": 0,
+      "wins": 0,
+      "losses": 0,
+      "pending": 0,
+      "void": 0,
+      "hit_rate": null,
+      "hit_rate_interval_95": [
+        null,
+        null
+      ],
+      "priced_settled": 0,
+      "odds_coverage": 0,
+      "paper_profit_units": 0,
+      "paper_roi_pct": null,
+      "paper_max_drawdown_units": 0,
+      "sufficient_sample": false
+    },
+    "by_sport": [],
+    "by_country": [],
+    "by_market": [],
+    "by_combination": [],
+    "min_sample": 30,
+    "paper_only": true,
+    "commission_included": false,
+    "calibrated_probability_available": false
+  },
+  "settlement_note": "Resultados automáticos de futebol: configurar API_FOOTBALL_KEY. Outros desportos: confirmação manual.",
+  "result_sources": [],
+  "analyst": "Mister Mi",
+  "sources": [
+    {
+      "id": "olbg",
+      "name": "OLBG",
+      "status": "ok",
+      "collected": 24,
+      "raw_rows": 85,
+      "message": "Recolha concluída",
+      "pages": [
+        {
+          "id": "olbg",
+          "url": "https://www.olbg.com/betting-tips/American_Football/11",
+          "status": "ok",
+          "raw_rows": 20,
+          "collected": 0,
+          "missing_scores": 0,
+          "message": "Recolha concluída"
+        },
+        {
+          "id": "olbg",
+          "url": "https://www.olbg.com/betting-tips/Basketball/4",
+          "status": "ok",
+          "raw_rows": 18,
+          "collected": 0,
+          "missing_scores": 0,
+          "message": "Recolha concluída"
+        },
+        {
+          "id": "olbg",
+          "url": "https://www.olbg.com/betting-tips/Football/1",
+          "status": "ok",
+          "raw_rows": 20,
+          "collected": 20,
+          "missing_scores": 0,
+          "message": "Recolha concluída"
+        },
+        {
+          "id": "olbg",
+          "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+          "status": "ok",
+          "raw_rows": 20,
+          "collected": 0,
+          "missing_scores": 0,
+          "message": "Recolha concluída"
+        },
+        {
+          "id": "olbg",
+          "url": "https://www.olbg.com/betting-tips/Tennis/3",
+          "status": "ok",
+          "raw_rows": 7,
+          "collected": 4,
+          "missing_scores": 0,
+          "message": "Recolha concluída"
+        }
+      ]
+    },
+    {
+      "id": "forebet",
+      "name": "Forebet",
+      "status": "ok",
+      "collected": 236,
+      "raw_rows": 266,
+      "message": "Recolha concluída",
+      "pages": [
+        {
+          "id": "forebet",
+          "url": "https://www.forebet.com/en/basketball/predictions-today",
+          "status": "ok",
+          "raw_rows": 68,
+          "collected": 66,
+          "missing_scores": 0,
+          "message": "Recolha concluída"
+        },
+        {
+          "id": "forebet",
+          "url": "https://www.forebet.com/en/football-tips-and-predictions-for-today",
+          "status": "ok",
+          "raw_rows": 44,
+          "collected": 42,
+          "missing_scores": 0,
+          "message": "Recolha concluída"
+        },
+        {
+          "id": "forebet",
+          "url": "https://www.forebet.com/en/football-tips-and-predictions-for-today/predictions-under-over-goals",
+          "status": "ok",
+          "raw_rows": 44,
+          "collected": 42,
+          "missing_scores": 0,
+          "message": "Recolha concluída"
+        },
+        {
+          "id": "forebet",
+          "url": "https://www.forebet.com/en/hockey/predictions-today",
+          "status": "ok",
+          "raw_rows": 60,
+          "collected": 58,
+          "missing_scores": 0,
+          "message": "Recolha concluída"
+        },
+        {
+          "id": "forebet",
+          "url": "https://www.forebet.com/en/tennis/predictions-today",
+          "status": "ok",
+          "raw_rows": 50,
+          "collected": 28,
+          "missing_scores": 0,
+          "message": "Recolha concluída"
+        }
+      ]
+    },
+    {
+      "id": "protipster",
+      "name": "ProTipster",
+      "status": "partial",
+      "collected": 3,
+      "raw_rows": 6,
+      "message": "3 tips sem Tip Score público; excluídas do consenso",
+      "pages": [
+        {
+          "id": "protipster",
+          "url": "https://www.protipster.com/betting-tips/today",
+          "status": "partial",
+          "raw_rows": 6,
+          "collected": 3,
+          "missing_scores": 3,
+          "message": "3 tips sem Tip Score público; excluídas do consenso"
+        }
+      ]
+    },
+    {
+      "id": "predictz",
+      "name": "PredictZ",
+      "status": "ok",
+      "collected": 12,
+      "raw_rows": 12,
+      "message": "Recolha concluída",
+      "pages": [
+        {
+          "id": "predictz",
+          "url": "https://www.predictz.com/predictions/",
+          "status": "ok",
+          "raw_rows": 12,
+          "collected": 12,
+          "missing_scores": 0,
+          "message": "Recolha concluída"
+        }
+      ]
+    },
+    {
+      "id": "api_football",
+      "name": "API-Football",
+      "status": "not_configured",
+      "message": "Opcional · requer chave API",
+      "collected": 0,
+      "raw_rows": 0
+    }
+  ],
+  "request_id": "",
+  "run_url": "",
+  "status": "ok"
+}
