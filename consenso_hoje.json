@@ -1,7 +1,7 @@
 {
   "date": "2026-11-19",
   "timezone": "Europe/Lisbon",
-  "updated_at": "2026-11-19T18:35:36.589407+00:00",
+  "updated_at": "2026-11-19T19:12:58.433871+00:00",
   "schema_version": 1,
   "score_is_probability": false,
   "settings": {
@@ -23,15 +23,15 @@
     "history_min_sample": 30,
     "history_warning_roi": -10
   },
-  "total_collected": 191,
-  "total_eligible": 13,
-  "total_selected": 4,
+  "total_collected": 190,
+  "total_eligible": 12,
+  "total_selected": 3,
   "discarded": {
-    "other_day": 159,
+    "other_day": 161,
     "started_or_soon": 0,
     "stale": 0,
-    "threshold": 19,
-    "conflict": 0,
+    "threshold": 17,
+    "conflict": 1,
     "excluded": 0
   },
   "data": [
@@ -47,10 +47,10 @@
       "country": "Desconhecido",
       "odds": 1.4,
       "odds_source": "olbg",
-      "odds_observed_at": "2026-11-19T18:35:28.307868+00:00",
+      "odds_observed_at": "2026-11-19T19:12:51.587186+00:00",
       "outcome": "HOME",
       "selection": "Alexander Zverev vence",
-      "score": 76.3,
+      "score": 76.5,
       "tier": "silver",
       "source_count": 2,
       "sources": [
@@ -64,7 +64,7 @@
           "market": "MATCH_WINNER",
           "outcome": "HOME",
           "url": "https://www.betclan.com/tennis/predictionsdetails/204803143/Alexander-Zverev-vs-Arthur-Fils-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-19T18:35:33.737247+00:00",
+          "fetched_at": "2026-11-19T19:12:56.516530+00:00",
           "competition": "ATP Finals",
           "metric": 75.0,
           "metric_kind": "model_pct",
@@ -86,12 +86,12 @@
           "market": "MATCH_WINNER",
           "outcome": "HOME",
           "url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Alexander_Zverev_v_Arthur_Fils/3?event_id=906388",
-          "fetched_at": "2026-11-19T18:35:28.307868+00:00",
+          "fetched_at": "2026-11-19T19:12:51.587186+00:00",
           "competition": "",
-          "metric": 89.29,
+          "metric": 86.67,
           "metric_kind": "vote_pct",
-          "votes_for": 25,
-          "votes_total": 28,
+          "votes_for": 26,
+          "votes_total": 30,
           "odds": 1.4,
           "event_id": "",
           "segment": "open",
@@ -118,10 +118,10 @@
       "country": "Desconhecido",
       "odds": 1.18,
       "odds_source": "olbg",
-      "odds_observed_at": "2026-11-19T18:35:28.448018+00:00",
+      "odds_observed_at": "2026-11-19T19:12:51.363652+00:00",
       "outcome": "HOME",
       "selection": "Valencia vence",
-      "score": 74.3,
+      "score": 74.4,
       "tier": "silver",
       "source_count": 2,
       "sources": [
@@ -135,7 +135,7 @@
           "market": "MATCH_WINNER",
           "outcome": "HOME",
           "url": "https://www.betclan.com/basketball/predictionsdetails/204489013/Valencia-vs-Virtus-Bologna-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-19T18:35:33.806038+00:00",
+          "fetched_at": "2026-11-19T19:12:56.471098+00:00",
           "competition": "Euroleague",
           "metric": 85.0,
           "metric_kind": "model_pct",
@@ -157,12 +157,12 @@
           "market": "MATCH_WINNER",
           "outcome": "HOME",
           "url": "https://www.olbg.com/betting-tips/Basketball/European/Euroleague/Valencia_vs_Virtus_Bologna/4?event_id=537871",
-          "fetched_at": "2026-11-19T18:35:28.448018+00:00",
+          "fetched_at": "2026-11-19T19:12:51.363652+00:00",
           "competition": "Euroleague",
-          "metric": 80.0,
+          "metric": 76.47,
           "metric_kind": "vote_pct",
-          "votes_for": 12,
-          "votes_total": 15,
+          "votes_for": 13,
+          "votes_total": 17,
           "odds": 1.18,
           "event_id": "",
           "segment": "open",
@@ -189,10 +189,10 @@
       "country": "Desconhecido",
       "odds": 1.61,
       "odds_source": "olbg",
-      "odds_observed_at": "2026-11-19T18:35:28.448018+00:00",
+      "odds_observed_at": "2026-11-19T19:12:51.363652+00:00",
       "outcome": "AWAY",
       "selection": "Fenerbahce vence",
-      "score": 74.0,
+      "score": 74.2,
       "tier": "silver",
       "source_count": 2,
       "sources": [
@@ -206,7 +206,7 @@
           "market": "MATCH_WINNER",
           "outcome": "AWAY",
           "url": "https://www.betclan.com/basketball/predictionsdetails/204488973/Milano-vs-Fenerbahce-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-19T18:35:33.758282+00:00",
+          "fetched_at": "2026-11-19T19:12:56.493460+00:00",
           "competition": "Euroleague",
           "metric": 71.0,
           "metric_kind": "model_pct",
@@ -228,84 +228,13 @@
           "market": "MATCH_WINNER",
           "outcome": "AWAY",
           "url": "https://www.olbg.com/betting-tips/Basketball/European/Euroleague/Milano_vs_Fenerbahce/4?event_id=537869",
-          "fetched_at": "2026-11-19T18:35:28.448018+00:00",
+          "fetched_at": "2026-11-19T19:12:51.363652+00:00",
           "competition": "Euroleague",
-          "metric": 75.0,
+          "metric": 76.19,
           "metric_kind": "vote_pct",
-          "votes_for": 15,
-          "votes_total": 20,
+          "votes_for": 16,
+          "votes_total": 21,
           "odds": 1.61,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Desconhecido"
-        }
-      ],
-      "reason": "2 fontes concordam na mesma seleção e no mesmo mercado.",
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "status": "out_of_scope"
-      }
-    },
-    {
-      "id": "debddbe29f8208ed",
-      "sport": "basketball",
-      "home": "Bayern Munich",
-      "away": "Baskonia",
-      "match": "Bayern Munich vs Baskonia",
-      "competition": "Euroleague",
-      "kickoff": "2026-11-19T19:00:00+00:00",
-      "market": "MATCH_WINNER",
-      "country": "Desconhecido",
-      "odds": 1.33,
-      "odds_source": "olbg",
-      "odds_observed_at": "2026-11-19T18:35:28.448018+00:00",
-      "outcome": "HOME",
-      "selection": "Bayern Munich vence",
-      "score": 73.7,
-      "tier": "silver",
-      "source_count": 2,
-      "sources": [
-        {
-          "source": "betclan",
-          "sport": "basketball",
-          "home": "Bayern Munich",
-          "away": "Baskonia",
-          "event_date": "2026-11-19",
-          "kickoff": "2026-11-19T19:00:00+00:00",
-          "market": "MATCH_WINNER",
-          "outcome": "HOME",
-          "url": "https://www.betclan.com/basketball/predictionsdetails/204488954/Bayern-Munich-vs-Baskonia-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-19T18:35:33.782757+00:00",
-          "competition": "Euroleague",
-          "metric": 74.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": null,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Desconhecido"
-        },
-        {
-          "source": "olbg",
-          "sport": "basketball",
-          "home": "Bayern Munich",
-          "away": "Baskonia",
-          "event_date": "2026-11-19",
-          "kickoff": "2026-11-19T19:00:00+00:00",
-          "market": "MATCH_WINNER",
-          "outcome": "HOME",
-          "url": "https://www.olbg.com/betting-tips/Basketball/European/Euroleague/Bayern_Munich_vs_Baskonia/4?event_id=537866",
-          "fetched_at": "2026-11-19T18:35:28.448018+00:00",
-          "competition": "Euroleague",
-          "metric": 76.47,
-          "metric_kind": "vote_pct",
-          "votes_for": 13,
-          "votes_total": 17,
-          "odds": 1.33,
           "event_id": "",
           "segment": "open",
           "status": "scheduled",
@@ -321,51 +250,6 @@
     }
   ],
   "watchlist": [
-    {
-      "sport": "basketball",
-      "home": "Paris",
-      "away": "Hapoel Tel Aviv",
-      "match": "Paris vs Hapoel Tel Aviv",
-      "kickoff": "2026-11-19T19:45:00+00:00",
-      "country": "Desconhecido",
-      "competition": "Euroleague",
-      "market": "MATCH_WINNER",
-      "outcome": "AWAY",
-      "selection": "Hapoel Tel Aviv vence",
-      "odds": null,
-      "source_count": 1,
-      "sources": [
-        {
-          "source": "betclan",
-          "sport": "basketball",
-          "home": "Paris",
-          "away": "Hapoel Tel Aviv",
-          "event_date": "2026-11-19",
-          "kickoff": "2026-11-19T19:45:00+00:00",
-          "market": "MATCH_WINNER",
-          "outcome": "AWAY",
-          "url": "https://www.betclan.com/basketball/predictionsdetails/204488993/Paris-vs-Hapoel-Tel-Aviv-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-19T18:35:34.539808+00:00",
-          "competition": "Euroleague",
-          "metric": 67.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": null,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Desconhecido"
-        }
-      ],
-      "status": "awaiting_independent_source",
-      "is_recommendation": false,
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "status": "out_of_scope"
-      }
-    },
     {
       "sport": "basketball",
       "home": "Pato Basquete",
@@ -390,7 +274,7 @@
           "market": "MATCH_WINNER",
           "outcome": "AWAY",
           "url": "https://www.betclan.com/basketball/predictionsdetails/204488990/Pato-Basquete-vs-Corinthians-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-19T18:35:34.584237+00:00",
+          "fetched_at": "2026-11-19T19:12:57.374879+00:00",
           "competition": "Brazil NBB",
           "metric": 73.0,
           "metric_kind": "model_pct",
@@ -435,7 +319,7 @@
           "market": "MATCH_WINNER",
           "outcome": "AWAY",
           "url": "https://www.betclan.com/basketball/predictionsdetails/204489016/Basket-Osasco-vs-Minas-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-19T18:35:34.808932+00:00",
+          "fetched_at": "2026-11-19T19:12:57.434778+00:00",
           "competition": "Brazil NBB",
           "metric": 89.0,
           "metric_kind": "model_pct",
@@ -480,7 +364,7 @@
           "market": "MATCH_WINNER",
           "outcome": "HOME",
           "url": "https://www.betclan.com/basketball/predictionsdetails/204489007/Pinheiros-vs-Cruzeiro-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-19T18:35:34.712997+00:00",
+          "fetched_at": "2026-11-19T19:12:57.354057+00:00",
           "competition": "Brazil NBB",
           "metric": 76.0,
           "metric_kind": "model_pct",
@@ -505,33 +389,33 @@
   "diagnostics": {
     "coverage": "partial",
     "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
-    "today_forecasts": 32,
-    "today_events": 14,
-    "eligible_forecasts": 13,
-    "eligible_events": 9,
+    "today_forecasts": 29,
+    "today_events": 12,
+    "eligible_forecasts": 12,
+    "eligible_events": 8,
     "threshold_reasons": {
-      "below_source_threshold": 9,
-      "insufficient_votes": 5,
+      "below_source_threshold": 8,
+      "insufficient_votes": 4,
       "missing_metric": 5
     },
     "comparison_rejections": {
-      "insufficient_sources": 4,
+      "insufficient_sources": 3,
       "missing_kickoff": 1,
       "odds_filter": 0,
       "below_consensus_score": 0
     },
-    "watchlist_total": 4,
+    "watchlist_total": 3,
     "by_source": [
       {
         "id": "betclan",
-        "collected": 30,
-        "today": 15,
-        "eligible": 9
+        "collected": 33,
+        "today": 14,
+        "eligible": 8
       },
       {
         "id": "olbg",
-        "collected": 156,
-        "today": 12,
+        "collected": 152,
+        "today": 10,
         "eligible": 4
       },
       {
@@ -567,10 +451,10 @@
       },
       {
         "id": "basketball",
-        "forecasts": 16,
-        "eligible": 10,
-        "events": 8,
-        "confirmed": 3,
+        "forecasts": 14,
+        "eligible": 9,
+        "events": 7,
+        "confirmed": 2,
         "sources": [
           "betclan",
           "olbg"
@@ -578,13 +462,11 @@
       },
       {
         "id": "hockey",
-        "forecasts": 1,
+        "forecasts": 0,
         "eligible": 0,
-        "events": 1,
+        "events": 0,
         "confirmed": 0,
-        "sources": [
-          "olbg"
-        ]
+        "sources": []
       },
       {
         "id": "american_football",
@@ -596,11 +478,24 @@
       }
     ]
   },
+  "oddspedia_feed": {
+    "id": "oddspedia",
+    "name": "Oddspedia API",
+    "configured": true,
+    "checked_at": "2026-11-19T19:12:58.433871+00:00",
+    "url": "https://widgets.oddspedia.com/",
+    "counts_as_prediction": false,
+    "used_in_analysis": false,
+    "status": "error",
+    "reason": "request_failed",
+    "http_status": 403,
+    "message": "A Oddspedia não aceitou o pedido (HTTP 403)."
+  },
   "previews": [
     {
       "date": "2026-11-20",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-19T18:35:36.589407+00:00",
+      "updated_at": "2026-11-19T19:12:58.433871+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -622,14 +517,14 @@
         "history_min_sample": 30,
         "history_warning_roi": -10
       },
-      "total_collected": 191,
-      "total_eligible": 6,
+      "total_collected": 190,
+      "total_eligible": 7,
       "total_selected": 0,
       "discarded": {
-        "other_day": 118,
+        "other_day": 111,
         "started_or_soon": 0,
         "stale": 0,
-        "threshold": 67,
+        "threshold": 72,
         "conflict": 0,
         "excluded": 0
       },
@@ -658,7 +553,7 @@
               "market": "MATCH_WINNER",
               "outcome": "HOME",
               "url": "https://www.betclan.com/tennis/predictionsdetails/204846425/Carlos-Alcaraz-vs-Flavio-Cobolli-prediction-h2h-tip-and-match-preview/",
-              "fetched_at": "2026-11-19T18:35:35.220132+00:00",
+              "fetched_at": "2026-11-19T19:12:57.928194+00:00",
               "competition": "ATP Finals",
               "metric": 89.0,
               "metric_kind": "model_pct",
@@ -683,17 +578,17 @@
       "diagnostics": {
         "coverage": "partial",
         "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
-        "today_forecasts": 73,
-        "today_events": 64,
-        "eligible_forecasts": 6,
-        "eligible_events": 4,
+        "today_forecasts": 79,
+        "today_events": 66,
+        "eligible_forecasts": 7,
+        "eligible_events": 5,
         "threshold_reasons": {
-          "insufficient_votes": 62,
-          "below_source_threshold": 5
+          "insufficient_votes": 64,
+          "below_source_threshold": 8
         },
         "comparison_rejections": {
           "insufficient_sources": 1,
-          "missing_kickoff": 3,
+          "missing_kickoff": 4,
           "odds_filter": 0,
           "below_consensus_score": 0
         },
@@ -701,14 +596,14 @@
         "by_source": [
           {
             "id": "betclan",
-            "collected": 30,
-            "today": 9,
-            "eligible": 5
+            "collected": 33,
+            "today": 13,
+            "eligible": 6
           },
           {
             "id": "olbg",
-            "collected": 156,
-            "today": 64,
+            "collected": 152,
+            "today": 66,
             "eligible": 1
           },
           {
@@ -721,9 +616,9 @@
         "by_sport": [
           {
             "id": "football",
-            "forecasts": 45,
-            "eligible": 5,
-            "events": 37,
+            "forecasts": 53,
+            "eligible": 6,
+            "events": 41,
             "confirmed": 1,
             "sources": [
               "betclan",
@@ -732,9 +627,9 @@
           },
           {
             "id": "tennis",
-            "forecasts": 3,
+            "forecasts": 2,
             "eligible": 1,
-            "events": 2,
+            "events": 1,
             "confirmed": 0,
             "sources": [
               "betclan",
@@ -743,9 +638,9 @@
           },
           {
             "id": "basketball",
-            "forecasts": 8,
+            "forecasts": 7,
             "eligible": 0,
-            "events": 8,
+            "events": 7,
             "confirmed": 0,
             "sources": [
               "olbg"
@@ -791,7 +686,7 @@
           "country": "Germany",
           "odds": 1.08,
           "odds_source": "olbg",
-          "odds_observed_at": "2026-11-19T18:35:28.515023+00:00",
+          "odds_observed_at": "2026-11-19T19:12:51.491719+00:00",
           "outcome": "HOME",
           "selection": "Bayern Munich vence",
           "score": 74.9,
@@ -808,7 +703,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.olbg.com/betting-tips/Football/European_Competitions/Germany_Bundesliga_I/Bayern_Munich_v_Cologne/1?event_id=2046707",
-              "fetched_at": "2026-11-19T18:35:28.515023+00:00",
+              "fetched_at": "2026-11-19T19:12:51.491719+00:00",
               "competition": "Germany Bundesliga I",
               "metric": 86.67,
               "metric_kind": "vote_pct",
@@ -830,7 +725,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.betclan.com/predictionsdetails/football/1575221/bayern-m%C3%BCnchen-v-1.-fc-k%C3%B6ln-prediction-h2h-tip-and-match-preview/",
-              "fetched_at": "2026-11-19T18:35:34.202445+00:00",
+              "fetched_at": "2026-11-19T19:12:56.735149+00:00",
               "competition": "Germany Bundesliga",
               "metric": 88.0,
               "metric_kind": "model_pct",
@@ -862,7 +757,7 @@
     {
       "date": "2026-11-21",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-19T18:35:36.589407+00:00",
+      "updated_at": "2026-11-19T19:12:58.433871+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -884,14 +779,14 @@
         "history_min_sample": 30,
         "history_warning_roi": -10
       },
-      "total_collected": 191,
+      "total_collected": 190,
       "total_eligible": 5,
       "total_selected": 0,
       "discarded": {
-        "other_day": 137,
+        "other_day": 140,
         "started_or_soon": 0,
         "stale": 0,
-        "threshold": 49,
+        "threshold": 45,
         "conflict": 0,
         "excluded": 0
       },
@@ -920,12 +815,12 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Tottenham_v_Ipswich/1?event_id=2046626",
-              "fetched_at": "2026-11-19T18:35:28.515023+00:00",
+              "fetched_at": "2026-11-19T19:12:51.491719+00:00",
               "competition": "England Premier League",
-              "metric": 76.92,
+              "metric": 75.86,
               "metric_kind": "vote_pct",
-              "votes_for": 20,
-              "votes_total": 26,
+              "votes_for": 22,
+              "votes_total": 29,
               "odds": 1.55,
               "event_id": "",
               "segment": "open",
@@ -965,12 +860,12 @@
               "market": "FT_1X2",
               "outcome": "AWAY",
               "url": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Newcastle_v_Arsenal/1?event_id=2046627",
-              "fetched_at": "2026-11-19T18:35:28.515023+00:00",
+              "fetched_at": "2026-11-19T19:12:51.491719+00:00",
               "competition": "England Premier League",
-              "metric": 78.95,
+              "metric": 80.0,
               "metric_kind": "vote_pct",
-              "votes_for": 15,
-              "votes_total": 19,
+              "votes_for": 16,
+              "votes_total": 20,
               "odds": 1.6,
               "event_id": "",
               "segment": "open",
@@ -990,13 +885,13 @@
       "diagnostics": {
         "coverage": "partial",
         "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
-        "today_forecasts": 54,
-        "today_events": 48,
+        "today_forecasts": 50,
+        "today_events": 44,
         "eligible_forecasts": 5,
         "eligible_events": 3,
         "threshold_reasons": {
           "below_source_threshold": 8,
-          "insufficient_votes": 41
+          "insufficient_votes": 37
         },
         "comparison_rejections": {
           "insufficient_sources": 2,
@@ -1008,14 +903,14 @@
         "by_source": [
           {
             "id": "betclan",
-            "collected": 30,
+            "collected": 33,
             "today": 6,
             "eligible": 2
           },
           {
             "id": "olbg",
-            "collected": 156,
-            "today": 48,
+            "collected": 152,
+            "today": 44,
             "eligible": 3
           },
           {
@@ -1028,9 +923,9 @@
         "by_sport": [
           {
             "id": "football",
-            "forecasts": 54,
+            "forecasts": 50,
             "eligible": 5,
-            "events": 48,
+            "events": 44,
             "confirmed": 1,
             "sources": [
               "betclan",
@@ -1089,10 +984,10 @@
           "country": "England",
           "odds": 1.44,
           "odds_source": "olbg",
-          "odds_observed_at": "2026-11-19T18:35:28.515023+00:00",
+          "odds_observed_at": "2026-11-19T19:12:51.491719+00:00",
           "outcome": "HOME",
           "selection": "Man City vence",
-          "score": 76.9,
+          "score": 77.1,
           "tier": "silver",
           "source_count": 2,
           "sources": [
@@ -1106,12 +1001,12 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Man_City_v_Fulham/1?event_id=2046621",
-              "fetched_at": "2026-11-19T18:35:28.515023+00:00",
+              "fetched_at": "2026-11-19T19:12:51.491719+00:00",
               "competition": "England Premier League",
-              "metric": 81.08,
+              "metric": 79.49,
               "metric_kind": "vote_pct",
-              "votes_for": 30,
-              "votes_total": 37,
+              "votes_for": 31,
+              "votes_total": 39,
               "odds": 1.44,
               "event_id": "",
               "segment": "open",
@@ -1128,7 +1023,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.betclan.com/predictionsdetails/football/1557474/manchester-city-v-fulham-prediction-h2h-tip-and-match-preview/",
-              "fetched_at": "2026-11-19T18:35:34.027359+00:00",
+              "fetched_at": "2026-11-19T19:12:56.774045+00:00",
               "competition": "England Premier League",
               "metric": 68.0,
               "metric_kind": "model_pct",
@@ -1157,7 +1052,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-19T18:35:36.589407+00:00",
+    "generated_at": "2026-11-19T19:12:58.433871+00:00",
     "window_from": "2026-11-19",
     "window_through": "2026-11-21",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
@@ -2051,8 +1946,8 @@
       "id": "olbg",
       "name": "OLBG",
       "status": "ok",
-      "collected": 156,
-      "raw_rows": 208,
+      "collected": 152,
+      "raw_rows": 207,
       "message": "Recolha concluída",
       "pages": [
         {
@@ -2068,8 +1963,8 @@
           "id": "olbg",
           "url": "https://www.olbg.com/betting-tips/Basketball/4",
           "status": "ok",
-          "raw_rows": 32,
-          "collected": 16,
+          "raw_rows": 31,
+          "collected": 14,
           "missing_scores": 0,
           "message": "Recolha concluída"
         },
@@ -2087,7 +1982,7 @@
           "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
           "status": "ok",
           "raw_rows": 45,
-          "collected": 17,
+          "collected": 16,
           "missing_scores": 0,
           "message": "Recolha concluída"
         },
@@ -2096,12 +1991,12 @@
           "url": "https://www.olbg.com/betting-tips/Tennis/3",
           "status": "ok",
           "raw_rows": 10,
-          "collected": 3,
+          "collected": 2,
           "missing_scores": 0,
           "message": "Recolha concluída"
         }
       ],
-      "today": 12,
+      "today": 10,
       "eligible": 4
     },
     {
@@ -2211,14 +2106,14 @@
       "id": "betclan",
       "name": "BetClan",
       "status": "partial",
-      "collected": 30,
+      "collected": 33,
       "raw_rows": 1267,
       "details_requested": 24,
       "detail_limit": 24,
       "indexed_by_date": [
         {
           "date": "2026-11-19",
-          "fixtures": 64
+          "fixtures": 50
         },
         {
           "date": "2026-11-20",
@@ -2233,22 +2128,22 @@
         {
           "date": "2026-11-19",
           "sport": "football",
-          "fixtures": 11
+          "fixtures": 10
         },
         {
           "date": "2026-11-19",
           "sport": "tennis",
-          "fixtures": 21
+          "fixtures": 19
         },
         {
           "date": "2026-11-19",
           "sport": "basketball",
-          "fixtures": 26
+          "fixtures": 17
         },
         {
           "date": "2026-11-19",
           "sport": "hockey",
-          "fixtures": 6
+          "fixtures": 4
         },
         {
           "date": "2026-11-19",
@@ -2374,7 +2269,7 @@
           "collected": 1
         },
         {
-          "url": "https://www.betclan.com/basketball/predictionsdetails/204488954/Bayern-Munich-vs-Baskonia-prediction-h2h-tip-and-match-preview/",
+          "url": "https://www.betclan.com/basketball/predictionsdetails/204488993/Paris-vs-Hapoel-Tel-Aviv-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 1
         },
@@ -2414,11 +2309,6 @@
           "collected": 2
         },
         {
-          "url": "https://www.betclan.com/basketball/predictionsdetails/204488993/Paris-vs-Hapoel-Tel-Aviv-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 1
-        },
-        {
           "url": "https://www.betclan.com/basketball/predictionsdetails/204488967/Unifacisa-vs-Flamengo-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 1
@@ -2444,22 +2334,17 @@
           "collected": 2
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1570454/athletic-club-v-espanyol-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
           "url": "https://www.betclan.com/predictionsdetails/football/1492457/sao-paulo-v-fluminense-prediction-h2h-tip-and-match-preview/",
           "status": "partial",
           "collected": 0
         },
         {
-          "url": "https://www.betclan.com/basketball/predictionsdetails/204800364/LA-Clippers-vs-SA-Spurs-prediction-h2h-tip-and-match-preview/",
-          "status": "partial",
-          "collected": 0
+          "url": "https://www.betclan.com/predictionsdetails/football/1570454/athletic-club-v-espanyol-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
         },
         {
-          "url": "https://www.betclan.com/basketball/predictionsdetails/204800358/POR-Trail-Blazers-vs-MIL-Bucks-prediction-h2h-tip-and-match-preview/",
+          "url": "https://www.betclan.com/basketball/predictionsdetails/204800364/LA-Clippers-vs-SA-Spurs-prediction-h2h-tip-and-match-preview/",
           "status": "partial",
           "collected": 0
         },
@@ -2474,25 +2359,35 @@
           "collected": 1
         },
         {
+          "url": "https://www.betclan.com/predictionsdetails/football/1593704/western-sydney-wanderers-v-adelaide-united-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
           "url": "https://www.betclan.com/basketball/predictionsdetails/204800354/GS-Warriors-vs-MEM-Grizzlies-prediction-h2h-tip-and-match-preview/",
           "status": "partial",
           "collected": 0
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1593704/western-sydney-wanderers-v-adelaide-united-prediction-h2h-tip-and-match-preview/",
+          "url": "https://www.betclan.com/predictionsdetails/football/1565308/fc-botosani-v-fc-voluntari-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1585341/southend-v-boreham-wood-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         }
       ],
-      "today": 15,
-      "eligible": 9
+      "today": 14,
+      "eligible": 8
     }
   ],
   "request_id": "",
-  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/44589335718",
+  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/44595893439",
   "status": "partial",
   "pipeline_health": {
-    "checked_at": "2026-11-19T18:35:36.589407+00:00",
+    "checked_at": "2026-11-19T19:12:58.433871+00:00",
     "schedule": "13,43 * * * *",
     "timezone": "UTC",
     "workflow_state": "active",
@@ -2502,9 +2397,9 @@
     "scheduled_age_minutes": null,
     "max_age_minutes": 45,
     "schedule_runs_observed": 0,
-    "run_window": 25,
+    "run_window": 27,
     "last_event": "push",
-    "last_run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/44589335718",
+    "last_run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/44595893439",
     "errors": {}
   },
   "run_event": "push"
