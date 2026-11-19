@@ -72,3 +72,18 @@ API respondeu: logótipo e texto “Data powered by Oddspedia”, com ligação 
 - https://widgets.oddspedia.com/obligations
 
 Não são publicadas nem transcritas neste documento as credenciais da conta.
+
+## Diagnóstico de acesso
+
+O transporte da API lê o corpo de uma recusa apenas para identificar mensagens
+explícitas de chave inválida/expirada, domínio não autorizado, acesso da conta
+ou verificação de navegador. Publica uma categoria e mensagem fixa; nunca o
+corpo recebido, a credencial, URLs autenticados ou cookies. Um 403 genérico não
+é atribuído automaticamente a bots, à chave ou ao domínio. Páginas HTML com
+HTTP 200 também não são tratadas como dados JSON válidos.
+
+Não se alteram identidade do cliente, cookies, IP, rede, origem ou cabeçalhos
+para tentar superar a recusa. Redirecionamentos não são seguidos. Após 403,
+a verificação automática aguarda seis horas; após 401/429, uma hora. O estado
+e instante originais ficam no histórico. Uma execução manual no GitHub pode
+voltar a verificar depois de corrigir a configuração ou obter autorização.

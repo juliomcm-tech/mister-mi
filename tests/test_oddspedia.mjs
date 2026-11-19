@@ -22,3 +22,10 @@ test('empty responses and catalogue-only access stay distinct from a refusal',()
  const refused=oddspediaView({...feed,status:'error',http_status:403,message:'HTTP 403'},now);
  assert.equal(refused.level,'error');assert.equal(refused.attribution,false);
 });
+test('provider challenge is explicit and a deferred retry never claims a fresh success',()=>{
+ const challenged={...feed,status:'error',reason:'provider_challenge',message:'É exigida uma verificação de navegador.'};
+ assert.equal(oddspediaView(challenged,now).label,'Verificação exigida');
+ const deferred=oddspediaView({...challenged,deferred:true,next_check_at:'2026-11-20T01:50:00Z'},now);
+ assert.equal(deferred.label,'Nova tentativa em pausa');assert.equal(deferred.level,'pending');assert.equal(deferred.attribution,false);
+ assert.match(deferred.message,/Lisboa/);
+});

@@ -27,8 +27,9 @@ def main():
     payload["previews"] = upcoming_previews(tips, now, settings)
     api_candidates = payload.get("data", []) + [pick for snapshot in payload["previews"]
                       for key in ("data", "candidates", "watchlist") for pick in snapshot.get(key, [])]
-    payload["oddspedia_feed"] = collect_oddspedia_feed(now, queries=[pick.get("home") for pick in api_candidates])
     prior_history = load_json(args.history, {"schema_version": 1, "records": []})
+    payload["oddspedia_feed"] = collect_oddspedia_feed(now, queries=[pick.get("home") for pick in api_candidates],
+                              previous=prior_history.get("oddspedia_feed"), force=os.environ.get("RUN_EVENT") == "workflow_dispatch")
     catalog = collect_fixture_catalog(prior_history.get("fixture_catalog"), now)
     payload["fixture_catalog"] = catalog
     for snapshot in [payload, *payload["previews"]]:
@@ -36,6 +37,7 @@ def main():
             pick["fixture_verification"] = verify_fixture(pick, catalog)
     history = record(prior_history, payload)
     history["fixture_catalog"] = catalog
+    history["oddspedia_feed"] = payload["oddspedia_feed"]
     free_results, free_statuses = collect_free_results(history, now)
     history["result_sources"] = free_statuses
     automatic, outcome_note = auto_results(history, now)

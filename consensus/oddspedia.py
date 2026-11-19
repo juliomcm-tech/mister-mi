@@ -3,14 +3,14 @@
 This connection is separate from prediction votes. Until its event/market schema
 is mapped and tested, a successful JSON response is not an analysed selection.
 """
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from html import unescape
 from urllib.parse import parse_qs, urlsplit, urlencode
 import json
 import os
 import re
 
-from .sources import Client
+from .oddspedia_transport import OddspediaClient, ApiAccessError
 
 PUBLIC_URL = "https://widgets.oddspedia.com/"
 _VISIBLE_KEY = re.compile(r"^[a-zA-Z_][a-zA-Z0-9_]{0,39}$")
@@ -72,6 +72,9 @@ def _read_endpoint(client, endpoint, token, language, query=None):
     try:
         raw = client.get(url, check_robots=False, headers={"Accept": "application/json"})
     except Exception as exc:
+        if isinstance(exc, ApiAccessError):
+            return {**result, "status": "error", "reason": exc.reason, "http_status": exc.code,
+                    "response_type": exc.response_type, "message": str(exc)}, None
         status = getattr(exc, "code", None)
         if not isinstance(status, int):
             match = re.fullmatch(r"HTTP (\d{3})", str(exc))
@@ -113,7 +116,7 @@ def _search_queries(queries, token):
     return result
 
 
-def collect_oddspedia_feed(now=None, *, feed_url=None, client=None, queries=None):
+def collect_oddspedia_feed(now=None, *, feed_url=None, client=None, queries=None, previous=None, force=False):
     now = now or datetime.now(timezone.utc)
     if now.tzinfo is None:
         raise ValueError("now must contain a timezone")
@@ -128,6 +131,15 @@ def collect_oddspedia_feed(now=None, *, feed_url=None, client=None, queries=None
         url = validate_feed_url(value)
     except ValueError as exc:
         return {**result, "status": "error", "reason": "invalid_configuration", "message": str(exc)}
+    if isinstance(previous, dict) and not force and previous.get("status") == "error" and (previous.get("http_status") in (401, 403, 429) or previous.get("reason") == "provider_challenge"):
+        try:
+            checked = datetime.fromisoformat(previous["checked_at"])
+            due = datetime.fromisoformat(previous["next_check_at"])
+            if checked <= now < due and timedelta(0) < due - checked <= timedelta(days=1):
+                allowed = ("checked_at", "endpoint", "status", "reason", "http_status", "message", "response_type", "next_check_at")
+                return {**result, **{key:previous[key] for key in allowed if key in previous}, "deferred": True}
+        except (KeyError, ValueError, TypeError):
+            pass
     params = parse_qs(urlsplit(url).query)
     token = params["api_token"][0]
     language = params.get("lang", ["en"])[0]
@@ -137,10 +149,12 @@ def collect_oddspedia_feed(now=None, *, feed_url=None, client=None, queries=None
     if os.environ.get("GITHUB_ACTIONS") == "true":
         if not re.search(r"[\r\n]", token):
             print("::add-mask::" + token.replace("%", "%25"))
-    client = client or Client()
+    client = client or OddspediaClient()
     catalogue, data = _read_endpoint(client, "/api/sports", token, language)
     result.update({**catalogue, "catalogue": catalogue, "searches": []})
     if catalogue["status"] != "ok":
+        if catalogue.get("http_status") in (401, 403, 429) or catalogue.get("reason") == "provider_challenge":
+            result["next_check_at"] = (now + timedelta(hours=6 if catalogue.get("http_status") == 403 or catalogue.get("reason") == "provider_challenge" else 1)).isoformat()
         return result  # A refusal stops this attempt; no route probing or retries.
     rows = _records(data)
     if not rows or not all(isinstance(row, dict) and {"id", "slug", "match_count"}.issubset(row)
