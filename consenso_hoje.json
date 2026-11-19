@@ -1,7 +1,7 @@
 {
   "date": "2026-11-19",
   "timezone": "Europe/Lisbon",
-  "updated_at": "2026-11-19T14:23:34.292287+00:00",
+  "updated_at": "2026-11-19T14:30:41.673442+00:00",
   "schema_version": 1,
   "score_is_probability": false,
   "settings": {
@@ -23,14 +23,14 @@
     "history_min_sample": 30,
     "history_warning_roi": -10
   },
-  "total_collected": 27,
+  "total_collected": 87,
   "total_eligible": 1,
   "total_selected": 0,
   "discarded": {
-    "other_day": 19,
+    "other_day": 56,
     "started_or_soon": 0,
     "stale": 0,
-    "threshold": 7,
+    "threshold": 30,
     "conflict": 0,
     "excluded": 0
   },
@@ -72,7 +72,7 @@
       "id": "olbg",
       "name": "OLBG",
       "status": "ok",
-      "collected": 24,
+      "collected": 83,
       "raw_rows": 85,
       "message": "Recolha concluída",
       "pages": [
@@ -81,7 +81,7 @@
           "url": "https://www.olbg.com/betting-tips/American_Football/11",
           "status": "ok",
           "raw_rows": 20,
-          "collected": 0,
+          "collected": 20,
           "missing_scores": 0,
           "message": "Recolha concluída"
         },
@@ -90,7 +90,7 @@
           "url": "https://www.olbg.com/betting-tips/Basketball/4",
           "status": "ok",
           "raw_rows": 18,
-          "collected": 0,
+          "collected": 18,
           "missing_scores": 0,
           "message": "Recolha concluída"
         },
@@ -108,7 +108,7 @@
           "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
           "status": "ok",
           "raw_rows": 20,
-          "collected": 0,
+          "collected": 20,
           "missing_scores": 0,
           "message": "Recolha concluída"
         },
@@ -117,7 +117,7 @@
           "url": "https://www.olbg.com/betting-tips/Tennis/3",
           "status": "ok",
           "raw_rows": 7,
-          "collected": 4,
+          "collected": 5,
           "missing_scores": 0,
           "message": "Recolha concluída"
         }
@@ -177,18 +177,18 @@
       "id": "protipster",
       "name": "ProTipster",
       "status": "partial",
-      "collected": 3,
+      "collected": 4,
       "raw_rows": 6,
-      "message": "3 tips sem Tip Score público; excluídas do consenso",
+      "message": "4 tips sem Tip Score público; excluídas do consenso",
       "pages": [
         {
           "id": "protipster",
           "url": "https://www.protipster.com/betting-tips/today",
           "status": "partial",
           "raw_rows": 6,
-          "collected": 3,
-          "missing_scores": 3,
-          "message": "3 tips sem Tip Score público; excluídas do consenso"
+          "collected": 4,
+          "missing_scores": 4,
+          "message": "4 tips sem Tip Score público; excluídas do consenso"
         }
       ]
     },
@@ -220,6 +220,6 @@
     }
   ],
   "request_id": "",
-  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/44543152199",
+  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/44544477628",
   "status": "ok"
 }
