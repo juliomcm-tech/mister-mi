@@ -5,6 +5,7 @@ import {coverageView,visibleWatchlist} from './coverage.js';
 import {futureDate,outlookState,outlookCandidates} from './outlook.js';
 import {gameCard} from './game-card.js';
 import {operationState,canStartCollection} from './operation.js';
+import {initOddspediaWidget} from './oddspedia.js';
 
 const $ = id => document.getElementById(id);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -25,6 +26,7 @@ let favorites = new Set(read('mister-mi.favorites',[]));
 let payload=null, history={records:[]}, health=null, activeSport='all', onlyFavorites=false, busy=false, loadFailed=false, latestMessage='', lastReadError='';
 let policy={...DEFAULT_POLICY,...read('mister-mi.policy',{})};
 let view='hoje';
+let oddspediaWidget;
 let experiment=null,experimentRequested=false;
 let motionEnabled=read('mister-mi.motion',true)===true;
 const requestedDay=new URLSearchParams(location.search).get('day');
@@ -47,7 +49,7 @@ function changeView(name){
  view=name;document.querySelectorAll('.view').forEach(el=>el.hidden=el.id!==`view-${name}`);
  document.querySelectorAll('.rail-button').forEach(el=>{el.classList.toggle('active',el.dataset.view===name);el.setAttribute('aria-current',el.dataset.view===name?'page':'false');});
  if(location.hash!==`#${name}`)historyReplaceHash(name);
- render();window.scrollTo({top:0,behavior:'instant'});
+ render();oddspediaWidget?.show(name);window.scrollTo({top:0,behavior:'instant'});
 }
 function historyReplaceHash(name){window.history.replaceState(null,'',`#${name}`);}
 document.addEventListener('click',e=>{const nav=e.target.closest('[data-view]');if(nav)changeView(nav.dataset.view);});
@@ -156,7 +158,7 @@ const descriptors={
 function renderSources(){
  $('source-details').innerHTML=(payload?.sources??Object.keys(descriptors).map(id=>({id,name:sourceNames[id],status:'not_configured',message:'A aguardar dados'}))).map(s=>{const d=descriptors[s.id]??{};return `<article class="panel source-card"><span class="source-kind">${esc(d.kind??'RESULTADOS')}</span><h2>${esc(s.name)}<span class="tiny-badge">${esc(stateLabels[s.status]??s.status)}</span></h2><p>${esc(d.description??'Verificação de resultados finais, separada dos prognósticos.')}</p><p><strong>${s.collected??0}</strong> previsões extraídas${s.today!==undefined?` · ${s.today} de hoje · ${s.eligible??0} aptas`:""}</p><div class="source-error">${esc(s.message??'')}${s.pages?`<details><summary>Ver páginas consultadas</summary>${s.pages.map(p=>`<p><a href="${safeURL(p.url)}" target="_blank" rel="noopener noreferrer">Página da fonte</a> · ${esc(stateLabels[p.status])}<br>${esc(p.message)}</p>`).join('')}</details>`:''}</div><p><a href="${safeURL(d.url??'https://github.com/juliomcm-tech/mister-mi')}" target="_blank" rel="noopener noreferrer">Consultar a fonte</a></p></article>`;}).join('');
  const resources=[
- ['Oddspedia','API e widgets anunciados como gratuitos para calendários, resultados e comparação de odds. Exigem conta, configuração do domínio e atribuição visível. Ainda não ligada ao Mister Mi.','https://widgets.oddspedia.com/','Disponível após registo · não conta como previsão de consenso'],
+ ['Oddspedia','API e widgets anunciados como gratuitos para calendários, resultados e comparação de odds. Exigem conta, configuração do domínio e atribuição visível. O widget pode ser adicionado em Ajustes → Oddspedia; a análise automática requer acesso separado aos dados.','https://widgets.oddspedia.com/','Disponível após registo · não conta como previsão de consenso'],
  ['OpenLigaDB','Integrado para resultados finais da Bundesliga 1/2, quando há correspondência inequívoca. Dados comunitários ODbL 1.0; não conta como previsão.','https://www.openligadb.de/en/license','Dados de OpenLigaDB · ODbL 1.0'],
  ['openfootball','JSON CC0 para investigação histórica e validação. Atualização diária; sem garantia de resultados completos no próprio dia.','https://github.com/openfootball/football.json','Referência · não conta para o consenso'],
  ['scikit-learn','Referência para calibração e avaliação futura com períodos cronológicos separados. Não há modelo calibrado ativo nesta versão.','https://scikit-learn.org/stable/modules/calibration.html','Investigação futura · BSD'],
@@ -285,6 +287,7 @@ async function refreshAnalysis(run=true){
  }catch(error){const message=error.message;const readOkay=await loadSnapshot({quiet:true});notice(readOkay?`Não foi possível iniciar uma nova execução: ${message} A última publicação do GitHub foi recarregada.`:message);}finally{busy=false;$('refresh').disabled=false;$('hero-analyse').disabled=false;render();}
 }
 document.addEventListener('click',e=>{
+ const widgetSettings=e.target.closest('[data-oddspedia-settings]');if(widgetSettings)$('oddspedia-form').scrollIntoView({block:'start',behavior:'smooth'});
  const day=e.target.closest('[data-preview-day]');if(day){previewOffset=Number(day.dataset.previewDay);const url=new URL(location.href);if(previewOffset)url.searchParams.set('day',previewOffset===1?'tomorrow':'after');else url.searchParams.delete('day');window.history.replaceState(null,'',url);renderPicks();document.querySelector('.analysis-days')?.scrollIntoView({block:'start',behavior:'smooth'});}
  const analysis=e.target.closest('[data-analysis]');if(analysis)showAnalysis(analysis.dataset.analysis);
  const fav=e.target.closest('[data-favorite]');if(fav){favorites.has(fav.dataset.favorite)?favorites.delete(fav.dataset.favorite):favorites.add(fav.dataset.favorite);write('mister-mi.favorites',[...favorites]);renderPicks();}
@@ -314,6 +317,7 @@ applyMotion();
 function closeInstall(){const d=$('install-dialog');if(typeof d.close==='function')d.close();else{d.removeAttribute('open');d.hidden=true;}}
 $('close-install').onclick=closeInstall;$('install-done').onclick=closeInstall;
 initPWA({onOffline:offline=>{if(offline){loadFailed=true;lastReadError='Sem ligação à Internet. As previsões atuais precisam de uma ligação ativa.';notice(lastReadError);render();}else if(loadFailed)loadSnapshot({quiet:true});}});
+oddspediaWidget=initOddspediaWidget({onOpen:()=>changeView('fontes'),onToast:toast});
 fillPreferences();changeView(location.hash.slice(1)||'hoje');
 await loadSnapshot();await loadHealth();renderPicks();
 
