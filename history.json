@@ -469,18 +469,44 @@
       "date": "2026-11-20",
       "first_seen": "2026-11-20T07:02:48.388347+00:00",
       "criteria_revision": "90f2af89cf64",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "loss",
+      "settled_at": "2026-11-20T22:39:00.097702+00:00",
+      "settlement_source": "openligadb",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        1,
+        1
+      ],
+      "settlement_evidence": {
+        "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+        "source_event_id": "83237",
+        "verified_at": "2026-11-20T22:39:00.097702+00:00",
+        "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
+        "license": "ODbL-1.0"
+      }
     }
   ],
-  "result_sources": [],
+  "result_sources": [
+    {
+      "id": "openligadb",
+      "name": "OpenLigaDB",
+      "resource": "bl1/2026",
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+      "checked_at": "2026-11-20T22:39:00.097702+00:00",
+      "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
+      "license": "ODbL-1.0",
+      "license_url": "https://www.openligadb.de/en/license",
+      "collected": 1,
+      "status": "ok",
+      "message": "Resultados regulamentares verificados",
+      "next_check_at": "2026-11-21T04:39:00.097702+00:00"
+    }
+  ],
   "fixture_catalog": {
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "ok",
-    "generated_at": "2026-11-20T16:04:41.990141+00:00",
+    "generated_at": "2026-11-20T22:39:00.097702+00:00",
     "window_from": "2026-11-20",
     "window_through": "2026-11-22",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
@@ -496,13 +522,13 @@
         "league": "bl1",
         "season": 2026,
         "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "ok",
-        "next_check_at": "2026-11-20T22:04:41.990141+00:00",
+        "next_check_at": "2026-11-21T04:39:00.097702+00:00",
         "cache_from": "2026-11-20",
         "cache_through": "2026-11-27",
         "fixtures": [
@@ -519,7 +545,7 @@
             "away": "1. FC Köln",
             "date": "2026-11-20",
             "kickoff": "2026-11-20T19:30:00+00:00",
-            "provider_finished": false,
+            "provider_finished": true,
             "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
             "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
             "license": "ODbL-1.0",
@@ -715,13 +741,13 @@
         "league": "bl2",
         "season": 2026,
         "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "ok",
-        "next_check_at": "2026-11-20T22:04:41.990141+00:00",
+        "next_check_at": "2026-11-21T04:39:00.097702+00:00",
         "cache_from": "2026-11-20",
         "cache_through": "2026-11-27",
         "fixtures": [
@@ -738,7 +764,7 @@
             "away": "1. FC Heidenheim 1846",
             "date": "2026-11-20",
             "kickoff": "2026-11-20T17:30:00+00:00",
-            "provider_finished": false,
+            "provider_finished": true,
             "source_url": "https://api.openligadb.de/getmatchdata/bl2/2026",
             "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
             "license": "ODbL-1.0",
@@ -758,7 +784,7 @@
             "away": "1. FC Magdeburg",
             "date": "2026-11-20",
             "kickoff": "2026-11-20T17:30:00+00:00",
-            "provider_finished": false,
+            "provider_finished": true,
             "source_url": "https://api.openligadb.de/getmatchdata/bl2/2026",
             "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
             "license": "ODbL-1.0",
@@ -963,14 +989,14 @@
         "away": "1. FC Heidenheim 1846",
         "date": "2026-11-20",
         "kickoff": "2026-11-20T17:30:00+00:00",
-        "provider_finished": false,
+        "provider_finished": true,
         "source_url": "https://api.openligadb.de/getmatchdata/bl2/2026",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "status": "finished",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -986,14 +1012,14 @@
         "away": "1. FC Magdeburg",
         "date": "2026-11-20",
         "kickoff": "2026-11-20T17:30:00+00:00",
-        "provider_finished": false,
+        "provider_finished": true,
         "source_url": "https://api.openligadb.de/getmatchdata/bl2/2026",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "status": "finished",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1009,14 +1035,14 @@
         "away": "1. FC Köln",
         "date": "2026-11-20",
         "kickoff": "2026-11-20T19:30:00+00:00",
-        "provider_finished": false,
+        "provider_finished": true,
         "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "status": "finished",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1039,7 +1065,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1062,7 +1088,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1085,7 +1111,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1108,7 +1134,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1131,7 +1157,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1154,7 +1180,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1177,7 +1203,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1200,7 +1226,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1223,7 +1249,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1246,7 +1272,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1269,7 +1295,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1292,7 +1318,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1315,7 +1341,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1338,7 +1364,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       },
       {
@@ -1361,14 +1387,14 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-20T16:04:41.990141+00:00",
+        "checked_at": "2026-11-20T22:39:00.097702+00:00",
         "cache_status": "ok"
       }
     ],
     "counts_by_date": [
       {
         "date": "2026-11-20",
-        "scheduled": 3,
+        "scheduled": 0,
         "coverage": "configured_resources_only"
       },
       {
@@ -1388,7 +1414,7 @@
     "id": "oddspedia",
     "name": "Oddspedia API",
     "configured": true,
-    "checked_at": "2026-11-20T16:04:41.990141+00:00",
+    "checked_at": "2026-11-20T22:39:00.097702+00:00",
     "url": "https://widgets.oddspedia.com/",
     "counts_as_prediction": false,
     "used_in_analysis": false,
@@ -1408,6 +1434,6 @@
       "message": "A resposta exige verificação de navegador ou recusa tráfego automatizado. O coletor não tenta contornar essa verificação."
     },
     "searches": [],
-    "next_check_at": "2026-11-20T22:04:41.990141+00:00"
+    "next_check_at": "2026-11-21T04:39:00.097702+00:00"
   }
 }
