@@ -1114,8 +1114,8 @@
   "fixture_catalog": {
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
-    "status": "ok",
-    "generated_at": "2026-11-21T19:07:39.075983+00:00",
+    "status": "cached",
+    "generated_at": "2026-11-21T23:46:37.168312+00:00",
     "window_from": "2026-11-21",
     "window_through": "2026-11-23",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
@@ -1136,7 +1136,7 @@
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "ok",
+        "status": "cached",
         "next_check_at": "2026-11-22T01:07:39.075983+00:00",
         "cache_from": "2026-11-21",
         "cache_through": "2026-11-28",
@@ -1435,7 +1435,7 @@
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "ok",
+        "status": "cached",
         "next_check_at": "2026-11-22T01:07:39.075983+00:00",
         "cache_from": "2026-11-21",
         "cache_through": "2026-11-28",
@@ -1726,7 +1726,7 @@
         "counts_as_prediction": false,
         "status": "finished",
         "checked_at": "2026-11-21T19:07:39.075983+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1749,7 +1749,7 @@
         "counts_as_prediction": false,
         "status": "finished",
         "checked_at": "2026-11-21T19:07:39.075983+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1772,7 +1772,7 @@
         "counts_as_prediction": false,
         "status": "finished",
         "checked_at": "2026-11-21T19:07:39.075983+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1795,7 +1795,7 @@
         "counts_as_prediction": false,
         "status": "finished",
         "checked_at": "2026-11-21T19:07:39.075983+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1818,7 +1818,7 @@
         "counts_as_prediction": false,
         "status": "finished",
         "checked_at": "2026-11-21T19:07:39.075983+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1841,7 +1841,7 @@
         "counts_as_prediction": false,
         "status": "finished",
         "checked_at": "2026-11-21T19:07:39.075983+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1864,7 +1864,7 @@
         "counts_as_prediction": false,
         "status": "finished",
         "checked_at": "2026-11-21T19:07:39.075983+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1887,7 +1887,7 @@
         "counts_as_prediction": false,
         "status": "finished",
         "checked_at": "2026-11-21T19:07:39.075983+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1910,7 +1910,7 @@
         "counts_as_prediction": false,
         "status": "started_unconfirmed",
         "checked_at": "2026-11-21T19:07:39.075983+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1931,9 +1931,9 @@
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "scheduled",
+        "status": "started_unconfirmed",
         "checked_at": "2026-11-21T19:07:39.075983+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1956,7 +1956,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-21T19:07:39.075983+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1979,7 +1979,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-21T19:07:39.075983+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -2002,7 +2002,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-21T19:07:39.075983+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -2025,7 +2025,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-21T19:07:39.075983+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -2048,13 +2048,13 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-21T19:07:39.075983+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       }
     ],
     "counts_by_date": [
       {
         "date": "2026-11-21",
-        "scheduled": 1,
+        "scheduled": 0,
         "coverage": "configured_resources_only"
       },
       {
@@ -2083,17 +2083,9 @@
     "status": "error",
     "reason": "provider_challenge",
     "http_status": 403,
-    "response_type": "html",
     "message": "A resposta exige verificação de navegador ou recusa tráfego automatizado. O coletor não tenta contornar essa verificação.",
-    "catalogue": {
-      "endpoint": "/api/sports",
-      "status": "error",
-      "reason": "provider_challenge",
-      "http_status": 403,
-      "response_type": "html",
-      "message": "A resposta exige verificação de navegador ou recusa tráfego automatizado. O coletor não tenta contornar essa verificação."
-    },
-    "searches": [],
-    "next_check_at": "2026-11-22T01:07:39.075983+00:00"
+    "response_type": "html",
+    "next_check_at": "2026-11-22T01:07:39.075983+00:00",
+    "deferred": true
   }
 }
