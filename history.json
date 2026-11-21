@@ -484,31 +484,250 @@
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0"
       }
-    }
-  ],
-  "result_sources": [
+    },
     {
-      "id": "openligadb",
-      "name": "OpenLigaDB",
-      "resource": "bl1/2026",
-      "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
-      "checked_at": "2026-11-20T22:39:00.097702+00:00",
-      "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
-      "license": "ODbL-1.0",
-      "license_url": "https://www.openligadb.de/en/license",
-      "collected": 1,
-      "status": "ok",
-      "message": "Resultados regulamentares verificados",
-      "next_check_at": "2026-11-21T04:39:00.097702+00:00"
+      "id": "d27467a9bfbe22c0",
+      "sport": "football",
+      "home": "Southampton",
+      "away": "Derby",
+      "match": "Southampton vs Derby",
+      "competition": "England Championship",
+      "kickoff": "2026-11-21T12:30:00+00:00",
+      "market": "FT_1X2",
+      "country": "England",
+      "odds": 1.36,
+      "odds_source": "olbg",
+      "odds_observed_at": "2026-11-21T03:27:30.793389+00:00",
+      "outcome": "HOME",
+      "selection": "Southampton vence",
+      "score": 76.0,
+      "tier": "silver",
+      "source_count": 2,
+      "sources": [
+        {
+          "source": "olbg",
+          "sport": "football",
+          "home": "Southampton",
+          "away": "Derby",
+          "event_date": "2026-11-21",
+          "kickoff": "2026-11-21T12:30:00+00:00",
+          "market": "FT_1X2",
+          "outcome": "HOME",
+          "url": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/Southampton_v_Derby/1?event_id=2047676",
+          "fetched_at": "2026-11-21T03:27:30.793389+00:00",
+          "competition": "England Championship",
+          "metric": 88.89,
+          "metric_kind": "vote_pct",
+          "votes_for": 24,
+          "votes_total": 27,
+          "odds": 1.36,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "England"
+        },
+        {
+          "source": "betclan",
+          "sport": "football",
+          "home": "Southampton",
+          "away": "Derby",
+          "event_date": "2026-11-21",
+          "kickoff": null,
+          "market": "FT_1X2",
+          "outcome": "HOME",
+          "url": "https://www.betclan.com/predictionsdetails/football/1563270/southampton-v-derby-prediction-h2h-tip-and-match-preview/",
+          "fetched_at": "2026-11-21T03:27:34.901563+00:00",
+          "competition": "England Championship",
+          "metric": 72.0,
+          "metric_kind": "model_pct",
+          "votes_for": 0,
+          "votes_total": 0,
+          "odds": null,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "England"
+        }
+      ],
+      "reason": "2 fontes concordam na mesma seleção e no mesmo mercado.",
+      "fixture_verification": {
+        "source": "openligadb_calendar",
+        "counts_as_prediction": false,
+        "status": "out_of_scope"
+      },
+      "date": "2026-11-21",
+      "first_seen": "2026-11-21T03:27:36.936946+00:00",
+      "criteria_revision": "90f2af89cf64",
+      "result": "pending",
+      "settled_at": null,
+      "settlement_source": null,
+      "paper_stake_units": 1.0
+    },
+    {
+      "id": "ed96310676e4529a",
+      "sport": "football",
+      "home": "Man City",
+      "away": "Fulham",
+      "match": "Man City vs Fulham",
+      "competition": "England Premier League",
+      "kickoff": "2026-11-21T12:30:00+00:00",
+      "market": "FT_1X2",
+      "country": "England",
+      "odds": 1.4,
+      "odds_source": "olbg",
+      "odds_observed_at": "2026-11-21T03:27:30.793389+00:00",
+      "outcome": "HOME",
+      "selection": "Man City vence",
+      "score": 78.8,
+      "tier": "silver",
+      "source_count": 2,
+      "sources": [
+        {
+          "source": "olbg",
+          "sport": "football",
+          "home": "Man City",
+          "away": "Fulham",
+          "event_date": "2026-11-21",
+          "kickoff": "2026-11-21T12:30:00+00:00",
+          "market": "FT_1X2",
+          "outcome": "HOME",
+          "url": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Man_City_v_Fulham/1?event_id=2046621",
+          "fetched_at": "2026-11-21T03:27:30.793389+00:00",
+          "competition": "England Premier League",
+          "metric": 78.05,
+          "metric_kind": "vote_pct",
+          "votes_for": 64,
+          "votes_total": 82,
+          "odds": 1.4,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "England"
+        },
+        {
+          "source": "betclan",
+          "sport": "football",
+          "home": "Manchester City",
+          "away": "Fulham",
+          "event_date": "2026-11-21",
+          "kickoff": null,
+          "market": "FT_1X2",
+          "outcome": "HOME",
+          "url": "https://www.betclan.com/predictionsdetails/football/1557474/manchester-city-v-fulham-prediction-h2h-tip-and-match-preview/",
+          "fetched_at": "2026-11-21T03:27:34.747743+00:00",
+          "competition": "England Premier League",
+          "metric": 68.0,
+          "metric_kind": "model_pct",
+          "votes_for": 0,
+          "votes_total": 0,
+          "odds": null,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "England"
+        }
+      ],
+      "reason": "2 fontes concordam na mesma seleção e no mesmo mercado.",
+      "fixture_verification": {
+        "source": "openligadb_calendar",
+        "counts_as_prediction": false,
+        "status": "out_of_scope"
+      },
+      "date": "2026-11-21",
+      "first_seen": "2026-11-21T03:27:36.936946+00:00",
+      "criteria_revision": "90f2af89cf64",
+      "result": "pending",
+      "settled_at": null,
+      "settlement_source": null,
+      "paper_stake_units": 1.0
+    },
+    {
+      "id": "f2092a39e7bfcafa",
+      "sport": "football",
+      "home": "Lazio",
+      "away": "Lecce",
+      "match": "Lazio vs Lecce",
+      "competition": "Italy Serie A",
+      "kickoff": "2026-11-21T14:00:00+00:00",
+      "market": "FT_1X2",
+      "country": "Italy",
+      "odds": 1.44,
+      "odds_source": "olbg",
+      "odds_observed_at": "2026-11-21T03:27:30.793389+00:00",
+      "outcome": "HOME",
+      "selection": "Lazio vence",
+      "score": 75.2,
+      "tier": "silver",
+      "source_count": 2,
+      "sources": [
+        {
+          "source": "olbg",
+          "sport": "football",
+          "home": "Lazio",
+          "away": "Lecce",
+          "event_date": "2026-11-21",
+          "kickoff": "2026-11-21T14:00:00+00:00",
+          "market": "FT_1X2",
+          "outcome": "HOME",
+          "url": "https://www.olbg.com/betting-tips/Football/European_Competitions/Italy_Serie_A/Lazio_v_Lecce/1?event_id=2046753",
+          "fetched_at": "2026-11-21T03:27:30.793389+00:00",
+          "competition": "Italy Serie A",
+          "metric": 95.0,
+          "metric_kind": "vote_pct",
+          "votes_for": 19,
+          "votes_total": 20,
+          "odds": 1.44,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "Italy"
+        },
+        {
+          "source": "betclan",
+          "sport": "football",
+          "home": "Lazio",
+          "away": "Lecce",
+          "event_date": "2026-11-21",
+          "kickoff": null,
+          "market": "FT_1X2",
+          "outcome": "HOME",
+          "url": "https://www.betclan.com/predictionsdetails/football/1550202/lazio-v-lecce-prediction-h2h-tip-and-match-preview/",
+          "fetched_at": "2026-11-21T03:27:35.066893+00:00",
+          "competition": "Italy Serie A",
+          "metric": 71.0,
+          "metric_kind": "model_pct",
+          "votes_for": 0,
+          "votes_total": 0,
+          "odds": null,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "Italy"
+        }
+      ],
+      "reason": "2 fontes concordam na mesma seleção e no mesmo mercado.",
+      "fixture_verification": {
+        "source": "openligadb_calendar",
+        "counts_as_prediction": false,
+        "status": "out_of_scope"
+      },
+      "date": "2026-11-21",
+      "first_seen": "2026-11-21T03:27:36.936946+00:00",
+      "criteria_revision": "90f2af89cf64",
+      "result": "pending",
+      "settled_at": null,
+      "settlement_source": null,
+      "paper_stake_units": 1.0
     }
   ],
+  "result_sources": [],
   "fixture_catalog": {
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
-    "status": "ok",
-    "generated_at": "2026-11-20T22:39:00.097702+00:00",
-    "window_from": "2026-11-20",
-    "window_through": "2026-11-22",
+    "status": "cached",
+    "generated_at": "2026-11-21T03:27:36.936946+00:00",
+    "window_from": "2026-11-21",
+    "window_through": "2026-11-23",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
     "complete_global_coverage": false,
     "counts_as_prediction": false,
@@ -527,7 +746,7 @@
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "ok",
+        "status": "cached",
         "next_check_at": "2026-11-21T04:39:00.097702+00:00",
         "cache_from": "2026-11-20",
         "cache_through": "2026-11-27",
@@ -746,7 +965,7 @@
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "ok",
+        "status": "cached",
         "next_check_at": "2026-11-21T04:39:00.097702+00:00",
         "cache_from": "2026-11-20",
         "cache_through": "2026-11-27",
@@ -978,75 +1197,6 @@
     "fixtures": [
       {
         "source": "openligadb",
-        "source_event_id": "83697",
-        "league": "bl2",
-        "season": 2026,
-        "sport": "football",
-        "country": "Germany",
-        "segment": "open",
-        "competition": "Bundesliga 2",
-        "home": "SV Darmstadt 98",
-        "away": "1. FC Heidenheim 1846",
-        "date": "2026-11-20",
-        "kickoff": "2026-11-20T17:30:00+00:00",
-        "provider_finished": true,
-        "source_url": "https://api.openligadb.de/getmatchdata/bl2/2026",
-        "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
-        "license": "ODbL-1.0",
-        "license_url": "https://www.openligadb.de/en/license",
-        "counts_as_prediction": false,
-        "status": "finished",
-        "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
-      },
-      {
-        "source": "openligadb",
-        "source_event_id": "83705",
-        "league": "bl2",
-        "season": 2026,
-        "sport": "football",
-        "country": "Germany",
-        "segment": "open",
-        "competition": "Bundesliga 2",
-        "home": "DSC Arminia Bielefeld",
-        "away": "1. FC Magdeburg",
-        "date": "2026-11-20",
-        "kickoff": "2026-11-20T17:30:00+00:00",
-        "provider_finished": true,
-        "source_url": "https://api.openligadb.de/getmatchdata/bl2/2026",
-        "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
-        "license": "ODbL-1.0",
-        "license_url": "https://www.openligadb.de/en/license",
-        "counts_as_prediction": false,
-        "status": "finished",
-        "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
-      },
-      {
-        "source": "openligadb",
-        "source_event_id": "83237",
-        "league": "bl1",
-        "season": 2026,
-        "sport": "football",
-        "country": "Germany",
-        "segment": "open",
-        "competition": "Bundesliga 1",
-        "home": "FC Bayern München",
-        "away": "1. FC Köln",
-        "date": "2026-11-20",
-        "kickoff": "2026-11-20T19:30:00+00:00",
-        "provider_finished": true,
-        "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
-        "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
-        "license": "ODbL-1.0",
-        "license_url": "https://www.openligadb.de/en/license",
-        "counts_as_prediction": false,
-        "status": "finished",
-        "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
-      },
-      {
-        "source": "openligadb",
         "source_event_id": "83689",
         "league": "bl2",
         "season": 2026,
@@ -1066,7 +1216,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1089,7 +1239,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1112,7 +1262,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1135,7 +1285,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1158,7 +1308,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1181,7 +1331,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1204,7 +1354,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1227,7 +1377,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1250,7 +1400,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1273,7 +1423,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1296,7 +1446,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1319,7 +1469,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1342,7 +1492,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1365,7 +1515,7 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       },
       {
         "source": "openligadb",
@@ -1388,15 +1538,10 @@
         "counts_as_prediction": false,
         "status": "scheduled",
         "checked_at": "2026-11-20T22:39:00.097702+00:00",
-        "cache_status": "ok"
+        "cache_status": "cached"
       }
     ],
     "counts_by_date": [
-      {
-        "date": "2026-11-20",
-        "scheduled": 0,
-        "coverage": "configured_resources_only"
-      },
       {
         "date": "2026-11-21",
         "scheduled": 10,
@@ -1405,6 +1550,11 @@
       {
         "date": "2026-11-22",
         "scheduled": 5,
+        "coverage": "configured_resources_only"
+      },
+      {
+        "date": "2026-11-23",
+        "scheduled": 0,
         "coverage": "configured_resources_only"
       }
     ],
@@ -1423,17 +1573,9 @@
     "status": "error",
     "reason": "provider_challenge",
     "http_status": 403,
-    "response_type": "html",
     "message": "A resposta exige verificação de navegador ou recusa tráfego automatizado. O coletor não tenta contornar essa verificação.",
-    "catalogue": {
-      "endpoint": "/api/sports",
-      "status": "error",
-      "reason": "provider_challenge",
-      "http_status": 403,
-      "response_type": "html",
-      "message": "A resposta exige verificação de navegador ou recusa tráfego automatizado. O coletor não tenta contornar essa verificação."
-    },
-    "searches": [],
-    "next_check_at": "2026-11-21T04:39:00.097702+00:00"
+    "response_type": "html",
+    "next_check_at": "2026-11-21T04:39:00.097702+00:00",
+    "deferred": true
   }
 }
