@@ -1427,7 +1427,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "ok",
-    "generated_at": "2026-11-24T05:57:32.826533+00:00",
+    "generated_at": "2026-11-24T17:34:11.471215+00:00",
     "window_from": "2026-11-24",
     "window_through": "2026-11-26",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
@@ -1443,13 +1443,13 @@
         "league": "bl1",
         "season": 2026,
         "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
-        "checked_at": "2026-11-24T05:57:32.826533+00:00",
+        "checked_at": "2026-11-24T17:34:11.471215+00:00",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "ok",
-        "next_check_at": "2026-11-24T11:57:32.826533+00:00",
+        "next_check_at": "2026-11-24T23:34:11.471215+00:00",
         "cache_from": "2026-11-24",
         "cache_through": "2026-12-01",
         "fixtures": [
@@ -1642,13 +1642,13 @@
         "league": "bl2",
         "season": 2026,
         "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
-        "checked_at": "2026-11-24T05:57:32.826533+00:00",
+        "checked_at": "2026-11-24T17:34:11.471215+00:00",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "ok",
-        "next_check_at": "2026-11-24T11:57:32.826533+00:00",
+        "next_check_at": "2026-11-24T23:34:11.471215+00:00",
         "cache_from": "2026-11-24",
         "cache_through": "2026-12-01",
         "fixtures": [
@@ -1860,7 +1860,7 @@
     "id": "oddspedia",
     "name": "Oddspedia API",
     "configured": true,
-    "checked_at": "2026-11-24T05:57:32.826533+00:00",
+    "checked_at": "2026-11-24T17:34:11.471215+00:00",
     "url": "https://widgets.oddspedia.com/",
     "counts_as_prediction": false,
     "used_in_analysis": false,
@@ -1880,6 +1880,6 @@
       "message": "A resposta exige verificação de navegador ou recusa tráfego automatizado. O coletor não tenta contornar essa verificação."
     },
     "searches": [],
-    "next_check_at": "2026-11-24T11:57:32.826533+00:00"
+    "next_check_at": "2026-11-24T23:34:11.471215+00:00"
   }
 }
