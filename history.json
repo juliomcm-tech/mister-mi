@@ -1427,9 +1427,9 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "ok",
-    "generated_at": "2026-11-24T17:34:11.471215+00:00",
-    "window_from": "2026-11-24",
-    "window_through": "2026-11-26",
+    "generated_at": "2026-11-25T01:34:38.096902+00:00",
+    "window_from": "2026-11-25",
+    "window_through": "2026-11-27",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
     "complete_global_coverage": false,
     "counts_as_prediction": false,
@@ -1443,15 +1443,15 @@
         "league": "bl1",
         "season": 2026,
         "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
-        "checked_at": "2026-11-24T17:34:11.471215+00:00",
+        "checked_at": "2026-11-25T01:34:38.096902+00:00",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "ok",
-        "next_check_at": "2026-11-24T23:34:11.471215+00:00",
-        "cache_from": "2026-11-24",
-        "cache_through": "2026-12-01",
+        "next_check_at": "2026-11-25T07:34:38.096902+00:00",
+        "cache_from": "2026-11-25",
+        "cache_through": "2026-12-02",
         "fixtures": [
           {
             "source": "openligadb",
@@ -1642,15 +1642,15 @@
         "league": "bl2",
         "season": 2026,
         "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
-        "checked_at": "2026-11-24T17:34:11.471215+00:00",
+        "checked_at": "2026-11-25T01:34:38.096902+00:00",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "ok",
-        "next_check_at": "2026-11-24T23:34:11.471215+00:00",
-        "cache_from": "2026-11-24",
-        "cache_through": "2026-12-01",
+        "next_check_at": "2026-11-25T07:34:38.096902+00:00",
+        "cache_from": "2026-11-25",
+        "cache_through": "2026-12-02",
         "fixtures": [
           {
             "source": "openligadb",
@@ -1836,13 +1836,78 @@
         "failures": 0
       }
     ],
-    "fixtures": [],
-    "counts_by_date": [
+    "fixtures": [
       {
-        "date": "2026-11-24",
-        "scheduled": 0,
-        "coverage": "configured_resources_only"
+        "source": "openligadb",
+        "source_event_id": "83707",
+        "league": "bl2",
+        "season": 2026,
+        "sport": "football",
+        "country": "Germany",
+        "segment": "open",
+        "competition": "Bundesliga 2",
+        "home": "1. FC Heidenheim 1846",
+        "away": "1. FC Nürnberg",
+        "date": "2026-11-27",
+        "kickoff": "2026-11-27T17:30:00+00:00",
+        "provider_finished": false,
+        "source_url": "https://api.openligadb.de/getmatchdata/bl2/2026",
+        "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
+        "license": "ODbL-1.0",
+        "license_url": "https://www.openligadb.de/en/license",
+        "counts_as_prediction": false,
+        "status": "scheduled",
+        "checked_at": "2026-11-25T01:34:38.096902+00:00",
+        "cache_status": "ok"
       },
+      {
+        "source": "openligadb",
+        "source_event_id": "83709",
+        "league": "bl2",
+        "season": 2026,
+        "sport": "football",
+        "country": "Germany",
+        "segment": "open",
+        "competition": "Bundesliga 2",
+        "home": "VfL Bochum",
+        "away": "SV Darmstadt 98",
+        "date": "2026-11-27",
+        "kickoff": "2026-11-27T17:30:00+00:00",
+        "provider_finished": false,
+        "source_url": "https://api.openligadb.de/getmatchdata/bl2/2026",
+        "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
+        "license": "ODbL-1.0",
+        "license_url": "https://www.openligadb.de/en/license",
+        "counts_as_prediction": false,
+        "status": "scheduled",
+        "checked_at": "2026-11-25T01:34:38.096902+00:00",
+        "cache_status": "ok"
+      },
+      {
+        "source": "openligadb",
+        "source_event_id": "83253",
+        "league": "bl1",
+        "season": 2026,
+        "sport": "football",
+        "country": "Germany",
+        "segment": "open",
+        "competition": "Bundesliga 1",
+        "home": "SV Werder Bremen",
+        "away": "Borussia Mönchengladbach",
+        "date": "2026-11-27",
+        "kickoff": "2026-11-27T19:30:00+00:00",
+        "provider_finished": false,
+        "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+        "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
+        "license": "ODbL-1.0",
+        "license_url": "https://www.openligadb.de/en/license",
+        "counts_as_prediction": false,
+        "status": "scheduled",
+        "checked_at": "2026-11-25T01:34:38.096902+00:00",
+        "cache_status": "ok"
+      }
+    ],
+    "counts_by_date": [
       {
         "date": "2026-11-25",
         "scheduled": 0,
@@ -1852,6 +1917,11 @@
         "date": "2026-11-26",
         "scheduled": 0,
         "coverage": "configured_resources_only"
+      },
+      {
+        "date": "2026-11-27",
+        "scheduled": 3,
+        "coverage": "configured_resources_only"
       }
     ],
     "complete_within_configured_resources": true
@@ -1860,7 +1930,7 @@
     "id": "oddspedia",
     "name": "Oddspedia API",
     "configured": true,
-    "checked_at": "2026-11-24T17:34:11.471215+00:00",
+    "checked_at": "2026-11-25T01:34:38.096902+00:00",
     "url": "https://widgets.oddspedia.com/",
     "counts_as_prediction": false,
     "used_in_analysis": false,
@@ -1880,6 +1950,6 @@
       "message": "A resposta exige verificação de navegador ou recusa tráfego automatizado. O coletor não tenta contornar essa verificação."
     },
     "searches": [],
-    "next_check_at": "2026-11-24T23:34:11.471215+00:00"
+    "next_check_at": "2026-11-25T07:34:38.096902+00:00"
   }
 }
