@@ -1,7 +1,7 @@
 {
   "date": "2026-11-25",
   "timezone": "Europe/Lisbon",
-  "updated_at": "2026-11-25T10:26:35.994909+00:00",
+  "updated_at": "2026-11-25T20:09:09.136601+00:00",
   "schema_version": 1,
   "score_is_probability": false,
   "settings": {
@@ -23,415 +23,54 @@
     "history_min_sample": 30,
     "history_warning_roi": -10
   },
-  "total_collected": 188,
-  "total_eligible": 10,
+  "total_collected": 172,
+  "total_eligible": 0,
   "total_selected": 0,
   "discarded": {
-    "other_day": 111,
-    "started_or_soon": 1,
+    "other_day": 165,
+    "started_or_soon": 0,
     "stale": 0,
-    "threshold": 66,
+    "threshold": 7,
     "conflict": 0,
     "excluded": 0
   },
   "data": [],
-  "watchlist": [
-    {
-      "sport": "tennis",
-      "home": "Italy",
-      "away": "South Korea",
-      "match": "Italy vs South Korea",
-      "kickoff": "2026-11-25T15:00:00+00:00",
-      "country": "Desconhecido",
-      "competition": "",
-      "market": "MATCH_WINNER",
-      "outcome": "HOME",
-      "selection": "Italy vence",
-      "odds": 1.08,
-      "source_count": 1,
-      "sources": [
-        {
-          "source": "olbg",
-          "sport": "tennis",
-          "home": "Italy",
-          "away": "South Korea",
-          "event_date": "2026-11-25",
-          "kickoff": "2026-11-25T15:00:00+00:00",
-          "market": "MATCH_WINNER",
-          "outcome": "HOME",
-          "url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Italy_v_South_Korea/3?event_id=907592",
-          "fetched_at": "2026-11-25T10:26:27.770413+00:00",
-          "competition": "",
-          "metric": 93.33,
-          "metric_kind": "vote_pct",
-          "votes_for": 14,
-          "votes_total": 15,
-          "odds": 1.08,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Desconhecido"
-        }
-      ],
-      "status": "awaiting_independent_source",
-      "is_recommendation": false,
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "status": "out_of_scope"
-      }
-    },
-    {
-      "sport": "basketball",
-      "home": "BC Dubai",
-      "away": "Partizan",
-      "match": "BC Dubai vs Partizan",
-      "kickoff": "2026-11-25T16:00:00+00:00",
-      "country": "Desconhecido",
-      "competition": "Euroleague",
-      "market": "MATCH_WINNER",
-      "outcome": "HOME",
-      "selection": "BC Dubai vence",
-      "odds": null,
-      "source_count": 1,
-      "sources": [
-        {
-          "source": "betclan",
-          "sport": "basketball",
-          "home": "BC Dubai",
-          "away": "Partizan",
-          "event_date": "2026-11-25",
-          "kickoff": "2026-11-25T16:00:00+00:00",
-          "market": "MATCH_WINNER",
-          "outcome": "HOME",
-          "url": "https://www.betclan.com/basketball/predictionsdetails/204818617/BC-Dubai-vs-Partizan-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-25T10:26:33.343148+00:00",
-          "competition": "Euroleague",
-          "metric": 75.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": null,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Desconhecido"
-        }
-      ],
-      "status": "awaiting_independent_source",
-      "is_recommendation": false,
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "status": "out_of_scope"
-      }
-    },
-    {
-      "sport": "tennis",
-      "home": "Sol Ailin Larraya Guidi",
-      "away": "Maria Lourdes Carle",
-      "match": "Sol Ailin Larraya Guidi vs Maria Lourdes Carle",
-      "kickoff": "2026-11-25T18:00:00+00:00",
-      "country": "Desconhecido",
-      "competition": "WTA Buenos Aires",
-      "market": "MATCH_WINNER",
-      "outcome": "AWAY",
-      "selection": "Maria Lourdes Carle vence",
-      "odds": null,
-      "source_count": 1,
-      "sources": [
-        {
-          "source": "betclan",
-          "sport": "tennis",
-          "home": "Sol Ailin Larraya Guidi",
-          "away": "Maria Lourdes Carle",
-          "event_date": "2026-11-25",
-          "kickoff": "2026-11-25T18:00:00+00:00",
-          "market": "MATCH_WINNER",
-          "outcome": "AWAY",
-          "url": "https://www.betclan.com/tennis/predictionsdetails/205065343/Sol-Ailin-Larraya-Guidi-vs-Maria-Lourdes-Carle-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-25T10:26:34.781290+00:00",
-          "competition": "WTA Buenos Aires",
-          "metric": 89.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": null,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Desconhecido"
-        }
-      ],
-      "status": "awaiting_independent_source",
-      "is_recommendation": false,
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "status": "out_of_scope"
-      }
-    },
-    {
-      "sport": "basketball",
-      "home": "Olympiacos",
-      "away": "Hapoel Tel Aviv",
-      "match": "Olympiacos vs Hapoel Tel Aviv",
-      "kickoff": "2026-11-25T19:15:00+00:00",
-      "country": "Desconhecido",
-      "competition": "Euroleague",
-      "market": "MATCH_WINNER",
-      "outcome": "HOME",
-      "selection": "Olympiacos vence",
-      "odds": null,
-      "source_count": 1,
-      "sources": [
-        {
-          "source": "betclan",
-          "sport": "basketball",
-          "home": "Olympiacos",
-          "away": "Hapoel Tel Aviv",
-          "event_date": "2026-11-25",
-          "kickoff": "2026-11-25T19:15:00+00:00",
-          "market": "MATCH_WINNER",
-          "outcome": "HOME",
-          "url": "https://www.betclan.com/basketball/predictionsdetails/204818620/Olympiacos-vs-Hapoel-Tel-Aviv-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-25T10:26:34.038976+00:00",
-          "competition": "Euroleague",
-          "metric": 77.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": null,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Desconhecido"
-        }
-      ],
-      "status": "awaiting_independent_source",
-      "is_recommendation": false,
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "status": "out_of_scope"
-      }
-    },
-    {
-      "sport": "tennis",
-      "home": "Alicia Herrero Linana",
-      "away": "Ariana Geerlings",
-      "match": "Alicia Herrero Linana vs Ariana Geerlings",
-      "kickoff": "2026-11-25T19:30:00+00:00",
-      "country": "Desconhecido",
-      "competition": "WTA Buenos Aires",
-      "market": "MATCH_WINNER",
-      "outcome": "AWAY",
-      "selection": "Ariana Geerlings vence",
-      "odds": null,
-      "source_count": 1,
-      "sources": [
-        {
-          "source": "betclan",
-          "sport": "tennis",
-          "home": "Alicia Herrero Linana",
-          "away": "Ariana Geerlings",
-          "event_date": "2026-11-25",
-          "kickoff": "2026-11-25T19:30:00+00:00",
-          "market": "MATCH_WINNER",
-          "outcome": "AWAY",
-          "url": "https://www.betclan.com/tennis/predictionsdetails/205176640/Alicia-Herrero-Linana-vs-Ariana-Geerlings-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-25T10:26:35.067258+00:00",
-          "competition": "WTA Buenos Aires",
-          "metric": 69.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": null,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Desconhecido"
-        }
-      ],
-      "status": "awaiting_independent_source",
-      "is_recommendation": false,
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "status": "out_of_scope"
-      }
-    },
-    {
-      "sport": "basketball",
-      "home": "Real Madrid",
-      "away": "Zalgiris",
-      "match": "Real Madrid vs Zalgiris",
-      "kickoff": "2026-11-25T19:45:00+00:00",
-      "country": "Desconhecido",
-      "competition": "Euroleague",
-      "market": "MATCH_WINNER",
-      "outcome": "HOME",
-      "selection": "Real Madrid vence",
-      "odds": null,
-      "source_count": 1,
-      "sources": [
-        {
-          "source": "betclan",
-          "sport": "basketball",
-          "home": "Real Madrid",
-          "away": "Zalgiris",
-          "event_date": "2026-11-25",
-          "kickoff": "2026-11-25T19:45:00+00:00",
-          "market": "MATCH_WINNER",
-          "outcome": "HOME",
-          "url": "https://www.betclan.com/basketball/predictionsdetails/204818631/Real-Madrid-vs-Zalgiris-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-25T10:26:34.385766+00:00",
-          "competition": "Euroleague",
-          "metric": 79.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": null,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Desconhecido"
-        }
-      ],
-      "status": "awaiting_independent_source",
-      "is_recommendation": false,
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "status": "out_of_scope"
-      }
-    },
-    {
-      "sport": "football",
-      "home": "Inter Milan",
-      "away": "VfB Stuttgart",
-      "match": "Inter Milan vs VfB Stuttgart",
-      "kickoff": "2026-11-25T20:00:00+00:00",
-      "country": "Desconhecido",
-      "competition": "Champions League",
-      "market": "FT_1X2",
-      "outcome": "HOME",
-      "selection": "Inter Milan vence",
-      "odds": 1.42,
-      "source_count": 1,
-      "sources": [
-        {
-          "source": "olbg",
-          "sport": "football",
-          "home": "Inter Milan",
-          "away": "VfB Stuttgart",
-          "event_date": "2026-11-25",
-          "kickoff": "2026-11-25T20:00:00+00:00",
-          "market": "FT_1X2",
-          "outcome": "HOME",
-          "url": "https://www.olbg.com/betting-tips/Football/UEFA_Competitions/Champions_League/Inter_Milan_v_VfB_Stuttgart/1?event_id=2047433",
-          "fetched_at": "2026-11-25T10:26:27.807285+00:00",
-          "competition": "Champions League",
-          "metric": 81.25,
-          "metric_kind": "vote_pct",
-          "votes_for": 13,
-          "votes_total": 16,
-          "odds": 1.42,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Desconhecido"
-        }
-      ],
-      "status": "awaiting_independent_source",
-      "is_recommendation": false,
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "status": "out_of_scope"
-      }
-    },
-    {
-      "sport": "football",
-      "home": "Lille",
-      "away": "Bayern Munich",
-      "match": "Lille vs Bayern Munich",
-      "kickoff": "2026-11-25T20:00:00+00:00",
-      "country": "Desconhecido",
-      "competition": "Champions League",
-      "market": "FT_1X2",
-      "outcome": "AWAY",
-      "selection": "Bayern Munich vence",
-      "odds": 1.62,
-      "source_count": 1,
-      "sources": [
-        {
-          "source": "olbg",
-          "sport": "football",
-          "home": "Lille",
-          "away": "Bayern Munich",
-          "event_date": "2026-11-25",
-          "kickoff": "2026-11-25T20:00:00+00:00",
-          "market": "FT_1X2",
-          "outcome": "AWAY",
-          "url": "https://www.olbg.com/betting-tips/Football/UEFA_Competitions/Champions_League/Lille_v_Bayern_Munich/1?event_id=2047437",
-          "fetched_at": "2026-11-25T10:26:27.807285+00:00",
-          "competition": "Champions League",
-          "metric": 94.74,
-          "metric_kind": "vote_pct",
-          "votes_for": 18,
-          "votes_total": 19,
-          "odds": 1.62,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Desconhecido"
-        }
-      ],
-      "status": "awaiting_independent_source",
-      "is_recommendation": false,
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "status": "out_of_scope"
-      }
-    }
-  ],
+  "watchlist": [],
   "diagnostics": {
     "coverage": "partial",
     "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
-    "today_forecasts": 77,
-    "today_events": 48,
-    "eligible_forecasts": 10,
-    "eligible_events": 10,
+    "today_forecasts": 7,
+    "today_events": 4,
+    "eligible_forecasts": 0,
+    "eligible_events": 0,
     "threshold_reasons": {
-      "insufficient_votes": 37,
-      "below_source_threshold": 26,
+      "below_source_threshold": 2,
+      "insufficient_votes": 2,
       "missing_metric": 3
     },
     "comparison_rejections": {
-      "insufficient_sources": 10,
+      "insufficient_sources": 0,
       "missing_kickoff": 0,
       "odds_filter": 0,
       "below_consensus_score": 0
     },
-    "watchlist_total": 10,
+    "watchlist_total": 0,
     "by_source": [
       {
         "id": "betclan",
-        "collected": 37,
-        "today": 29,
-        "eligible": 5
+        "collected": 31,
+        "today": 1,
+        "eligible": 0
       },
       {
         "id": "olbg",
-        "collected": 148,
-        "today": 45,
-        "eligible": 5
+        "collected": 137,
+        "today": 3,
+        "eligible": 0
       },
       {
         "id": "protipster",
-        "collected": 3,
+        "collected": 4,
         "today": 3,
         "eligible": 0
       }
@@ -439,21 +78,20 @@
     "by_sport": [
       {
         "id": "football",
-        "forecasts": 49,
-        "eligible": 4,
-        "events": 27,
+        "forecasts": 4,
+        "eligible": 0,
+        "events": 2,
         "confirmed": 0,
         "sources": [
-          "betclan",
           "olbg",
           "protipster"
         ]
       },
       {
         "id": "tennis",
-        "forecasts": 9,
-        "eligible": 3,
-        "events": 6,
+        "forecasts": 2,
+        "eligible": 0,
+        "events": 1,
         "confirmed": 0,
         "sources": [
           "betclan",
@@ -462,24 +100,21 @@
       },
       {
         "id": "basketball",
-        "forecasts": 9,
-        "eligible": 3,
-        "events": 5,
+        "forecasts": 1,
+        "eligible": 0,
+        "events": 1,
         "confirmed": 0,
         "sources": [
-          "betclan",
           "olbg"
         ]
       },
       {
         "id": "hockey",
-        "forecasts": 10,
+        "forecasts": 0,
         "eligible": 0,
-        "events": 10,
+        "events": 0,
         "confirmed": 0,
-        "sources": [
-          "olbg"
-        ]
+        "sources": []
       },
       {
         "id": "american_football",
@@ -495,7 +130,7 @@
     {
       "date": "2026-11-26",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-25T10:26:35.994909+00:00",
+      "updated_at": "2026-11-25T20:09:09.136601+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -517,14 +152,14 @@
         "history_min_sample": 30,
         "history_warning_roi": -10
       },
-      "total_collected": 188,
-      "total_eligible": 5,
+      "total_collected": 172,
+      "total_eligible": 13,
       "total_selected": 0,
       "discarded": {
-        "other_day": 132,
+        "other_day": 80,
         "started_or_soon": 0,
         "stale": 0,
-        "threshold": 51,
+        "threshold": 79,
         "conflict": 0,
         "excluded": 0
       },
@@ -532,17 +167,18 @@
       "diagnostics": {
         "coverage": "partial",
         "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
-        "today_forecasts": 56,
-        "today_events": 48,
-        "eligible_forecasts": 5,
-        "eligible_events": 3,
+        "today_forecasts": 92,
+        "today_events": 62,
+        "eligible_forecasts": 13,
+        "eligible_events": 9,
         "threshold_reasons": {
-          "insufficient_votes": 47,
-          "below_source_threshold": 4
+          "insufficient_votes": 60,
+          "below_source_threshold": 18,
+          "missing_metric": 1
         },
         "comparison_rejections": {
           "insufficient_sources": 0,
-          "missing_kickoff": 5,
+          "missing_kickoff": 13,
           "odds_filter": 0,
           "below_consensus_score": 0
         },
@@ -550,40 +186,41 @@
         "by_source": [
           {
             "id": "betclan",
-            "collected": 37,
-            "today": 8,
-            "eligible": 5
+            "collected": 31,
+            "today": 30,
+            "eligible": 13
           },
           {
             "id": "olbg",
-            "collected": 148,
-            "today": 48,
+            "collected": 137,
+            "today": 61,
             "eligible": 0
           },
           {
             "id": "protipster",
-            "collected": 3,
-            "today": 0,
+            "collected": 4,
+            "today": 1,
             "eligible": 0
           }
         ],
         "by_sport": [
           {
             "id": "football",
-            "forecasts": 40,
-            "eligible": 5,
-            "events": 32,
+            "forecasts": 68,
+            "eligible": 13,
+            "events": 38,
             "confirmed": 0,
             "sources": [
               "betclan",
-              "olbg"
+              "olbg",
+              "protipster"
             ]
           },
           {
             "id": "tennis",
-            "forecasts": 2,
+            "forecasts": 3,
             "eligible": 0,
-            "events": 2,
+            "events": 3,
             "confirmed": 0,
             "sources": [
               "olbg"
@@ -591,9 +228,9 @@
           },
           {
             "id": "basketball",
-            "forecasts": 5,
+            "forecasts": 8,
             "eligible": 0,
-            "events": 5,
+            "events": 8,
             "confirmed": 0,
             "sources": [
               "olbg"
@@ -601,9 +238,9 @@
           },
           {
             "id": "hockey",
-            "forecasts": 6,
+            "forecasts": 10,
             "eligible": 0,
-            "events": 6,
+            "events": 10,
             "confirmed": 0,
             "sources": [
               "olbg"
@@ -631,7 +268,7 @@
     {
       "date": "2026-11-27",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-25T10:26:35.994909+00:00",
+      "updated_at": "2026-11-25T20:09:09.136601+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -653,14 +290,14 @@
         "history_min_sample": 30,
         "history_warning_roi": -10
       },
-      "total_collected": 188,
+      "total_collected": 172,
       "total_eligible": 0,
       "total_selected": 0,
       "discarded": {
-        "other_day": 169,
+        "other_day": 150,
         "started_or_soon": 0,
         "stale": 0,
-        "threshold": 19,
+        "threshold": 22,
         "conflict": 0,
         "excluded": 0
       },
@@ -668,12 +305,12 @@
       "diagnostics": {
         "coverage": "partial",
         "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
-        "today_forecasts": 19,
-        "today_events": 19,
+        "today_forecasts": 22,
+        "today_events": 22,
         "eligible_forecasts": 0,
         "eligible_events": 0,
         "threshold_reasons": {
-          "insufficient_votes": 19
+          "insufficient_votes": 22
         },
         "comparison_rejections": {
           "insufficient_sources": 0,
@@ -685,19 +322,19 @@
         "by_source": [
           {
             "id": "betclan",
-            "collected": 37,
+            "collected": 31,
             "today": 0,
             "eligible": 0
           },
           {
             "id": "olbg",
-            "collected": 148,
-            "today": 19,
+            "collected": 137,
+            "today": 22,
             "eligible": 0
           },
           {
             "id": "protipster",
-            "collected": 3,
+            "collected": 4,
             "today": 0,
             "eligible": 0
           }
@@ -705,9 +342,9 @@
         "by_sport": [
           {
             "id": "football",
-            "forecasts": 12,
+            "forecasts": 14,
             "eligible": 0,
-            "events": 12,
+            "events": 14,
             "confirmed": 0,
             "sources": [
               "olbg"
@@ -731,9 +368,9 @@
           },
           {
             "id": "hockey",
-            "forecasts": 5,
+            "forecasts": 6,
             "eligible": 0,
-            "events": 5,
+            "events": 6,
             "confirmed": 0,
             "sources": [
               "olbg"
@@ -763,7 +400,7 @@
     "id": "oddspedia",
     "name": "Oddspedia API",
     "configured": true,
-    "checked_at": "2026-11-25T10:26:35.994909+00:00",
+    "checked_at": "2026-11-25T20:09:09.136601+00:00",
     "url": "https://widgets.oddspedia.com/",
     "counts_as_prediction": false,
     "used_in_analysis": false,
@@ -783,13 +420,13 @@
       "message": "A resposta exige verificação de navegador ou recusa tráfego automatizado. O coletor não tenta contornar essa verificação."
     },
     "searches": [],
-    "next_check_at": "2026-11-25T16:26:35.994909+00:00"
+    "next_check_at": "2026-11-26T02:09:09.136601+00:00"
   },
   "fixture_catalog": {
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "ok",
-    "generated_at": "2026-11-25T10:26:35.994909+00:00",
+    "generated_at": "2026-11-25T20:09:09.136601+00:00",
     "window_from": "2026-11-25",
     "window_through": "2026-11-27",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
@@ -805,13 +442,13 @@
         "league": "bl1",
         "season": 2026,
         "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
-        "checked_at": "2026-11-25T10:26:35.994909+00:00",
+        "checked_at": "2026-11-25T20:09:09.136601+00:00",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "ok",
-        "next_check_at": "2026-11-25T16:26:35.994909+00:00",
+        "next_check_at": "2026-11-26T02:09:09.136601+00:00",
         "cache_from": "2026-11-25",
         "cache_through": "2026-12-02",
         "fixtures": [
@@ -1004,13 +641,13 @@
         "league": "bl2",
         "season": 2026,
         "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
-        "checked_at": "2026-11-25T10:26:35.994909+00:00",
+        "checked_at": "2026-11-25T20:09:09.136601+00:00",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "ok",
-        "next_check_at": "2026-11-25T16:26:35.994909+00:00",
+        "next_check_at": "2026-11-26T02:09:09.136601+00:00",
         "cache_from": "2026-11-25",
         "cache_through": "2026-12-02",
         "fixtures": [
@@ -1219,7 +856,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-25T10:26:35.994909+00:00",
+        "checked_at": "2026-11-25T20:09:09.136601+00:00",
         "cache_status": "ok"
       },
       {
@@ -1242,7 +879,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-25T10:26:35.994909+00:00",
+        "checked_at": "2026-11-25T20:09:09.136601+00:00",
         "cache_status": "ok"
       },
       {
@@ -1265,7 +902,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-25T10:26:35.994909+00:00",
+        "checked_at": "2026-11-25T20:09:09.136601+00:00",
         "cache_status": "ok"
       }
     ],
@@ -1767,8 +1404,8 @@
       "id": "olbg",
       "name": "OLBG",
       "status": "ok",
-      "collected": 148,
-      "raw_rows": 210,
+      "collected": 137,
+      "raw_rows": 187,
       "message": "Recolha concluída",
       "pages": [
         {
@@ -1784,8 +1421,8 @@
           "id": "olbg",
           "url": "https://www.olbg.com/betting-tips/Basketball/4",
           "status": "ok",
-          "raw_rows": 19,
-          "collected": 10,
+          "raw_rows": 16,
+          "collected": 9,
           "missing_scores": 0,
           "message": "Recolha concluída"
         },
@@ -1794,7 +1431,7 @@
           "url": "https://www.olbg.com/betting-tips/Football/1",
           "status": "ok",
           "raw_rows": 100,
-          "collected": 93,
+          "collected": 92,
           "missing_scores": 0,
           "message": "Recolha concluída"
         },
@@ -1802,8 +1439,8 @@
           "id": "olbg",
           "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
           "status": "ok",
-          "raw_rows": 57,
-          "collected": 21,
+          "raw_rows": 43,
+          "collected": 16,
           "missing_scores": 0,
           "message": "Recolha concluída"
         },
@@ -1811,14 +1448,14 @@
           "id": "olbg",
           "url": "https://www.olbg.com/betting-tips/Tennis/3",
           "status": "ok",
-          "raw_rows": 18,
-          "collected": 8,
+          "raw_rows": 12,
+          "collected": 4,
           "missing_scores": 0,
           "message": "Recolha concluída"
         }
       ],
-      "today": 45,
-      "eligible": 5
+      "today": 3,
+      "eligible": 0
     },
     {
       "id": "forebet",
@@ -1876,18 +1513,18 @@
       "id": "protipster",
       "name": "ProTipster",
       "status": "partial",
-      "collected": 3,
+      "collected": 4,
       "raw_rows": 6,
-      "message": "3 tips sem Tip Score público; excluídas do consenso",
+      "message": "4 tips sem Tip Score público; excluídas do consenso",
       "pages": [
         {
           "id": "protipster",
           "url": "https://www.protipster.com/betting-tips/today",
           "status": "partial",
           "raw_rows": 6,
-          "collected": 3,
-          "missing_scores": 3,
-          "message": "3 tips sem Tip Score público; excluídas do consenso"
+          "collected": 4,
+          "missing_scores": 4,
+          "message": "4 tips sem Tip Score público; excluídas do consenso"
         }
       ],
       "today": 3,
@@ -1927,18 +1564,18 @@
       "id": "betclan",
       "name": "BetClan",
       "status": "partial",
-      "collected": 37,
-      "raw_rows": 615,
+      "collected": 31,
+      "raw_rows": 769,
       "details_requested": 24,
       "detail_limit": 24,
       "indexed_by_date": [
         {
           "date": "2026-11-25",
-          "fixtures": 217
+          "fixtures": 39
         },
         {
           "date": "2026-11-26",
-          "fixtures": 155
+          "fixtures": 269
         },
         {
           "date": "2026-11-27",
@@ -1949,22 +1586,22 @@
         {
           "date": "2026-11-25",
           "sport": "football",
-          "fixtures": 97
+          "fixtures": 6
         },
         {
           "date": "2026-11-25",
           "sport": "tennis",
-          "fixtures": 43
+          "fixtures": 18
         },
         {
           "date": "2026-11-25",
           "sport": "basketball",
-          "fixtures": 45
+          "fixtures": 15
         },
         {
           "date": "2026-11-25",
           "sport": "hockey",
-          "fixtures": 32
+          "fixtures": 0
         },
         {
           "date": "2026-11-25",
@@ -1979,12 +1616,12 @@
         {
           "date": "2026-11-26",
           "sport": "tennis",
-          "fixtures": 45
+          "fixtures": 99
         },
         {
           "date": "2026-11-26",
           "sport": "basketball",
-          "fixtures": 8
+          "fixtures": 68
         },
         {
           "date": "2026-11-26",
@@ -2022,7 +1659,7 @@
           "fixtures": 0
         }
       ],
-      "message": "615 eventos indexados; 24 detalhes consultados para cruzar com outros feeds. Índice não equivale a previsões analisadas.",
+      "message": "769 eventos indexados; 24 detalhes consultados para cruzar com outros feeds. Índice não equivale a previsões analisadas.",
       "pages": [
         {
           "url": "https://www.betclan.com/todays-football-predictions/",
@@ -2032,12 +1669,12 @@
         {
           "url": "https://www.betclan.com/todays-tennis-predictions/",
           "status": "ok",
-          "indexed_fixtures": 98
+          "indexed_fixtures": 107
         },
         {
           "url": "https://www.betclan.com/todays-basketball-predictions/",
           "status": "ok",
-          "indexed_fixtures": 115
+          "indexed_fixtures": 146
         },
         {
           "url": "https://www.betclan.com/todays-ice-hockey-predictions/",
@@ -2062,7 +1699,7 @@
         {
           "url": "https://www.betclan.com/tomorrows-basketball-predictions/",
           "status": "ok",
-          "indexed_fixtures": 8
+          "indexed_fixtures": 68
         },
         {
           "url": "https://www.betclan.com/tomorrows-football-predictions/",
@@ -2077,97 +1714,17 @@
         {
           "url": "https://www.betclan.com/tomorrows-tennis-predictions/",
           "status": "ok",
-          "indexed_fixtures": 45
+          "indexed_fixtures": 99
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1635682/lille-v-bayern-m%C3%BCnchen-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/basketball/predictionsdetails/204818617/BC-Dubai-vs-Partizan-prediction-h2h-tip-and-match-preview/",
+          "url": "https://www.betclan.com/tennis/predictionsdetails/205184480/Solana-Sierra-vs-Carole-Monnet-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 1
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1563284/burnley-v-birmingham-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1635724/shakhtar-donetsk-v-fenerbah%C3%A7e-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1601615/cremonese-v-avellino-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/basketball/predictionsdetails/204818620/Olympiacos-vs-Hapoel-Tel-Aviv-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 1
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1563283/bolton-v-west-brom-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1563286/watford-v-blackburn-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/tennis/predictionsdetails/205172293/Martina-Trevisan-vs-Veronika-Erjavec-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 1
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1601620/padova-v-sampdoria-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/basketball/predictionsdetails/204818624/Baskonia-vs-Anadolu-Efes-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 1
-        },
-        {
-          "url": "https://www.betclan.com/basketball/predictionsdetails/204818631/Real-Madrid-vs-Zalgiris-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 1
-        },
-        {
-          "url": "https://www.betclan.com/tennis/predictionsdetails/205065343/Sol-Ailin-Larraya-Guidi-vs-Maria-Lourdes-Carle-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 1
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1601619/mantova-v-arezzo-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1601622/pisa-v-modena-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/tennis/predictionsdetails/205176640/Alicia-Herrero-Linana-vs-Ariana-Geerlings-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 1
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1585364/hartlepool-v-solihull-moors-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1635735/sporting-cp-v-manchester-united-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
+          "url": "https://www.betclan.com/basketball/predictionsdetails/205122946/LA-Clippers-vs-MEM-Grizzlies-prediction-h2h-tip-and-match-preview/",
+          "status": "partial",
+          "collected": 0
         },
         {
           "url": "https://www.betclan.com/basketball/predictionsdetails/205122939/CLE-Cavaliers-vs-NY-Knicks-prediction-h2h-tip-and-match-preview/",
@@ -2175,17 +1732,17 @@
           "collected": 0
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1636231/be%C5%9Fikta%C5%9F-v-hapoel-beer-sheva-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
+          "url": "https://www.betclan.com/basketball/predictionsdetails/205122935/CHI-Bulls-vs-CHA-Hornets-prediction-h2h-tip-and-match-preview/",
+          "status": "partial",
+          "collected": 0
+        },
+        {
+          "url": "https://www.betclan.com/basketball/predictionsdetails/199519587/MIN-Timberwolves-vs-OKC-Thunder-prediction-h2h-tip-and-match-preview/",
+          "status": "partial",
+          "collected": 0
         },
         {
           "url": "https://www.betclan.com/predictionsdetails/football/1636298/marseille-v-levski-sofia-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1636252/crystal-palace-v-real-sociedad-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         },
@@ -2195,32 +1752,112 @@
           "collected": 2
         },
         {
-          "url": "https://www.betclan.com/basketball/predictionsdetails/199519587/MIN-Timberwolves-vs-OKC-Thunder-prediction-h2h-tip-and-match-preview/",
+          "url": "https://www.betclan.com/basketball/predictionsdetails/205122949/PHX-Suns-vs-HOU-Rockets-prediction-h2h-tip-and-match-preview/",
           "status": "partial",
           "collected": 0
+        },
+        {
+          "url": "https://www.betclan.com/basketball/predictionsdetails/205122952/SAC-Kings-vs-GS-Warriors-prediction-h2h-tip-and-match-preview/",
+          "status": "partial",
+          "collected": 0
+        },
+        {
+          "url": "https://www.betclan.com/basketball/predictionsdetails/199519590/SA-Spurs-vs-POR-Trail-Blazers-prediction-h2h-tip-and-match-preview/",
+          "status": "partial",
+          "collected": 0
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1636381/ajax-v-fc-thun-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1636426/fc-iberia-1999-v-getafe-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1636231/be%C5%9Fikta%C5%9F-v-hapoel-beer-sheva-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1636252/crystal-palace-v-real-sociedad-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1636294/lyon-v-lillestrom-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/basketball/predictionsdetails/205122943/BKN-Nets-vs-MIL-Bucks-prediction-h2h-tip-and-match-preview/",
+          "status": "partial",
+          "collected": 0
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1636244/celta-vigo-v-bournemouth-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1636386/borac-banja-luka-v-atalanta-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1636428/inter-club-descaldes-v-fc-copenhagen-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1636255/dinamo-zagreb-v-bayer-leverkusen-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1636349/torreense-v-celtic-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1636435/kairat-almaty-v-mjallby-aif-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1636402/cska-sofia-v-trabzonspor-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1636457/fc-nordsjaelland-v-panathinaikos-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
         }
       ],
-      "today": 29,
-      "eligible": 5
+      "today": 1,
+      "eligible": 0
     }
   ],
   "request_id": "",
-  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/45594968400",
+  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/45692106913",
   "status": "partial",
   "pipeline_health": {
-    "checked_at": "2026-11-25T10:26:35.994909+00:00",
+    "checked_at": "2026-11-25T20:09:09.136601+00:00",
     "schedule": "13,43 * * * *",
     "timezone": "UTC",
     "workflow_state": "active",
     "scheduler_status": "running",
-    "last_scheduled_at": "2026-11-25T10:26:14+00:00",
-    "last_successful_scheduled_at": "2026-11-25T01:34:20+00:00",
-    "scheduled_age_minutes": 0.4,
+    "last_scheduled_at": "2026-11-25T20:08:50+00:00",
+    "last_successful_scheduled_at": "2026-11-25T10:26:14+00:00",
+    "scheduled_age_minutes": 0.3,
     "max_age_minutes": 45,
-    "schedule_runs_observed": 18,
-    "run_window": 49,
+    "schedule_runs_observed": 19,
+    "run_window": 50,
     "last_event": "schedule",
-    "last_run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/45594968400",
+    "last_run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/45692106913",
     "errors": {}
   },
   "run_event": "schedule"
