@@ -1661,7 +1661,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "ok",
-    "generated_at": "2026-11-26T12:16:55.283883+00:00",
+    "generated_at": "2026-11-26T21:53:52.203493+00:00",
     "window_from": "2026-11-26",
     "window_through": "2026-11-28",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
@@ -1677,13 +1677,13 @@
         "league": "bl1",
         "season": 2026,
         "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
-        "checked_at": "2026-11-26T12:16:55.283883+00:00",
+        "checked_at": "2026-11-26T21:53:52.203493+00:00",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "ok",
-        "next_check_at": "2026-11-26T18:16:55.283883+00:00",
+        "next_check_at": "2026-11-27T03:53:52.203493+00:00",
         "cache_from": "2026-11-26",
         "cache_through": "2026-12-03",
         "fixtures": [
@@ -1876,13 +1876,13 @@
         "league": "bl2",
         "season": 2026,
         "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
-        "checked_at": "2026-11-26T12:16:55.283883+00:00",
+        "checked_at": "2026-11-26T21:53:52.203493+00:00",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "ok",
-        "next_check_at": "2026-11-26T18:16:55.283883+00:00",
+        "next_check_at": "2026-11-27T03:53:52.203493+00:00",
         "cache_from": "2026-11-26",
         "cache_through": "2026-12-03",
         "fixtures": [
@@ -2091,7 +2091,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-26T12:16:55.283883+00:00",
+        "checked_at": "2026-11-26T21:53:52.203493+00:00",
         "cache_status": "ok"
       },
       {
@@ -2114,7 +2114,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-26T12:16:55.283883+00:00",
+        "checked_at": "2026-11-26T21:53:52.203493+00:00",
         "cache_status": "ok"
       },
       {
@@ -2137,7 +2137,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-26T12:16:55.283883+00:00",
+        "checked_at": "2026-11-26T21:53:52.203493+00:00",
         "cache_status": "ok"
       },
       {
@@ -2160,7 +2160,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-26T12:16:55.283883+00:00",
+        "checked_at": "2026-11-26T21:53:52.203493+00:00",
         "cache_status": "ok"
       },
       {
@@ -2183,7 +2183,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-26T12:16:55.283883+00:00",
+        "checked_at": "2026-11-26T21:53:52.203493+00:00",
         "cache_status": "ok"
       },
       {
@@ -2206,7 +2206,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-26T12:16:55.283883+00:00",
+        "checked_at": "2026-11-26T21:53:52.203493+00:00",
         "cache_status": "ok"
       },
       {
@@ -2229,7 +2229,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-26T12:16:55.283883+00:00",
+        "checked_at": "2026-11-26T21:53:52.203493+00:00",
         "cache_status": "ok"
       },
       {
@@ -2252,7 +2252,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-26T12:16:55.283883+00:00",
+        "checked_at": "2026-11-26T21:53:52.203493+00:00",
         "cache_status": "ok"
       },
       {
@@ -2275,7 +2275,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-26T12:16:55.283883+00:00",
+        "checked_at": "2026-11-26T21:53:52.203493+00:00",
         "cache_status": "ok"
       },
       {
@@ -2298,7 +2298,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-26T12:16:55.283883+00:00",
+        "checked_at": "2026-11-26T21:53:52.203493+00:00",
         "cache_status": "ok"
       },
       {
@@ -2321,7 +2321,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-26T12:16:55.283883+00:00",
+        "checked_at": "2026-11-26T21:53:52.203493+00:00",
         "cache_status": "ok"
       },
       {
@@ -2344,7 +2344,7 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-26T12:16:55.283883+00:00",
+        "checked_at": "2026-11-26T21:53:52.203493+00:00",
         "cache_status": "ok"
       }
     ],
@@ -2371,7 +2371,7 @@
     "id": "oddspedia",
     "name": "Oddspedia API",
     "configured": true,
-    "checked_at": "2026-11-26T12:16:55.283883+00:00",
+    "checked_at": "2026-11-26T21:53:52.203493+00:00",
     "url": "https://widgets.oddspedia.com/",
     "counts_as_prediction": false,
     "used_in_analysis": false,
@@ -2391,6 +2391,6 @@
       "message": "A resposta exige verificação de navegador ou recusa tráfego automatizado. O coletor não tenta contornar essa verificação."
     },
     "searches": [],
-    "next_check_at": "2026-11-26T18:16:55.283883+00:00"
+    "next_check_at": "2026-11-27T03:53:52.203493+00:00"
   }
 }
