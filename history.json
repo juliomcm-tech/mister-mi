@@ -2680,7 +2680,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-27T17:07:54.215151+00:00",
+    "generated_at": "2026-11-27T17:33:01.518445+00:00",
     "window_from": "2026-11-27",
     "window_through": "2026-11-29",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
@@ -3169,7 +3169,7 @@
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "scheduled",
+        "status": "started_unconfirmed",
         "checked_at": "2026-11-27T16:42:49.491181+00:00",
         "cache_status": "cached"
       },
@@ -3192,7 +3192,7 @@
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "scheduled",
+        "status": "started_unconfirmed",
         "checked_at": "2026-11-27T16:42:49.491181+00:00",
         "cache_status": "cached"
       },
@@ -3568,7 +3568,7 @@
     "counts_by_date": [
       {
         "date": "2026-11-27",
-        "scheduled": 3,
+        "scheduled": 1,
         "coverage": "configured_resources_only"
       },
       {
