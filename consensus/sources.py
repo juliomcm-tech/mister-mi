@@ -481,8 +481,7 @@ def collect(now):
     jobs += [("forebet", u, parse_forebet, {"sport": sport, "market": market}) for u, sport, market in FOREBET_PAGES]
     jobs += [("protipster", "https://www.protipster.com/betting-tips/today", parse_protipster, {}),
              ("predictz", "https://www.predictz.com/predictions/", parse_predictz, {}),
-             ] + [("zulubet", "https://www.zulubet.com/tips-" + (now.astimezone(LISBON).date() + timedelta(days=k)).strftime("%d-%m-%Y") + ".html",
-                   parse_zulubet, {}) for k in (0, 1)]
+             ("zulubet", "https://www.zulubet.com/", parse_zulubet, {})]  # as páginas por data respondem 404 ao robô
     tips, logs = [], []
 
     def run(job):
