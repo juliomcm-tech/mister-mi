@@ -1965,55 +1965,10 @@
     {
       "id": "zulubet_results",
       "name": "Zulubet (resultados)",
-      "resource": "zulubet/26-11-2026",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
-      "collected": 3,
-      "status": "ok",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
-    },
-    {
-      "id": "zulubet_results",
-      "name": "Zulubet (resultados)",
-      "resource": "zulubet/24-11-2026",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
-      "collected": 2,
-      "status": "ok",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
-    },
-    {
-      "id": "zulubet_results",
-      "name": "Zulubet (resultados)",
-      "resource": "zulubet/22-11-2026",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
-      "collected": 1,
-      "status": "ok",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
-    },
-    {
-      "id": "zulubet_results",
-      "name": "Zulubet (resultados)",
       "resource": "zulubet/21-11-2026",
       "checked_at": "2026-11-27T10:39:02.226894+00:00",
       "collected": 5,
-      "status": "ok",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
-      "resource": "soccer/all/20261123",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
-      "collected": 0,
-      "status": "ok",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
-      "resource": "soccer/all/20261122",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
-      "collected": 1,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-27T13:39:02.226894+00:00"
     },
     {
@@ -2022,16 +1977,7 @@
       "resource": "soccer/all/20261121",
       "checked_at": "2026-11-27T10:39:02.226894+00:00",
       "collected": 2,
-      "status": "ok",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
-      "resource": "tennis/atp/20261120",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
-      "collected": 1,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-27T13:39:02.226894+00:00"
     },
     {
@@ -2040,16 +1986,7 @@
       "resource": "basketball/euroleague/20261120",
       "checked_at": "2026-11-27T10:39:02.226894+00:00",
       "collected": 0,
-      "status": "ok",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
-      "resource": "soccer/all/20261120",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
-      "collected": 1,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-27T13:39:02.226894+00:00"
     },
     {
@@ -2058,7 +1995,7 @@
       "resource": "basketball/euroleague/20261119",
       "checked_at": "2026-11-27T10:39:02.226894+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-27T13:39:02.226894+00:00"
     }
   ],
@@ -2066,7 +2003,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-27T10:39:02.226894+00:00",
+    "generated_at": "2026-11-27T10:55:15.817579+00:00",
     "window_from": "2026-11-27",
     "window_through": "2026-11-29",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",

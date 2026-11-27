@@ -1,7 +1,7 @@
 {
   "date": "2026-11-27",
   "timezone": "Europe/Lisbon",
-  "updated_at": "2026-11-27T10:39:02.226894+00:00",
+  "updated_at": "2026-11-27T10:55:15.817579+00:00",
   "schema_version": 1,
   "score_is_probability": false,
   "settings": {
@@ -20,17 +20,18 @@
     "excluded_combinations": [],
     "min_odds": null,
     "max_odds": null,
+    "zebra_min_odds": 2.2,
     "history_min_sample": 30,
     "history_warning_roi": -10
   },
-  "total_collected": 216,
+  "total_collected": 218,
   "total_eligible": 17,
   "total_selected": 2,
   "discarded": {
-    "other_day": 81,
+    "other_day": 80,
     "started_or_soon": 3,
     "stale": 0,
-    "threshold": 115,
+    "threshold": 118,
     "conflict": 0,
     "excluded": 0
   },
@@ -47,7 +48,7 @@
       "country": "Germany",
       "odds": 1.72,
       "odds_source": "zulubet",
-      "odds_observed_at": "2026-11-27T10:38:55.655434+00:00",
+      "odds_observed_at": "2026-11-27T10:55:08.436914+00:00",
       "outcome": "HOME",
       "selection": "Werder Bremen vence",
       "score": 75.0,
@@ -64,7 +65,7 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.olbg.com/betting-tips/Football/European_Competitions/Germany_Bundesliga_I/Werder_Bremen_v_Borussia_Mgladbach/1?event_id=2047739",
-          "fetched_at": "2026-11-27T10:38:53.716081+00:00",
+          "fetched_at": "2026-11-27T10:55:07.393430+00:00",
           "competition": "Germany Bundesliga I",
           "metric": 100.0,
           "metric_kind": "vote_pct",
@@ -86,7 +87,7 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.zulubet.com/match-1341840.html",
-          "fetched_at": "2026-11-27T10:38:55.655434+00:00",
+          "fetched_at": "2026-11-27T10:55:08.436914+00:00",
           "competition": "Germany Bundesliga",
           "metric": 71.0,
           "metric_kind": "model_pct",
@@ -123,7 +124,7 @@
       "country": "Poland",
       "odds": 1.45,
       "odds_source": "zulubet",
-      "odds_observed_at": "2026-11-27T10:38:55.655434+00:00",
+      "odds_observed_at": "2026-11-27T10:55:08.436914+00:00",
       "outcome": "HOME",
       "selection": "Gornik Zabrze vence",
       "score": 70.7,
@@ -140,7 +141,7 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.zulubet.com/match-1341806.html",
-          "fetched_at": "2026-11-27T10:38:55.655434+00:00",
+          "fetched_at": "2026-11-27T10:55:08.436914+00:00",
           "competition": "Poland Ekstraklasa",
           "metric": 76.0,
           "metric_kind": "model_pct",
@@ -162,7 +163,7 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.betclan.com/predictionsdetails/football/1553236/gornik-zabrze-v-wisla-plock-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-27T10:38:59.886739+00:00",
+          "fetched_at": "2026-11-27T10:55:13.343236+00:00",
           "competition": "Poland Ekstraklasa",
           "metric": 69.0,
           "metric_kind": "model_pct",
@@ -208,7 +209,7 @@
           "market": "FT_1X2",
           "outcome": "AWAY",
           "url": "https://www.zulubet.com/match-1341874.html",
-          "fetched_at": "2026-11-27T10:38:55.655434+00:00",
+          "fetched_at": "2026-11-27T10:55:08.436914+00:00",
           "competition": "Qatar Stars League",
           "metric": 68.0,
           "metric_kind": "model_pct",
@@ -253,7 +254,7 @@
           "market": "FT_1X2",
           "outcome": "AWAY",
           "url": "https://www.olbg.com/betting-tips/Football/European_Competitions/Italy_Serie_A/Venezia_v_Bologna/1?event_id=2047762",
-          "fetched_at": "2026-11-27T10:38:53.716081+00:00",
+          "fetched_at": "2026-11-27T10:55:07.393430+00:00",
           "competition": "Italy Serie A",
           "metric": 82.35,
           "metric_kind": "vote_pct",
@@ -298,7 +299,7 @@
           "market": "MATCH_WINNER",
           "outcome": "AWAY",
           "url": "https://www.olbg.com/betting-tips/American_Football/NFL/NFL/DEN_Broncos_@_PIT_Steelers/11?event_id=28751",
-          "fetched_at": "2026-11-27T10:38:54.297169+00:00",
+          "fetched_at": "2026-11-27T10:55:09.615882+00:00",
           "competition": "NFL",
           "metric": 88.89,
           "metric_kind": "vote_pct",
@@ -320,15 +321,17 @@
       }
     }
   ],
+  "zebras": [],
+  "total_zebras": 0,
   "diagnostics": {
     "coverage": "partial",
     "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
-    "today_forecasts": 135,
-    "today_events": 87,
+    "today_forecasts": 138,
+    "today_events": 90,
     "eligible_forecasts": 17,
     "eligible_events": 13,
     "threshold_reasons": {
-      "insufficient_votes": 71,
+      "insufficient_votes": 74,
       "below_source_threshold": 38,
       "missing_metric": 6
     },
@@ -348,8 +351,8 @@
       },
       {
         "id": "olbg",
-        "collected": 151,
-        "today": 75,
+        "collected": 153,
+        "today": 78,
         "eligible": 3
       },
       {
@@ -368,9 +371,9 @@
     "by_sport": [
       {
         "id": "football",
-        "forecasts": 103,
+        "forecasts": 106,
         "eligible": 16,
-        "events": 55,
+        "events": 58,
         "confirmed": 2,
         "sources": [
           "betclan",
@@ -423,7 +426,7 @@
     {
       "date": "2026-11-28",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-27T10:39:02.226894+00:00",
+      "updated_at": "2026-11-27T10:55:15.817579+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -442,30 +445,33 @@
         "excluded_combinations": [],
         "min_odds": null,
         "max_odds": null,
+        "zebra_min_odds": 2.2,
         "history_min_sample": 30,
         "history_warning_roi": -10
       },
-      "total_collected": 216,
+      "total_collected": 218,
       "total_eligible": 2,
       "total_selected": 0,
       "discarded": {
-        "other_day": 163,
+        "other_day": 166,
         "started_or_soon": 0,
         "stale": 0,
-        "threshold": 51,
+        "threshold": 50,
         "conflict": 0,
         "excluded": 0
       },
       "watchlist": [],
+      "zebras": [],
+      "total_zebras": 0,
       "diagnostics": {
         "coverage": "partial",
         "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
-        "today_forecasts": 53,
-        "today_events": 51,
+        "today_forecasts": 52,
+        "today_events": 50,
         "eligible_forecasts": 2,
         "eligible_events": 1,
         "threshold_reasons": {
-          "insufficient_votes": 48,
+          "insufficient_votes": 47,
           "below_source_threshold": 3
         },
         "comparison_rejections": {
@@ -484,8 +490,8 @@
           },
           {
             "id": "olbg",
-            "collected": 151,
-            "today": 49,
+            "collected": 153,
+            "today": 48,
             "eligible": 1
           },
           {
@@ -504,9 +510,9 @@
         "by_sport": [
           {
             "id": "football",
-            "forecasts": 42,
+            "forecasts": 40,
             "eligible": 2,
-            "events": 40,
+            "events": 38,
             "confirmed": 1,
             "sources": [
               "betclan",
@@ -524,9 +530,9 @@
           },
           {
             "id": "basketball",
-            "forecasts": 10,
+            "forecasts": 11,
             "eligible": 0,
-            "events": 10,
+            "events": 11,
             "confirmed": 0,
             "sources": [
               "olbg"
@@ -570,7 +576,7 @@
           "country": "England",
           "odds": 1.5,
           "odds_source": "olbg",
-          "odds_observed_at": "2026-11-27T10:38:53.716081+00:00",
+          "odds_observed_at": "2026-11-27T10:55:07.393430+00:00",
           "outcome": "HOME",
           "selection": "Leeds vence",
           "score": 74.4,
@@ -587,7 +593,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Leeds_v_Coventry/1?event_id=2047651",
-              "fetched_at": "2026-11-27T10:38:53.716081+00:00",
+              "fetched_at": "2026-11-27T10:55:07.393430+00:00",
               "competition": "England Premier League",
               "metric": 85.71,
               "metric_kind": "vote_pct",
@@ -609,7 +615,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.betclan.com/predictionsdetails/football/1557483/leeds-v-coventry-prediction-h2h-tip-and-match-preview/",
-              "fetched_at": "2026-11-27T10:39:00.076697+00:00",
+              "fetched_at": "2026-11-27T10:55:13.577253+00:00",
               "competition": "England Premier League",
               "metric": 65.0,
               "metric_kind": "model_pct",
@@ -636,7 +642,7 @@
     {
       "date": "2026-11-29",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-27T10:39:02.226894+00:00",
+      "updated_at": "2026-11-27T10:55:15.817579+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -655,14 +661,15 @@
         "excluded_combinations": [],
         "min_odds": null,
         "max_odds": null,
+        "zebra_min_odds": 2.2,
         "history_min_sample": 30,
         "history_warning_roi": -10
       },
-      "total_collected": 216,
+      "total_collected": 218,
       "total_eligible": 0,
       "total_selected": 0,
       "discarded": {
-        "other_day": 196,
+        "other_day": 198,
         "started_or_soon": 0,
         "stale": 0,
         "threshold": 20,
@@ -670,6 +677,8 @@
         "excluded": 0
       },
       "watchlist": [],
+      "zebras": [],
+      "total_zebras": 0,
       "diagnostics": {
         "coverage": "partial",
         "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
@@ -696,7 +705,7 @@
           },
           {
             "id": "olbg",
-            "collected": 151,
+            "collected": 153,
             "today": 20,
             "eligible": 0
           },
@@ -790,7 +799,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-27T10:39:02.226894+00:00",
+    "generated_at": "2026-11-27T10:55:15.817579+00:00",
     "window_from": "2026-11-27",
     "window_through": "2026-11-29",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
@@ -4043,6 +4052,27 @@
       "settled": 5,
       "won": 2,
       "hit_rate": 40.0
+    },
+    "zebra": {
+      "total": 0,
+      "settled": 0,
+      "wins": 0,
+      "losses": 0,
+      "pending": 0,
+      "void": 0,
+      "hit_rate": null,
+      "hit_rate_interval_95": [
+        null,
+        null
+      ],
+      "priced_settled": 0,
+      "odds_coverage": 0,
+      "paper_profit_units": 0,
+      "paper_roi_pct": null,
+      "paper_max_drawdown_units": 0,
+      "sufficient_sample": false,
+      "average_odds": null,
+      "items": []
     }
   },
   "settlement_note": "Resultados automáticos de futebol: configurar API_FOOTBALL_KEY. Outros desportos: confirmação manual.",
@@ -4050,55 +4080,10 @@
     {
       "id": "zulubet_results",
       "name": "Zulubet (resultados)",
-      "resource": "zulubet/26-11-2026",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
-      "collected": 3,
-      "status": "ok",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
-    },
-    {
-      "id": "zulubet_results",
-      "name": "Zulubet (resultados)",
-      "resource": "zulubet/24-11-2026",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
-      "collected": 2,
-      "status": "ok",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
-    },
-    {
-      "id": "zulubet_results",
-      "name": "Zulubet (resultados)",
-      "resource": "zulubet/22-11-2026",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
-      "collected": 1,
-      "status": "ok",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
-    },
-    {
-      "id": "zulubet_results",
-      "name": "Zulubet (resultados)",
       "resource": "zulubet/21-11-2026",
       "checked_at": "2026-11-27T10:39:02.226894+00:00",
       "collected": 5,
-      "status": "ok",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
-      "resource": "soccer/all/20261123",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
-      "collected": 0,
-      "status": "ok",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
-      "resource": "soccer/all/20261122",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
-      "collected": 1,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-27T13:39:02.226894+00:00"
     },
     {
@@ -4107,16 +4092,7 @@
       "resource": "soccer/all/20261121",
       "checked_at": "2026-11-27T10:39:02.226894+00:00",
       "collected": 2,
-      "status": "ok",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
-      "resource": "tennis/atp/20261120",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
-      "collected": 1,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-27T13:39:02.226894+00:00"
     },
     {
@@ -4125,16 +4101,7 @@
       "resource": "basketball/euroleague/20261120",
       "checked_at": "2026-11-27T10:39:02.226894+00:00",
       "collected": 0,
-      "status": "ok",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
-      "resource": "soccer/all/20261120",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
-      "collected": 1,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-27T13:39:02.226894+00:00"
     },
     {
@@ -4143,7 +4110,7 @@
       "resource": "basketball/euroleague/20261119",
       "checked_at": "2026-11-27T10:39:02.226894+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-27T13:39:02.226894+00:00"
     }
   ],
@@ -4153,7 +4120,7 @@
       "id": "olbg",
       "name": "OLBG",
       "status": "ok",
-      "collected": 151,
+      "collected": 153,
       "raw_rows": 171,
       "message": "Recolha concluída",
       "pages": [
@@ -4171,7 +4138,7 @@
           "url": "https://www.olbg.com/betting-tips/Basketball/4",
           "status": "ok",
           "raw_rows": 11,
-          "collected": 10,
+          "collected": 11,
           "missing_scores": 0,
           "message": "Recolha concluída"
         },
@@ -4180,7 +4147,7 @@
           "url": "https://www.olbg.com/betting-tips/Football/1",
           "status": "ok",
           "raw_rows": 100,
-          "collected": 97,
+          "collected": 98,
           "missing_scores": 0,
           "message": "Recolha concluída"
         },
@@ -4203,7 +4170,7 @@
           "message": "Recolha concluída"
         }
       ],
-      "today": 75,
+      "today": 78,
       "eligible": 3
     },
     {
@@ -4304,14 +4271,14 @@
       "name": "Zulubet",
       "status": "ok",
       "collected": 11,
-      "raw_rows": 28,
+      "raw_rows": 29,
       "message": "Recolha concluída",
       "pages": [
         {
           "id": "zulubet",
           "url": "https://www.zulubet.com/",
           "status": "ok",
-          "raw_rows": 28,
+          "raw_rows": 29,
           "collected": 11,
           "missing_scores": 0,
           "message": "Recolha concluída"
@@ -4341,7 +4308,7 @@
       "indexed_by_date": [
         {
           "date": "2026-11-27",
-          "fixtures": 390
+          "fixtures": 372
         },
         {
           "date": "2026-11-28",
@@ -4356,17 +4323,17 @@
         {
           "date": "2026-11-27",
           "sport": "football",
-          "fixtures": 191
+          "fixtures": 181
         },
         {
           "date": "2026-11-27",
           "sport": "tennis",
-          "fixtures": 33
+          "fixtures": 30
         },
         {
           "date": "2026-11-27",
           "sport": "basketball",
-          "fixtures": 63
+          "fixtures": 58
         },
         {
           "date": "2026-11-27",
@@ -4612,22 +4579,22 @@
     }
   ],
   "request_id": "",
-  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/45983835670",
+  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/45986083808",
   "status": "partial",
   "pipeline_health": {
-    "checked_at": "2026-11-27T10:39:02.226894+00:00",
+    "checked_at": "2026-11-27T10:55:15.817579+00:00",
     "schedule": "13,43 * * * *",
     "timezone": "UTC",
     "workflow_state": "active",
     "scheduler_status": "overdue",
     "last_scheduled_at": "2026-11-27T04:10:23+00:00",
     "last_successful_scheduled_at": "2026-11-27T04:10:23+00:00",
-    "scheduled_age_minutes": 388.7,
+    "scheduled_age_minutes": 404.9,
     "max_age_minutes": 45,
     "schedule_runs_observed": 23,
-    "run_window": 69,
+    "run_window": 71,
     "last_event": "push",
-    "last_run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/45983835670",
+    "last_run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/45986083808",
     "errors": {}
   },
   "run_event": "push"
