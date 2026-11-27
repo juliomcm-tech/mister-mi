@@ -48,7 +48,14 @@ class Client:
             with self.lock:
                 if host not in self.robots:
                     robot = RobotFileParser()
-                    robot.parse(self.get(f"https://{host}/robots.txt", check_robots=False).splitlines())
+                    try:
+                        robot.parse(self.get(f"https://{host}/robots.txt", check_robots=False).splitlines())
+                    except FetchError as exc:
+                        # RFC 9309: robots.txt inexistente (404/410) significa sem restrições.
+                        # Qualquer outra falha (403, 5xx, rede) continua a bloquear a recolha.
+                        if str(exc) not in {"HTTP 404", "HTTP 410"}:
+                            raise
+                        robot.parse([])
                     self.robots[host] = robot
                 robot = self.robots[host]
             if not robot.can_fetch(USER_AGENT, url):
@@ -481,7 +488,7 @@ def collect(now):
     jobs += [("forebet", u, parse_forebet, {"sport": sport, "market": market}) for u, sport, market in FOREBET_PAGES]
     jobs += [("protipster", "https://www.protipster.com/betting-tips/today", parse_protipster, {}),
              ("predictz", "https://www.predictz.com/predictions/", parse_predictz, {}),
-             ("zulubet", "https://www.zulubet.com/", parse_zulubet, {})]  # as páginas por data respondem 404 ao robô
+             ("zulubet", "https://www.zulubet.com/", parse_zulubet, {})]
     tips, logs = [], []
 
     def run(job):

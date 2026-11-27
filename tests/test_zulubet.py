@@ -53,3 +53,36 @@ class ZulubetTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class RobotsTests(unittest.TestCase):
+    def test_missing_robots_allows_but_forbidden_robots_blocks(self):
+        from consensus import sources
+        calls = []
+
+        class Fake(sources.Client):
+            def __init__(self, code):
+                super().__init__(); self.code = code
+
+        def fake_get_factory(code):
+            real = sources.Client.get
+            def fake(self, url, *, headers=None, check_robots=True):
+                if url.endswith("/robots.txt"):
+                    raise sources.FetchError(f"HTTP {code}")
+                if not check_robots:
+                    return "ok"
+                return real(self, url, headers=headers, check_robots=check_robots)
+            return fake
+
+        import unittest.mock as mock
+        with mock.patch.object(sources.Client, "get", fake_get_factory(404)):
+            c = sources.Client()
+            # robots 404 → regras vazias → permitido (a seguir falharia só por não haver rede no teste)
+            try:
+                c.get("https://exemplo.test/pagina")
+            except sources.FetchError as exc:
+                self.assertNotIn("robots", str(exc))
+            self.assertTrue(c.robots["exemplo.test"].can_fetch(sources.USER_AGENT, "https://exemplo.test/pagina"))
+        with mock.patch.object(sources.Client, "get", fake_get_factory(403)):
+            with self.assertRaises(sources.FetchError):
+                sources.Client().get("https://outro.test/pagina")
