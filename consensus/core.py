@@ -99,7 +99,7 @@ class Tip:
             if self.votes_total < settings["min_votes"]:
                 return "insufficient_votes"
             return None if 100 * self.votes_for / self.votes_total >= settings["min_olbg"] else "below_source_threshold"
-        if self.source in {"protipster", "forebet", "api_football", "betclan"}:
+        if self.source in {"protipster", "forebet", "api_football", "betclan", "zulubet"}:
             kind = "tip_score" if self.source == "protipster" else "model_pct"
             if self.metric_kind != kind or self.metric is None:
                 return "missing_metric"

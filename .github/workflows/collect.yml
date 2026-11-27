@@ -13,10 +13,6 @@ on:
         required: false
         type: string
 
-concurrency:
-  group: mister-mi-pipeline
-  cancel-in-progress: false
-
 permissions:
   contents: write
   pages: write
@@ -26,6 +22,10 @@ jobs:
   analyse:
     runs-on: ubuntu-latest
     timeout-minutes: 12
+    # a fila fica só na recolha: assim o botão do painel não espera pela pausa do trabalho «seguinte»
+    concurrency:
+      group: mister-mi-pipeline
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
@@ -111,3 +111,31 @@ jobs:
       - name: Publicar o painel
         id: deployment
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+  # O temporizador do GitHub (schedule) neste repositório só dispara de 6 em 6 a 9 em 9 horas, e o painel esconde as
+  # opções quando a última recolha tem mais de 45 minutos. Por isso cada corrida marca a seguinte, ~25 minutos depois.
+  # Se existir o ambiente «espera» com Wait timer (Settings → Environments → espera → Wait timer: 25), a espera não gasta
+  # máquina; se não existir temporizador, o próprio trabalho espera o que faltar. O schedule continua como rede de segurança.
+  seguinte:
+    needs: analyse
+    if: ${{ always() && github.ref_name == 'main' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    environment: espera
+    permissions:
+      actions: write
+    steps:
+      - name: Marcar a próxima corrida
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          inicio=$(date -d "$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" -q .run_started_at)" +%s)
+          passou=$(( $(date +%s) - inicio ))
+          alvo=1500
+          if [ "$passou" -lt "$alvo" ]; then echo "Passaram $passou s; espero mais $((alvo - passou)) s."; sleep $((alvo - passou)); fi
+          # só a corrida mais recente marca a seguinte (se o schedule, um push ou o botão do painel lançaram outra depois
+          # desta, é essa que continua a corrente: assim nunca há duas correntes em paralelo)
+          novas=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/collect.yml/runs?per_page=30" -q "[.workflow_runs[] | select(.id > $GITHUB_RUN_ID)] | length")
+          if [ "$novas" != "0" ]; then echo "Há $novas corrida(s) mais recente(s): é essa que marca a seguinte."; exit 0; fi
+          gh workflow run collect.yml --repo "$GITHUB_REPOSITORY" --ref main
+          echo "Próxima corrida marcada."

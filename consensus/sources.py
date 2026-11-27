@@ -328,6 +328,55 @@ def parse_forebet(html, url, now, sport="football", market="FT_1X2"):
     return result, len(rows), 0
 
 
+def parse_zulubet(html, url, now):
+    """Zulubet: probabilidades 1/X/2 publicadas por jogo e hora em UTC (a página converte para a hora local com
+    mf_usertime, que soma o fuso do visitante a uma hora UTC). Só conta a dica simples (1, X ou 2) e a
+    probabilidade dessa mesma seleção; dicas duplas (1X, X2, 12) ficam de fora."""
+    soup = BeautifulSoup(html, "html.parser")
+    rows = [tr for tr in soup.select("tr") if len(tr.find_all("td", class_="prediction_full", recursive=False)) == 3
+            and tr.select_one('a[href*="match-"]')]
+    if not rows:
+        raise FetchError("Estrutura Zulubet alterada ou sem jogos publicados")
+    result = []
+    for row in rows:
+        try:
+            m = re.search(r"mf_usertime\('(\d{2})/(\d{2})/(\d{4}), (\d{2}):(\d{2})'", str(row))
+            if not m:
+                continue
+            mo, d, y, hh, mm = map(int, m.groups())
+            kickoff = datetime(y, mo, d, hh, mm, tzinfo=UTC)
+            name = row.select_one('a[href*="match-"]').get_text(" ", strip=True)
+            if " - " not in name:
+                continue
+            home, away = [x.strip() for x in name.split(" - ", 1)]
+            probs = [number(td.get_text(strip=True)) for td in row.find_all("td", class_="prediction_full", recursive=False)]
+            if any(x is None for x in probs) or abs(sum(probs) - 100) > 3:
+                continue
+            cells = row.find_all("td", recursive=False)
+            tip = next((c.find("b").get_text(strip=True) for c in cells if c.find("b") and c.find("b").get_text(strip=True) in {"1", "X", "2", "1X", "X2", "12"}), "")
+            # «-52'» é contagem decrescente para o início; «52'» sem sinal é jogo a decorrer
+            live = any(re.fullmatch(r"\d+'", sp.get_text(strip=True)) for sp in row.select("span"))
+            order = {"1": ("HOME", 0), "X": ("DRAW", 1), "2": ("AWAY", 2)}
+            if tip not in order:
+                continue
+            outcome, index = order[tip]
+            flag = row.select_one("img.flags[title]")
+            league = flag["title"].strip() if flag else ""
+            odds = [number(td.get_text(strip=True)) for td in row.find_all("td", class_="aver_odds_full", recursive=False)]
+            score = cells[-2].get_text(strip=True) if len(cells) >= 2 else ""
+            finished = bool(re.fullmatch(r"\d+:\d+", score))
+            link = row.select_one('a[href*="match-"]')
+            result.append(Tip("zulubet", "football", home, away, kickoff.astimezone(LISBON).date().isoformat(),
+                              kickoff.isoformat(), "FT_1X2", outcome, urljoin(url, link["href"]) if link else url,
+                              now.isoformat(), league, probs[index], "model_pct",
+                              odds=odds[index] if len(odds) == 3 and odds[index] and odds[index] > 1 else None,
+                              segment=segment_for(league, home, away),
+                              status="finished" if finished else "live" if live else "scheduled", country=country_for(league)))
+        except (ValueError, TypeError, KeyError, IndexError):
+            continue
+    return result, len(rows), 0
+
+
 def parse_protipster(html, url, now):
     # Public hydration data is JSON inside a JS wrapper. Decode JSON only; never eval JavaScript.
     match = re.search(r"mutation:\s*['\"]TIPS_SECTIONS['\"]\s*,\s*args:\s*\[\s*", html)
@@ -431,7 +480,9 @@ def collect(now):
     jobs = [("olbg", u, parse_olbg, {}) for u in OLBG_URLS]
     jobs += [("forebet", u, parse_forebet, {"sport": sport, "market": market}) for u, sport, market in FOREBET_PAGES]
     jobs += [("protipster", "https://www.protipster.com/betting-tips/today", parse_protipster, {}),
-             ("predictz", "https://www.predictz.com/predictions/", parse_predictz, {})]
+             ("predictz", "https://www.predictz.com/predictions/", parse_predictz, {}),
+             ] + [("zulubet", "https://www.zulubet.com/tips-" + (now.astimezone(LISBON).date() + timedelta(days=k)).strftime("%d-%m-%Y") + ".html",
+                   parse_zulubet, {}) for k in (0, 1)]
     tips, logs = [], []
 
     def run(job):
@@ -454,7 +505,7 @@ def collect(now):
             tips.extend(data)
             logs.append(log)
     sources = []
-    for source, name in [("olbg", "OLBG"), ("forebet", "Forebet"), ("protipster", "ProTipster"), ("predictz", "PredictZ")]:
+    for source, name in [("olbg", "OLBG"), ("forebet", "Forebet"), ("protipster", "ProTipster"), ("predictz", "PredictZ"), ("zulubet", "Zulubet")]:
         pages = sorted([log for log in logs if log["id"] == source], key=lambda x: x["url"])
         statuses = {x["status"] for x in pages}
         status = "ok" if statuses == {"ok"} else "error" if statuses == {"error"} else "partial"

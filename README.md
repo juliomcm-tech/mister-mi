@@ -7,7 +7,7 @@ O teu analista desportivo: recolhe prognósticos, compara o mesmo evento e merca
 ## O que está implementado
 
 - Futebol, ténis, basquetebol, hóquei e futebol americano nas fontes suportadas. A notação explícita visitante @ anfitrião é normalizada sem inverter a seleção.
-- OLBG, BetClan, Forebet, ProTipster e PredictZ; API-Football opcional, mediante chave e cobertura do plano. A disponibilidade real é indicada em cada recolha.
+- OLBG, BetClan, Zulubet, Forebet, ProTipster e PredictZ; API-Football opcional, mediante chave e cobertura do plano. A disponibilidade real é indicada em cada recolha.
 - Data corrente em `Europe/Lisbon`, timestamps com fuso, apenas jogos ainda por começar e recolhas recentes.
 - Identificação de participantes, segmento feminino/sub-idade, país conhecido e horários compatíveis. Abreviaturas de tenistas ambíguas são excluídas.
 - Mesmo mercado e seleção em pelo menos duas fontes distintas; páginas duplicadas e vários tipsters não são votos adicionais.
@@ -56,7 +56,7 @@ O GitHub Pages serve ficheiros estáticos e não executa Python quando o visitan
 1. Em **Settings → Pages → Build and deployment**, escolher **main / (root)** ou **GitHub Actions**. Em modo main, a entrada abre `web/`; ambos os modos leem a análise mais recente na branch `data`.
 2. Abrir **Actions → Mister Mi — analisar e publicar → Run workflow** para a primeira execução, caso ainda não tenha ocorrido automaticamente.
 3. A branch `data` guarda `consenso_hoje.json` e `history.json`. Cada execução recupera o histórico anterior antes de acrescentar registos.
-4. O agendamento está configurado aos minutos 13 e 43 de cada hora UTC. O GitHub pode atrasar execuções; a página rejeita dados antigos e mostra se há execuções agendadas realmente observadas.
+4. Cada execução marca a seguinte cerca de 25 minutos depois (trabalho «seguinte»), porque o agendamento do GitHub neste repositório só dispara de poucas em poucas horas e o painel esconde análises com mais de 45 minutos. Para a espera não ocupar uma máquina, criar em **Settings → Environments** o ambiente `espera` com **Wait timer** de 25 minutos (opcional). O agendamento aos minutos 13 e 43 UTC fica como rede de segurança. O GitHub pode atrasar execuções; a página rejeita dados antigos e mostra se há execuções agendadas realmente observadas.
 5. A primeira recolha pode terminar sem seleções. Consultar **Fontes** para distinguir filtros exigentes, dados em falta e falhas dos fornecedores.
 
 Uma fonte bloqueada, alterada ou sem métricas não é contornada. O adaptador regista a falha e o filtro continua com a evidência disponível.

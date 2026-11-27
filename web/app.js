@@ -11,7 +11,7 @@ const $ = id => document.getElementById(id);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const icon = name => `<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const sports = {football:'Futebol',tennis:'Ténis',basketball:'Basquetebol',hockey:'Hóquei',american_football:'F. americano'};
-const sourceNames = {olbg:'OLBG',forebet:'Forebet',protipster:'ProTipster',predictz:'PredictZ',api_football:'API-Football',betclan:'BetClan'};
+const sourceNames = {olbg:'OLBG',forebet:'Forebet',protipster:'ProTipster',predictz:'PredictZ',api_football:'API-Football',betclan:'BetClan',zulubet:'Zulubet'};
 const stateLabels = {ok:'Recolhida',partial:'Parcial',error:'Indisponível',not_configured:'Opcional',cached:'Em cache'};
 const marketNames = {FT_1X2:'Resultado · tempo regulamentar',MATCH_WINNER:'Vencedor do jogo','FT_TOTAL_1.5':'Total de golos · 1.5','FT_TOTAL_2.5':'Total de golos · 2.5','FT_TOTAL_3.5':'Total de golos · 3.5',FT_BTTS:'Ambas marcam'};
 const countryNames = {England:'Inglaterra',Scotland:'Escócia',Brazil:'Brasil',Germany:'Alemanha',France:'França',Spain:'Espanha',Italy:'Itália',Japan:'Japão',Netherlands:'Países Baixos',Denmark:'Dinamarca','United States':'Estados Unidos',Uruguay:'Uruguai',Argentina:'Argentina',Portugal:'Portugal'};
@@ -148,6 +148,7 @@ function sourceSummary(){
 }
 const descriptors={
  betclan:{kind:'MODELO DA FONTE · NOVA INTEGRAÇÃO',url:'https://www.betclan.com/faq/',description:'Probabilidade publicada de pelo menos 65% para a seleção exata, lida no bloco do modelo. O índice de eventos serve para encontrar jogos; só os detalhes consultados contam como previsões. A métrica não foi calibrada pelo Mister Mi.'},
+ zulubet:{kind:'PREVISÃO ESTATÍSTICA · NOVA INTEGRAÇÃO',url:'https://www.zulubet.com/',description:'Pelo menos 65% na probabilidade publicada para a dica simples (1, X ou 2), com hora de início. Dicas duplas não contam. O Mister Mi não calcula nem valida o modelo da fonte.'},
  olbg:{kind:'CONSENSO DA COMUNIDADE',url:'https://www.olbg.com/betting-tips',description:'Pelo menos 15 votos e 75% de apoio. Votos medem popularidade da seleção; não são uma probabilidade de acerto.'},
  forebet:{kind:'PREVISÃO ESTATÍSTICA',url:'https://www.forebet.com/',description:'Pelo menos 65% na probabilidade publicada para a seleção exata. O Mister Mi não calcula nem valida o modelo proprietário.'},
  protipster:{kind:'AVALIAÇÃO DE TIPSTERS',url:'https://www.protipster.com/betting-tips/today',description:'Tip Score público de pelo menos 8/10. Sem essa métrica explícita, a tip não contribui para o consenso.'},
