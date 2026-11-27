@@ -23,6 +23,9 @@ ALIASES = {
     "ol lyonnes": "olympique lyonnais w", "lyon w": "olympique lyonnais w",
     "bos celtics": "boston celtics", "den nuggets": "denver nuggets",
     "la lakers": "los angeles lakers", "uta jazz": "utah jazz",
+    "borussia mgladbach": "borussia monchengladbach", "borussia m gladbach": "borussia monchengladbach",
+    "b monchengladbach": "borussia monchengladbach", "monchengladbach": "borussia monchengladbach",
+    "gladbach": "borussia monchengladbach", "bor monchengladbach": "borussia monchengladbach",
 }
 
 
