@@ -76,7 +76,9 @@ function visiblePicks(){
  if(q)picks=picks.filter(p=>`${p.match} ${p.competition} ${p.country} ${countryNames[p.country]??''}`.toLocaleLowerCase('pt-PT').includes(q));
  return picks.toSorted ? picks.toSorted(sorter) : [...picks].sort(sorter);
 }
-function sorter(a,b){const sort=$('sort').value;return sort==='time'?new Date(a.kickoff)-new Date(b.kickoff):sort==='score'?b.score-a.score:b.source_count-a.source_count||b.score-a.score;}
+let sortMode=read('mister-mi.sort','consensus');
+function paintSort(){document.querySelectorAll('[data-sort]').forEach(b=>b.classList.toggle('on',b.dataset.sort===sortMode));}
+function sorter(a,b){const sort=sortMode;return sort==='time'?new Date(a.kickoff)-new Date(b.kickoff):sort==='score'?b.score-a.score:b.source_count-a.source_count||b.score-a.score;}
 function emptyState(title,copy,action=''){return `<div class="empty-state"><span class="empty-icon">${icon('shield')}</span><h3>${esc(title)}</h3><p>${esc(copy)}</p>${action}</div>`;}
 function initials(s){return s.split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();}
 function previewCard(p,confirmed=false){return gameCard(p,{sports,countries:countryNames,markets:marketNames,sources:sourceNames,phase:confirmed?'future':'watchlist',featured:true});}
@@ -338,7 +340,9 @@ document.addEventListener('click',e=>{
 $('close-dialog').onclick=()=>$('analysis-dialog').close();
 $('analysis-dialog').addEventListener('click',e=>{if(e.target===$('analysis-dialog')){const r=$('analysis-dialog').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('analysis-dialog').close();}});
 $('refresh').onclick=()=>refreshAnalysis();$('hero-analyse').onclick=()=>refreshAnalysis();
-for(const id of ['search','sort','three-sources'])$(id).addEventListener('input',renderPicks);
+for(const id of ['search','three-sources'])$(id).addEventListener('input',renderPicks);
+document.addEventListener('click',e=>{const b=e.target.closest('[data-sort]');if(!b)return;sortMode=b.dataset.sort;write('mister-mi.sort',sortMode);paintSort();renderPicks();});
+paintSort();
 $('min-score').addEventListener('input',()=>{$('score-label').textContent=$('min-score').value;renderPicks();});
 $('favorites-toggle').onclick=()=>{onlyFavorites=!onlyFavorites;$('favorites-toggle').setAttribute('aria-pressed',String(onlyFavorites));$('favorites-toggle').style.color=onlyFavorites?'#a38a21':'';renderPicks();};
 $('stats-dimension').onchange=renderPerformance;

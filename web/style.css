@@ -105,3 +105,32 @@ table{font-size:.875rem}th{font-size:.75rem}.rail-button{min-height:68px}.sort-l
 .zebra-panel{border:1px dashed rgba(255,255,255,.35)}
 .zebra-note{margin:-6px 0 14px;padding:10px 12px;border-radius:12px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 10px,rgba(0,0,0,.05) 10px 20px);display:flex;flex-direction:column;gap:4px}
 .zebra-note small{opacity:.85}
+
+/* ===== Cartão de jogo compacto (v14) ===== */
+.game-grid{grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}.game-grid>.game-card:first-child{grid-column:auto}
+.picks,.watchlist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.game-card.gc{padding:14px 15px 12px;border-radius:18px;margin:0}
+.game-card.gc:before{width:220px;height:220px;right:-120px;top:-110px;opacity:.6}
+.gc-top{display:flex;align-items:center;gap:8px;flex-wrap:nowrap;font-size:.8rem;min-width:0}
+.gc-top .game-schedule{display:flex;align-items:baseline;gap:6px;margin:0;padding:5px 9px;border-radius:10px;background:#e5f7ff;color:#073b5c;flex:none}
+.gc-top .game-schedule strong{font-size:1rem}.gc-top .game-schedule span{font-size:.72rem;opacity:.75}.gc-top .game-schedule small{display:none}
+.gc-league{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#cfeaf5;font-weight:600}
+.gc-top .game-state{flex:none;padding:4px 8px;border-radius:8px;font-size:.72rem}
+.gc-top .game-favorite{width:32px;height:32px;border-radius:9px;font-size:1rem;flex:none}
+.gc-teams{display:grid;gap:7px;margin:12px 0 10px}
+.gc-team{display:flex;align-items:center;gap:10px;min-width:0;font-weight:700;font-size:1.02rem}
+.gc-team span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crest{width:30px;height:30px;flex:none;filter:drop-shadow(0 2px 3px #0004)}
+.gc-pick{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0 8px;border-top:1px solid #ffffff26}
+.gc-pick small{display:block;color:#b7dce9;font-size:.72rem}.gc-pick strong{display:block;color:#e4f99a;font-size:1.05rem;line-height:1.25}
+.gc-nums{display:flex;gap:12px;flex:none;text-align:center}.gc-nums b{display:block;font-size:1.02rem}.gc-nums small{font-size:.66rem}
+.gc-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:8px;border-top:1px solid #ffffff1f}
+.gc-foot .game-evidence{gap:5px;flex-wrap:wrap}.gc-foot .game-evidence a{min-height:0;padding:3px 8px;border-radius:999px;font-size:.72rem}
+.gc-more{flex:none;border:0;border-radius:999px;padding:7px 12px;background:#dff58f;color:#0b3550;font-weight:800;font-size:.8rem;cursor:pointer;text-decoration:none}
+.gc-zebra{background:linear-gradient(126deg,#1d1d2b 0%,#33334a 55%,#4b4b63 100%)!important}
+/* ordenar: opções visíveis */
+.sort-chips{display:flex;gap:6px;flex-wrap:wrap}.sort-chips button{border:1px solid #9fcbe0;background:#fff;color:#0b4a6f;border-radius:999px;padding:7px 12px;font-weight:700;font-size:.8rem;cursor:pointer}
+.sort-chips button.on{background:#0b4a6f;color:#fff;border-color:#0b4a6f}
+@media(max-width:640px){.picks,.watchlist-grid,.game-grid{grid-template-columns:1fr}.list-toolbar{flex-wrap:wrap}}
+.selection-panel>#zebra-panel{order:4}
+.gc-top .game-schedule{width:auto!important;min-width:0!important;max-width:none;grid-template-columns:none!important;flex:0 0 auto}
