@@ -118,7 +118,7 @@ DEFAULTS = {"min_votes": 15, "min_olbg": 75, "min_protipster": 8, "min_model": 6
             "min_sources": 2, "min_score": 70, "max_picks": 6, "max_age_minutes": 45,
             "kickoff_tolerance_minutes": 20, "lead_minutes": 5,
             "excluded_sports": [], "excluded_countries": [], "excluded_combinations": [],
-            "min_odds": None, "max_odds": None}
+            "min_odds": None, "max_odds": None, "zebra_min_odds": 2.2}
 
 
 def same_event(a: Tip, b: Tip, settings: dict) -> bool:
@@ -149,6 +149,21 @@ def selection_label(tip: Tip) -> str:
     if tip.market.startswith("FT_TOTAL_"):
         return ("Mais de " if tip.outcome == "OVER" else "Menos de ") + tip.market.rsplit("_", 1)[1] + " golos"
     return "Ambas marcam: " + ("sim" if tip.outcome == "YES" else "não")
+
+
+def mark_zebra(pick: dict) -> dict:
+    """Explica a discordância: o que cada fonte diz contra o que a odd implica."""
+    implied = round(100 / pick["odds"], 1)
+    says = [{"source": s["source"], "pct": round(s["metric"], 1), "kind": s["metric_kind"]}
+            for s in pick.get("sources", []) if s.get("metric_kind") in {"vote_pct", "model_pct"} and isinstance(s.get("metric"), (int, float))]
+    prices = [s["odds"] for s in pick.get("sources", []) if isinstance(s.get("odds"), (int, float)) and s["odds"] > 1]
+    spread = round(max(prices) / min(prices) - 1, 3) if len(prices) > 1 else 0
+    warnings = ["Confirma notícias (lesões, poupanças, mau tempo): quando a casa paga muito contra todos, às vezes sabe algo."]
+    if spread >= 0.25:
+        warnings.insert(0, f"As odds das fontes diferem {round(spread * 100)}%: confirma o preço na tua casa.")
+    pick.update(zebra=True, kind="zebra", implied_pct=implied, source_says=says, odds_spread=spread, zebra_warnings=warnings,
+                reason=f"{pick['source_count']} fontes concordam, mas a odd {pick['odds']} implica só {implied}%.")
+    return pick
 
 
 def group_events(tips: list[Tip], settings: dict) -> list[list[Tip]]:
@@ -304,6 +319,12 @@ def _analyse_day(tips: list[Tip], now: datetime, settings: dict | None, target_d
                 "sources": [asdict(t) for t in evidence],
                 "reason": f"{len(evidence)} fontes concordam na mesma seleção e no mesmo mercado.",
             })
+    # 🦓 Zebra unânime: as fontes concordam, mas a casa paga uma odd alta (a odd implica menos de ~45%).
+    # Fica à parte: não entra na seleção normal nem no boletim do dia, e tem estatísticas próprias.
+    zebra_min = settings.get("zebra_min_odds") or 0
+    zebras = [mark_zebra(p) for p in selected if zebra_min and isinstance(p.get("odds"), (int, float)) and p["odds"] >= zebra_min]
+    selected = [p for p in selected if not p.get("zebra")]
+    zebras.sort(key=lambda x: (-x["source_count"], -x["score"], x["kickoff"]))
     selected.sort(key=lambda x: (-x["source_count"], -x["score"], x["kickoff"]))
     unique_events, final = set(), []
     for tip in selected:
@@ -326,6 +347,7 @@ def _analyse_day(tips: list[Tip], now: datetime, settings: dict | None, target_d
             "schema_version": 1, "score_is_probability": False, "settings": settings,
             "total_collected": len(tips), "total_eligible": len(eligible), "total_selected": len(final),
             "discarded": discarded, "data": final, "watchlist": watchlist[:8],
+            "zebras": zebras[:4], "total_zebras": len(zebras),
             "diagnostics": {"coverage": "partial", "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
                             "today_forecasts": len(today_tips), "today_events": len(group_events(today_tips, settings)),
                             "eligible_forecasts": len(eligible), "eligible_events": len(groups),

@@ -100,3 +100,8 @@ table{font-size:.875rem}th{font-size:.75rem}.rail-button{min-height:68px}.sort-l
 
 /* Connection status is metadata; the authenticated API never runs in the browser. */
 .oddspedia-api-panel{margin-bottom:24px}.oddspedia-api-panel .section-heading{gap:16px;flex-wrap:wrap}.oddspedia-api-panel p{line-height:1.7}.oddspedia-api-panel [data-state=ok]{color:#256a4b;background:#e2f3e7}.oddspedia-api-panel [data-state=error]{color:#8b3535;background:#fff0ec}.oddspedia-attribution{display:flex;flex-direction:column;gap:7px;align-items:flex-start;text-decoration:none;font-size:.875rem;line-height:1.6}.oddspedia-attribution img{display:block;max-width:136px;object-fit:contain}
+
+/* 🦓 Zebra unânime */
+.zebra-panel{border:1px dashed rgba(255,255,255,.35)}
+.zebra-note{margin:-6px 0 14px;padding:10px 12px;border-radius:12px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 10px,rgba(0,0,0,.05) 10px 20px);display:flex;flex-direction:column;gap:4px}
+.zebra-note small{opacity:.85}

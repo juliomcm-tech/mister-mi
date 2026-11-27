@@ -21,7 +21,7 @@ def record(history, payload):
         raise ValueError("Uma pré-visualização futura não pode entrar no histórico de recomendações")
     records = {r["id"]: r for r in history.get("records", [])}
     config_hash = sha256(json.dumps(payload["settings"], sort_keys=True).encode()).hexdigest()[:12]
-    for pick in payload["data"]:
+    for pick in payload["data"] + payload.get("zebras", []):
         if pick["id"] not in records:
             # Immutable first-publication price and criteria. Later refreshes never improve an old price.
             records[pick["id"]] = {**pick, "date": payload["date"], "first_seen": payload["updated_at"],
@@ -174,8 +174,19 @@ def daily_slips(rows, days=60):
             "hit_rate": round(100 * sum(d["status"] == "won" for d in settled) / len(settled), 1) if settled else None}
 
 
+def zebra_summary(rows, minimum):
+    z = [r for r in rows if r.get("kind") == "zebra"]
+    priced = [r for r in z if isinstance(r.get("odds"), (int, float))]
+    return {**metrics(z, minimum), "average_odds": round(sum(r["odds"] for r in priced) / len(priced), 2) if priced else None,
+            "items": [{"date": r.get("date"), "match": r.get("match"), "selection": r.get("selection"), "odds": r.get("odds"),
+                       "implied_pct": r.get("implied_pct"), "source_says": r.get("source_says", []), "result": r["result"],
+                       "final_score": r.get("final_score"), "competition": r.get("competition")}
+                      for r in sorted(z, key=lambda r: r.get("kickoff") or "", reverse=True)[:30]]}
+
+
 def summary(history, settings):
-    rows = history["records"]
+    all_rows = history["records"]
+    rows = [r for r in all_rows if r.get("kind") != "zebra"]  # as zebras têm contas próprias
     minimum = settings.get("history_min_sample", 30)
     result = {"overall": metrics(rows, minimum), "by_sport": [], "by_country": [], "by_market": [], "by_combination": [],
               "min_sample": minimum, "paper_only": True, "commission_included": False,
@@ -199,6 +210,7 @@ def summary(history, settings):
         result[output] = sorted(({"key": k, **metrics(g, minimum)} for k, g in groups.items()),
                                 key=lambda x: (-x["settled"], -x["total"], x["key"]))
     result["daily"] = daily_slips(rows)
+    result["zebra"] = zebra_summary(all_rows, minimum)
     combinations = defaultdict(list)
     for row in rows:
         combinations[(row["sport"], row.get("country", "Desconhecido"))].append(row)

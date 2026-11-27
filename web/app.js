@@ -123,6 +123,24 @@ function renderCoverage(fresh){
  $('watchlist-panel').hidden=!candidates.length;
  $('watchlist').innerHTML=candidates.map(p=>gameCard(p,{sports,countries:countryNames,markets:marketNames,sources:sourceNames,phase:'watchlist',featured:candidates.length===1})).join('');
  $('coverage-sports').innerHTML=sportCoverage(payload);
+ renderZebras(fresh);
+}
+/* 🦓 Zebra unânime: consenso entre fontes com odd alta (a casa discorda) */
+function zebraNote(p){
+ const says=(p.source_says??[]).map(s=>`${esc(sourceNames[s.source]??s.source)} ${num(s.pct,0)}%`).join(' · ');
+ return `<div class="zebra-note"><strong>🦓 ${says||'Fontes de acordo'} · a casa dá ${num(p.implied_pct,0)}% (odd ${num(p.odds,2)})</strong>${(p.zebra_warnings??[]).map(w=>`<small>⚠️ ${esc(w)}</small>`).join('')}</div>`;
+}
+function renderZebras(fresh){
+ const panel=$('zebra-panel');if(!panel)return;
+ const today=lisbonDay(),lead=(payload?.settings?.lead_minutes??5)*60000;
+ const list=fresh?.valid?(payload?.zebras??[]).filter(p=>Number.isFinite(+new Date(p.kickoff))&&new Date(p.kickoff).getTime()>Date.now()+lead&&lisbonDay(new Date(p.kickoff))===today):[];
+ panel.hidden=!list.length;
+ $('zebras').innerHTML=list.map(p=>gameCard(p,{sports,countries:countryNames,markets:marketNames,sources:sourceNames,phase:'today',featured:list.length===1})+zebraNote(p)).join('');
+}
+function renderZebraStats(z){
+ const box=$('zebra-stats');if(!box)return;
+ const items=z?.items??[];
+ box.innerHTML=`<div class="section-heading"><div><h2>🦓 Zebras unânimes</h2><p>Fontes de acordo contra a casa (odd ${num(payload?.settings?.zebra_min_odds??2.2,2)} ou mais). Contas à parte das seleções normais.</p></div><span class="tiny-badge">${z?.settled?`${z.wins}/${z.settled} certas · ROI ${pct(z.paper_roi_pct)}`:'à espera da primeira'}</span></div>${items.length?`<div class="table-wrap"><table><thead><tr><th>DIA</th><th>SELEÇÃO</th><th>FONTES DIZIAM</th><th>A CASA DAVA</th><th>RESULTADO</th></tr></thead><tbody>${items.map(i=>`<tr><td>${esc((i.date??'').split('-').reverse().join('/'))}</td><td><strong>${esc(i.selection)}</strong><br><small class="muted">${esc(i.match)} · ${esc(i.competition??'')}</small></td><td>${(i.source_says??[]).map(s=>`${esc(sourceNames[s.source]??s.source)} ${num(s.pct,0)}%`).join('<br>')}</td><td>${num(i.implied_pct,0)}% · @${num(i.odds,2)}</td><td>${resIcon[i.result]??''}${i.final_score?` ${esc(i.final_score.join('-'))}`:''}</td></tr>`).join('')}</tbody></table></div><p class="muted">Odd média ${num(z.average_odds,2)}. Com poucas zebras, a taxa de acerto ainda não diz nada: espera por ${payload?.performance?.min_sample??30}.</p>`:'<p class="muted">Ainda não apareceu nenhuma. São raras: quando as fontes concordam, quase sempre é num favorito.</p>'}`;
 }
 function renderPicks(){
  const fresh=freshness(),all=todaysPicks(),picks=visiblePicks();
@@ -194,6 +212,7 @@ function renderPerformance(){
  const dimension=$('stats-dimension').value;const rows=performance?.[dimension]??[];
  $('performance-table').innerHTML=`<table><thead><tr><th>SEGMENTO</th><th>AMOSTRA</th><th>ACERTO</th><th>INTERVALO 95%</th><th>ROI SIMULADO</th><th>COM ODDS</th></tr></thead><tbody>${rows.length?rows.map(r=>`<tr><td><strong>${esc(dimension==='by_combination'?`${sports[r.sport]??r.sport} × ${countryNames[r.country]??r.country}`:sports[r.key]??countryNames[r.key]??marketNames[r.key]??tierNames[r.key]??sourceList(r.key))}</strong></td><td>${r.settled}${r.sufficient_sample?'':' · inicial'}</td><td>${pct(r.hit_rate)}</td><td>${r.settled?`${num(r.hit_rate_interval_95[0])}%–${num(r.hit_rate_interval_95[1])}%`:'—'}</td><td class="${(r.paper_roi_pct??0)<0?'negative':'positive'}">${pct(r.paper_roi_pct)}</td><td>${r.priced_settled??0}</td></tr>`).join(''):'<tr><td class="no-data-cell" colspan="6">O Mister Mi ainda não tem resultados confirmados. As estatísticas começam com as primeiras opções registadas e liquidadas.</td></tr>'}</tbody></table>`;
  renderDaily(performance?.daily);
+ renderZebraStats(performance?.zebra);
  const suggestions=performance?.by_combination?.filter(r=>r.review_suggested)??[];
  $('review-suggestions').innerHTML=`<h2>Segmentos a rever</h2><p>O Mister Mi sinaliza combinações com pelo menos ${performance?.min_sample??30} entradas liquidadas com odds e cobertura de preços suficiente. Um alerta pede revisão; não demonstra uma desvantagem futura.</p>${suggestions.length?suggestions.map(r=>`<div class="review-item"><p><strong>${esc(sports[r.sport]??r.sport)} × ${esc(countryNames[r.country]??r.country)}</strong><br>${r.priced_settled} com odds · ROI ${pct(r.paper_roi_pct)}</p><button class="button outline" data-exclude-combo="${esc(r.sport)}|${esc(r.country)}">Excluir na minha seleção</button></div>`).join(''):'<p class="muted">Ainda não há amostra suficiente para identificar os segmentos mais fortes ou mais fracos com este critério.</p>'}<p class="muted">ROI antes de comissões. Apenas preços observados, sem garantia de execução. Pendentes e devolvidas não entram na taxa de acerto; preços em falta não são inventados.</p>`;
  renderExperiment();
