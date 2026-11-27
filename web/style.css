@@ -134,3 +134,10 @@ table{font-size:.875rem}th{font-size:.75rem}.rail-button{min-height:68px}.sort-l
 @media(max-width:640px){.picks,.watchlist-grid,.game-grid{grid-template-columns:1fr}.list-toolbar{flex-wrap:wrap}}
 .selection-panel>#zebra-panel{order:4}
 .gc-top .game-schedule{width:auto!important;min-width:0!important;max-width:none;grid-template-columns:none!important;flex:0 0 auto}
+/* Carteira: nada pode ficar mais largo do que o ecrã (v15) */
+.portfolio-grid{grid-template-columns:minmax(0,1fr)}
+.portfolio-grid>*{min-width:0}
+.portfolio-grid .form-panel{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.portfolio-grid .form-panel label,.portfolio-grid .form-panel input{min-width:0}
+@media(max-width:560px){.portfolio-grid .form-panel{grid-template-columns:minmax(0,1fr);padding:20px}}
+#view-carteira .table-wrap,#view-carteira .panel{max-width:100%;overflow-x:auto}
