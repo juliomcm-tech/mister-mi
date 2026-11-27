@@ -66,3 +66,28 @@ class VitibetTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TimingCatalogueTests(unittest.TestCase):
+    def test_untimed_models_get_kickoff_from_any_timed_forecast_without_counting_it_as_a_vote(self):
+        s = [t for t in parse_statarea(statarea(), URL, NOW)[0] if t.market == "FT_1X2"]
+        v = Tip("vitibet", "football", "Porto", "Benfica", "2026-11-27", None, "FT_1X2", "HOME", "https://example.org/v",
+                NOW.isoformat(), "Portugal Liga Portugal", 70, "model_pct", country="Portugal")
+        # a Zulubet só dá 40% (não passa o limiar) mas tem a hora do jogo
+        clock = Tip("zulubet", "football", "Porto", "Benfica", "2026-11-27", "2026-11-27T20:15:00+00:00", "FT_1X2", "DRAW",
+                    "https://example.org/z", NOW.isoformat(), "Portugal Liga Portugal", 40, "model_pct", country="Portugal")
+        self.assertEqual(analyse(s + [v], NOW)["total_selected"], 0)
+        r = analyse(s + [v, clock], NOW)
+        self.assertEqual(r["total_selected"], 1)
+        self.assertEqual(r["data"][0]["kickoff"], "2026-11-27T20:15:00+00:00")
+        self.assertEqual(r["data"][0]["source_count"], 2)
+
+    def test_conflicting_clocks_do_not_anchor(self):
+        s = [t for t in parse_statarea(statarea(), URL, NOW)[0] if t.market == "FT_1X2"]
+        v = Tip("vitibet", "football", "Porto", "Benfica", "2026-11-27", None, "FT_1X2", "HOME", "https://example.org/v",
+                NOW.isoformat(), "Portugal Liga Portugal", 70, "model_pct", country="Portugal")
+        c1 = Tip("zulubet", "football", "Porto", "Benfica", "2026-11-27", "2026-11-27T14:00:00+00:00", "FT_1X2", "DRAW",
+                 "https://example.org/z", NOW.isoformat(), "x", 40, "model_pct", country="Portugal")
+        c2 = Tip("olbg", "football", "Porto", "Benfica", "2026-11-27", "2026-11-27T20:00:00+00:00", "FT_1X2", "AWAY",
+                 "https://example.org/o", NOW.isoformat(), "x", None, "vote_pct", 2, 10, country="Portugal")
+        self.assertEqual(analyse(s + [v, c1, c2], NOW)["total_selected"], 0)

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, replace
 from datetime import datetime, timezone, timedelta
 from difflib import SequenceMatcher
 from hashlib import sha256
@@ -262,6 +262,9 @@ def _analyse_day(tips: list[Tip], now: datetime, settings: dict | None, target_d
             reject_threshold("invalid_record")
 
     # Timed records are anchors. Undated/untimed categorical pages only corroborate.
+    # Catálogo de horas: qualquer previsão de hoje com hora verificada (de qualquer fonte e mercado, mesmo sem
+    # passar o limiar) serve só para dar a hora ao jogo — nunca conta como voto.
+    timing = [t for t in tips if t.kickoff and t.event_date == today and t.source not in {"predictz"}]
     groups = group_events(eligible, settings)
     selected, watchlist = [], []
     for group in groups:
@@ -281,8 +284,18 @@ def _analyse_day(tips: list[Tip], now: datetime, settings: dict | None, target_d
             evidence = list(by_source.values())
             anchors = [t for t in evidence if t.kickoff and t.source != "predictz"]
             if not anchors:
-                comparison["missing_kickoff"] += 1
-                continue
+                probe = evidence[0]
+                clocks = [t for t in timing if same_event(probe, t, settings) and all(same_event(e, t, settings) for e in evidence)]
+                kicks = sorted({iso_time(t.kickoff) for t in clocks})
+                if kicks and (kicks[-1] - kicks[0]).total_seconds() <= settings["kickoff_tolerance_minutes"] * 60:
+                    clock = min(clocks, key=lambda t: iso_time(t.kickoff))
+                    if (iso_time(clock.kickoff) - now).total_seconds() <= settings["lead_minutes"] * 60:
+                        discarded["started_or_soon"] += 1
+                        continue
+                    anchors = [replace(probe, kickoff=clock.kickoff, country=probe.country if probe.country != "Desconhecido" else clock.country)]
+                else:
+                    comparison["missing_kickoff"] += 1
+                    continue
             anchor = min(anchors, key=lambda t: iso_time(t.kickoff))
             country = next((t.country for t in evidence if t.country != "Desconhecido"), "Desconhecido")
             if (anchor.sport in settings["excluded_sports"] or country in settings["excluded_countries"]

@@ -341,7 +341,7 @@ def parse_zulubet(html, url, now):
     probabilidade dessa mesma seleção; dicas duplas (1X, X2, 12) ficam de fora."""
     soup = BeautifulSoup(html, "html.parser")
     rows = [tr for tr in soup.select("tr") if len(tr.find_all("td", class_="prediction_full", recursive=False)) == 3
-            and tr.select_one('a[href*="match-"]')]
+            and "mf_usertime(" in str(tr)]
     if not rows:
         raise FetchError("Estrutura Zulubet alterada ou sem jogos publicados")
     result = []
@@ -352,7 +352,8 @@ def parse_zulubet(html, url, now):
                 continue
             mo, d, y, hh, mm = map(int, m.groups())
             kickoff = datetime(y, mo, d, hh, mm, tzinfo=UTC)
-            name = row.select_one('a[href*="match-"]').get_text(" ", strip=True)
+            cells0 = row.find_all("td", recursive=False)
+            name = (row.select_one('a[href*="match-"]') or cells0[1]).get_text(" ", strip=True)
             if " - " not in name:
                 continue
             home, away = [x.strip() for x in name.split(" - ", 1)]
@@ -586,7 +587,7 @@ def collect(now):
     jobs += [("forebet", u, parse_forebet, {"sport": sport, "market": market}) for u, sport, market in FOREBET_PAGES]
     jobs += [("protipster", "https://www.protipster.com/betting-tips/today", parse_protipster, {}),
              ("predictz", "https://www.predictz.com/predictions/", parse_predictz, {}),
-             ("zulubet", "https://www.zulubet.com/", parse_zulubet, {}),
+             ("zulubet", "https://www.zulubet.com/tips-" + now.astimezone(LISBON).strftime("%d-%m-%Y") + ".html", parse_zulubet, {}),
              ("vitibet", "https://www.vitibet.com/index.php?clanek=quicktips&sekce=fotbal&lang=en&design_version=old", parse_vitibet, {}),
              ("statarea", "https://www.statarea.com/olddevices/prediction/" + now.astimezone(LISBON).date().isoformat() + "/", parse_statarea, {})]
     tips, logs = [], []
