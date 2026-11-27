@@ -924,10 +924,19 @@
       "date": "2026-11-21",
       "first_seen": "2026-11-21T11:43:28.342509+00:00",
       "criteria_revision": "90f2af89cf64",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "loss",
+      "settled_at": "2026-11-27T11:11:32.498226+00:00",
+      "settlement_source": "espn",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        0,
+        1
+      ],
+      "settlement_evidence": {
+        "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.3/scoreboard?dates=20261121",
+        "source_event_id": "401880731",
+        "verified_at": "2026-11-27T11:11:32.498226+00:00"
+      }
     },
     {
       "id": "c8183b05d1e66a2b",
@@ -1963,13 +1972,13 @@
   ],
   "result_sources": [
     {
-      "id": "zulubet_results",
-      "name": "Zulubet (resultados)",
-      "resource": "zulubet/21-11-2026",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
-      "collected": 5,
-      "status": "cached",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "soccer/eng.3/20261121",
+      "checked_at": "2026-11-27T11:11:32.498226+00:00",
+      "collected": 1,
+      "status": "ok",
+      "next_check_at": "2026-11-27T14:11:32.498226+00:00"
     },
     {
       "id": "espn",
@@ -1977,6 +1986,15 @@
       "resource": "soccer/all/20261121",
       "checked_at": "2026-11-27T10:39:02.226894+00:00",
       "collected": 2,
+      "status": "cached",
+      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
+    },
+    {
+      "id": "zulubet_results",
+      "name": "Zulubet (resultados)",
+      "resource": "zulubet/21-11-2026",
+      "checked_at": "2026-11-27T10:39:02.226894+00:00",
+      "collected": 5,
       "status": "cached",
       "next_check_at": "2026-11-27T13:39:02.226894+00:00"
     },
@@ -2003,7 +2021,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-27T10:55:15.817579+00:00",
+    "generated_at": "2026-11-27T11:11:32.498226+00:00",
     "window_from": "2026-11-27",
     "window_through": "2026-11-29",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
