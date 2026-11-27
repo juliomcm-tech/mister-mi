@@ -29,10 +29,40 @@ EXTRA = {"STATUS_FINAL_AET", "STATUS_FINAL_PEN", "STATUS_END_OF_EXTRATIME", "STA
 VOID = {"STATUS_POSTPONED", "STATUS_CANCELED", "STATUS_ABANDONED", "STATUS_FORFEIT", "STATUS_SUSPENDED"}
 
 
+SOCCER_LEAGUES = [  # (palavras na competição, país) → código ESPN
+    (("premier league",), "England", "eng.1"), (("championship",), "England", "eng.2"),
+    (("league one",), "England", "eng.3"), (("league two",), "England", "eng.4"), (("fa cup",), "England", "eng.fa"),
+    (("league cup", "carabao", "efl cup"), "England", "eng.league_cup"),
+    (("primera", "laliga", "la liga"), "Spain", "esp.1"), (("segunda", "laliga2", "la liga 2"), "Spain", "esp.2"),
+    (("copa del rey",), "Spain", "esp.copa_del_rey"),
+    (("serie a",), "Italy", "ita.1"), (("serie b",), "Italy", "ita.2"), (("coppa italia",), "Italy", "ita.coppa_italia"),
+    (("2 bundesliga", "bundesliga 2", "bundesliga ii"), "Germany", "ger.2"), (("bundesliga",), "Germany", "ger.1"),
+    (("dfb pokal", "pokal"), "Germany", "ger.dfb_pokal"),
+    (("ligue 1",), "France", "fra.1"), (("ligue 2",), "France", "fra.2"), (("coupe de france",), "France", "fra.coupe_de_france"),
+    (("primeira", "liga portugal", "liga nos"), "Portugal", "por.1"), (("eredivisie",), "Netherlands", "ned.1"),
+    (("pro league", "jupiler", "first division a"), "Belgium", "bel.1"), (("premiership",), "Scotland", "sco.1"),
+    (("super lig", "süper lig"), "Turkey", "tur.1"), (("mls", "major league soccer"), "United States", "usa.1"),
+    (("serie a", "brasileirao"), "Brazil", "bra.1"), (("liga profesional", "primera division"), "Argentina", "arg.1"),
+    (("liga mx",), "Mexico", "mex.1"), (("j1", "j league", "j-league"), "Japan", "jpn.1"),
+    (("superliga",), "Denmark", "den.1"), (("eliteserien",), "Norway", "nor.1"), (("allsvenskan",), "Sweden", "swe.1"),
+    (("bundesliga",), "Austria", "aut.1"), (("super league",), "Switzerland", "sui.1"), (("super league",), "Greece", "gre.1"),
+    (("a-league", "a league"), "Australia", "aus.1"), (("pro league", "saudi"), "Saudi Arabia", "ksa.1"),
+]
+EURO_CUPS = [(("champions league",), "uefa.champions"), (("conference league",), "uefa.europa.conf"), (("europa league",), "uefa.europa")]
+
+
 def espn_paths(record: dict) -> list[str]:
     sport, comp = record.get("sport"), str(record.get("competition", "")).lower()
     if sport == "football":
-        return ["soccer/all"]
+        paths = ["soccer/all"]
+        country = record.get("country")
+        for words, code in EURO_CUPS:
+            if any(w in comp for w in words):
+                return ["soccer/" + code] + paths
+        for words, ctry, code in SOCCER_LEAGUES:
+            if ctry == country and any(w in comp for w in words):
+                return ["soccer/" + code] + paths
+        return paths
     if sport == "basketball":
         if "euroleague" in comp:
             return ["basketball/euroleague"]
@@ -91,18 +121,24 @@ def parse_espn(data: dict, sport: str) -> list[dict]:
                 else:
                     home = next(c for c in cs if c.get("homeAway") == "home")
                     away = next(c for c in cs if c.get("homeAway") == "away")
+                detail = " ".join(str(status.get(k, "")) for k in ("detail", "shortDetail", "description"))
                 game = {"home": _names(home), "away": _names(away), "date": comp.get("date") or event.get("date"),
-                        "state": name, "id": str(comp.get("id") or event.get("id") or "")}
+                        "state": name, "id": str(comp.get("id") or event.get("id") or ""),
+                        "extra": bool(re.search(r"\b(OT|SO|AET|Pens?|Penalties|Overtime|Shootout|Extra Time)\b", detail, re.I)),
+                        "retired": bool(re.search(r"\b(Ret(ired)?\.?|Walkover|W/O|Def(aulted)?)\b", detail, re.I))}
                 if sport == "tennis":
                     if home.get("winner") is True or away.get("winner") is True:
                         game.update(hs=1 if home.get("winner") is True else 0, as_=1 if away.get("winner") is True else 0)
                 else:
                     game.update(hs=_int(home.get("score")), as_=_int(away.get("score")))
-                    if sport == "hockey":
+                    periods = {"hockey": 3, "basketball": 4, "american_football": 4}.get(sport)
+                    if periods:
                         lh, la = home.get("linescores") or [], away.get("linescores") or []
-                        if len(lh) >= 3 and len(la) >= 3:
-                            rh = [_int((x or {}).get("value")) for x in lh[:3]]
-                            ra = [_int((x or {}).get("value")) for x in la[:3]]
+                        if len(lh) > periods or len(la) > periods:
+                            game["extra"] = True
+                        if len(lh) >= periods and len(la) >= periods:
+                            rh = [_int((x or {}).get("value")) for x in lh[:periods]]
+                            ra = [_int((x or {}).get("value")) for x in la[:periods]]
                             if None not in rh and None not in ra:
                                 game["reg"] = (sum(rh), sum(ra))
                 games.append(game)
@@ -170,14 +206,19 @@ def _result(record: dict, game: dict, now: datetime, source: str, url: str) -> d
         return {**base, "status": "void"} if now > iso_time(record["kickoff"]) + timedelta(hours=48) else None
     if state not in FINAL:
         return None
+    if game.get("retired"):
+        # desistência / falta de comparência: muitas casas devolvem; nunca dar como ganha por isso
+        return {**base, "status": "void"}
     hs, as_ = game.get("hs"), game.get("as_")
-    if sport == "hockey" and market == "FT_1X2":
-        if state in EXTRA or "reg" in game:
-            if "reg" not in game:
-                return None
-            hs, as_ = game["reg"]
-    elif sport == "football" and state in EXTRA:
+    extra = state in EXTRA or game.get("extra")
+    if sport == "football" and extra:
         return None  # 90 minutos não confirmados (prolongamento/penáltis)
+    if sport in {"hockey", "basketball", "american_football"} and market == "FT_1X2":
+        # resultado do tempo regulamentar: só com os períodos explícitos
+        if "reg" in game:
+            hs, as_ = game["reg"]
+        elif extra or sport != "hockey" or state not in {"STATUS_FINAL", "STATUS_FULL_TIME"}:
+            return None
     if hs is None or as_ is None:
         return None
     return {**base, "status": "final", "home_score": hs, "away_score": as_}
@@ -205,12 +246,20 @@ def collect_public_results(history: dict, now: datetime) -> tuple[list[dict], li
         for path in espn_paths(r):
             for day in {(k - timedelta(hours=6)).strftime("%Y%m%d"), (k + timedelta(hours=6)).strftime("%Y%m%d"), k.strftime("%Y%m%d")}:
                 wanted.setdefault(("espn", path, day), []).append(r)
-        if r.get("sport") == "football":
-            wanted.setdefault(("zulubet_results", "football", k.strftime("%d-%m-%Y")), []).append(r)
+        cup = re.search(r"\b(cup|copa|coupe|pokal|coppa|taça|taca|trophy|shield)\b", str(r.get("competition", "")).lower())
+        if r.get("sport") == "football" and not cup:  # nas taças pode haver prolongamento: só a ESPN, que o assinala
+            days = {k.strftime("%d-%m-%Y")}
+            if k.hour >= 22 or k.hour < 2:
+                days |= {(k - timedelta(hours=3)).strftime("%d-%m-%Y"), (k + timedelta(hours=3)).strftime("%d-%m-%Y")}
+            for day in days:
+                wanted.setdefault(("zulubet_results", "football", day), []).append(r)
     client = Client()
-    results, statuses, done = [], [], set()
-    for (kind, path, day), records in sorted(wanted.items(), key=lambda x: x[0][2], reverse=True):
-        records = [r for r in records if r["id"] not in done]
+    results, statuses, fetched = [], [], 0
+
+    def real_day(key):
+        d = key[2]
+        return d if len(d) == 8 else d[6:10] + d[3:5] + d[0:2]
+    for (kind, path, day), records in sorted(wanted.items(), key=lambda x: (real_day(x[0]), x[0][0] == "espn"), reverse=True):
         resource = f"{path}/{day}" if kind == "espn" else f"zulubet/{day}"
         old = previous.get(resource, {})
         try:
@@ -221,8 +270,11 @@ def collect_public_results(history: dict, now: datetime) -> tuple[list[dict], li
             pass
         if not records:
             continue
-        if len([s for s in statuses if s.get("status") != "cached"]) >= MAX_RESOURCES:
-            break
+        if fetched >= MAX_RESOURCES:
+            if old:
+                statuses.append(old)  # guardar o estado para a próxima corrida respeitar os intervalos
+            continue
+        fetched += 1
         url = ESPN.format(path=path, day=day) if kind == "espn" else ZULU.format(day=day)
         status = {"id": kind, "name": "ESPN" if kind == "espn" else "Zulubet (resultados)", "resource": resource,
                   "checked_at": now.isoformat(), "collected": 0}
@@ -238,8 +290,7 @@ def collect_public_results(history: dict, now: datetime) -> tuple[list[dict], li
                     continue
                 res = _result(r, found[0], now, kind, url)
                 if res:
-                    results.append(res)
-                    done.add(r["id"])
+                    results.append(res)  # todas as fontes entram: se discordarem, o registo fica pendente
                     status["collected"] += 1
             status.update(status="ok", next_check_at=(now + timedelta(hours=3)).isoformat())
         except Exception as exc:

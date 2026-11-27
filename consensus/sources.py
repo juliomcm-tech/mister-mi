@@ -384,6 +384,104 @@ def parse_zulubet(html, url, now):
     return result, len(rows), 0
 
 
+def _model_markets(probs):
+    """Probabilidades publicadas → mercados (só a seleção com 65%+ conta, como nos outros modelos).
+    probs: dict com o25/o15/o35 (mais de X golos) e bts/ots (ambas marcam sim/não)."""
+    out = []
+    for line, key in (("1.5", "o15"), ("2.5", "o25"), ("3.5", "o35")):
+        p = probs.get(key)
+        if p is None:
+            continue
+        out.append((f"FT_TOTAL_{line}", "OVER", p) if p >= 50 else (f"FT_TOTAL_{line}", "UNDER", 100 - p))
+    if probs.get("bts") is not None and probs.get("ots") is not None:
+        out.append(("FT_BTTS", "YES", probs["bts"]) if probs["bts"] >= probs["ots"] else ("FT_BTTS", "NO", probs["ots"]))
+    return out
+
+
+def parse_statarea(html, url, now):
+    """Statarea (versão leve): modelo próprio com % de 1/X/2, golos e ambas marcam. A hora da página segue o fuso
+    de quem pede (varia com o servidor do GitHub), por isso NÃO se usa: a Statarea só confirma jogos que outra fonte
+    já tem com hora verificada. O dia vem do próprio URL."""
+    m = re.search(r"/prediction/(\d{4}-\d{2}-\d{2})/", url)
+    if not m:
+        raise FetchError("URL Statarea sem data")
+    day = m.group(1)
+    soup = BeautifulSoup(html, "html.parser")
+    rows = soup.select("tr")
+    if not any("prediction:" in r.get_text() for r in rows):
+        raise FetchError("Estrutura Statarea alterada ou sem jogos publicados")
+    result, league, pred, teams, raw = [], "", None, [], 0
+    for tr in rows:
+        cells = tr.find_all("td", recursive=False)
+        text = tr.get_text(" ", strip=True)
+        if len(cells) == 2 and cells[0].find("img") and not text.startswith(("time:", "prediction:")):
+            league, pred, teams = text, None, []
+        elif text.startswith("prediction:"):
+            b = tr.find("b"); pred, teams = (b.get_text(strip=True) if b else ""), []
+        elif len(cells) == 2 and pred is not None and len(teams) < 2 and not text.startswith("time:"):
+            teams.append((cells[0].get_text(" ", strip=True), cells[1].get_text(strip=True)))
+        elif len(cells) == 11 and len(teams) == 2 and all("%" in c.get_text() for c in cells):
+            raw += 1
+            vals = [number(c.get_text(strip=True)) for c in cells]
+            (home, s1), (away, s2) = teams
+            teams, p = [], pred
+            pred = None
+            if None in vals or not home or not away or re.fullmatch(r"\d+", s1 or "") or re.fullmatch(r"\d+", s2 or ""):
+                continue  # jogo já com resultado, ou linha incompleta
+            comp = league.replace("-", " ")
+            base = dict(segment=segment_for(comp, home, away), country=country_for(comp))
+            picks = []
+            order = {"1": ("HOME", 0), "X": ("DRAW", 1), "2": ("AWAY", 2)}
+            if p in order and abs(sum(vals[:3]) - 100) <= 3:
+                picks.append(("FT_1X2", order[p][0], vals[order[p][1]]))
+            picks += _model_markets({"o15": vals[6], "o25": vals[7], "o35": vals[8], "bts": vals[9], "ots": vals[10]})
+            for market, outcome, metric in picks:
+                result.append(Tip("statarea", "football", home, away, day, None, market, outcome, url, now.isoformat(),
+                                  comp, metric, "model_pct", **base))
+    return result, raw, 0
+
+
+def parse_vitibet(html, url, now):
+    """Vitibet: modelo próprio checo com % de 1/X/2 e resultado provável. Sem hora: só confirma jogos que outra
+    fonte já tem com hora verificada. Dicas duplas (10, 02, 12) não contam."""
+    soup = BeautifulSoup(html, "html.parser")
+    rows = [tr for tr in soup.select("tr") if len(tr.select("td.standardbunkaprocenta")) >= 3]
+    if not rows:
+        raise FetchError("Estrutura Vitibet alterada ou sem jogos publicados")
+    result, league = [], ""
+    for tr in soup.select("tr"):
+        if "odseknutiligy" in (tr.get("class") or []):
+            league = tr.get_text(" ", strip=True)
+            continue
+        cells = tr.find_all("td", recursive=False)
+        pcts = tr.select("td.standardbunkaprocenta")
+        if len(pcts) < 3 or len(cells) < 12:
+            continue
+        try:
+            dm = re.fullmatch(r"(\d{1,2})\.(\d{1,2})\.?", cells[0].get_text(strip=True))
+            if not dm:
+                continue
+            d, mo = int(dm[1]), int(dm[2])
+            local = now.astimezone(LISBON)
+            year = local.year + (1 if mo == 1 and local.month == 12 else -1 if mo == 12 and local.month == 1 else 0)
+            day = f"{year:04d}-{mo:02d}-{d:02d}"
+            home, away = cells[2].get_text(" ", strip=True), cells[3].get_text(" ", strip=True)
+            probs = [number(x.get_text(strip=True)) for x in pcts[:3]]
+            tipcell = tr.find("td", class_=re.compile(r"^barvapodtipek"))
+            tip = tipcell.get_text(strip=True) if tipcell else ""
+            order = {"1": ("HOME", 0), "0": ("DRAW", 1), "2": ("AWAY", 2)}
+            if tip not in order or None in probs or abs(sum(probs) - 100) > 3 or not home or not away:
+                continue
+            outcome, index = order[tip]
+            link = tr.select_one('a[href*="match-detail"]')
+            result.append(Tip("vitibet", "football", home, away, day, None, "FT_1X2", outcome,
+                              urljoin(url, link["href"]) if link else url, now.isoformat(), league, probs[index],
+                              "model_pct", segment=segment_for(league, home, away), country=country_for(league)))
+        except (ValueError, TypeError, KeyError, IndexError):
+            continue
+    return result, len(rows), 0
+
+
 def parse_protipster(html, url, now):
     # Public hydration data is JSON inside a JS wrapper. Decode JSON only; never eval JavaScript.
     match = re.search(r"mutation:\s*['\"]TIPS_SECTIONS['\"]\s*,\s*args:\s*\[\s*", html)
@@ -488,7 +586,9 @@ def collect(now):
     jobs += [("forebet", u, parse_forebet, {"sport": sport, "market": market}) for u, sport, market in FOREBET_PAGES]
     jobs += [("protipster", "https://www.protipster.com/betting-tips/today", parse_protipster, {}),
              ("predictz", "https://www.predictz.com/predictions/", parse_predictz, {}),
-             ("zulubet", "https://www.zulubet.com/", parse_zulubet, {})]
+             ("zulubet", "https://www.zulubet.com/", parse_zulubet, {}),
+             ("vitibet", "https://www.vitibet.com/index.php?clanek=quicktips&sekce=fotbal&lang=en&design_version=old", parse_vitibet, {}),
+             ("statarea", "https://www.statarea.com/olddevices/prediction/" + now.astimezone(LISBON).date().isoformat() + "/", parse_statarea, {})]
     tips, logs = [], []
 
     def run(job):
@@ -511,7 +611,8 @@ def collect(now):
             tips.extend(data)
             logs.append(log)
     sources = []
-    for source, name in [("olbg", "OLBG"), ("forebet", "Forebet"), ("protipster", "ProTipster"), ("predictz", "PredictZ"), ("zulubet", "Zulubet")]:
+    for source, name in [("olbg", "OLBG"), ("forebet", "Forebet"), ("protipster", "ProTipster"), ("predictz", "PredictZ"), ("zulubet", "Zulubet"),
+                         ("vitibet", "Vitibet"), ("statarea", "Statarea")]:
         pages = sorted([log for log in logs if log["id"] == source], key=lambda x: x["url"])
         statuses = {x["status"] for x in pages}
         status = "ok" if statuses == {"ok"} else "error" if statuses == {"error"} else "partial"

@@ -20,9 +20,15 @@ def record(history, payload):
     if payload.get("is_preview") or payload.get("analysis_mode") == "future_preview":
         raise ValueError("Uma pré-visualização futura não pode entrar no histórico de recomendações")
     records = {r["id"]: r for r in history.get("records", [])}
+
+    def same_bet(a, b):
+        return (a.get("date") == b.get("date") and a.get("sport") == b.get("sport") and a.get("market") == b.get("market")
+                and a.get("outcome") == b.get("outcome") and team_equal(a.get("home", ""), b.get("home", ""), a.get("sport", ""))
+                and team_equal(a.get("away", ""), b.get("away", ""), a.get("sport", "")))
     config_hash = sha256(json.dumps(payload["settings"], sort_keys=True).encode()).hexdigest()[:12]
     for pick in payload["data"] + payload.get("zebras", []):
-        if pick["id"] not in records:
+        if pick["id"] not in records and not any(same_bet({**pick, "date": payload["date"]}, r) for r in records.values()):
+            # mesma aposta com id diferente (outra fonte passou a dar a hora/país) não é registada outra vez
             # Immutable first-publication price and criteria. Later refreshes never improve an old price.
             records[pick["id"]] = {**pick, "date": payload["date"], "first_seen": payload["updated_at"],
                                    "criteria_revision": config_hash, "result": "pending", "settled_at": None,
@@ -43,7 +49,8 @@ def settlement(pick, result):
     market, outcome = pick["market"], pick["outcome"]
     if market in {"FT_1X2", "MATCH_WINNER"}:
         if market == "MATCH_WINNER" and h == a:
-            return None
+            # empate em «vencedor do jogo»: só existe no futebol americano (devolvida); noutros desportos é dado suspeito
+            return "void" if pick.get("sport") == "american_football" else None
         actual = "HOME" if h > a else "AWAY" if a > h else "DRAW"
     elif market.startswith("FT_TOTAL_"):
         line = float(market.rsplit("_", 1)[1])
@@ -59,8 +66,10 @@ def apply_results(history, results, now):
     records = {r["id"]: r for r in history["records"]}
     for result in results:
         pick = records.get(result.get("id"))
-        if not pick or pick["result"] != "pending" or iso_time(pick["kickoff"]) > now:
+        if not pick or iso_time(pick["kickoff"]) > now:
             continue
+        if pick["result"] != "pending" and not result.get("override"):
+            continue  # um resultado manual com "override": true corrige um já liquidado
         answer = settlement(pick, result)
         if answer:
             pick.update(result=answer, settled_at=now.isoformat(), settlement_source=result.get("source", "manual"),
@@ -153,7 +162,19 @@ def daily_slips(rows, days=60):
         by_day[row.get("date") or "?"].append(row)
     out = []
     for day in sorted(by_day, reverse=True)[:days]:
-        picks = sorted(by_day[day], key=lambda r: r.get("kickoff") or "")
+        slip, late, lock = [], [], None
+        for r in sorted(by_day[day], key=lambda r: (r.get("first_seen") or "", r.get("id") or "")):
+            try:
+                seen, kick = iso_time(r.get("first_seen") or r["kickoff"]), iso_time(r["kickoff"])
+            except (KeyError, TypeError, ValueError):
+                late.append(r)
+                continue
+            if lock is None or seen <= lock:
+                slip.append(r)
+                lock = kick if lock is None else min(lock, kick)
+            else:
+                late.append(r)
+        picks = sorted(slip, key=lambda r: r.get("kickoff") or "")
         live = [p for p in picks if p["result"] != "void"]
         wins = sum(p["result"] == "win" for p in live)
         losses = sum(p["result"] == "loss" for p in live)
@@ -164,7 +185,7 @@ def daily_slips(rows, days=60):
         for p in live:
             odd *= p["odds"] if priced else 1
         out.append({"date": day, "picks": len(picks), "wins": wins, "losses": losses, "pending": pending,
-                    "void": len(picks) - len(live), "status": status, "combined_odds": round(odd, 2) if priced else None,
+                    "void": len(picks) - len(live), "status": status, "late": len(late), "combined_odds": round(odd, 2) if priced else None,
                     "items": [{"match": p.get("match"), "selection": p.get("selection"), "competition": p.get("competition"),
                                "kickoff": p.get("kickoff"), "odds": p.get("odds"), "result": p["result"],
                                "final_score": p.get("final_score"), "sources": p.get("sources", []), "tier": p.get("tier")}

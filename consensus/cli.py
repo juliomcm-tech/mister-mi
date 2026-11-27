@@ -30,7 +30,7 @@ def main():
                       for key in ("data", "candidates", "watchlist") for pick in snapshot.get(key, [])]
     prior_history = load_json(args.history, {"schema_version": 1, "records": []})
     payload["oddspedia_feed"] = collect_oddspedia_feed(now, queries=[pick.get("home") for pick in api_candidates],
-                              previous=prior_history.get("oddspedia_feed"), force=os.environ.get("RUN_EVENT") == "workflow_dispatch")
+                              previous=prior_history.get("oddspedia_feed"), force=bool(os.environ.get("REQUEST_ID")))
     catalog = collect_fixture_catalog(prior_history.get("fixture_catalog"), now)
     payload["fixture_catalog"] = catalog
     for snapshot in [payload, *payload["previews"]]:
@@ -49,6 +49,15 @@ def main():
     candidates = free_results + automatic + load_json(args.results, {"results": []})["results"]
     conflicts = {r["id"] for r in candidates if len({(x.get("status"), x.get("home_score"), x.get("away_score")) for x in candidates if x["id"] == r["id"]}) > 1}
     apply_results(history, [r for r in candidates if r["id"] not in conflicts], now)
+    # sem resultado em nenhuma fonte pública ao fim de 10 dias → «devolvida (sem resultado público)», para não ficar pendente para sempre
+    from datetime import timedelta
+    from .core import iso_time
+    for r in history["records"]:
+        try:
+            if r["result"] == "pending" and iso_time(r["kickoff"]) < now - timedelta(days=10) and r["id"] not in conflicts:
+                r.update(result="void", settled_at=now.isoformat(), settlement_source="sem_resultado_publico")
+        except (KeyError, TypeError, ValueError):
+            continue
     payload["performance"] = summary(history, settings)
     payload["settlement_note"] = outcome_note
     payload["result_sources"] = free_statuses

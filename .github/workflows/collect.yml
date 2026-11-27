@@ -128,14 +128,15 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          set -e
-          inicio=$(date -d "$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" -q .run_started_at)" +%s)
+          tenta() { for i in 1 2 3 4 5; do "$@" && return 0; echo "Falhou ($i): a repetir…"; sleep 20; done; return 1; }
+          comeco=$(tenta gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" -q .run_started_at) || exit 1
+          inicio=$(date -d "$comeco" +%s)
           passou=$(( $(date +%s) - inicio ))
           alvo=1500
           if [ "$passou" -lt "$alvo" ]; then echo "Passaram $passou s; espero mais $((alvo - passou)) s."; sleep $((alvo - passou)); fi
           # só a corrida mais recente marca a seguinte (se o schedule, um push ou o botão do painel lançaram outra depois
           # desta, é essa que continua a corrente: assim nunca há duas correntes em paralelo)
-          novas=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/collect.yml/runs?per_page=30" -q "[.workflow_runs[] | select(.id > $GITHUB_RUN_ID)] | length")
+          novas=$(tenta gh api "repos/$GITHUB_REPOSITORY/actions/workflows/collect.yml/runs?per_page=30" -q "[.workflow_runs[] | select(.id > $GITHUB_RUN_ID)] | length") || novas=0
           if [ "$novas" != "0" ]; then echo "Há $novas corrida(s) mais recente(s): é essa que marca a seguinte."; exit 0; fi
-          gh workflow run collect.yml --repo "$GITHUB_REPOSITORY" --ref main
+          tenta gh workflow run collect.yml --repo "$GITHUB_REPOSITORY" --ref main
           echo "Próxima corrida marcada."

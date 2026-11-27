@@ -29,8 +29,12 @@ ALIASES = {
 }
 
 
+_SPECIAL = str.maketrans({"ł": "l", "Ł": "L", "ø": "o", "Ø": "O", "ß": "ss", "đ": "d", "Đ": "D", "æ": "ae", "Æ": "AE",
+                          "œ": "oe", "Œ": "OE", "ı": "i", "þ": "th", "ð": "d"})
+
+
 def name_key(value: str) -> str:
-    value = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode().lower()
+    value = unicodedata.normalize("NFKD", value.translate(_SPECIAL)).encode("ascii", "ignore").decode().lower()
     value = re.sub(r"\b(women|woman|feminino|ladies)\b", "w", value)
     value = re.sub(r"[^a-z0-9 ]", " ", value)
     value = " ".join(value.split())
@@ -102,7 +106,7 @@ class Tip:
             if self.votes_total < settings["min_votes"]:
                 return "insufficient_votes"
             return None if 100 * self.votes_for / self.votes_total >= settings["min_olbg"] else "below_source_threshold"
-        if self.source in {"protipster", "forebet", "api_football", "betclan", "zulubet"}:
+        if self.source in {"protipster", "forebet", "api_football", "betclan", "zulubet", "vitibet", "statarea"}:
             kind = "tip_score" if self.source == "protipster" else "model_pct"
             if self.metric_kind != kind or self.metric is None:
                 return "missing_metric"

@@ -38,7 +38,7 @@ def build_pipeline_health(runs, now, workflow=None, *, schedule="13,43 * * * *",
     dated = [(run, _instant(run.get("created_at"))) for run in matching]
     dated = [(run, stamp) for run, stamp in dated if stamp and (stamp-now).total_seconds() <= 60]
     dated.sort(key=lambda item: item[1], reverse=True)
-    scheduled = [(run, stamp) for run, stamp in dated if run.get("event") == "schedule"]
+    scheduled = [(run, stamp) for run, stamp in dated if run.get("event") in {"schedule", "workflow_dispatch"}]
     last_run = dated[0][0] if dated else {}
     last_schedule, last_at = scheduled[0] if scheduled else ({}, None)
     age = round(max(0, (now-last_at).total_seconds()/60), 1) if last_at else None

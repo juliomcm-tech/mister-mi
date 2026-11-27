@@ -11,7 +11,7 @@ const $ = id => document.getElementById(id);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const icon = name => `<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const sports = {football:'Futebol',tennis:'Ténis',basketball:'Basquetebol',hockey:'Hóquei',american_football:'F. americano'};
-const sourceNames = {olbg:'OLBG',forebet:'Forebet',protipster:'ProTipster',predictz:'PredictZ',api_football:'API-Football',betclan:'BetClan',zulubet:'Zulubet'};
+const sourceNames = {olbg:'OLBG',forebet:'Forebet',protipster:'ProTipster',predictz:'PredictZ',api_football:'API-Football',betclan:'BetClan',zulubet:'Zulubet',vitibet:'Vitibet',statarea:'Statarea'};
 const stateLabels = {ok:'Recolhida',partial:'Parcial',error:'Indisponível',not_configured:'Opcional',cached:'Em cache'};
 const marketNames = {FT_1X2:'Resultado · tempo regulamentar',MATCH_WINNER:'Vencedor do jogo','FT_TOTAL_1.5':'Total de golos · 1.5','FT_TOTAL_2.5':'Total de golos · 2.5','FT_TOTAL_3.5':'Total de golos · 3.5',FT_BTTS:'Ambas marcam'};
 const countryNames = {England:'Inglaterra',Scotland:'Escócia',Brazil:'Brasil',Germany:'Alemanha',France:'França',Spain:'Espanha',Italy:'Itália',Japan:'Japão',Netherlands:'Países Baixos',Denmark:'Dinamarca','United States':'Estados Unidos',Uruguay:'Uruguai',Argentina:'Argentina',Portugal:'Portugal'};
@@ -135,7 +135,7 @@ function renderZebras(fresh){
  const today=lisbonDay(),lead=(payload?.settings?.lead_minutes??5)*60000;
  const list=fresh?.valid?(payload?.zebras??[]).filter(p=>Number.isFinite(+new Date(p.kickoff))&&new Date(p.kickoff).getTime()>Date.now()+lead&&lisbonDay(new Date(p.kickoff))===today):[];
  panel.hidden=!list.length;
- $('zebras').innerHTML=list.map(p=>gameCard(p,{sports,countries:countryNames,markets:marketNames,sources:sourceNames,phase:'today',featured:list.length===1})+zebraNote(p)).join('');
+ $('zebras').innerHTML=list.map(p=>gameCard(p,{sports,countries:countryNames,markets:marketNames,sources:sourceNames,phase:'today',featured:list.length===1,favorite:favorites.has(p.id)})+zebraNote(p)).join('');
 }
 function renderZebraStats(z){
  const box=$('zebra-stats');if(!box)return;
@@ -167,6 +167,8 @@ function sourceSummary(){
 const descriptors={
  betclan:{kind:'MODELO DA FONTE · NOVA INTEGRAÇÃO',url:'https://www.betclan.com/faq/',description:'Probabilidade publicada de pelo menos 65% para a seleção exata, lida no bloco do modelo. O índice de eventos serve para encontrar jogos; só os detalhes consultados contam como previsões. A métrica não foi calibrada pelo Mister Mi.'},
  zulubet:{kind:'PREVISÃO ESTATÍSTICA · NOVA INTEGRAÇÃO',url:'https://www.zulubet.com/',description:'Pelo menos 65% na probabilidade publicada para a dica simples (1, X ou 2), com hora de início. Dicas duplas não contam. O Mister Mi não calcula nem valida o modelo da fonte.'},
+ vitibet:{kind:'PREVISÃO ESTATÍSTICA · REP. CHECA',url:'https://www.vitibet.com/',description:'Pelo menos 65% na probabilidade publicada para 1, X ou 2. Sem hora publicada: só confirma jogos que outra fonte já tem com hora verificada.'},
+ statarea:{kind:'PREVISÃO ESTATÍSTICA · NOVA INTEGRAÇÃO',url:'https://www.statarea.com/',description:'Pelo menos 65% na probabilidade publicada (1X2, golos 1.5/2.5/3.5, ambas marcam). A hora da página muda com o fuso de quem pede, por isso não é usada: só confirma jogos com hora verificada noutra fonte.'},
  olbg:{kind:'CONSENSO DA COMUNIDADE',url:'https://www.olbg.com/betting-tips',description:'Pelo menos 15 votos e 75% de apoio. Votos medem popularidade da seleção; não são uma probabilidade de acerto.'},
  forebet:{kind:'PREVISÃO ESTATÍSTICA',url:'https://www.forebet.com/',description:'Pelo menos 65% na probabilidade publicada para a seleção exata. O Mister Mi não calcula nem valida o modelo proprietário.'},
  protipster:{kind:'AVALIAÇÃO DE TIPSTERS',url:'https://www.protipster.com/betting-tips/today',description:'Tip Score público de pelo menos 8/10. Sem essa métrica explícita, a tip não contribui para o consenso.'},
@@ -203,7 +205,7 @@ function renderDaily(daily){
  if(!days.length){box.innerHTML='<h2>Boletins do dia</h2><p class="muted">Ainda sem boletins registados.</p>';return;}
  const st={won:['Ganho','positive'],lost:['Perdido','negative'],pending:['Em jogo / por conferir',''],void:['Devolvido','']};
  box.innerHTML=`<div class="section-heading"><div><h2>Boletins do dia</h2><p>Todas as opções de cada dia juntas, como um boletim. É conferido sozinho com resultados públicos (ESPN, Zulubet, OpenLigaDB).</p></div><span class="tiny-badge">${daily.settled?`${daily.won}/${daily.settled} boletins inteiros certos`:'à espera de resultados'}</span></div>
- <div class="table-wrap"><table><thead><tr><th>DIA</th><th>BOLETIM</th><th>SELEÇÕES</th><th>ODD TOTAL</th></tr></thead><tbody>${days.slice(0,21).map(d=>`<tr><td><strong>${esc(d.date.split('-').reverse().join('/'))}</strong></td><td class="${st[d.status]?.[1]??''}"><strong>${esc(st[d.status]?.[0]??d.status)}</strong><br><small>${d.wins}✅ ${d.losses}❌ ${d.pending?d.pending+'⏳':''}${d.void?' '+d.void+'↩️':''}</small></td><td>${d.items.map(i=>`<div>${resIcon[i.result]??''} ${esc(i.selection)} <small class="muted">· ${esc(i.match)}${i.final_score?` · ${esc(i.final_score.join('-'))}`:''} · ${esc(i.competition??'')}${i.odds?` · @${num(i.odds,2)}`:''}</small></div>`).join('')}</td><td>${d.combined_odds?num(d.combined_odds,2):'—'}</td></tr>`).join('')}</tbody></table></div>`;
+ <div class="table-wrap"><table><thead><tr><th>DIA</th><th>BOLETIM</th><th>SELEÇÕES</th><th>ODD TOTAL</th></tr></thead><tbody>${days.slice(0,21).map(d=>`<tr><td><strong>${esc(d.date.split('-').reverse().join('/'))}</strong></td><td class="${st[d.status]?.[1]??''}"><strong>${esc(st[d.status]?.[0]??d.status)}</strong><br><small>${d.wins}✅ ${d.losses}❌ ${d.pending?d.pending+'⏳':''}${d.void?' '+d.void+'↩️':''}</small>${d.late?`<br><small class="muted">+${d.late} publicada${d.late>1?'s':''} depois do 1.º jogo (fora do boletim)</small>`:''}</td><td>${d.items.map(i=>`<div>${resIcon[i.result]??''} ${esc(i.selection)} <small class="muted">· ${esc(i.match)}${i.final_score?` · ${esc(i.final_score.join('-'))}`:''} · ${esc(i.competition??'')}${i.odds?` · @${num(i.odds,2)}`:''}</small></div>`).join('')}</td><td>${d.combined_odds?num(d.combined_odds,2):'—'}</td></tr>`).join('')}</tbody></table></div>`;
 }
 function renderPerformance(){
  const performance=payload?.performance;const overall=performance?.overall??{};
@@ -241,7 +243,7 @@ function renderPortfolio(){
 }
 function metricLabel(s){return s.metric_kind==='vote_pct'?`${num(s.metric)}% de apoio · ${s.votes_for}/${s.votes_total} votos`:s.metric_kind==='model_pct'?`${num(s.metric)}% · modelo da fonte`:s.metric_kind==='tip_score'?`${num(s.metric)}/10 · Tip Score`:'Previsão categórica';}
 function showAnalysis(id){
- const pick=todaysPicks().find(p=>p.id===id);if(!pick){toast('Esta opção já não está válida para hoje.');return;}
+ const pick=[...todaysPicks(),...(freshness().valid?(payload?.zebras??[]):[])].find(p=>p.id===id);if(!pick){toast('Esta opção já não está válida para hoje.');return;}
  $('analysis-detail').innerHTML=`<h2>${esc(pick.match)}</h2><p>${esc(sports[pick.sport]??pick.sport)} · ${esc(countryNames[pick.country]??pick.country)} · ${dateTime(pick.kickoff)}</p><div class="portfolio-total"><div><span>${esc(marketNames[pick.market]??pick.market)}</span><h3>${esc(pick.selection)}</h3></div><div><strong>${num(pick.score)}</strong><span> / 98 · consenso</span></div></div><p>${esc(pick.reason)}</p><h3>O que cada fonte diz</h3>${pick.sources.map(s=>`<div class="evidence-row"><strong>${esc(sourceNames[s.source]??s.source)}<span>${esc(metricLabel(s))}</span></strong><small>Recolhido ${dateTime(s.fetched_at)}${s.odds?` · Odd observada ${num(s.odds,2)}`:''}</small><a href="${safeURL(s.url)}" target="_blank" rel="noopener noreferrer">Ver evidência na fonte</a></div>`).join('')}<p>O Mister Mi verifica a concordância, a identidade do evento, os limiares e a frescura. Sem validação histórica suficiente, não estima uma probabilidade de acerto nem retorno esperado.</p>`;
  $('analysis-dialog').showModal();
 }
