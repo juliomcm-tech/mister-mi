@@ -1,7 +1,7 @@
 {
   "date": "2026-11-27",
   "timezone": "Europe/Lisbon",
-  "updated_at": "2026-11-27T22:33:25.341372+00:00",
+  "updated_at": "2026-11-27T22:39:40.456731+00:00",
   "schema_version": 1,
   "score_is_probability": false,
   "settings": {
@@ -61,7 +61,7 @@
           "market": "FT_TOTAL_1.5",
           "outcome": "OVER",
           "url": "https://www.statarea.com/olddevices/prediction/2026-11-27/",
-          "fetched_at": "2026-11-27T22:33:16.862293+00:00",
+          "fetched_at": "2026-11-27T22:39:32.167285+00:00",
           "competition": "Brazil Serie A",
           "metric": 77.0,
           "metric_kind": "model_pct",
@@ -106,7 +106,7 @@
           "market": "FT_TOTAL_3.5",
           "outcome": "UNDER",
           "url": "https://www.statarea.com/olddevices/prediction/2026-11-27/",
-          "fetched_at": "2026-11-27T22:33:16.862293+00:00",
+          "fetched_at": "2026-11-27T22:39:32.167285+00:00",
           "competition": "Brazil Serie A",
           "metric": 68.0,
           "metric_kind": "model_pct",
@@ -243,7 +243,7 @@
     {
       "date": "2026-11-28",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-27T22:33:25.341372+00:00",
+      "updated_at": "2026-11-27T22:39:40.456731+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -302,7 +302,7 @@
               "market": "MATCH_WINNER",
               "outcome": "AWAY",
               "url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/PHI_76ers_@_IND_Pacers/4?event_id=538392",
-              "fetched_at": "2026-11-27T22:33:13.258131+00:00",
+              "fetched_at": "2026-11-27T22:39:27.496056+00:00",
               "competition": "NBA",
               "metric": 77.27,
               "metric_kind": "vote_pct",
@@ -347,7 +347,7 @@
               "market": "FT_1X2",
               "outcome": "AWAY",
               "url": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/Lincoln_City_v_Wolverhampton/1?event_id=2049417",
-              "fetched_at": "2026-11-27T22:33:13.360162+00:00",
+              "fetched_at": "2026-11-27T22:39:27.506590+00:00",
               "competition": "England Championship",
               "metric": 84.21,
               "metric_kind": "vote_pct",
@@ -392,7 +392,7 @@
               "market": "FT_TOTAL_2.5",
               "outcome": "OVER",
               "url": "https://www.betclan.com/predictionsdetails/football/1563292/preston-v-norwich-prediction-h2h-tip-and-match-preview/",
-              "fetched_at": "2026-11-27T22:33:24.317325+00:00",
+              "fetched_at": "2026-11-27T22:39:39.540221+00:00",
               "competition": "England Championship",
               "metric": 66.0,
               "metric_kind": "model_pct",
@@ -437,7 +437,7 @@
               "market": "FT_TOTAL_2.5",
               "outcome": "OVER",
               "url": "https://www.betclan.com/predictionsdetails/football/1563287/birmingham-v-bolton-prediction-h2h-tip-and-match-preview/",
-              "fetched_at": "2026-11-27T22:33:24.748364+00:00",
+              "fetched_at": "2026-11-27T22:39:39.712029+00:00",
               "competition": "England Championship",
               "metric": 65.0,
               "metric_kind": "model_pct",
@@ -482,7 +482,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.vitibet.com/index.php?clanek=match-detail&sekce=fotbal&lang=en&fixture_id=1556716&league_id=179",
-              "fetched_at": "2026-11-27T22:33:16.512817+00:00",
+              "fetched_at": "2026-11-27T22:39:31.775279+00:00",
               "competition": "Scotland Premiership",
               "metric": 74.0,
               "metric_kind": "model_pct",
@@ -527,7 +527,7 @@
               "market": "FT_1X2",
               "outcome": "AWAY",
               "url": "https://www.vitibet.com/index.php?clanek=match-detail&sekce=fotbal&lang=en&fixture_id=1561972&league_id=218",
-              "fetched_at": "2026-11-27T22:33:16.512817+00:00",
+              "fetched_at": "2026-11-27T22:39:31.775279+00:00",
               "competition": "Austria Bundesliga",
               "metric": 72.0,
               "metric_kind": "model_pct",
@@ -572,7 +572,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.vitibet.com/index.php?clanek=match-detail&sekce=fotbal&lang=en&fixture_id=1558691&league_id=144",
-              "fetched_at": "2026-11-27T22:33:16.512817+00:00",
+              "fetched_at": "2026-11-27T22:39:31.775279+00:00",
               "competition": "Belgium Jupiler Pro League",
               "metric": 68.0,
               "metric_kind": "model_pct",
@@ -617,7 +617,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.vitibet.com/index.php?clanek=match-detail&sekce=fotbal&lang=en&fixture_id=1552835&league_id=61",
-              "fetched_at": "2026-11-27T22:33:16.512817+00:00",
+              "fetched_at": "2026-11-27T22:39:31.775279+00:00",
               "competition": "France Ligue 1",
               "metric": 77.0,
               "metric_kind": "model_pct",
@@ -768,7 +768,7 @@
           "country": "England",
           "odds": 1.5,
           "odds_source": "olbg",
-          "odds_observed_at": "2026-11-27T22:33:13.360162+00:00",
+          "odds_observed_at": "2026-11-27T22:39:27.506590+00:00",
           "outcome": "HOME",
           "selection": "Leeds vence",
           "score": 77.6,
@@ -785,7 +785,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Leeds_v_Coventry/1?event_id=2047651",
-              "fetched_at": "2026-11-27T22:33:13.360162+00:00",
+              "fetched_at": "2026-11-27T22:39:27.506590+00:00",
               "competition": "England Premier League",
               "metric": 85.37,
               "metric_kind": "vote_pct",
@@ -807,7 +807,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.betclan.com/predictionsdetails/football/1557483/leeds-v-coventry-prediction-h2h-tip-and-match-preview/",
-              "fetched_at": "2026-11-27T22:33:22.291560+00:00",
+              "fetched_at": "2026-11-27T22:39:37.715306+00:00",
               "competition": "England Premier League",
               "metric": 65.0,
               "metric_kind": "model_pct",
@@ -834,7 +834,7 @@
     {
       "date": "2026-11-29",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-27T22:33:25.341372+00:00",
+      "updated_at": "2026-11-27T22:39:40.456731+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -893,7 +893,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Brighton_v_Newcastle/1?event_id=2047658",
-              "fetched_at": "2026-11-27T22:33:13.360162+00:00",
+              "fetched_at": "2026-11-27T22:39:27.506590+00:00",
               "competition": "England Premier League",
               "metric": 77.78,
               "metric_kind": "vote_pct",
@@ -1051,7 +1051,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-27T22:33:25.341372+00:00",
+    "generated_at": "2026-11-27T22:39:40.456731+00:00",
     "window_from": "2026-11-27",
     "window_through": "2026-11-29",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
@@ -5015,29 +5015,11 @@
     {
       "id": "espn",
       "name": "ESPN",
-      "resource": "soccer/esp.1/20261128",
-      "checked_at": "2026-11-27T22:33:25.341372+00:00",
-      "collected": 0,
-      "status": "ok",
-      "next_check_at": "2026-11-28T01:33:25.341372+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
       "resource": "soccer/ned.1/20261128",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 0,
       "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
-      "resource": "soccer/eng.2/20261128",
-      "checked_at": "2026-11-27T22:33:25.341372+00:00",
-      "collected": 0,
-      "status": "ok",
-      "next_check_at": "2026-11-28T01:33:25.341372+00:00"
     },
     {
       "id": "espn",
@@ -5051,29 +5033,11 @@
     {
       "id": "espn",
       "name": "ESPN",
-      "resource": "soccer/esp.1/20261127",
-      "checked_at": "2026-11-27T22:33:25.341372+00:00",
-      "collected": 1,
-      "status": "ok",
-      "next_check_at": "2026-11-28T01:33:25.341372+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
       "resource": "soccer/ned.1/20261127",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 0,
       "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
-      "resource": "soccer/eng.2/20261127",
-      "checked_at": "2026-11-27T22:33:25.341372+00:00",
-      "collected": 1,
-      "status": "ok",
-      "next_check_at": "2026-11-28T01:33:25.341372+00:00"
     },
     {
       "id": "zulubet_results",
@@ -5339,7 +5303,7 @@
       "indexed_by_date": [
         {
           "date": "2026-11-27",
-          "fixtures": 17
+          "fixtures": 16
         },
         {
           "date": "2026-11-28",
@@ -5364,7 +5328,7 @@
         {
           "date": "2026-11-27",
           "sport": "basketball",
-          "fixtures": 8
+          "fixtures": 7
         },
         {
           "date": "2026-11-27",
@@ -5610,10 +5574,10 @@
     }
   ],
   "request_id": "",
-  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/46077316411",
+  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/46077927212",
   "status": "partial",
   "pipeline_health": {
-    "checked_at": "2026-11-27T22:33:25.341372+00:00",
+    "checked_at": "2026-11-27T22:39:40.456731+00:00",
     "schedule": "13,43 * * * *",
     "timezone": "UTC",
     "workflow_state": "active",
@@ -5630,5 +5594,5 @@
       "runs": "ValueError"
     }
   },
-  "run_event": "workflow_dispatch"
+  "run_event": "schedule"
 }

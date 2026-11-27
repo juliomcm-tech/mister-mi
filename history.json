@@ -2870,29 +2870,11 @@
     {
       "id": "espn",
       "name": "ESPN",
-      "resource": "soccer/esp.1/20261128",
-      "checked_at": "2026-11-27T22:33:25.341372+00:00",
-      "collected": 0,
-      "status": "ok",
-      "next_check_at": "2026-11-28T01:33:25.341372+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
       "resource": "soccer/ned.1/20261128",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 0,
       "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
-      "resource": "soccer/eng.2/20261128",
-      "checked_at": "2026-11-27T22:33:25.341372+00:00",
-      "collected": 0,
-      "status": "ok",
-      "next_check_at": "2026-11-28T01:33:25.341372+00:00"
     },
     {
       "id": "espn",
@@ -2906,29 +2888,11 @@
     {
       "id": "espn",
       "name": "ESPN",
-      "resource": "soccer/esp.1/20261127",
-      "checked_at": "2026-11-27T22:33:25.341372+00:00",
-      "collected": 1,
-      "status": "ok",
-      "next_check_at": "2026-11-28T01:33:25.341372+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
       "resource": "soccer/ned.1/20261127",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 0,
       "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
-      "resource": "soccer/eng.2/20261127",
-      "checked_at": "2026-11-27T22:33:25.341372+00:00",
-      "collected": 1,
-      "status": "ok",
-      "next_check_at": "2026-11-28T01:33:25.341372+00:00"
     },
     {
       "id": "zulubet_results",
@@ -2962,7 +2926,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-27T22:33:25.341372+00:00",
+    "generated_at": "2026-11-27T22:39:40.456731+00:00",
     "window_from": "2026-11-27",
     "window_through": "2026-11-29",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
