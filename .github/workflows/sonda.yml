@@ -8,4 +8,9 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - run: python3 sonda/sonda.py
+      - run: python3 sonda/guardar.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: amostras
+          path: amostras
+          retention-days: 1
