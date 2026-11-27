@@ -2841,20 +2841,6 @@
   ],
   "result_sources": [
     {
-      "id": "openligadb",
-      "name": "OpenLigaDB",
-      "resource": "bl1/2026",
-      "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
-      "checked_at": "2026-11-27T21:18:20.616040+00:00",
-      "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
-      "license": "ODbL-1.0",
-      "license_url": "https://www.openligadb.de/en/license",
-      "collected": 0,
-      "status": "cached",
-      "message": "Intervalo de atualização respeitado",
-      "next_check_at": "2026-11-28T03:18:20.616040+00:00"
-    },
-    {
       "id": "espn",
       "name": "ESPN",
       "resource": "soccer/all/20261128",
@@ -2862,15 +2848,6 @@
       "collected": 0,
       "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
-      "resource": "soccer/ger.1/20261128",
-      "checked_at": "2026-11-27T21:43:14.608323+00:00",
-      "collected": 0,
-      "status": "ok",
-      "next_check_at": "2026-11-28T00:43:14.608323+00:00"
     },
     {
       "id": "espn",
@@ -2884,15 +2861,6 @@
     {
       "id": "espn",
       "name": "ESPN",
-      "resource": "tennis/wta/20261128",
-      "checked_at": "2026-11-27T21:43:14.608323+00:00",
-      "collected": 1,
-      "status": "ok",
-      "next_check_at": "2026-11-28T00:43:14.608323+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
       "resource": "soccer/all/20261127",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 1,
@@ -2902,29 +2870,11 @@
     {
       "id": "espn",
       "name": "ESPN",
-      "resource": "soccer/ger.1/20261127",
-      "checked_at": "2026-11-27T21:43:14.608323+00:00",
-      "collected": 1,
-      "status": "ok",
-      "next_check_at": "2026-11-28T00:43:14.608323+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
       "resource": "soccer/ned.1/20261127",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 0,
       "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
-      "resource": "tennis/wta/20261127",
-      "checked_at": "2026-11-27T21:43:14.608323+00:00",
-      "collected": 1,
-      "status": "ok",
-      "next_check_at": "2026-11-28T00:43:14.608323+00:00"
     },
     {
       "id": "zulubet_results",
@@ -2958,7 +2908,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-27T21:43:14.608323+00:00",
+    "generated_at": "2026-11-27T22:08:16.804031+00:00",
     "window_from": "2026-11-27",
     "window_through": "2026-11-29",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
