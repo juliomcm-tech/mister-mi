@@ -1,7 +1,7 @@
 {
   "date": "2026-11-27",
   "timezone": "Europe/Lisbon",
-  "updated_at": "2026-11-27T09:52:44.875064+00:00",
+  "updated_at": "2026-11-27T09:54:45.639303+00:00",
   "schema_version": 1,
   "score_is_probability": false,
   "settings": {
@@ -25,7 +25,7 @@
   },
   "total_collected": 211,
   "total_eligible": 17,
-  "total_selected": 1,
+  "total_selected": 2,
   "discarded": {
     "other_day": 79,
     "started_or_soon": 1,
@@ -35,6 +35,82 @@
     "excluded": 0
   },
   "data": [
+    {
+      "id": "0f7e3fe106035c9b",
+      "sport": "football",
+      "home": "Werder Bremen",
+      "away": "Borussia Mgladbach",
+      "match": "Werder Bremen vs Borussia Mgladbach",
+      "competition": "Germany Bundesliga I",
+      "kickoff": "2026-11-27T19:30:00+00:00",
+      "market": "FT_1X2",
+      "country": "Germany",
+      "odds": 1.72,
+      "odds_source": "zulubet",
+      "odds_observed_at": "2026-11-27T09:54:38.642813+00:00",
+      "outcome": "HOME",
+      "selection": "Werder Bremen vence",
+      "score": 74.8,
+      "tier": "silver",
+      "source_count": 2,
+      "sources": [
+        {
+          "source": "olbg",
+          "sport": "football",
+          "home": "Werder Bremen",
+          "away": "Borussia Mgladbach",
+          "event_date": "2026-11-27",
+          "kickoff": "2026-11-27T19:30:00+00:00",
+          "market": "FT_1X2",
+          "outcome": "HOME",
+          "url": "https://www.olbg.com/betting-tips/Football/European_Competitions/Germany_Bundesliga_I/Werder_Bremen_v_Borussia_Mgladbach/1?event_id=2047739",
+          "fetched_at": "2026-11-27T09:54:36.766226+00:00",
+          "competition": "Germany Bundesliga I",
+          "metric": 100.0,
+          "metric_kind": "vote_pct",
+          "votes_for": 16,
+          "votes_total": 16,
+          "odds": 1.75,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "Germany"
+        },
+        {
+          "source": "zulubet",
+          "sport": "football",
+          "home": "Werder Bremen",
+          "away": "Borussia Mönchengladbach",
+          "event_date": "2026-11-27",
+          "kickoff": "2026-11-27T19:30:00+00:00",
+          "market": "FT_1X2",
+          "outcome": "HOME",
+          "url": "https://www.zulubet.com/match-1341840.html",
+          "fetched_at": "2026-11-27T09:54:38.642813+00:00",
+          "competition": "Germany Bundesliga",
+          "metric": 71.0,
+          "metric_kind": "model_pct",
+          "votes_for": 0,
+          "votes_total": 0,
+          "odds": 1.72,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "Germany"
+        }
+      ],
+      "reason": "2 fontes concordam na mesma seleção e no mesmo mercado.",
+      "fixture_verification": {
+        "source": "openligadb_calendar",
+        "counts_as_prediction": false,
+        "source_event_id": "83253",
+        "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+        "checked_at": "2026-11-27T04:10:44.767011+00:00",
+        "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
+        "license": "ODbL-1.0",
+        "status": "verified"
+      }
+    },
     {
       "id": "357515326ee58bc9",
       "sport": "football",
@@ -47,7 +123,7 @@
       "country": "Poland",
       "odds": 1.45,
       "odds_source": "zulubet",
-      "odds_observed_at": "2026-11-27T09:52:39.368672+00:00",
+      "odds_observed_at": "2026-11-27T09:54:38.642813+00:00",
       "outcome": "HOME",
       "selection": "Gornik Zabrze vence",
       "score": 70.7,
@@ -64,7 +140,7 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.zulubet.com/match-1341806.html",
-          "fetched_at": "2026-11-27T09:52:39.368672+00:00",
+          "fetched_at": "2026-11-27T09:54:38.642813+00:00",
           "competition": "Poland Ekstraklasa",
           "metric": 76.0,
           "metric_kind": "model_pct",
@@ -86,7 +162,7 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.betclan.com/predictionsdetails/football/1553236/gornik-zabrze-v-wisla-plock-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-27T09:52:42.847496+00:00",
+          "fetched_at": "2026-11-27T09:54:43.416249+00:00",
           "competition": "Poland Ekstraklasa",
           "metric": 69.0,
           "metric_kind": "model_pct",
@@ -132,7 +208,7 @@
           "market": "FT_1X2",
           "outcome": "AWAY",
           "url": "https://www.zulubet.com/match-1341974.html",
-          "fetched_at": "2026-11-27T09:52:39.368672+00:00",
+          "fetched_at": "2026-11-27T09:54:38.642813+00:00",
           "competition": "Israel Liga Alef",
           "metric": 69.0,
           "metric_kind": "model_pct",
@@ -177,7 +253,7 @@
           "market": "FT_1X2",
           "outcome": "AWAY",
           "url": "https://www.zulubet.com/match-1341874.html",
-          "fetched_at": "2026-11-27T09:52:39.368672+00:00",
+          "fetched_at": "2026-11-27T09:54:38.642813+00:00",
           "competition": "Qatar Stars League",
           "metric": 68.0,
           "metric_kind": "model_pct",
@@ -196,102 +272,6 @@
         "source": "openligadb_calendar",
         "counts_as_prediction": false,
         "status": "out_of_scope"
-      }
-    },
-    {
-      "sport": "football",
-      "home": "Werder Bremen",
-      "away": "Borussia Mgladbach",
-      "match": "Werder Bremen vs Borussia Mgladbach",
-      "kickoff": "2026-11-27T19:30:00+00:00",
-      "country": "Germany",
-      "competition": "Germany Bundesliga I",
-      "market": "FT_1X2",
-      "outcome": "HOME",
-      "selection": "Werder Bremen vence",
-      "odds": 1.75,
-      "source_count": 1,
-      "sources": [
-        {
-          "source": "olbg",
-          "sport": "football",
-          "home": "Werder Bremen",
-          "away": "Borussia Mgladbach",
-          "event_date": "2026-11-27",
-          "kickoff": "2026-11-27T19:30:00+00:00",
-          "market": "FT_1X2",
-          "outcome": "HOME",
-          "url": "https://www.olbg.com/betting-tips/Football/European_Competitions/Germany_Bundesliga_I/Werder_Bremen_v_Borussia_Mgladbach/1?event_id=2047739",
-          "fetched_at": "2026-11-27T09:52:38.478992+00:00",
-          "competition": "Germany Bundesliga I",
-          "metric": 100.0,
-          "metric_kind": "vote_pct",
-          "votes_for": 16,
-          "votes_total": 16,
-          "odds": 1.75,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Germany"
-        }
-      ],
-      "status": "awaiting_independent_source",
-      "is_recommendation": false,
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "status": "not_found",
-        "reason": "no_unique_fixture"
-      }
-    },
-    {
-      "sport": "football",
-      "home": "Werder Bremen",
-      "away": "Borussia Mönchengladbach",
-      "match": "Werder Bremen vs Borussia Mönchengladbach",
-      "kickoff": "2026-11-27T19:30:00+00:00",
-      "country": "Germany",
-      "competition": "Germany Bundesliga",
-      "market": "FT_1X2",
-      "outcome": "HOME",
-      "selection": "Werder Bremen vence",
-      "odds": 1.72,
-      "source_count": 1,
-      "sources": [
-        {
-          "source": "zulubet",
-          "sport": "football",
-          "home": "Werder Bremen",
-          "away": "Borussia Mönchengladbach",
-          "event_date": "2026-11-27",
-          "kickoff": "2026-11-27T19:30:00+00:00",
-          "market": "FT_1X2",
-          "outcome": "HOME",
-          "url": "https://www.zulubet.com/match-1341840.html",
-          "fetched_at": "2026-11-27T09:52:39.368672+00:00",
-          "competition": "Germany Bundesliga",
-          "metric": 71.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": 1.72,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Germany"
-        }
-      ],
-      "status": "awaiting_independent_source",
-      "is_recommendation": false,
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "source_event_id": "83253",
-        "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
-        "checked_at": "2026-11-27T04:10:44.767011+00:00",
-        "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
-        "license": "ODbL-1.0",
-        "status": "verified"
       }
     },
     {
@@ -318,7 +298,7 @@
           "market": "FT_1X2",
           "outcome": "AWAY",
           "url": "https://www.olbg.com/betting-tips/Football/European_Competitions/Italy_Serie_A/Venezia_v_Bologna/1?event_id=2047762",
-          "fetched_at": "2026-11-27T09:52:38.478992+00:00",
+          "fetched_at": "2026-11-27T09:54:36.766226+00:00",
           "competition": "Italy Serie A",
           "metric": 80.0,
           "metric_kind": "vote_pct",
@@ -363,7 +343,7 @@
           "market": "MATCH_WINNER",
           "outcome": "AWAY",
           "url": "https://www.olbg.com/betting-tips/American_Football/NFL/NFL/DEN_Broncos_@_PIT_Steelers/11?event_id=28751",
-          "fetched_at": "2026-11-27T09:52:39.881400+00:00",
+          "fetched_at": "2026-11-27T09:54:37.384852+00:00",
           "competition": "NFL",
           "metric": 87.5,
           "metric_kind": "vote_pct",
@@ -389,21 +369,21 @@
     "coverage": "partial",
     "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
     "today_forecasts": 132,
-    "today_events": 87,
+    "today_events": 86,
     "eligible_forecasts": 17,
-    "eligible_events": 14,
+    "eligible_events": 13,
     "threshold_reasons": {
       "insufficient_votes": 71,
       "below_source_threshold": 37,
       "missing_metric": 6
     },
     "comparison_rejections": {
-      "insufficient_sources": 6,
+      "insufficient_sources": 4,
       "missing_kickoff": 9,
       "odds_filter": 0,
       "below_consensus_score": 0
     },
-    "watchlist_total": 6,
+    "watchlist_total": 4,
     "by_source": [
       {
         "id": "betclan",
@@ -435,8 +415,8 @@
         "id": "football",
         "forecasts": 102,
         "eligible": 16,
-        "events": 57,
-        "confirmed": 1,
+        "events": 56,
+        "confirmed": 2,
         "sources": [
           "betclan",
           "olbg",
@@ -488,7 +468,7 @@
     {
       "date": "2026-11-28",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-27T09:52:44.875064+00:00",
+      "updated_at": "2026-11-27T09:54:45.639303+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -546,7 +526,7 @@
               "market": "FT_1X2",
               "outcome": "AWAY",
               "url": "https://www.zulubet.com/match-1342017.html",
-              "fetched_at": "2026-11-27T09:52:39.368672+00:00",
+              "fetched_at": "2026-11-27T09:54:38.642813+00:00",
               "competition": "Macedonia First League",
               "metric": 69.0,
               "metric_kind": "model_pct",
@@ -681,7 +661,7 @@
           "country": "England",
           "odds": 1.5,
           "odds_source": "olbg",
-          "odds_observed_at": "2026-11-27T09:52:38.478992+00:00",
+          "odds_observed_at": "2026-11-27T09:54:36.766226+00:00",
           "outcome": "HOME",
           "selection": "Leeds vence",
           "score": 74.4,
@@ -698,7 +678,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Leeds_v_Coventry/1?event_id=2047651",
-              "fetched_at": "2026-11-27T09:52:38.478992+00:00",
+              "fetched_at": "2026-11-27T09:54:36.766226+00:00",
               "competition": "England Premier League",
               "metric": 85.71,
               "metric_kind": "vote_pct",
@@ -720,7 +700,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.betclan.com/predictionsdetails/football/1557483/leeds-v-coventry-prediction-h2h-tip-and-match-preview/",
-              "fetched_at": "2026-11-27T09:52:43.176849+00:00",
+              "fetched_at": "2026-11-27T09:54:43.336997+00:00",
               "competition": "England Premier League",
               "metric": 65.0,
               "metric_kind": "model_pct",
@@ -747,7 +727,7 @@
     {
       "date": "2026-11-29",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-27T09:52:44.875064+00:00",
+      "updated_at": "2026-11-27T09:54:45.639303+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -901,7 +881,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-27T09:52:44.875064+00:00",
+    "generated_at": "2026-11-27T09:54:45.639303+00:00",
     "window_from": "2026-11-27",
     "window_through": "2026-11-29",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
@@ -1807,11 +1787,11 @@
   },
   "performance": {
     "overall": {
-      "total": 22,
+      "total": 23,
       "settled": 1,
       "wins": 0,
       "losses": 1,
-      "pending": 21,
+      "pending": 22,
       "void": 0,
       "hit_rate": 0.0,
       "hit_rate_interval_95": [
@@ -1848,11 +1828,11 @@
       },
       {
         "key": "football",
-        "total": 18,
+        "total": 19,
         "settled": 1,
         "wins": 0,
         "losses": 1,
-        "pending": 17,
+        "pending": 18,
         "void": 0,
         "hit_rate": 0.0,
         "hit_rate_interval_95": [
@@ -1950,11 +1930,11 @@
       },
       {
         "key": "Germany",
-        "total": 1,
+        "total": 2,
         "settled": 1,
         "wins": 0,
         "losses": 1,
-        "pending": 0,
+        "pending": 1,
         "void": 0,
         "hit_rate": 0.0,
         "hit_rate_interval_95": [
@@ -2052,11 +2032,11 @@
     "by_market": [
       {
         "key": "FT_1X2",
-        "total": 18,
+        "total": 19,
         "settled": 1,
         "wins": 0,
         "losses": 1,
-        "pending": 17,
+        "pending": 18,
         "void": 0,
         "hit_rate": 0.0,
         "hit_rate_interval_95": [
@@ -2183,11 +2163,11 @@
       {
         "sport": "football",
         "country": "Germany",
-        "total": 1,
+        "total": 2,
         "settled": 1,
         "wins": 0,
         "losses": 1,
-        "pending": 0,
+        "pending": 1,
         "void": 0,
         "hit_rate": 0.0,
         "hit_rate_interval_95": [
@@ -2660,6 +2640,11 @@
           "indexed_fixtures": 0
         },
         {
+          "url": "https://www.betclan.com/predictionsdetails/football/1575237/werder-bremen-v-borussia-m%C3%B6nchengladbach-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
           "url": "https://www.betclan.com/predictionsdetails/football/1550216/venezia-v-bologna-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
@@ -2676,11 +2661,6 @@
         },
         {
           "url": "https://www.betclan.com/predictionsdetails/football/1597971/lusail-city-v-al-arabi-sc-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1575237/werder-bremen-v-borussia-m%C3%B6nchengladbach-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         },
@@ -2785,26 +2765,23 @@
     }
   ],
   "request_id": "",
-  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/45977304196",
+  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/45977590945",
   "status": "partial",
   "pipeline_health": {
-    "checked_at": "2026-11-27T09:52:44.875064+00:00",
+    "checked_at": "2026-11-27T09:54:45.639303+00:00",
     "schedule": "13,43 * * * *",
     "timezone": "UTC",
-    "workflow_state": "unknown",
-    "scheduler_status": "unavailable",
-    "last_scheduled_at": null,
-    "last_successful_scheduled_at": null,
-    "scheduled_age_minutes": null,
+    "workflow_state": "active",
+    "scheduler_status": "overdue",
+    "last_scheduled_at": "2026-11-27T04:10:23+00:00",
+    "last_successful_scheduled_at": "2026-11-27T04:10:23+00:00",
+    "scheduled_age_minutes": 344.4,
     "max_age_minutes": 45,
-    "schedule_runs_observed": 0,
-    "run_window": null,
-    "last_event": null,
-    "last_run_url": null,
-    "errors": {
-      "workflow": "HTTP 403",
-      "runs": "HTTP 403"
-    }
+    "schedule_runs_observed": 23,
+    "run_window": 65,
+    "last_event": "push",
+    "last_run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/45977590945",
+    "errors": {}
   },
   "run_event": "push"
 }
