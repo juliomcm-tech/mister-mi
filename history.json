@@ -1964,10 +1964,19 @@
       "date": "2026-11-27",
       "first_seen": "2026-11-27T09:54:45.639303+00:00",
       "criteria_revision": "90f2af89cf64",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "loss",
+      "settled_at": "2026-11-27T21:43:14.608323+00:00",
+      "settlement_source": "espn",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        3,
+        3
+      ],
+      "settlement_evidence": {
+        "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261127",
+        "source_event_id": "401884720",
+        "verified_at": "2026-11-27T21:43:14.608323+00:00"
+      }
     },
     {
       "id": "54c1ff385dac76ed",
@@ -2659,10 +2668,19 @@
       "date": "2026-11-27",
       "first_seen": "2026-11-27T16:42:49.491181+00:00",
       "criteria_revision": "84974be650e9",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "loss",
+      "settled_at": "2026-11-27T21:43:14.608323+00:00",
+      "settlement_source": "espn",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        1,
+        0
+      ],
+      "settlement_evidence": {
+        "source_url": "https://site.api.espn.com/apis/site/v2/sports/tennis/wta/scoreboard?dates=20261128",
+        "source_event_id": "186829",
+        "verified_at": "2026-11-27T21:43:14.608323+00:00"
+      }
     },
     {
       "id": "0bae1c4d8344b340",
@@ -2832,8 +2850,8 @@
       "license": "ODbL-1.0",
       "license_url": "https://www.openligadb.de/en/license",
       "collected": 0,
-      "status": "ok",
-      "message": "Resultados regulamentares verificados",
+      "status": "cached",
+      "message": "Intervalo de atualização respeitado",
       "next_check_at": "2026-11-28T03:18:20.616040+00:00"
     },
     {
@@ -2842,8 +2860,17 @@
       "resource": "soccer/all/20261128",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "soccer/ger.1/20261128",
+      "checked_at": "2026-11-27T21:43:14.608323+00:00",
+      "collected": 0,
+      "status": "ok",
+      "next_check_at": "2026-11-28T00:43:14.608323+00:00"
     },
     {
       "id": "espn",
@@ -2851,8 +2878,17 @@
       "resource": "soccer/ned.1/20261128",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "tennis/wta/20261128",
+      "checked_at": "2026-11-27T21:43:14.608323+00:00",
+      "collected": 1,
+      "status": "ok",
+      "next_check_at": "2026-11-28T00:43:14.608323+00:00"
     },
     {
       "id": "espn",
@@ -2860,8 +2896,17 @@
       "resource": "soccer/all/20261127",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 1,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "soccer/ger.1/20261127",
+      "checked_at": "2026-11-27T21:43:14.608323+00:00",
+      "collected": 1,
+      "status": "ok",
+      "next_check_at": "2026-11-28T00:43:14.608323+00:00"
     },
     {
       "id": "espn",
@@ -2869,8 +2914,17 @@
       "resource": "soccer/ned.1/20261127",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "tennis/wta/20261127",
+      "checked_at": "2026-11-27T21:43:14.608323+00:00",
+      "collected": 1,
+      "status": "ok",
+      "next_check_at": "2026-11-28T00:43:14.608323+00:00"
     },
     {
       "id": "zulubet_results",
@@ -2878,7 +2932,7 @@
       "resource": "zulubet/27-11-2026",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
     },
     {
@@ -2904,7 +2958,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-27T21:18:20.616040+00:00",
+    "generated_at": "2026-11-27T21:43:14.608323+00:00",
     "window_from": "2026-11-27",
     "window_through": "2026-11-29",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",

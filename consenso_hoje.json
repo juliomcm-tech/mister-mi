@@ -1,7 +1,7 @@
 {
   "date": "2026-11-27",
   "timezone": "Europe/Lisbon",
-  "updated_at": "2026-11-27T21:18:20.616040+00:00",
+  "updated_at": "2026-11-27T21:43:14.608323+00:00",
   "schema_version": 1,
   "score_is_probability": false,
   "settings": {
@@ -24,64 +24,19 @@
     "history_min_sample": 30,
     "history_warning_roi": -10
   },
-  "total_collected": 584,
-  "total_eligible": 131,
+  "total_collected": 509,
+  "total_eligible": 93,
   "total_selected": 0,
   "discarded": {
-    "other_day": 224,
-    "started_or_soon": 47,
+    "other_day": 227,
+    "started_or_soon": 45,
     "stale": 0,
-    "threshold": 195,
+    "threshold": 154,
     "conflict": 0,
     "excluded": 0
   },
   "data": [],
   "watchlist": [
-    {
-      "sport": "football",
-      "home": "Deportivo Cuenca",
-      "away": "Manta FC",
-      "match": "Deportivo Cuenca vs Manta FC",
-      "kickoff": "2026-11-27T21:30:00+00:00",
-      "country": "Ecuador",
-      "competition": "Ecuador Liga Pro",
-      "market": "FT_1X2",
-      "outcome": "HOME",
-      "selection": "Deportivo Cuenca vence",
-      "odds": 1.66,
-      "source_count": 1,
-      "sources": [
-        {
-          "source": "zulubet",
-          "sport": "football",
-          "home": "Deportivo Cuenca",
-          "away": "Manta FC",
-          "event_date": "2026-11-27",
-          "kickoff": "2026-11-27T21:30:00+00:00",
-          "market": "FT_1X2",
-          "outcome": "HOME",
-          "url": "https://www.zulubet.com/tips-27-11-2026.html",
-          "fetched_at": "2026-11-27T21:18:13.140443+00:00",
-          "competition": "Ecuador Liga Pro",
-          "metric": 70.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": 1.66,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Ecuador"
-        }
-      ],
-      "status": "awaiting_independent_source",
-      "is_recommendation": false,
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "status": "out_of_scope"
-      }
-    },
     {
       "sport": "football",
       "home": "Fluminense",
@@ -106,7 +61,7 @@
           "market": "FT_TOTAL_1.5",
           "outcome": "OVER",
           "url": "https://www.statarea.com/olddevices/prediction/2026-11-27/",
-          "fetched_at": "2026-11-27T21:18:15.005780+00:00",
+          "fetched_at": "2026-11-27T21:43:09.752020+00:00",
           "competition": "Brazil Serie A",
           "metric": 77.0,
           "metric_kind": "model_pct",
@@ -151,7 +106,7 @@
           "market": "FT_TOTAL_3.5",
           "outcome": "UNDER",
           "url": "https://www.statarea.com/olddevices/prediction/2026-11-27/",
-          "fetched_at": "2026-11-27T21:18:15.005780+00:00",
+          "fetched_at": "2026-11-27T21:43:09.752020+00:00",
           "competition": "Brazil Serie A",
           "metric": 68.0,
           "metric_kind": "model_pct",
@@ -178,32 +133,32 @@
   "diagnostics": {
     "coverage": "partial",
     "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
-    "today_forecasts": 360,
-    "today_events": 146,
-    "eligible_forecasts": 131,
-    "eligible_events": 72,
+    "today_forecasts": 282,
+    "today_events": 132,
+    "eligible_forecasts": 93,
+    "eligible_events": 55,
     "threshold_reasons": {
       "insufficient_votes": 2,
       "missing_metric": 6,
-      "below_source_threshold": 187
+      "below_source_threshold": 146
     },
     "comparison_rejections": {
-      "insufficient_sources": 3,
-      "missing_kickoff": 114,
+      "insufficient_sources": 2,
+      "missing_kickoff": 80,
       "odds_filter": 0,
       "below_consensus_score": 0
     },
-    "watchlist_total": 3,
+    "watchlist_total": 2,
     "by_source": [
       {
         "id": "betclan",
         "collected": 26,
-        "today": 4,
+        "today": 2,
         "eligible": 0
       },
       {
         "id": "olbg",
-        "collected": 131,
+        "collected": 132,
         "today": 2,
         "eligible": 0
       },
@@ -215,9 +170,9 @@
       },
       {
         "id": "statarea",
-        "collected": 235,
-        "today": 235,
-        "eligible": 108
+        "collected": 159,
+        "today": 159,
+        "eligible": 71
       },
       {
         "id": "vitibet",
@@ -229,15 +184,15 @@
         "id": "zulubet",
         "collected": 36,
         "today": 35,
-        "eligible": 1
+        "eligible": 0
       }
     ],
     "by_sport": [
       {
         "id": "football",
-        "forecasts": 359,
-        "eligible": 131,
-        "events": 145,
+        "forecasts": 281,
+        "eligible": 93,
+        "events": 131,
         "confirmed": 0,
         "sources": [
           "betclan",
@@ -288,7 +243,7 @@
     {
       "date": "2026-11-28",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-27T21:18:20.616040+00:00",
+      "updated_at": "2026-11-27T21:43:14.608323+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -311,14 +266,14 @@
         "history_min_sample": 30,
         "history_warning_roi": -10
       },
-      "total_collected": 584,
+      "total_collected": 509,
       "total_eligible": 26,
       "total_selected": 0,
       "discarded": {
-        "other_day": 393,
+        "other_day": 314,
         "started_or_soon": 0,
         "stale": 0,
-        "threshold": 165,
+        "threshold": 169,
         "conflict": 0,
         "excluded": 0
       },
@@ -334,7 +289,7 @@
           "market": "MATCH_WINNER",
           "outcome": "AWAY",
           "selection": "PHI 76ers vence",
-          "odds": 1.65,
+          "odds": 1.62,
           "source_count": 1,
           "sources": [
             {
@@ -347,13 +302,13 @@
               "market": "MATCH_WINNER",
               "outcome": "AWAY",
               "url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/PHI_76ers_@_IND_Pacers/4?event_id=538392",
-              "fetched_at": "2026-11-27T21:18:11.283448+00:00",
+              "fetched_at": "2026-11-27T21:43:06.514409+00:00",
               "competition": "NBA",
-              "metric": 76.47,
+              "metric": 78.95,
               "metric_kind": "vote_pct",
-              "votes_for": 13,
-              "votes_total": 17,
-              "odds": 1.65,
+              "votes_for": 15,
+              "votes_total": 19,
+              "odds": 1.62,
               "event_id": "",
               "segment": "open",
               "status": "scheduled",
@@ -392,7 +347,7 @@
               "market": "FT_1X2",
               "outcome": "AWAY",
               "url": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/Lincoln_City_v_Wolverhampton/1?event_id=2049417",
-              "fetched_at": "2026-11-27T21:18:11.095436+00:00",
+              "fetched_at": "2026-11-27T21:43:06.577020+00:00",
               "competition": "England Championship",
               "metric": 87.5,
               "metric_kind": "vote_pct",
@@ -437,7 +392,7 @@
               "market": "FT_TOTAL_2.5",
               "outcome": "OVER",
               "url": "https://www.betclan.com/predictionsdetails/football/1563292/preston-v-norwich-prediction-h2h-tip-and-match-preview/",
-              "fetched_at": "2026-11-27T21:18:19.791854+00:00",
+              "fetched_at": "2026-11-27T21:43:13.916044+00:00",
               "competition": "England Championship",
               "metric": 66.0,
               "metric_kind": "model_pct",
@@ -482,7 +437,7 @@
               "market": "FT_TOTAL_2.5",
               "outcome": "OVER",
               "url": "https://www.betclan.com/predictionsdetails/football/1563287/birmingham-v-bolton-prediction-h2h-tip-and-match-preview/",
-              "fetched_at": "2026-11-27T21:18:19.727531+00:00",
+              "fetched_at": "2026-11-27T21:43:13.883004+00:00",
               "competition": "England Championship",
               "metric": 65.0,
               "metric_kind": "model_pct",
@@ -527,7 +482,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.vitibet.com/index.php?clanek=match-detail&sekce=fotbal&lang=en&fixture_id=1556716&league_id=179",
-              "fetched_at": "2026-11-27T21:18:14.652817+00:00",
+              "fetched_at": "2026-11-27T21:43:09.434759+00:00",
               "competition": "Scotland Premiership",
               "metric": 74.0,
               "metric_kind": "model_pct",
@@ -572,7 +527,7 @@
               "market": "FT_1X2",
               "outcome": "AWAY",
               "url": "https://www.vitibet.com/index.php?clanek=match-detail&sekce=fotbal&lang=en&fixture_id=1561972&league_id=218",
-              "fetched_at": "2026-11-27T21:18:14.652817+00:00",
+              "fetched_at": "2026-11-27T21:43:09.434759+00:00",
               "competition": "Austria Bundesliga",
               "metric": 72.0,
               "metric_kind": "model_pct",
@@ -617,7 +572,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.vitibet.com/index.php?clanek=match-detail&sekce=fotbal&lang=en&fixture_id=1558691&league_id=144",
-              "fetched_at": "2026-11-27T21:18:14.652817+00:00",
+              "fetched_at": "2026-11-27T21:43:09.434759+00:00",
               "competition": "Belgium Jupiler Pro League",
               "metric": 68.0,
               "metric_kind": "model_pct",
@@ -662,7 +617,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.vitibet.com/index.php?clanek=match-detail&sekce=fotbal&lang=en&fixture_id=1552835&league_id=61",
-              "fetched_at": "2026-11-27T21:18:14.652817+00:00",
+              "fetched_at": "2026-11-27T21:43:09.434759+00:00",
               "competition": "France Ligue 1",
               "metric": 77.0,
               "metric_kind": "model_pct",
@@ -689,13 +644,13 @@
       "diagnostics": {
         "coverage": "partial",
         "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
-        "today_forecasts": 191,
-        "today_events": 157,
+        "today_forecasts": 195,
+        "today_events": 158,
         "eligible_forecasts": 26,
         "eligible_events": 23,
         "threshold_reasons": {
-          "below_source_threshold": 72,
-          "insufficient_votes": 93
+          "below_source_threshold": 74,
+          "insufficient_votes": 95
         },
         "comparison_rejections": {
           "insufficient_sources": 8,
@@ -708,13 +663,13 @@
           {
             "id": "betclan",
             "collected": 26,
-            "today": 20,
+            "today": 22,
             "eligible": 4
           },
           {
             "id": "olbg",
-            "collected": 131,
-            "today": 99,
+            "collected": 132,
+            "today": 101,
             "eligible": 3
           },
           {
@@ -725,7 +680,7 @@
           },
           {
             "id": "statarea",
-            "collected": 235,
+            "collected": 159,
             "today": 0,
             "eligible": 0
           },
@@ -745,9 +700,9 @@
         "by_sport": [
           {
             "id": "football",
-            "forecasts": 173,
+            "forecasts": 177,
             "eligible": 25,
-            "events": 139,
+            "events": 140,
             "confirmed": 1,
             "sources": [
               "betclan",
@@ -813,10 +768,10 @@
           "country": "England",
           "odds": 1.5,
           "odds_source": "olbg",
-          "odds_observed_at": "2026-11-27T21:18:11.095436+00:00",
+          "odds_observed_at": "2026-11-27T21:43:06.577020+00:00",
           "outcome": "HOME",
           "selection": "Leeds vence",
-          "score": 77.0,
+          "score": 77.2,
           "tier": "silver",
           "source_count": 2,
           "sources": [
@@ -830,12 +785,12 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Leeds_v_Coventry/1?event_id=2047651",
-              "fetched_at": "2026-11-27T21:18:11.095436+00:00",
+              "fetched_at": "2026-11-27T21:43:06.577020+00:00",
               "competition": "England Premier League",
-              "metric": 86.49,
+              "metric": 86.84,
               "metric_kind": "vote_pct",
-              "votes_for": 32,
-              "votes_total": 37,
+              "votes_for": 33,
+              "votes_total": 38,
               "odds": 1.5,
               "event_id": "",
               "segment": "open",
@@ -852,7 +807,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.betclan.com/predictionsdetails/football/1557483/leeds-v-coventry-prediction-h2h-tip-and-match-preview/",
-              "fetched_at": "2026-11-27T21:18:18.461944+00:00",
+              "fetched_at": "2026-11-27T21:43:12.947989+00:00",
               "competition": "England Premier League",
               "metric": 65.0,
               "metric_kind": "model_pct",
@@ -879,7 +834,7 @@
     {
       "date": "2026-11-29",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-27T21:18:20.616040+00:00",
+      "updated_at": "2026-11-27T21:43:14.608323+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -902,14 +857,14 @@
         "history_min_sample": 30,
         "history_warning_roi": -10
       },
-      "total_collected": 584,
+      "total_collected": 509,
       "total_eligible": 1,
       "total_selected": 0,
       "discarded": {
-        "other_day": 558,
+        "other_day": 485,
         "started_or_soon": 0,
         "stale": 0,
-        "threshold": 25,
+        "threshold": 23,
         "conflict": 0,
         "excluded": 0
       },
@@ -938,7 +893,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Brighton_v_Newcastle/1?event_id=2047658",
-              "fetched_at": "2026-11-27T21:18:11.095436+00:00",
+              "fetched_at": "2026-11-27T21:43:06.577020+00:00",
               "competition": "England Premier League",
               "metric": 77.78,
               "metric_kind": "vote_pct",
@@ -965,13 +920,13 @@
       "diagnostics": {
         "coverage": "partial",
         "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
-        "today_forecasts": 26,
-        "today_events": 24,
+        "today_forecasts": 24,
+        "today_events": 22,
         "eligible_forecasts": 1,
         "eligible_events": 1,
         "threshold_reasons": {
           "below_source_threshold": 5,
-          "insufficient_votes": 20
+          "insufficient_votes": 18
         },
         "comparison_rejections": {
           "insufficient_sources": 1,
@@ -989,8 +944,8 @@
           },
           {
             "id": "olbg",
-            "collected": 131,
-            "today": 24,
+            "collected": 132,
+            "today": 22,
             "eligible": 1
           },
           {
@@ -1001,7 +956,7 @@
           },
           {
             "id": "statarea",
-            "collected": 235,
+            "collected": 159,
             "today": 0,
             "eligible": 0
           },
@@ -1021,9 +976,9 @@
         "by_sport": [
           {
             "id": "football",
-            "forecasts": 17,
+            "forecasts": 15,
             "eligible": 1,
-            "events": 15,
+            "events": 13,
             "confirmed": 0,
             "sources": [
               "betclan",
@@ -1096,7 +1051,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-27T21:18:20.616040+00:00",
+    "generated_at": "2026-11-27T21:43:14.608323+00:00",
     "window_from": "2026-11-27",
     "window_through": "2026-11-29",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
@@ -2003,21 +1958,21 @@
   "performance": {
     "overall": {
       "total": 33,
-      "settled": 21,
+      "settled": 23,
       "wins": 13,
-      "losses": 8,
-      "pending": 12,
+      "losses": 10,
+      "pending": 10,
       "void": 0,
-      "hit_rate": 61.9,
+      "hit_rate": 56.5,
       "hit_rate_interval_95": [
-        40.9,
-        79.2
+        36.8,
+        74.4
       ],
-      "priced_settled": 20,
-      "odds_coverage": 95.2,
-      "paper_profit_units": -2.79,
-      "paper_roi_pct": -13.95,
-      "paper_max_drawdown_units": 4.12,
+      "priced_settled": 22,
+      "odds_coverage": 95.7,
+      "paper_profit_units": -4.79,
+      "paper_roi_pct": -21.77,
+      "paper_max_drawdown_units": 5.19,
       "sufficient_sample": false
     },
     "by_sport": [
@@ -2044,41 +1999,41 @@
       {
         "key": "football",
         "total": 28,
-        "settled": 20,
+        "settled": 21,
         "wins": 12,
-        "losses": 8,
-        "pending": 8,
+        "losses": 9,
+        "pending": 7,
         "void": 0,
-        "hit_rate": 60.0,
+        "hit_rate": 57.1,
         "hit_rate_interval_95": [
-          38.7,
-          78.1
+          36.5,
+          75.5
         ],
-        "priced_settled": 19,
-        "odds_coverage": 95.0,
-        "paper_profit_units": -3.19,
-        "paper_roi_pct": -16.79,
-        "paper_max_drawdown_units": 4.12,
+        "priced_settled": 20,
+        "odds_coverage": 95.2,
+        "paper_profit_units": -4.19,
+        "paper_roi_pct": -20.95,
+        "paper_max_drawdown_units": 4.64,
         "sufficient_sample": false
       },
       {
         "key": "tennis",
         "total": 2,
-        "settled": 1,
+        "settled": 2,
         "wins": 1,
-        "losses": 0,
-        "pending": 1,
+        "losses": 1,
+        "pending": 0,
         "void": 0,
-        "hit_rate": 100.0,
+        "hit_rate": 50.0,
         "hit_rate_interval_95": [
-          20.7,
-          100
+          9.5,
+          90.5
         ],
-        "priced_settled": 1,
+        "priced_settled": 2,
         "odds_coverage": 100.0,
-        "paper_profit_units": 0.4,
-        "paper_roi_pct": 40.0,
-        "paper_max_drawdown_units": 0,
+        "paper_profit_units": -0.6,
+        "paper_roi_pct": -30.0,
+        "paper_max_drawdown_units": 1.0,
         "sufficient_sample": false
       }
     ],
@@ -2106,21 +2061,21 @@
       {
         "key": "Desconhecido",
         "total": 10,
-        "settled": 6,
+        "settled": 7,
         "wins": 6,
-        "losses": 0,
-        "pending": 4,
+        "losses": 1,
+        "pending": 3,
         "void": 0,
-        "hit_rate": 100.0,
+        "hit_rate": 85.7,
         "hit_rate_interval_95": [
-          61.0,
-          100.0
+          48.7,
+          97.4
         ],
-        "priced_settled": 6,
+        "priced_settled": 7,
         "odds_coverage": 100.0,
-        "paper_profit_units": 1.85,
-        "paper_roi_pct": 30.83,
-        "paper_max_drawdown_units": 0,
+        "paper_profit_units": 0.85,
+        "paper_roi_pct": 12.14,
+        "paper_max_drawdown_units": 1.0,
         "sufficient_sample": false
       },
       {
@@ -2166,21 +2121,21 @@
       {
         "key": "Germany",
         "total": 2,
-        "settled": 1,
+        "settled": 2,
         "wins": 0,
-        "losses": 1,
-        "pending": 1,
+        "losses": 2,
+        "pending": 0,
         "void": 0,
         "hit_rate": 0.0,
         "hit_rate_interval_95": [
           0,
-          79.3
+          65.8
         ],
-        "priced_settled": 1,
+        "priced_settled": 2,
         "odds_coverage": 100.0,
-        "paper_profit_units": -1,
+        "paper_profit_units": -2,
         "paper_roi_pct": -100.0,
-        "paper_max_drawdown_units": 1,
+        "paper_max_drawdown_units": 2,
         "sufficient_sample": false
       },
       {
@@ -2308,21 +2263,21 @@
       {
         "key": "FT_1X2",
         "total": 25,
-        "settled": 19,
+        "settled": 20,
         "wins": 12,
-        "losses": 7,
-        "pending": 6,
+        "losses": 8,
+        "pending": 5,
         "void": 0,
-        "hit_rate": 63.2,
+        "hit_rate": 60.0,
         "hit_rate_interval_95": [
-          41.0,
-          80.9
+          38.7,
+          78.1
         ],
-        "priced_settled": 19,
+        "priced_settled": 20,
         "odds_coverage": 100.0,
-        "paper_profit_units": -3.19,
-        "paper_roi_pct": -16.79,
-        "paper_max_drawdown_units": 4.12,
+        "paper_profit_units": -4.19,
+        "paper_roi_pct": -20.95,
+        "paper_max_drawdown_units": 4.64,
         "sufficient_sample": false
       },
       {
@@ -2368,21 +2323,21 @@
       {
         "key": "MATCH_WINNER",
         "total": 5,
-        "settled": 1,
+        "settled": 2,
         "wins": 1,
-        "losses": 0,
-        "pending": 4,
+        "losses": 1,
+        "pending": 3,
         "void": 0,
-        "hit_rate": 100.0,
+        "hit_rate": 50.0,
         "hit_rate_interval_95": [
-          20.7,
-          100
+          9.5,
+          90.5
         ],
-        "priced_settled": 1,
+        "priced_settled": 2,
         "odds_coverage": 100.0,
-        "paper_profit_units": 0.4,
-        "paper_roi_pct": 40.0,
-        "paper_max_drawdown_units": 0,
+        "paper_profit_units": -0.6,
+        "paper_roi_pct": -30.0,
+        "paper_max_drawdown_units": 1.0,
         "sufficient_sample": false
       }
     ],
@@ -2501,21 +2456,21 @@
         "sport": "football",
         "country": "Germany",
         "total": 2,
-        "settled": 1,
+        "settled": 2,
         "wins": 0,
-        "losses": 1,
-        "pending": 1,
+        "losses": 2,
+        "pending": 0,
         "void": 0,
         "hit_rate": 0.0,
         "hit_rate_interval_95": [
           0,
-          79.3
+          65.8
         ],
-        "priced_settled": 1,
+        "priced_settled": 2,
         "odds_coverage": 100.0,
-        "paper_profit_units": -1,
+        "paper_profit_units": -2,
         "paper_roi_pct": -100.0,
-        "paper_max_drawdown_units": 1,
+        "paper_max_drawdown_units": 2,
         "sufficient_sample": false,
         "review_suggested": false
       },
@@ -2655,21 +2610,21 @@
         "sport": "tennis",
         "country": "Desconhecido",
         "total": 2,
-        "settled": 1,
+        "settled": 2,
         "wins": 1,
-        "losses": 0,
-        "pending": 1,
+        "losses": 1,
+        "pending": 0,
         "void": 0,
-        "hit_rate": 100.0,
+        "hit_rate": 50.0,
         "hit_rate_interval_95": [
-          20.7,
-          100
+          9.5,
+          90.5
         ],
-        "priced_settled": 1,
+        "priced_settled": 2,
         "odds_coverage": 100.0,
-        "paper_profit_units": 0.4,
-        "paper_roi_pct": 40.0,
-        "paper_max_drawdown_units": 0,
+        "paper_profit_units": -0.6,
+        "paper_roi_pct": -30.0,
+        "paper_max_drawdown_units": 1.0,
         "sufficient_sample": false,
         "review_suggested": false
       }
@@ -2740,6 +2695,26 @@
         "sufficient_sample": false
       },
       {
+        "key": "Germany Bundesliga I",
+        "total": 2,
+        "settled": 2,
+        "wins": 0,
+        "losses": 2,
+        "pending": 0,
+        "void": 0,
+        "hit_rate": 0.0,
+        "hit_rate_interval_95": [
+          0,
+          65.8
+        ],
+        "priced_settled": 2,
+        "odds_coverage": 100.0,
+        "paper_profit_units": -2,
+        "paper_roi_pct": -100.0,
+        "paper_max_drawdown_units": 2,
+        "sufficient_sample": false
+      },
+      {
         "key": "Italy Serie A",
         "total": 2,
         "settled": 2,
@@ -2777,26 +2752,6 @@
         "paper_profit_units": 0.38,
         "paper_roi_pct": 19.0,
         "paper_max_drawdown_units": 0,
-        "sufficient_sample": false
-      },
-      {
-        "key": "Germany Bundesliga I",
-        "total": 2,
-        "settled": 1,
-        "wins": 0,
-        "losses": 1,
-        "pending": 1,
-        "void": 0,
-        "hit_rate": 0.0,
-        "hit_rate_interval_95": [
-          0,
-          79.3
-        ],
-        "priced_settled": 1,
-        "odds_coverage": 100.0,
-        "paper_profit_units": -1,
-        "paper_roi_pct": -100.0,
-        "paper_max_drawdown_units": 1,
         "sufficient_sample": false
       },
       {
@@ -2980,6 +2935,26 @@
         "sufficient_sample": false
       },
       {
+        "key": "WTA Buenos Aires",
+        "total": 1,
+        "settled": 1,
+        "wins": 0,
+        "losses": 1,
+        "pending": 0,
+        "void": 0,
+        "hit_rate": 0.0,
+        "hit_rate_interval_95": [
+          0,
+          79.3
+        ],
+        "priced_settled": 1,
+        "odds_coverage": 100.0,
+        "paper_profit_units": -1,
+        "paper_roi_pct": -100.0,
+        "paper_max_drawdown_units": 1,
+        "sufficient_sample": false
+      },
+      {
         "key": "Euroleague",
         "total": 3,
         "settled": 0,
@@ -3078,46 +3053,26 @@
         "paper_roi_pct": null,
         "paper_max_drawdown_units": 0,
         "sufficient_sample": false
-      },
-      {
-        "key": "WTA Buenos Aires",
-        "total": 1,
-        "settled": 0,
-        "wins": 0,
-        "losses": 0,
-        "pending": 1,
-        "void": 0,
-        "hit_rate": null,
-        "hit_rate_interval_95": [
-          null,
-          null
-        ],
-        "priced_settled": 0,
-        "odds_coverage": 0,
-        "paper_profit_units": 0,
-        "paper_roi_pct": null,
-        "paper_max_drawdown_units": 0,
-        "sufficient_sample": false
       }
     ],
     "by_sources": [
       {
         "key": "betclan + olbg",
         "total": 22,
-        "settled": 18,
+        "settled": 19,
         "wins": 12,
-        "losses": 6,
-        "pending": 4,
+        "losses": 7,
+        "pending": 3,
         "void": 0,
-        "hit_rate": 66.7,
+        "hit_rate": 63.2,
         "hit_rate_interval_95": [
-          43.7,
-          83.7
+          41.0,
+          80.9
         ],
-        "priced_settled": 18,
+        "priced_settled": 19,
         "odds_coverage": 100.0,
-        "paper_profit_units": -2.24,
-        "paper_roi_pct": -12.44,
+        "paper_profit_units": -3.24,
+        "paper_roi_pct": -17.05,
         "paper_max_drawdown_units": 4.12,
         "sufficient_sample": false
       },
@@ -3182,6 +3137,26 @@
         "sufficient_sample": false
       },
       {
+        "key": "olbg + zulubet",
+        "total": 1,
+        "settled": 1,
+        "wins": 0,
+        "losses": 1,
+        "pending": 0,
+        "void": 0,
+        "hit_rate": 0.0,
+        "hit_rate_interval_95": [
+          0,
+          79.3
+        ],
+        "priced_settled": 1,
+        "odds_coverage": 100.0,
+        "paper_profit_units": -1,
+        "paper_roi_pct": -100.0,
+        "paper_max_drawdown_units": 1,
+        "sufficient_sample": false
+      },
+      {
         "key": "betclan + vitibet",
         "total": 1,
         "settled": 0,
@@ -3203,26 +3178,6 @@
       },
       {
         "key": "olbg + statarea",
-        "total": 1,
-        "settled": 0,
-        "wins": 0,
-        "losses": 0,
-        "pending": 1,
-        "void": 0,
-        "hit_rate": null,
-        "hit_rate_interval_95": [
-          null,
-          null
-        ],
-        "priced_settled": 0,
-        "odds_coverage": 0,
-        "paper_profit_units": 0,
-        "paper_roi_pct": null,
-        "paper_max_drawdown_units": 0,
-        "sufficient_sample": false
-      },
-      {
-        "key": "olbg + zulubet",
         "total": 1,
         "settled": 0,
         "wins": 0,
@@ -3266,21 +3221,21 @@
       {
         "key": "silver",
         "total": 31,
-        "settled": 20,
+        "settled": 22,
         "wins": 13,
-        "losses": 7,
-        "pending": 11,
+        "losses": 9,
+        "pending": 9,
         "void": 0,
-        "hit_rate": 65.0,
+        "hit_rate": 59.1,
         "hit_rate_interval_95": [
-          43.3,
-          81.9
+          38.7,
+          76.7
         ],
-        "priced_settled": 19,
-        "odds_coverage": 95.0,
-        "paper_profit_units": -1.79,
-        "paper_roi_pct": -9.42,
-        "paper_max_drawdown_units": 4.12,
+        "priced_settled": 21,
+        "odds_coverage": 95.5,
+        "paper_profit_units": -3.79,
+        "paper_roi_pct": -18.05,
+        "paper_max_drawdown_units": 4.19,
         "sufficient_sample": false
       },
       {
@@ -3328,21 +3283,21 @@
       {
         "key": "70–74",
         "total": 19,
-        "settled": 8,
+        "settled": 10,
         "wins": 4,
-        "losses": 4,
-        "pending": 11,
+        "losses": 6,
+        "pending": 9,
         "void": 0,
-        "hit_rate": 50.0,
+        "hit_rate": 40.0,
         "hit_rate_interval_95": [
-          21.5,
-          78.5
+          16.8,
+          68.7
         ],
-        "priced_settled": 7,
-        "odds_coverage": 87.5,
-        "paper_profit_units": -1.5,
-        "paper_roi_pct": -21.43,
-        "paper_max_drawdown_units": 3,
+        "priced_settled": 9,
+        "odds_coverage": 90.0,
+        "paper_profit_units": -3.5,
+        "paper_roi_pct": -38.89,
+        "paper_max_drawdown_units": 3.5,
         "sufficient_sample": false
       },
       {
@@ -3372,8 +3327,8 @@
           "date": "2026-11-27",
           "picks": 8,
           "wins": 1,
-          "losses": 2,
-          "pending": 5,
+          "losses": 3,
+          "pending": 4,
           "void": 0,
           "status": "lost",
           "late": 4,
@@ -3718,8 +3673,11 @@
               "competition": "Germany Bundesliga I",
               "kickoff": "2026-11-27T19:30:00+00:00",
               "odds": 1.72,
-              "result": "pending",
-              "final_score": null,
+              "result": "loss",
+              "final_score": [
+                3,
+                3
+              ],
               "sources": [
                 {
                   "source": "olbg",
@@ -5052,8 +5010,8 @@
       "license": "ODbL-1.0",
       "license_url": "https://www.openligadb.de/en/license",
       "collected": 0,
-      "status": "ok",
-      "message": "Resultados regulamentares verificados",
+      "status": "cached",
+      "message": "Intervalo de atualização respeitado",
       "next_check_at": "2026-11-28T03:18:20.616040+00:00"
     },
     {
@@ -5062,8 +5020,17 @@
       "resource": "soccer/all/20261128",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "soccer/ger.1/20261128",
+      "checked_at": "2026-11-27T21:43:14.608323+00:00",
+      "collected": 0,
+      "status": "ok",
+      "next_check_at": "2026-11-28T00:43:14.608323+00:00"
     },
     {
       "id": "espn",
@@ -5071,8 +5038,17 @@
       "resource": "soccer/ned.1/20261128",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "tennis/wta/20261128",
+      "checked_at": "2026-11-27T21:43:14.608323+00:00",
+      "collected": 1,
+      "status": "ok",
+      "next_check_at": "2026-11-28T00:43:14.608323+00:00"
     },
     {
       "id": "espn",
@@ -5080,8 +5056,17 @@
       "resource": "soccer/all/20261127",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 1,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "soccer/ger.1/20261127",
+      "checked_at": "2026-11-27T21:43:14.608323+00:00",
+      "collected": 1,
+      "status": "ok",
+      "next_check_at": "2026-11-28T00:43:14.608323+00:00"
     },
     {
       "id": "espn",
@@ -5089,8 +5074,17 @@
       "resource": "soccer/ned.1/20261127",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "tennis/wta/20261127",
+      "checked_at": "2026-11-27T21:43:14.608323+00:00",
+      "collected": 1,
+      "status": "ok",
+      "next_check_at": "2026-11-28T00:43:14.608323+00:00"
     },
     {
       "id": "zulubet_results",
@@ -5098,7 +5092,7 @@
       "resource": "zulubet/27-11-2026",
       "checked_at": "2026-11-27T21:18:20.616040+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T00:18:20.616040+00:00"
     },
     {
@@ -5126,7 +5120,7 @@
       "id": "olbg",
       "name": "OLBG",
       "status": "ok",
-      "collected": 131,
+      "collected": 132,
       "raw_rows": 178,
       "message": "Recolha concluída",
       "pages": [
@@ -5135,7 +5129,7 @@
           "url": "https://www.olbg.com/betting-tips/American_Football/11",
           "status": "ok",
           "raw_rows": 13,
-          "collected": 12,
+          "collected": 13,
           "missing_scores": 0,
           "message": "Recolha concluída"
         },
@@ -5291,7 +5285,7 @@
         }
       ],
       "today": 35,
-      "eligible": 1
+      "eligible": 0
     },
     {
       "id": "vitibet",
@@ -5318,22 +5312,22 @@
       "id": "statarea",
       "name": "Statarea",
       "status": "ok",
-      "collected": 235,
-      "raw_rows": 90,
+      "collected": 159,
+      "raw_rows": 91,
       "message": "Recolha concluída",
       "pages": [
         {
           "id": "statarea",
           "url": "https://www.statarea.com/olddevices/prediction/2026-11-27/",
           "status": "ok",
-          "raw_rows": 90,
-          "collected": 235,
+          "raw_rows": 91,
+          "collected": 159,
           "missing_scores": 0,
           "message": "Recolha concluída"
         }
       ],
-      "today": 235,
-      "eligible": 108
+      "today": 159,
+      "eligible": 71
     },
     {
       "id": "api_football",
@@ -5356,7 +5350,7 @@
       "indexed_by_date": [
         {
           "date": "2026-11-27",
-          "fixtures": 42
+          "fixtures": 36
         },
         {
           "date": "2026-11-28",
@@ -5371,7 +5365,7 @@
         {
           "date": "2026-11-27",
           "sport": "football",
-          "fixtures": 10
+          "fixtures": 8
         },
         {
           "date": "2026-11-27",
@@ -5381,7 +5375,7 @@
         {
           "date": "2026-11-27",
           "sport": "basketball",
-          "fixtures": 23
+          "fixtures": 19
         },
         {
           "date": "2026-11-27",
@@ -5502,11 +5496,6 @@
           "indexed_fixtures": 21
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1639840/deportivo-cuenca-v-manta-fc-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
           "url": "https://www.betclan.com/predictionsdetails/football/1557483/leeds-v-coventry-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
@@ -5582,6 +5571,11 @@
           "collected": 0
         },
         {
+          "url": "https://www.betclan.com/predictionsdetails/football/1563287/birmingham-v-bolton-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
           "url": "https://www.betclan.com/predictionsdetails/football/1563292/preston-v-norwich-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
@@ -5593,11 +5587,6 @@
         },
         {
           "url": "https://www.betclan.com/predictionsdetails/football/1563296/west-brom-v-bristol-city-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1563287/birmingham-v-bolton-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         },
@@ -5617,20 +5606,25 @@
           "collected": 0
         },
         {
+          "url": "https://www.betclan.com/predictionsdetails/football/1563881/rochdale-v-barnet-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
           "url": "https://www.betclan.com/predictionsdetails/football/1563291/millwall-v-burnley-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         }
       ],
-      "today": 4,
+      "today": 2,
       "eligible": 0
     }
   ],
   "request_id": "",
-  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/46069364075",
+  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/46072071673",
   "status": "partial",
   "pipeline_health": {
-    "checked_at": "2026-11-27T21:18:20.616040+00:00",
+    "checked_at": "2026-11-27T21:43:14.608323+00:00",
     "schedule": "13,43 * * * *",
     "timezone": "UTC",
     "workflow_state": "active",
