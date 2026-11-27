@@ -4,6 +4,7 @@ from .core import UTC, analyse, upcoming_previews
 from .sources import collect
 from .history import load_json, record, apply_results, auto_results, summary
 from .free_results import collect_free_results
+from .espn_results import collect_public_results
 from .fixture_catalog import collect_fixture_catalog, verify_fixture
 from .oddspedia import collect_oddspedia_feed
 from scripts.pipeline_health import collect_pipeline_health
@@ -39,6 +40,9 @@ def main():
     history["fixture_catalog"] = catalog
     history["oddspedia_feed"] = payload["oddspedia_feed"]
     free_results, free_statuses = collect_free_results(history, now)
+    public_results, public_statuses = collect_public_results(history, now)
+    free_results += public_results
+    free_statuses = free_statuses + public_statuses
     history["result_sources"] = free_statuses
     automatic, outcome_note = auto_results(history, now)
     # Conflicting final score evidence remains pending, rather than settling from whichever arrived first.

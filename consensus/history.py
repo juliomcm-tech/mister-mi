@@ -137,6 +137,43 @@ def metrics(records, min_sample=30):
             "paper_max_drawdown_units": round(max_drawdown, 3), "sufficient_sample": len(resolved) >= min_sample}
 
 
+def score_band(score):
+    try:
+        s = float(score)
+    except (TypeError, ValueError):
+        return "?"
+    return "90+" if s >= 90 else "80–89" if s >= 80 else "75–79" if s >= 75 else "70–74"
+
+
+def daily_slips(rows, days=60):
+    """Boletim do dia: todas as opções publicadas nesse dia juntas. Ganho só se todas ganharem
+    (as devolvidas não contam); a odd é o produto das odds observadas quando todas têm preço."""
+    by_day = defaultdict(list)
+    for row in rows:
+        by_day[row.get("date") or "?"].append(row)
+    out = []
+    for day in sorted(by_day, reverse=True)[:days]:
+        picks = sorted(by_day[day], key=lambda r: r.get("kickoff") or "")
+        live = [p for p in picks if p["result"] != "void"]
+        wins = sum(p["result"] == "win" for p in live)
+        losses = sum(p["result"] == "loss" for p in live)
+        pending = sum(p["result"] == "pending" for p in live)
+        status = "lost" if losses else "pending" if pending else "won" if live else "void"
+        priced = all(isinstance(p.get("odds"), (int, float)) and p["odds"] > 1 for p in live) and live
+        odd = 1.0
+        for p in live:
+            odd *= p["odds"] if priced else 1
+        out.append({"date": day, "picks": len(picks), "wins": wins, "losses": losses, "pending": pending,
+                    "void": len(picks) - len(live), "status": status, "combined_odds": round(odd, 2) if priced else None,
+                    "items": [{"match": p.get("match"), "selection": p.get("selection"), "competition": p.get("competition"),
+                               "kickoff": p.get("kickoff"), "odds": p.get("odds"), "result": p["result"],
+                               "final_score": p.get("final_score"), "sources": p.get("sources", []), "tier": p.get("tier")}
+                              for p in picks]})
+    settled = [d for d in out if d["status"] in {"won", "lost"}]
+    return {"days": out, "settled": len(settled), "won": sum(d["status"] == "won" for d in settled),
+            "hit_rate": round(100 * sum(d["status"] == "won" for d in settled) / len(settled), 1) if settled else None}
+
+
 def summary(history, settings):
     rows = history["records"]
     minimum = settings.get("history_min_sample", 30)
@@ -148,6 +185,20 @@ def summary(history, settings):
         for row in rows:
             groups[row.get(field, "Desconhecido")].append(row)
         result[output] = [{"key": key, **metrics(group, minimum)} for key, group in sorted(groups.items())]
+    # onde acerta e onde falha: por liga/competição, pelas fontes que concordaram e pelo nível (ouro/prata)
+    extra = {
+        "by_competition": lambda r: (r.get("competition") or "Desconhecida").strip(),
+        "by_sources": lambda r: " + ".join(sorted(s if isinstance(s, str) else s.get("source", "?") for s in r.get("sources", []))) or "?",
+        "by_tier": lambda r: r.get("tier") or "?",
+        "by_score_band": lambda r: score_band(r.get("score")),
+    }
+    for output, key in extra.items():
+        groups = defaultdict(list)
+        for row in rows:
+            groups[key(row)].append(row)
+        result[output] = sorted(({"key": k, **metrics(g, minimum)} for k, g in groups.items()),
+                                key=lambda x: (-x["settled"], -x["total"], x["key"]))
+    result["daily"] = daily_slips(rows)
     combinations = defaultdict(list)
     for row in rows:
         combinations[(row["sport"], row.get("country", "Desconhecido"))].append(row)
