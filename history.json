@@ -2487,26 +2487,26 @@
       "id": "espn",
       "name": "ESPN",
       "resource": "basketball/euroleague/20261120",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
+      "checked_at": "2026-11-27T13:41:21.329038+00:00",
       "collected": 0,
-      "status": "cached",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
+      "status": "ok",
+      "next_check_at": "2026-11-27T16:41:21.329038+00:00"
     },
     {
       "id": "espn",
       "name": "ESPN",
       "resource": "basketball/euroleague/20261119",
-      "checked_at": "2026-11-27T10:39:02.226894+00:00",
+      "checked_at": "2026-11-27T13:41:21.329038+00:00",
       "collected": 0,
-      "status": "cached",
-      "next_check_at": "2026-11-27T13:39:02.226894+00:00"
+      "status": "ok",
+      "next_check_at": "2026-11-27T16:41:21.329038+00:00"
     }
   ],
   "fixture_catalog": {
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-27T13:16:13.966798+00:00",
+    "generated_at": "2026-11-27T13:41:21.329038+00:00",
     "window_from": "2026-11-27",
     "window_through": "2026-11-29",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
