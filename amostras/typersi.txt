@@ -1,0 +1,1541 @@
+<!doctype html>
+<html lang="pl" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="verify-v1" content="rxlpGdtBmTh6deBMnSFD70bjv/O9jcrMZw/Z9d4LCcQ=" />
+    <meta name="verify-v1" content="Qosu1SmPl0SGAmFlg0cjirzKdO6RNHFkL6CVQRjFr1c=" />
+    <meta name="verify-v1" content="DOx8X5E78Qbp45NHgaJTqQ2OtoKHT30tXhRuz93/udg=" />
+    <meta name="google-site-verification" content="xZzAwWYelokLds5GEMGturmnd691MLFALObojaRiCmg" />
+    <!-- !!! -->
+    <meta name="robots" content="all" />
+    <!-- !!! -->
+    <title>Darmowe typy bukmacherskie na dziś i jutro</title>
+    <meta name="description" content="Jeżeli grasz u bukmacherów, możesz wykorzystać pewne typy na dziś z naszej strony. Typuj i obstawiaj piłkę nożną, koszykówkę, tenisa. Darmowe typy bukmacherskie za darmo to pomoc w typowaniu zakładów bukmacherskich." />
+    <meta name="keywords" content="typy bukmacherskie, typy na dziś, typy sportowe, darmowe typy bukmacherskie, bonusy bukmacherskie, pewniaki, typy na jutro, typy piłka nożna, typy bukmacherskie pewniaki, pewne typy, typy na dziś, top typy" />
+    <meta property="og:title" content="Darmowe typy bukmacherskie na dziś i jutro">
+    <meta property="og:description" content="Jeżeli grasz u bukmacherów, możesz wykorzystać pewne typy na dziś z naszej strony. Typuj i obstawiaj piłkę nożną, koszykówkę, tenisa. Darmowe typy bukmacherskie za darmo to pomoc w typowaniu zakładów bukmacherskich.">
+    <meta property="og:image" content="https://typersi.pl/favicon/apple-icon-180x180.png">
+    <meta property="og:url" content="https://typersi.pl">
+    <meta name="twitter:title" content="Darmowe typy bukmacherskie na dziś i jutro">
+    <meta name="twitter:description" content="Jeżeli grasz u bukmacherów, możesz wykorzystać pewne typy na dziś z naszej strony. Typuj i obstawiaj piłkę nożną, koszykówkę, tenisa. Darmowe typy bukmacherskie za darmo to pomoc w typowaniu zakładów bukmacherskich.">
+    <meta name="twitter:card" content="summary">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link id="favicon" rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#666666">
+    <meta name="msapplication-TileColor" content="#f1f1f1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="/assets/bs/css/bootstrap.min.css?250103" rel="stylesheet">
+    <link href="/assets/css/typersi.css?1739126093" rel="stylesheet">
+    <link href="/assets/fonts/style.css?250103" rel="stylesheet">
+
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z51HJLKZY7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z51HJLKZY7');
+    </script>
+</head>
+
+<body class="bg-body-tertiary gradient-bg">
+    <!-- loginORregister/add btn visible only mobile  -->
+    <div class="fixed-bottom d-block d-sm-none">
+        <a href="/account" class="btn btn-warning w-100 btn-typ d-flex txt-bg-body rounded-0 border border-warning p-2 text-decoration-none justify-content-center gap-2  align-items-center" title="Dodaj swój typ">
+            <span class="icon-whistle fs-3"></span>
+            <span class="text-uppercase">Dodaj swój typ</span>
+            <span class="icon-chevron-thin-right fs-5"></span>
+        </a>
+    </div>
+
+    <!-- START NAV.php -->
+    <div class="navbar bg-theme">
+        <div class="container-xxl d-block">
+            <div class="d-flex justify-content-sm-end align-items-center gap-1 gap-sm-4 py-1">
+                <div class="position-relative me-2">
+                    <div class="position-absolute tyborder border-start border-top border-1 d-none d-sm-block" style="width: 15px; height: 35px;"></div>
+                </div>
+                <div class="align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="icc" viewBox="0 0 24 24">
+                        <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                            <path d="M16 2v4M8 2v4m-5 4h18" />
+                        </g>
+                    </svg><span class="ms-1 font-monospace pe-md-2">2026/11/27</span>
+                </div>
+                <div class="w-25 tyborder border-top border-1 d-none d-sm-block"></div>
+                <ul class="nav flex-row align-items-center gap-4">
+                    <li class="nav-item"><a class="btn btn-sm btn-warning rounded-4 small ms-2 ms-sm-0" href="/account"><span class="icon-add pe-1"></span>Dodaj typ</a></li>
+                    <li class="nav-item link-wrapper"><a class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover" href="/contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <nav id="nav-main" class="navbar shadow shadow-bottom border-top tyborder border-1 bg-body navbar-expand-lg sticky-top  py-md-0">
+        <div class="container-xxl justify-content-between">
+            <a class="navbar-brand" href="/">
+                <img src="/assets/img/logo/logo-dark.svg" width="200" height="45" alt="logo typersi" class="logo logo-dark">
+                <img src="/assets/img/logo/logo-light.svg" width="200" height="45" alt="logo typersi" class="logo logo-light">
+                <span class="d-block text-uppercase logo-txt fw-bold text-wrap">Serwis bukmacherski - Twoje typy</span>
+            </a>
+            <div class="offcanvas offcanvas-end w-100" tabindex="-1" id="offcanvas-navbar" aria-labelledby="offcanvas-navbar">
+                <div class="offcanvas-header">
+                    <a href="/" class="flex-fill text-center" title="Strona główna">
+                        <img src="/assets/img/logo/logo-dark.svg" width="150" height="75" alt="logo" class="logo logo-dark">
+                        <img src="/assets/img/logo/logo-light.svg" width="150" height="75" alt="logo" class="logo logo-light">
+                    </a>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Zamknij"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul id="rori-navbar" class="fw-bold text-uppercase align-items-center navbar-nav gap-0 gap-lg-3 text-center my-lg-2 ms-auto flex-lg-wrap justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/" title="Strona główna"><span class="visually-hidden">Strona główna</span>
+                                <svg id="home-icon" class="icc" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <path d="m3 9l9-7l9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                        <path d="M9 22V12h6v10" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item "><a title="Fuksiarz - nagrody" href="/art/208/Fuksiarz-jak-dobrze-obstawiac" class="nav-link">Fuksiarz - nagrody</a></li><li class="nav-item "><a title="Betfan" href="/art/210/Betfan-informacja-o-bukmacherze-i-promocjach" class="nav-link">Betfan</a></li><li class="nav-item "><a title="Superbet" href="/art/207/Superbet-informacja-o-bukmacherze" class="nav-link">Superbet</a></li><li class="nav-item "><a title="Ranking" href="/ranking" class="nav-link">Ranking</a></li><li class="nav-item "><a title="News" href="/news/list" class="nav-link">News</a></li><li class="nav-item "><a title="Bonusy bukmacherskie" href="/art/50/promocje-bukmacherskie-i-bonusy" class="nav-link">Bonusy bukmacherskie</a></li>                    </ul>
+                    <div class="d-flex justify-content-around me-lg-4 me-xxl-0">
+                        <div class="dropdown nav-item align-self-center text-center">
+                            <button type="button" class="btn btn-link d-flex mx-auto mb-2 mb-md-0" id="dropdownLangLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icc" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10a15.3 15.3 0 0 1-4 10a15.3 15.3 0 0 1-4-10a15.3 15.3 0 0 1 4-10" />
+                                    </g>
+                                </svg>
+                            </button>
+
+                                                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="dropdownLangLink">
+                                <li><a class="dropdown-item small" rel="canonical" hreflang="pl" href="https://typersi.pl/"><img class="flag-img" src="/assets/img/lang/pl.svg" width="32" height="16" alt="Flag of Poland">Polski</a></li>
+                                <li><a class="dropdown-item small" rel="alternate" hreflang="en" href="https://typersi.com/"><img class="flag-img" src="/assets/img/lang/gb.svg" width="32" height="16" alt="Flag of Great Britain">English</a></li>
+                                <li><a class="dropdown-item small" rel="alternate" hreflang="de" href="https://tippswetten.de/"><img class="flag-img" src="/assets/img/lang/de.svg" width="32" height="16" alt="Flag of Germany">Deutsch</a></li>
+                                <li><a class="dropdown-item small" rel="alternate" hreflang="it" href="https://scommesse.typersi.com/"><img class="flag-img" src="/assets/img/lang/it.svg" width="32" height="16" alt="Flag of Italy">Italiano</a></li>
+                                <li><a class="dropdown-item small" rel="alternate" hreflang="hr" href="https://tipovi.typersi.com/"><img class="flag-img" src="/assets/img/lang/hr.svg" width="32" height="16" alt="Flag of Croatia">Hrvatski</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-center d-flex align-self-center justify-content-center">
+                            <label class="mode-switch align-self-center ms-2"><span class="visually-hidden small">Tryb ciemny</span>
+                                <input class="toggle-mode" type="checkbox" id="darkModeSwitch" aria-label="Tryb ciemny" />
+                                <span class="toggle-slot d-block">
+                                    <span class="sun-icon-wrapper d-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="16" height="16" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <rect x="0" y="0" width="24" height="24" fill="none" stroke="none" />
+                                            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="5" />
+                                                <path d="M12 1v2" />
+                                                <path d="M12 21v2" />
+                                                <path d="M4.22 4.22l1.42 1.42" />
+                                                <path d="M18.36 18.36l1.42 1.42" />
+                                                <path d="M1 12h2" />
+                                                <path d="M21 12h2" />
+                                                <path d="M4.22 19.78l1.42-1.42" />
+                                                <path d="M18.36 5.64l1.42-1.42" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                    <span class="toggle-button d-block"></span>
+                                    <span class="moon-icon-wrapper d-inline-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="16" height="16" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <rect x="0" y="0" width="24" height="24" fill="none" stroke="none" />
+                                            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M21 12.79A9 9 0 1 1 11.21 3A7 7 0 0 0 21 12.79z" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-actions d-flex align-items-center">
+                <button class="btn fs-4 lh-1 d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
+                    <span class="icon-menu"></span><span class="visually-hidden-focusable">Menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- STOP NAV.php -->
+
+
+    <!-- TODO hero start-->
+    <div class="container-xxl">
+        <div class="row py-4 py-4">
+            <div class="col-lg-5 hero py-4 py-md-0 d-flex">
+                <div class="text-center mx-auto align-self-center justify-content-center">
+                    <div rel="100_up_220" class="bannerBoxDiv banner banners_up text-center"></div>                </div>
+            </div>
+            <div class="col-lg-7 order-sm-first align-self-center ps-md-5">
+                <h1 class="fw-bold">Typersi - Serwis bukmacherski, Twoje typy! <span class="icon-trophy-one1 fs-1 text-primary"></span></h1>
+                <p><p>Na Typersi.pl, liderze wśr&oacute;d serwis&oacute;w bukmacherskich, masz wyjątkową okazję odkryć, jak typują inni użytkownicy i jakie najnowsze bonusy bukmacherskie są dostępne. Dostarczamy typy bukmacherskie doświadczonych typer&oacute;w. Dziel się własnymi typami i zanurz się w świecie Typers&oacute;w.</p>
+</p>
+                <div class="text-center text-md-start">
+                    <a href="/account" class="btn btn-warning btn-typ d-inline-flex txt-bg-body border border-warning rounded-4 p-2 text-decoration-none gap-2 px-3 mt-auto align-items-center" title="Zarejestruj się">
+                        <span class="icon-soccer-court fs-3"></span>
+                        <span class="text-uppercase border-dark border-end lh-sm pe-3">Dołącz<span class="d-block small">Za darmo</span></span>
+                        <span class="icon-chevron-thin-right fs-5"></span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="d-flex flex-wrap flex-column flex-sm-row justify-content-center text-md-center gap-1 typpanels border-top">
+
+                                    <div class="item bg-body btn-typ rounded-bottom-4 d-flex flex-column flex-fill p-3 align-items-md-center position-relative">
+                    <div class="d-flex gap-3">
+                        <img class="align-self-center img-fluid lazyload" src="/link/5.jpg"
+                            data-src="/link/5.jpg" title="fortuna" alt="logo fortuna" width="97" height="24" loading="lazy" />
+                        <div class="p-1 pe-4 d-flex flex-column border-end">
+                            <h2 class="h5 mb-auto fw-bold h-100">Pakiet Powitalny 4321 PLN JAZDA!</h2>
+                            <a href="https://m.lvbetpartners.pl/Redirect.aspx?mid=106&sid=226&cid=&pid=&affid=655032" class="stretched-link" title="Pakiet Powitalny 4321 PLN JAZDA!"></a>
+                        </div>
+                        <span class="_typhover icon-chevron-thin-right fs-4 ps-1 align-self-center"></span>
+                    </div>
+                </div>
+                            <div class="item bg-body btn-typ rounded-bottom-4 d-flex flex-column flex-fill p-3 align-items-md-center position-relative">
+                    <div class="d-flex gap-3">
+                        <img class="align-self-center img-fluid lazyload" src="/link/4.jpg"
+                            data-src="/link/4.jpg" title="fortuna" alt="logo fortuna" width="97" height="24" loading="lazy" />
+                        <div class="p-1 pe-4 d-flex flex-column border-end">
+                            <h2 class="h5 mb-auto fw-bold h-100">100% do 200 zł</h2>
+                            <a href="https://betfan.pl/sg/q6v3b8tmlg" class="stretched-link" title="100% do 200 zł"></a>
+                        </div>
+                        <span class="_typhover icon-chevron-thin-right fs-4 ps-1 align-self-center"></span>
+                    </div>
+                </div>
+                        </div>
+
+    <div class="container-xxl">
+        <div class="row pt-5">
+
+                        <!-- START LEFT -->
+            <div class="d-none d-xxl-block col-xxl-2">
+                <div class="py-4 sticky-xxl-top z-1">
+                    <div class="pt-5 mt-4">
+                        <div rel="101_up_220" class="bannerBoxDiv banner banners_up text-center"></div>
+                        <div rel="101_down_220" class="bannerBoxDiv banner banners_down text-center"></div>                    </div>
+                </div>
+            </div>
+            <!-- START LEFT -->
+
+            <!-- START CENTER -->
+            <div class="col-md-9 col-lg-9 col-xxl-8">
+                <div class="main">
+                    <div rel="111_up" class="bannerTableDiv typ_block mbf clearfix pt20 banner banners_up text-center"></div>    <div class="col py-4">
+        <h2 class="typ fw-bold">Typy najlepszej piątki z rankingu typerów</h2>
+        <div class="bg-theme table-responsive border rounded-4 shadow">
+            <table class="table bg-theme align-middle text-nowrap"><thead class="text-uppercase lh-1"><th></th><th>TYPER</th><th>GODZ</th>
+        <th>BUKMACHER</th>
+        <th>SPOTKANIE / LIGA</th>
+		<th>TYP</th><th>KURS</th>
+		<th>WYNIK</th>
+		</tr></thead><tbody><tr><td><button class="btn btn-outline-primary p-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target=".collapseRow47200" aria-expanded="false">
+            <span class="icon-unfold_more"></span>
+            </button>
+            </td><td class="fw-bold">
+                <span class="icon-arrow_drop_down text-danger  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/47200/ambao" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="-1">
+                    ambao
+                </a>
+                </td><td>20:30</td><td><a rel="noreferrer" target="_blank" href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032"><img class="lazyload" alt="logo LVbet" title="LVbet" src="/bookie/119.jpg" data-src="/bookie/119.jpg" width="97" height="24" loading="lazy" /></a></td><td>Leganes - Sabadell</td><td> x </td><td>2.99</td><td>Piłka nożna</td></tr><tr class="collapse collapseRow47200"><td></td><td class="fw-bold">
+                <span class="icon-arrow_drop_down text-danger  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/47200/ambao" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="-1">
+                    ambao
+                </a>
+                </td><td>21:00</td><td><a rel="noreferrer" target="_blank" href="https://superbet.pl/rejestracja?bonus=TYPERSI"><img class="lazyload" alt="logo Superbet" title="Superbet" src="/bookie/176.jpg" data-src="/bookie/176.jpg" width="97" height="24" loading="lazy" /></a></td><td>Southampton - Middlesbrough</td><td> x </td><td>3.61</td><td>Piłka nożna</td></tr></tbody></table>        </div>
+    </div>
+<div rel="111_down" class="bannerTableDiv typ_block mbf clearfix pt20 banner banners_up text-center"></div>    <div class="p-md-4 mt-4">
+        <h3 class="h2 typ fw-bold text-center"><span class="icon-star fs-2 pe-2 text-primary"></span>Promocje zakładów bukmacherskich</h3>
+        <p class="mx-md-5"></p>
+        <div class="d-flex flex-wrap justify-content-around _promo py-4 gap-2 p-md-3 mx-2 mx-md-5 text-center typboxes">
+            <a href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032" target="_blank" rel="noreferrer" 
+                class="bg-body d-flex text-body border rounded-4 shadow p-2 p-md-3 text-decoration-none gap-2">
+                <img class="lazyload" src="/prom/180.jpg" data-src="/prom/180.jpg" 
+                alt="4321 PLN JAZDA!"  width="97" height="24" loading="lazy"/>
+                <span class="fw-bold">4321 PLN JAZDA!</span>
+                </a><a href="https://record.fuksiarzaffiliates.pl/_MZNPeKpK4kTT2Fu8bIPGIGNd7ZgqdRLk/1/" target="_blank" rel="noreferrer" 
+                class="bg-body d-flex text-body border rounded-4 shadow p-2 p-md-3 text-decoration-none gap-2">
+                <img class="lazyload" src="/prom/247.jpg" data-src="/prom/247.jpg" 
+                alt="1010 PLN"  width="97" height="24" loading="lazy"/>
+                <span class="fw-bold">1010 PLN</span>
+                </a><a href="https://betfan.pl/sg/kd90dfbdww" target="_blank" rel="noreferrer" 
+                class="bg-body d-flex text-body border rounded-4 shadow p-2 p-md-3 text-decoration-none gap-2">
+                <img class="lazyload" src="/prom/214.jpg" data-src="/prom/214.jpg" 
+                alt="3 x 200 ZŁ"  width="97" height="24" loading="lazy"/>
+                <span class="fw-bold">3 x 200 ZŁ</span>
+                </a><a href="https://superbet.pl/rejestracja?bonus=TYPERSI" target="_blank" rel="noreferrer" 
+                class="bg-body d-flex text-body border rounded-4 shadow p-2 p-md-3 text-decoration-none gap-2">
+                <img class="lazyload" src="/prom/246.jpg" data-src="/prom/246.jpg" 
+                alt="3754 PLN"  width="97" height="24" loading="lazy"/>
+                <span class="fw-bold">3754 PLN</span>
+                </a><a href="https://betclic.pl/landing/partner?id=SWO_550_7A&zone=264" target="_blank" rel="noreferrer" 
+                class="bg-body d-flex text-body border rounded-4 shadow p-2 p-md-3 text-decoration-none gap-2">
+                <img class="lazyload" src="/prom/215.jpg" data-src="/prom/215.jpg" 
+                alt="200 PLN"  width="97" height="24" loading="lazy"/>
+                <span class="fw-bold">200 PLN</span>
+                </a>        </div>
+    </div>
+<div rel="112_up" class="bannerTableDiv typ_block mbf clearfix pt20 banner banners_up text-center"></div>    <div class="col py-4">
+        <h2 class="typ fw-bold">Typy bukmacherskie najskuteczniejszych typerów</h2>
+        <div class="bg-theme table-responsive border rounded-4 shadow">
+            <table class="table bg-theme align-middle text-nowrap"><thead class="text-uppercase lh-1"><th></th><th>TYPER</th><th>GODZ</th>
+        <th>BUKMACHER</th>
+        <th>SPOTKANIE / LIGA</th>
+		<th>TYP</th><th>KURS</th>
+		<th>WYNIK</th>
+		</tr></thead><tbody><tr><td><button class="btn btn-outline-primary p-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target=".collapseRow54483" aria-expanded="false">
+            <span class="icon-unfold_more"></span>
+            </button>
+            </td><td class="fw-bold">
+                <span class="icon-arrow_drop_down text-danger  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/54483/Cobra2407" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="-10">
+                    Cobra2407
+                </a>
+                </td><td>12:30</td><td><a rel="noreferrer" target="_blank" href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032"><img class="lazyload"" alt="logo LVbet" title="LVbet" src="/bookie/119.jpg" data-src="/bookie/119.jpg" width="97" height="24" loading="lazy" /></a></td><td>Ilves (Fin) - TPS (Fin)</td><td> 1 </td><td>1.90</td><td>Piłka nożna</td></tr><tr class="collapse collapseRow54483"><td></td><td class="fw-bold">
+                <span class="icon-arrow_drop_down text-danger  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/54483/Cobra2407" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="-10">
+                    Cobra2407
+                </a>
+                </td><td>13:20</td><td><a rel="noreferrer" target="_blank" href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032"><img class="lazyload"" alt="logo LVbet" title="LVbet" src="/bookie/119.jpg" data-src="/bookie/119.jpg" width="97" height="24" loading="lazy" /></a></td><td>Al Qalah - Al Taraji</td><td> 1 </td><td>1.98</td><td>Piłka nożna</td></tr><tr><td><button class="btn btn-outline-primary p-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target=".collapseRow45260" aria-expanded="false">
+            <span class="icon-unfold_more"></span>
+            </button>
+            </td><td class="fw-bold">
+                <span class="icon-arrow_drop_down text-danger  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/45260/maer20" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="-2">
+                    maer20
+                </a>
+                </td><td>16:00</td><td><a rel="noreferrer" target="_blank" href="https://superbet.pl/rejestracja?bonus=TYPERSI"><img class="lazyload"" alt="logo Superbet" title="Superbet" src="/bookie/176.jpg" data-src="/bookie/176.jpg" width="97" height="24" loading="lazy" /></a></td><td>Wrexham - Portsmouth</td><td> 1 </td><td>2.10</td><td>Piłka nożna</td></tr><tr class="collapse collapseRow45260"><td></td><td class="fw-bold">
+                <span class="icon-arrow_drop_down text-danger  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/45260/maer20" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="-2">
+                    maer20
+                </a>
+                </td><td>19:30</td><td><a rel="noreferrer" target="_blank" href="https://superbet.pl/rejestracja?bonus=TYPERSI"><img class="lazyload"" alt="logo Superbet" title="Superbet" src="/bookie/176.jpg" data-src="/bookie/176.jpg" width="97" height="24" loading="lazy" /></a></td><td>Petrolul - FC Arges</td><td> 1 </td><td>2.09</td><td>Piłka nożna</td></tr></tbody></table>        </div>
+    </div>
+<div rel="112_down" class="bannerTableDiv typ_block mbf clearfix pt20 banner banners_up text-center"></div><div rel="113_up" class="bannerTableDiv typ_block mbf clearfix pt20 banner banners_up text-center"></div>    <div class="col py-4">
+        <h2 class="typ fw-bold">Typy na dziś</h2>
+        <div class="bg-theme table-responsive border rounded-4 shadow">
+            <table class="table bg-theme align-middle text-nowrap"><thead class="text-uppercase lh-1"><th></th><th>TYPER</th><th>GODZ</th>
+        <th>BUKMACHER</th>
+        <th>SPOTKANIE / LIGA</th>
+		<th>TYP</th><th>KURS</th>
+		<th>WYNIK</th>
+		</tr></thead><tbody><tr><td><button class="btn btn-outline-primary p-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target=".collapseRow60907" aria-expanded="false">
+            <span class="icon-unfold_more"></span>
+            </button>
+            </td><td class="fw-bold">
+                <span class="icon-arrow_drop_up text-warning  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/60907/Kruk1" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="+5">
+                    Kruk1
+                </a>
+                </td><td>12:30</td><td><a rel="noreferrer" target="_blank" href="https://betfan.pl/sg/kd90dfbdww"><img class="lazyload"" alt="logo Betfan" title="Betfan" src="/bookie/150.jpg" data-src="/bookie/150.jpg" width="97" height="24" loading="lazy" /></a></td><td>Shams Azar Qazvin - Kheybar Khorramabad</td><td> x </td><td>2.82</td><td>Piłka nożna</td></tr><tr class="collapse collapseRow60907"><td></td><td class="fw-bold">
+                <span class="icon-arrow_drop_up text-warning  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/60907/Kruk1" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="+5">
+                    Kruk1
+                </a>
+                </td><td>14:00</td><td><a rel="noreferrer" target="_blank" href="https://record.fuksiarzaffiliates.pl/_MZNPeKpK4kTT2Fu8bIPGIGNd7ZgqdRLk/1/"><img class="lazyload"" alt="logo Fuksiarz" title="Fuksiarz" src="/bookie/178.jpg" data-src="/bookie/178.jpg" width="97" height="24" loading="lazy" /></a></td><td>Esteghlal Khuzestan - Malavan</td><td> x </td><td>2.93</td><td>Piłka nożna</td></tr><tr><td></td><td class="fw-bold">
+                <span class="icon-arrow_drop_up text-warning  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/50239/Rekin1981" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="+3">
+                    Rekin1981
+                </a>
+                </td><td>04:10</td><td><a rel="noreferrer" target="_blank" href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032"><img class="lazyload"" alt="logo LVbet" title="LVbet" src="/bookie/119.jpg" data-src="/bookie/119.jpg" width="97" height="24" loading="lazy" /></a></td><td>Club Leon - Cruz Azul</td><td> x </td><td>3.47</td><td class="_tloss"><div class="fs-5 fw-bold text-center font-monospace">0 : 4</div></td></tr><tr><td><button class="btn btn-outline-primary p-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target=".collapseRow54469" aria-expanded="false">
+            <span class="icon-unfold_more"></span>
+            </button>
+            </td><td class="fw-bold">
+                <span class="icon-arrow_drop_up text-warning  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/54469/weberick" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="+1">
+                    weberick
+                </a>
+                </td><td>18:00</td><td><a rel="noreferrer" target="_blank" href="https://betfan.pl/sg/kd90dfbdww"><img class="lazyload" alt="logo Betfan" title="Betfan" src="/bookie/150.jpg" data-src="/bookie/150.jpg" width="97" height="24" loading="lazy" /></a></td><td>Alanyaspor - Konyaspor</td><td> 1 </td><td>2.52</td><td>Piłka nożna</td></tr><tr class="collapse collapseRow54469"><td></td><td class="fw-bold">
+                <span class="icon-arrow_drop_up text-warning  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/54469/weberick" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="+1">
+                    weberick
+                </a>
+                </td><td>19:30</td><td><a rel="noreferrer" target="_blank" href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032"><img class="lazyload" alt="logo LVbet" title="LVbet" src="/bookie/119.jpg" data-src="/bookie/119.jpg" width="97" height="24" loading="lazy" /></a></td><td>Grazer AK - Altach</td><td> 1 </td><td>3.23</td><td>Piłka nożna</td></tr><tr><td><button class="btn btn-outline-primary p-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target=".collapseRow25052" aria-expanded="false">
+            <span class="icon-unfold_more"></span>
+            </button>
+            </td><td class="fw-bold">
+                <span class="icon-arrow_drop_up text-warning  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/25052/Machin1990" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="+27">
+                    Machin1990
+                </a>
+                </td><td>18:00</td><td><a rel="noreferrer" target="_blank" href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032"><img class="lazyload"" alt="logo LVbet" title="LVbet" src="/bookie/119.jpg" data-src="/bookie/119.jpg" width="97" height="24" loading="lazy" /></a></td><td>Rakow - Piast Gliwice</td><td> 1 </td><td>1.84</td><td>Piłka nożna</td></tr><tr class="collapse collapseRow25052"><td></td><td class="fw-bold">
+                <span class="icon-arrow_drop_up text-warning  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/25052/Machin1990" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="+27">
+                    Machin1990
+                </a>
+                </td><td>20:15</td><td><a rel="noreferrer" target="_blank" href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032"><img class="lazyload"" alt="logo LVbet" title="LVbet" src="/bookie/119.jpg" data-src="/bookie/119.jpg" width="97" height="24" loading="lazy" /></a></td><td>Wisla - Motor Lublin</td><td> 1 </td><td>1.92</td><td>Piłka nożna</td></tr><tr><td></td><td class="fw-bold">
+                <span class="icon-arrow_drop_up text-warning  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/47808/mazi" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="+2">
+                    mazi
+                </a>
+                </td><td>18:00</td><td><a rel="noreferrer" target="_blank" href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032"><img class="lazyload"" alt="logo LVbet" title="LVbet" src="/bookie/119.jpg" data-src="/bookie/119.jpg" width="97" height="24" loading="lazy" /></a></td><td>Rakow - Piast Gliwice</td><td> 2 </td><td>3.80</td><td>Piłka nożna</td></tr><tr><td><button class="btn btn-outline-primary p-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target=".collapseRow24973" aria-expanded="false">
+            <span class="icon-unfold_more"></span>
+            </button>
+            </td><td class="fw-bold">
+                <span class="icon-arrow_drop_down text-danger  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/24973/hujek" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="-7">
+                    hujek
+                </a>
+                </td><td>18:00</td><td><a rel="noreferrer" target="_blank" href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032"><img class="lazyload"" alt="logo LVbet" title="LVbet" src="/bookie/119.jpg" data-src="/bookie/119.jpg" width="97" height="24" loading="lazy" /></a></td><td>Alanyaspor - Konyaspor</td><td> x </td><td>3.19</td><td>Piłka nożna</td></tr><tr class="collapse collapseRow24973"><td></td><td class="fw-bold">
+                <span class="icon-arrow_drop_down text-danger  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/24973/hujek" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="-7">
+                    hujek
+                </a>
+                </td><td>21:15</td><td><a rel="noreferrer" target="_blank" href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032"><img class="lazyload"" alt="logo LVbet" title="LVbet" src="/bookie/119.jpg" data-src="/bookie/119.jpg" width="97" height="24" loading="lazy" /></a></td><td>Maritimo - Nacional</td><td> x </td><td>3.28</td><td>Piłka nożna</td></tr><tr><td><button class="btn btn-outline-primary p-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target=".collapseRow61054" aria-expanded="false">
+            <span class="icon-unfold_more"></span>
+            </button>
+            </td><td class="fw-bold">
+                <span class="icon-arrow_drop_up text-warning  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/61054/Bart87" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="+9">
+                    Bart87
+                </a>
+                </td><td>18:00</td><td><a rel="noreferrer" target="_blank" href="https://betclic.pl/landing/partner?id=SWO_550_7A&zone=264"><img class="lazyload"" alt="logo Betclic" title="Betclic" src="/bookie/151.jpg" data-src="/bookie/151.jpg" width="97" height="24" loading="lazy" /></a></td><td>Tychy - Chojniczanka</td><td> 1 </td><td>1.61</td><td>Piłka nożna</td></tr><tr class="collapse collapseRow61054"><td></td><td class="fw-bold">
+                <span class="icon-arrow_drop_up text-warning  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/61054/Bart87" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="+9">
+                    Bart87
+                </a>
+                </td><td>20:30</td><td><a rel="noreferrer" target="_blank" href="https://betclic.pl/landing/partner?id=SWO_550_7A&zone=264"><img class="lazyload"" alt="logo Betclic" title="Betclic" src="/bookie/151.jpg" data-src="/bookie/151.jpg" width="97" height="24" loading="lazy" /></a></td><td>Chrobry Glogow - Skierniewice</td><td> 1 </td><td>2.10</td><td>Piłka nożna</td></tr><tr><td><button class="btn btn-outline-primary p-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target=".collapseRow60849" aria-expanded="false">
+            <span class="icon-unfold_more"></span>
+            </button>
+            </td><td class="fw-bold">
+                <span class="icon-arrow_drop_down text-danger  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/60849/Iwonka1990" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="-14">
+                    Iwonka1990
+                </a>
+                </td><td>05:30</td><td><a rel="noreferrer" target="_blank" href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032"><img class="lazyload"" alt="logo LVbet" title="LVbet" src="/bookie/119.jpg" data-src="/bookie/119.jpg" width="97" height="24" loading="lazy" /></a></td><td>Oregon - Texas Tech</td><td> 1 </td><td>4.45</td><td>Piłka nożna</td></tr><tr class="collapse collapseRow60849"><td></td><td class="fw-bold">
+                <span class="icon-arrow_drop_down text-danger  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/60849/Iwonka1990" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="-14">
+                    Iwonka1990
+                </a>
+                </td><td>04:30</td><td><a rel="noreferrer" target="_blank" href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032"><img class="lazyload"" alt="logo LVbet" title="LVbet" src="/bookie/119.jpg" data-src="/bookie/119.jpg" width="97" height="24" loading="lazy" /></a></td><td>Nebraska O. - Pacific</td><td> 1 </td><td>3.70</td><td class="_tloss"><div class="fs-5 fw-bold text-center font-monospace">62 : 71</div></td></tr><tr><td></td><td class="fw-bold">
+                <span class="icon-arrow_drop_up text-warning  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/65223/olek676767" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="+1">
+                    olek676767
+                </a>
+                </td><td>21:00</td><td><a rel="noreferrer" target="_blank" href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032"><img class="lazyload"" alt="logo LVbet" title="LVbet" src="/bookie/119.jpg" data-src="/bookie/119.jpg" width="97" height="24" loading="lazy" /></a></td><td>Nottingham - Chelsea</td><td> 2 </td><td>2.78</td><td>Piłka nożna</td></tr><tr><td><button class="btn btn-outline-primary p-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target=".collapseRow64385" aria-expanded="false">
+            <span class="icon-unfold_more"></span>
+            </button>
+            </td><td class="fw-bold">
+                <span class="icon-arrow_drop_down text-danger  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/64385/Spejs" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="-23">
+                    Spejs
+                </a>
+                </td><td>01:30</td><td><a rel="noreferrer" target="_blank" href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032"><img class="lazyload"" alt="logo LVbet" title="LVbet" src="/bookie/119.jpg" data-src="/bookie/119.jpg" width="97" height="24" loading="lazy" /></a></td><td>Montevideo City - Nacional</td><td> x </td><td>3.26</td><td class="_tloss"><div class="fs-5 fw-bold text-center font-monospace">0 : 1</div></td></tr><tr class="collapse collapseRow64385"><td></td><td class="fw-bold">
+                <span class="icon-arrow_drop_down text-danger  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/64385/Spejs" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="-23">
+                    Spejs
+                </a>
+                </td><td>03:00</td><td><a rel="noreferrer" target="_blank" href="https://m.lvbetpartners.pl/Redirect.aspx?mid=32&sid=226&cid=&pid=&affid=655032"><img class="lazyload"" alt="logo LVbet" title="LVbet" src="/bookie/119.jpg" data-src="/bookie/119.jpg" width="97" height="24" loading="lazy" /></a></td><td>Juarez U21 - Guadalajara Chivas U21</td><td> x </td><td>3.14</td><td class="_tloss"><div class="fs-5 fw-bold text-center font-monospace">0 : 1</div></td></tr><tr><td><button class="btn btn-outline-primary p-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target=".collapseRow39877" aria-expanded="false">
+            <span class="icon-unfold_more"></span>
+            </button>
+            </td><td class="fw-bold">
+                <span class="icon-arrow_drop_up text-warning  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/39877/Cactus" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="+7">
+                    Cactus
+                </a>
+                </td><td>20:00</td><td><a rel="noreferrer" target="_blank" href="https://superbet.pl/rejestracja?bonus=TYPERSI"><img class="lazyload" alt="logo Superbet" title="Superbet" src="/bookie/176.jpg" data-src="/bookie/176.jpg" width="97" height="24" loading="lazy" /></a></td><td>USLPV - Valenciennes</td><td> 2 </td><td>1.91</td><td>Piłka nożna</td></tr><tr class="collapse collapseRow39877"><td></td><td class="fw-bold">
+                <span class="icon-arrow_drop_up text-warning  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/39877/Cactus" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="+7">
+                    Cactus
+                </a>
+                </td><td>20:30</td><td><a rel="noreferrer" target="_blank" href="https://betfan.pl/sg/kd90dfbdww"><img class="lazyload" alt="logo Betfan" title="Betfan" src="/bookie/150.jpg" data-src="/bookie/150.jpg" width="97" height="24" loading="lazy" /></a></td><td>Werder Bremen - B. Monchengladbach</td><td> 1 </td><td>1.70</td><td>Piłka nożna</td></tr><tr><td></td><td class="fw-bold">
+                <span class="icon-arrow_drop_down text-danger  me-1"></span>
+                <span class="icon-person text-body-tertiary me-1"></span>
+                <a href="/typer/51361/DODONI" class="link-underline-warning link-offset-2 link-body-emphasis" data-bs-toggle="tooltip" data-bs-title="-17">
+                    DODONI
+                </a>
+                </td><td>13:45</td><td><a rel="noreferrer" target="_blank" href="https://betfan.pl/sg/kd90dfbdww"><img class="lazyload"" alt="logo Betfan" title="Betfan" src="/bookie/150.jpg" data-src="/bookie/150.jpg" width="97" height="24" loading="lazy" /></a></td><td>Aluminium Arak - Persepolis</td><td> x </td><td>3.15</td><td>Piłka nożna</td></tr></tbody></table>
+            <div class="d-flex justify-content-around">
+                <div class="py-3 px-1 p-md-3">
+                    <a href="/wczoraj/yesterday" title="Zobacz typy z wczoraj" class="btn btn-sm btn-primary d-flex align-items-center rounded-4 gap-1 h-100" tabindex="-1" role="button" aria-disabled="false">
+                        <span class="icon-skip_previous fs-4"></span>
+                        <span class="small text-nowrap">wczorajsze typy</span>
+                    </a>
+                </div>
+                <div class="py-3 px-1 p-md-3">
+                    <a href="/pozostali/remainder" title="Zobacz pozostałe" class="btn btn-sm btn-primary d-flex align-items-center rounded-4 gap-1 h-100" tabindex="-1" role="button" aria-disabled="false">
+                        <span class="small text-nowrap">pozostali</span>
+                    </a>
+                </div>
+                <div class="py-3 px-1 p-md-3">
+                    <a href="/jutro/tomorrow" title="Zobacz Typy na jutro" class="btn btn-sm btn-primary d-flex align-items-center rounded-4 gap-1 h-100" tabindex="-1" role="button" aria-disabled="false">
+                        <span class="small text-nowrap">Typy na jutro</span>
+                        <span class="icon-skip_next fs-4"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<div rel="113_down" class="bannerTableDiv typ_block mbf clearfix pt20 banner banners_up text-center"></div>
+
+<div class="col pb-4"><div class="d-flex flex-wrap justify-content-around _promo mt-5 py-4 gap-2 p-md-3 mx-2 mx-md-5 small typboxes"><a href="stat.html" class="bg-body d-flex text-body border rounded-4 shadow p-2 text-decoration-none gap-2 align-items-center" title="Statystyki">
+            <span class="icon-star fs-3"></span>
+            <span class="text-uppercase border-end pe-3">Statystyki</span>
+            <span class="icon-chevron-thin-right text-muted fs-5"></span>
+        </a><a href="art,40,Transmisje.html" class="bg-body d-flex text-body border rounded-4 shadow p-2 text-decoration-none gap-2 align-items-center" title="Transmisje meczów LIVE">
+            <span class="icon-star fs-3"></span>
+            <span class="text-uppercase border-end pe-3">Transmisje meczów LIVE</span>
+            <span class="icon-chevron-thin-right text-muted fs-5"></span>
+        </a><a href="art,50,Promocje-bukmacherskie-i-bonusy.html" class="bg-body d-flex text-body border rounded-4 shadow p-2 text-decoration-none gap-2 align-items-center" title="BONUSY BUKMACHERSKIE">
+            <span class="icon-star fs-3"></span>
+            <span class="text-uppercase border-end pe-3">BONUSY BUKMACHERSKIE</span>
+            <span class="icon-chevron-thin-right text-muted fs-5"></span>
+        </a><a href="art,184,Wyniki-pilki-noznej.html" class="bg-body d-flex text-body border rounded-4 shadow p-2 text-decoration-none gap-2 align-items-center" title="WYNIKI NA ŻYWO :">
+            <span class="icon-star fs-3"></span>
+            <span class="text-uppercase border-end pe-3">WYNIKI NA ŻYWO :</span>
+            <span class="icon-chevron-thin-right text-muted fs-5"></span>
+        </a><a href="art,184,Wyniki-pilki-noznej.html" class="bg-body d-flex text-body border rounded-4 shadow p-2 text-decoration-none gap-2 align-items-center" title="- piłka nożna -">
+            <span class="icon-star fs-3"></span>
+            <span class="text-uppercase border-end pe-3">- piłka nożna -</span>
+            <span class="icon-chevron-thin-right text-muted fs-5"></span>
+        </a><a href="art,164,Linki.html" class="bg-body d-flex text-body border rounded-4 shadow p-2 text-decoration-none gap-2 align-items-center" title="Strony sportowe">
+            <span class="icon-star fs-3"></span>
+            <span class="text-uppercase border-end pe-3">Strony sportowe</span>
+            <span class="icon-chevron-thin-right text-muted fs-5"></span>
+        </a></div></div>
+
+
+<div>
+    <div rel="1_up_pages" class="bannerPageDiv typ_block mbf clearfix pt20 banner banners_up text-center"></div>
+    <div class="typ_block mbf clearfix">
+<div class="title color2">
+<h2><strong>Darmowe analizy i typy sportowe od społeczności &ndash; Typersi.pl</strong></h2>
+</div>
+
+<p><strong>Uwaga!</strong> W bieżącej edycji konkursu sponsorzy przewidzieli dodatkowe nagrody, w tym <strong>nagrody fundowane przez LV BET dla ich użytkownik&oacute;w, z aktywnymi kontami, kt&oacute;rzy dokonali wpłaty w ciągu 30 dn</strong>i <strong>przed rozpoczęciem konkursu</strong>.</p>
+<!-- Słowa kluczowe (widoczne) – można ukryć CSS-em, ale lepiej zostawić naturalnie -->
+
+<p><strong>Słowa kluczowe:</strong> darmowe typy sportowe, typy na dziś, typy na jutro, analizy mecz&oacute;w, typy piłka nożna, ranking typer&oacute;w, skuteczność typowania, konkurs typerski, promocje i bonusy bukmacherskie.</p>
+
+<ul class="tt-toggle">
+	<li class="sub-toggle active">
+	<div class="toggle-head">
+	<div class="toggle-head-sign">&nbsp;</div>
+
+	<h2>Typersi.pl &ndash; serwis analiz sportowych, typ&oacute;w i ranking&oacute;w</h2>
+	</div>
+
+	<p>Typersi.pl to serwis informacyjno-społecznościowy poświęcony analizom wydarzeń sportowych oraz wymianie prognoz sportowych pomiędzy użytkownikami. Na platformie publikowane są darmowe typy sportowe na dziś i jutro, analizy mecz&oacute;w oraz rankingi skuteczności autor&oacute;w typ&oacute;w.</p>
+
+	<p>Serwis skierowany jest zar&oacute;wno do os&oacute;b rozpoczynających przygodę z analizą sportową, jak i do użytkownik&oacute;w posiadających większe doświadczenie, kt&oacute;rzy chcą dzielić się własnymi prognozami oraz por&oacute;wnywać skuteczność typowania.</p>
+
+	<h3>Najpopularniejsze dyscypliny i zakres treści</h3>
+
+	<p>Publikacje obejmują r&oacute;żne dyscypliny sportu, w tym szczeg&oacute;lnie popularne typy piłka nożna, a także koszyk&oacute;wkę, tenis czy hokej. Użytkownicy mogą publikować własne propozycje typ&oacute;w oraz analizy, budując reputację w społeczności.</p>
+
+	<section>
+	<h2>Ranking skuteczności typowania &ndash; jak działa</h2>
+
+	<p>System rankingowy prezentuje użytkownik&oacute;w wyr&oacute;żniających się najwyższą skutecznością publikowanych prognoz. Aby znaleźć się w rankingu, uczestnicy spełniają jasno określone kryteria, w tym minimalną liczbę opublikowanych typ&oacute;w, co zwiększa por&oacute;wnywalność wynik&oacute;w.</p>
+
+	<h3>Dlaczego ranking jest użyteczny</h3>
+
+	<p>Ranking pozwala analizować wyniki, śledzić postępy i por&oacute;wnywać skuteczność typowania w czasie. Jest to narzędzie wspierające rozw&oacute;j umiejętności analitycznych i strategicznych w typowaniu wydarzeń sportowych.</p>
+	</section>
+
+	<section>
+	<h2>Darmowe typy na dziś i jutro &ndash; analizy społeczności</h2>
+
+	<p>Na Typersi.pl znajdziesz darmowe propozycje typ&oacute;w sportowych na dziś i na jutro, publikowane przez użytkownik&oacute;w zainteresowanych r&oacute;żnymi dyscyplinami. Treści mają charakter opinii i analiz sportowych.</p>
+
+	<h3>Analizy mecz&oacute;w i kontekst statystyczny</h3>
+
+	<p>W serwisie dostępne są analizy mecz&oacute;w, por&oacute;wnania formy drużyn, informacje o składach i statystykach &ndash; tak, aby użytkownicy mogli świadomie por&oacute;wnywać r&oacute;żne podejścia do prognoz.</p>
+	</section>
+
+	<section>
+	<h2>Promocje i bonusy bukmacherskie &ndash; informacje i por&oacute;wnania</h2>
+
+	<p>W menu serwisu dostępne są informacje o aktualnych promocjach i bonusach oferowanych przez legalnych bukmacher&oacute;w działających na podstawie zezwoleń Ministra Finans&oacute;w. Materiały mają charakter informacyjny i por&oacute;wnawczy.</p>
+
+	<h3>Partnerzy i legalni bukmacherzy</h3>
+
+	<p>Informacje dotyczą m.in. ofert sponsor&oacute;w takich jak LV BET, Fuksiarz.pl oraz Betfan. Decyzja o ewentualnym skorzystaniu z ofert sponsor&oacute;w należy wyłącznie do użytkownika.</p>
+	</section>
+
+	<section>
+	<h2>Konkurs typerski Typersi.pl &ndash; zasady, kategorie i nagrody</h2>
+
+	<p>Typersi.pl prowadzi miesięczny konkurs społecznościowy (konkurs wiedzy i umiejętności), kt&oacute;rego celem jest wyłonienie użytkownik&oacute;w publikujących najbardziej skuteczne prognozy sportowe w danym miesiącu. Udział w konkursie jest bezpłatny. Pełny regulamin można przeczytać <strong><a href="https://typersi.pl/art/212/regulamin-konkursu" target="_blank">tutaj</a></strong></p>
+
+	<h3>Kategorie konkursowe</h3>
+
+	<ul>
+		<li>Najwyższy wynik punktowy</li>
+		<li>Najwyższa skuteczność (powyżej 20 typ&oacute;w)</li>
+		<li>Najwyższa skuteczność (10&ndash;20 typ&oacute;w)</li>
+	</ul>
+
+	<h3>Wartości nagr&oacute;d (informacja dla danej edycji)</h3>
+
+	<p>Nagrody są fundowane i przyznawane samodzielnie przez sponsor&oacute;w. Poniżej podano wartości informacyjne dla bieżącej edycji:<br />
+	Regulamin przyznawania i wykorzystania nagr&oacute;d w LV BET przeczytasz <strong><a href="https://typersi.pl/art/211/LVBET-regulamin-przyznawania-bonosow" target="_blank">tutaj</a></strong>. Regulamin przyznawania nagr&oacute;d przez Fuksiarz.pl znajdziesz <strong><a href="https://fuksiarz.pl/nagroda-bonusowa-typersipl" target="_blank">tutaj</a></strong>.</p>
+
+	<h3>Najwyższy wynik punktowy</h3>
+
+	<ul>
+		<li>Miejsce 1: 200 PLN &ndash; LV BET, 100 PLN &ndash; Fuksiarz.pl, 100 PLN &ndash; Betfan</li>
+		<li>Miejsce 2: 100 PLN &ndash; LV BET, 65 PLN &ndash; Fuksiarz.pl, 50 PLN &ndash; Betfan</li>
+		<li>Miejsce 3: 50 PLN &ndash; LV BET, 25 PLN &ndash; Betfan</li>
+	</ul>
+
+	<h3>Najwyższa skuteczność (powyżej 20 typ&oacute;w)</h3>
+
+	<ul>
+		<li>Miejsce 1: 200 PLN &ndash; LV BET, 100 PLN &ndash; Fuksiarz.pl, 100 PLN &ndash; Betfan</li>
+		<li>Miejsce 2: 100 PLN &ndash; LV BET, 65 PLN &ndash; Fuksiarz.pl, 50 PLN &ndash; Betfan</li>
+		<li>Miejsce 3: 50 PLN &ndash; LV BET, 25 PLN &ndash; Betfan</li>
+	</ul>
+
+	<h3>Najwyższa skuteczność (10&ndash;20 typ&oacute;w)</h3>
+
+	<ul>
+		<li>Miejsce 1: 200 PLN &ndash; LV BET, 100 PLN &ndash; Fuksiarz.pl, 100 PLN &ndash; Betfan</li>
+		<li>Miejsce 2: 100 PLN &ndash; LV BET, 65 PLN &ndash; Fuksiarz.pl, 50 PLN &ndash; Betfan</li>
+		<li>Miejsce 3: 50 PLN &ndash; LV BET, 25 PLN &ndash; Betfan</li>
+	</ul>
+
+	<p><strong>Uwaga:</strong> wartości nagr&oacute;d mają charakter informacyjny dla danej edycji konkursu. Szczeg&oacute;łowe zasady przyznawania i wykorzystania nagr&oacute;d określają regulaminy promocyjne sponsor&oacute;w.</p>
+	</section>
+
+	<section>
+	<h2>Zwycięzcy konkursu typowania w październiku 2026</h2>
+
+	<h4>Ranking punktowy</h4>
+
+	<ol>
+		<li>andxc 585.90</li>
+		<li>Kaczor 431.70</li>
+		<li>jaka550 376.50</li>
+
+	</ol>
+
+	<h4>Skuteczność (powyżej 20 typ&oacute;w)</h4>
+
+	<ol>
+		<li>alwex 68%/22</li>
+		<li>Kaczor 65%/61</li>
+		<li>Iwonka1990 65%/26</li>
+	</ol>
+
+	<h4>Skuteczność (10&ndash;20 typ&oacute;w)</h4>
+
+	<ol>
+		<li>CM711 100%/11</li>
+		<li>Skubi19 100%/11</li>
+		<li>special1 70%/10</li>
+	</ol>
+
+
+	<section>
+	<h2>Partnerzy Typersi.pl</h2>
+
+	<p>| Mecze na żywo | Wyniki na żywo | Typuje.pl |</p>
+	</section>
+
+	<section>
+	<h2>Informacja prawna i odpowiedzialność</h2>
+
+	<p>DARMOWE TYPY I BONUSY PREZENTOWANE W SERWISIE TO WYŁĄCZNIE PROPOZYCJE I INFORMACJE. TREŚCI MAJĄ CHARAKTER INFORMACYJNO-OPINIOTW&Oacute;RCZY I NIE STANOWIĄ PORADY ANI GWARANCJI OKREŚLONEGO WYNIKU SPORTOWEGO.</p>
+
+	<p>Organizator nie ponosi odpowiedzialności za spos&oacute;b wykorzystania opublikowanych treści przez użytkownik&oacute;w. Serwis nie stanowi zachęty do zawierania zakład&oacute;w wzajemnych.</p>
+	</section>
+
+	<section>
+	<h2>Jak działają Typersi.pl &ndash; pytania</h2>
+
+	<h3>Jak typować na Typersi.pl?</h3>
+
+	<p>Zarejestrowani użytkownicy mają możliwość codziennego dodawania do dw&oacute;ch propozycji typ&oacute;w sportowych, kt&oacute;re są uwzględniane w systemach rankingowych serwisu. To spos&oacute;b na por&oacute;wnanie skuteczności typowania i rozwijanie własnych umiejętności analitycznych.</p>
+
+	<h3>Jak działa ranking skuteczności typowania?</h3>
+
+	<p>Ranking prezentuje użytkownik&oacute;w osiągających wysoką skuteczność publikowanych prognoz. Aby znaleźć się w rankingu, trzeba spełniać określone kryteria, w tym minimalną liczbę opublikowanych typ&oacute;w, co zapewnia por&oacute;wnywalność wynik&oacute;w.</p>
+
+	<h3>Jak działa darmowe typowanie?</h3>
+
+	<p>Serwis publikuje darmowe typy sportowe i analizy społeczności. Pamiętaj, że prognozy nie są gwarancją wyniku &ndash; traktuj je jako wsparcie własnej analizy i działaj rozważnie.</p>
+
+	<h3>Jak wybrać bukmachera online?</h3>
+
+	<p>Typersi.pl udostępnia informacje o legalnych bukmacherach i ich promocjach. Wyb&oacute;r bukmachera oraz decyzja o ewentualnym skorzystaniu z jego oferty należy wyłącznie do użytkownika.</p>
+
+	<h3>Jak korzystać z promocji bukmacher&oacute;w?</h3>
+
+	<p>W serwisie znajdziesz informacje o aktualnych bonusach i promocjach. Zawsze zapoznaj się z regulaminem danej promocji u sponsora przed podjęciem decyzji.</p>
+	</section>
+	</section>
+	</li>
+</ul>
+</div>
+    <div rel="1_down_pages" class="bannerPageDiv typ_block mbf clearfix pt20 banner banners_down text-center"></div>
+</div>
+
+
+<section aria-labelledby="news-heading">
+    <header>
+        <h2 id="news-heading">Newsy</h2>
+    </header>
+
+    <div class="row row-cols-1 row-cols-lg-3 mb-4 justify-content-center">
+
+                <div class="col mb-3">
+            <div class="card h-100">
+                <article class="news-item">
+                    <figure><img class="card-img-top lazyload img-fluid" src="/assets/img/blank.svg" data-src="/images/news/3220.jpg"  alt="Typy Bukmacherów 2 liga polska 2026 : Sandecja Nowy Sącz vs KKS 1925 Kalisz - 28 kolejka" width="320" height="200" loading="lazy"/></figure>
+                    <div class="card-body">
+                        <header>
+                        <h5 class="card-title">Typy Bukmacherów 2 liga polska 2026 : Sandecja Nowy Sącz vs KKS 1925 Kalisz - 28 kolejka</h5>
+                        </header>
+                        <footer>
+                        <p class="card-text"><small class="text-body-secondary">Aktualizacja: <time datetime="2026-04-16">2026-04-16</time></small></p>
+                        <a href="/news/3220/typy-bukmacherow-2-liga-polska-2026-sandecja-nowy-sacz-vs-kks-1925-kalisz---28-kolejka" class="stretched-link" title="Przeczytaj Typy Bukmacherów 2 liga polska 2026 : Sandecja Nowy Sącz vs KKS 1925 Kalisz - 28 kolejka"></a>
+                        </footer>
+                    </div>
+                </article>
+            </div>
+        </div>
+                <div class="col mb-3">
+            <div class="card h-100">
+                <article class="news-item">
+                    <figure><img class="card-img-top lazyload img-fluid" src="/assets/img/blank.svg" data-src="/images/news/3219.jpg"  alt="Typy Bukmacherów Ligue 1 2026 : Paris Saint-Germain vs Lyon - 30 kolejka" width="320" height="200" loading="lazy"/></figure>
+                    <div class="card-body">
+                        <header>
+                        <h5 class="card-title">Typy Bukmacherów Ligue 1 2026 : Paris Saint-Germain vs Lyon - 30 kolejka</h5>
+                        </header>
+                        <footer>
+                        <p class="card-text"><small class="text-body-secondary">Aktualizacja: <time datetime="2026-04-16">2026-04-16</time></small></p>
+                        <a href="/news/3219/typy-bukmacherow-ligue-1-2026-paris-saint-germain-vs-lyon---30-kolejka" class="stretched-link" title="Przeczytaj Typy Bukmacherów Ligue 1 2026 : Paris Saint-Germain vs Lyon - 30 kolejka"></a>
+                        </footer>
+                    </div>
+                </article>
+            </div>
+        </div>
+                <div class="col mb-3">
+            <div class="card h-100">
+                <article class="news-item">
+                    <figure><img class="card-img-top lazyload img-fluid" src="/assets/img/blank.svg" data-src="/images/news/3218.jpg"  alt="Typy Bukmacherów Ligue 1 2026 : Nantes vs Brest - 30 kolejka" width="320" height="200" loading="lazy"/></figure>
+                    <div class="card-body">
+                        <header>
+                        <h5 class="card-title">Typy Bukmacherów Ligue 1 2026 : Nantes vs Brest - 30 kolejka</h5>
+                        </header>
+                        <footer>
+                        <p class="card-text"><small class="text-body-secondary">Aktualizacja: <time datetime="2026-04-16">2026-04-16</time></small></p>
+                        <a href="/news/3218/typy-bukmacherow-ligue-1-2026-nantes-vs-brest---30-kolejka" class="stretched-link" title="Przeczytaj Typy Bukmacherów Ligue 1 2026 : Nantes vs Brest - 30 kolejka"></a>
+                        </footer>
+                    </div>
+                </article>
+            </div>
+        </div>
+        
+    </div>
+
+</section>
+
+
+
+                    
+                    <div class="py-5">
+                                            </div>
+                                        
+
+
+                </div>
+            </div>
+
+            <!-- START CENTER -->
+
+            <!-- START RIGHT -->
+            <div class="col-md-3 col-lg-3 col-xxl-2">
+                <aside class="h-100">
+                                        <div class="bg-theme py-4 mb-3 text-center border rounded-4 shadow-lg py-2 sticky-md-top z-2">
+                        <div class="small px-4">
+                            <p>Dodaj swój własny typ, pozwól mu lecieć w świat!</p>
+                        </div>
+                        <a href="/account" class="btn btn-warning btn-typ d-inline-flex txt-bg-body border border-warning rounded-4 p-2 text-decoration-none gap-2 mt-auto align-items-center" title="Dodaj swój typ">
+                            <span class="icon-whistle fs-3"></span>
+                            <span class="text-uppercase border-dark border-end lh-sm pe-3">Dodaj <span class="d-block small"> </span></span>
+                            <span class="icon-chevron-thin-right fs-5"></span>
+                        </a>
+                    </div>
+
+                                        <div rel="107_up_220" class="bannerBoxDiv banner banners_up text-center"></div>                        <div class="widget">
+                            <h4 class="typ fw-bold">Ranking typowania</h4>
+                            <div class="bg-theme border rounded-4 shadow p-2 small overflow-y-auto max-vh-320">
+                                <div class="d-flex flex-row align-items-center justify-content-start">
+                                    <span class="icon-trophy-one pe-0 text-primary fs-4"></span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/63754/Teciech" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">Teciech</a>
+                                    <span class="fw-bold fs-6 font-monospace pe-md-2">528.60</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">2</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/47875/jaka550" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">jaka550</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">504.90</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">3</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/27155/pio" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+8">pio</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">409.80</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">4</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/65165/TEWIK" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">TEWIK</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">292.50</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">5</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/47200/ambao" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">ambao</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">266.10</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">6</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/60907/Kruk1" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+5">Kruk1</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">241.20</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">7</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/50239/Rekin1981" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+3">Rekin1981</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">234.90</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">8</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/29113/chatlisi" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">chatlisi</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">231.60</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">9</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/27646/zajac" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">zajac</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">219.30</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">10</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/54469/weberick" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">weberick</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">212.40</span>
+                                    </div><div class="collapse collapseWidgetRank" id="collapseWidgetRank"><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">11</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/44175/ABSOLUT" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-3">ABSOLUT</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">209.40</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">12</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/25052/Machin1990" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+27">Machin1990</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">199.50</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">13</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/24893/jemni78" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">jemni78</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">170.40</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">14</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/47808/mazi" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+2">mazi</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">157.20</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">15</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/25432/gregory198" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">gregory198</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">138.30</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">16</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/31886/Mclovin" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">Mclovin</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">125.10</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">17</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/45260/maer20" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">maer20</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">120.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">18</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/36324/Skubi19" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-5">Skubi19</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">114.30</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">19</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/24722/special1" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">special1</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">106.80</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">20</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/24973/hujek" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-7">hujek</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">99.90</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">21</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/24813/kapsel007" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-4">kapsel007</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">83.70</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">22</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/64718/Sikorski71" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">Sikorski71</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">65.40</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">23</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/63003/michaolo" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">michaolo</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">56.40</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">24</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/44460/VAKCI7" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">VAKCI7</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">54.60</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">25</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/65310/Meli755" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Meli755</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">54.30</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">26</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/50584/alwex" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">alwex</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">50.70</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">27</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/43648/13ibo" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">13ibo</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">49.60</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">28</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/61054/Bart87" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+9">Bart87</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">46.50</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">29</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/61367/Bartek8709" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">Bartek8709</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">46.20</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">30</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/47251/MateoKRI" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">MateoKRI</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">45.60</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">31</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/48346/Tomex379" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">Tomex379</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">43.80</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">32</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/63187/Onesy254" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">Onesy254</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">42.50</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">33</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/25015/Rubinstein" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">Rubinstein</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">34.40</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">34</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/50210/0754017637" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">0754017637</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">33.90</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">35</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/62618/Zubr" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Zubr</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">32.10</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">36</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/24999/Ruch1920" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+19">Ruch1920</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">31.80</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">37</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/41737/kep371" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">kep371</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">23.40</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">38</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/50144/trojanc" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">trojanc</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">19.50</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">39</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/45247/emilio1212" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">emilio1212</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">15.60</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">40</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/39998/BosshossV8" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">BosshossV8</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">14.10</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">41</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/48312/RandyKings" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">RandyKings</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">13.80</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">42</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/63373/Gerifan" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">Gerifan</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">12.30</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">43</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/37087/olsztyn" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">olsztyn</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">10.50</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">44</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/65259/Gidix" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">Gidix</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">7.30</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">45</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/51290/Santi07" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Santi07</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">6.30</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">46</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/37042/Lenkapas" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">Lenkapas</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">6.30</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">47</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/60849/Iwonka1990" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-14">Iwonka1990</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">3.30</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">48</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/25116/wercia" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">wercia</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-0.48</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">49</span>
+                                    <span class="icon-arrow_drop_ me-1"></span><a href="/typer/65321/Annex007" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">Annex007</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-2.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">50</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/61099/Kaczor" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+13">Kaczor</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-6.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">51</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/31024/wp76" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">wp76</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-6.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">52</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/63318/Cr7real" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Cr7real</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-7.20</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">53</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/51624/ELDIN78" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">ELDIN78</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-7.20</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">54</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/25618/arkadius86" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+2">arkadius86</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-7.50</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">55</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/54483/Cobra2407" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-10">Cobra2407</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-9.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">56</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/64935/minimenik" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">minimenik</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-13.20</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">57</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/36030/BLX" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">BLX</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-14.40</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">58</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/64999/Gusiek" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">Gusiek</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-22.50</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">59</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/44116/outlaw76" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">outlaw76</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-26.70</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">60</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/28910/dalmatino" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">dalmatino</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-27.60</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">61</span>
+                                    <span class="icon-arrow_drop_ me-1"></span><a href="/typer/63082/McRoma" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">McRoma</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-30.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">62</span>
+                                    <span class="icon-arrow_drop_ me-1"></span><a href="/typer/59235/Martinez" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">Martinez</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-30.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">63</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/65223/olek676767" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">olek676767</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-30.90</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">64</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/64385/Spejs" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-23">Spejs</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-42.90</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">65</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/37864/evseev" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">evseev</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-54.30</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">66</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/39877/Cactus" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+7">Cactus</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-54.60</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">67</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/55318/raczek096" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">raczek096</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-54.90</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">68</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/51361/DODONI" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-17">DODONI</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-57.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">69</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/51203/tweeds" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">tweeds</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-57.90</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">70</span>
+                                    <span class="icon-arrow_drop_ me-1"></span><a href="/typer/65315/nowhere" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">nowhere</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-60.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">71</span>
+                                    <span class="icon-arrow_drop_ me-1"></span><a href="/typer/58640/Volker" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Volker</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-60.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">72</span>
+                                    <span class="icon-arrow_drop_ me-1"></span><a href="/typer/50750/Mikla84" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Mikla84</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-60.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">73</span>
+                                    <span class="icon-arrow_drop_ me-1"></span><a href="/typer/41115/pirosky365" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">pirosky365</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-60.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">74</span>
+                                    <span class="icon-arrow_drop_ me-1"></span><a href="/typer/24907/Kanonieris" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Kanonieris</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-60.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">75</span>
+                                    <span class="icon-arrow_drop_ me-1"></span><a href="/typer/24858/konrado90" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">konrado90</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-60.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">76</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/62758/777bayern" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">777bayern</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-65.51</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">77</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/36203/eldorado19" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">eldorado19</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-69.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">78</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/60845/CM711" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+6">CM711</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-81.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">79</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/63137/Toci" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">Toci</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-81.30</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">80</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/50238/Czempion" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">Czempion</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-82.20</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">81</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/51659/OSTATNI" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">OSTATNI</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-84.00</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">82</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/30348/kaleros" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">kaleros</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-84.90</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">83</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/65292/Elec" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Elec</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-89.29</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">84</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/46504/CLIMAX" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">CLIMAX</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">-94.20</span>
+                                    </div></div>
+                                        <div class="border-top text-center mt-2 pt-2">
+                                        <button class="btn btn-outline-primary my-1 p-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target=".collapseWidgetRank" aria-expanded="false" aria-controls="collapseWidgetRank">
+                                            <span class="icon-keyboard_control"></span>
+                                        </button>
+                                    </div>                            </div>
+                        </div>
+                    <div rel="107_down_220" class="bannerBoxDiv banner banners_down text-center"></div>
+                    <div class="py-4 d-none d-md-block">
+                                            </div>
+
+                                            <div class="py-4">
+                            <div class="widget">
+                                <h4 class="typ fw-bold">Skuteczność <span class="d-block small text-muted">10-20 typów</span></h4>
+                                <div class="bg-theme border rounded-4 shadow p-2 small overflow-y-auto max-vh-320">
+                                    <div class="d-flex flex-row align-items-center justify-content-start">
+                                    <span class="icon-trophy-one pe-0 text-primary fs-4"></span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/63003/michaolo" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">michaolo</a>
+                                    <span class="fw-bold fs-6 font-monospace pe-md-2">71%/14</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">2</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/31024/wp76" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">wp76</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">62%/16</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">3</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/29113/chatlisi" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">chatlisi</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">52%/17</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">4</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/37864/evseev" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">evseev</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">50%/16</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">5</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/55318/raczek096" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">raczek096</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">50%/16</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">6</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/26896/Wilenma" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">Wilenma</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">50%/16</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">7</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/51203/tweeds" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">tweeds</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">50%/10</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">8</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/43648/13ibo" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">13ibo</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">45%/11</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">9</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/60845/CM711" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+6">CM711</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">42%/14</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">10</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/28910/dalmatino" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">dalmatino</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">40%/20</span>
+                                    </div><div class="collapse collapseWidget20X" id="collapseWidget20X"><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">11</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/63137/Toci" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">Toci</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">38%/18</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">12</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/46504/CLIMAX" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">CLIMAX</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">38%/13</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">13</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/36324/Skubi19" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-5">Skubi19</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">36%/11</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">14</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/36203/eldorado19" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">eldorado19</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">36%/11</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">15</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/63318/Cr7real" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Cr7real</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">33%/15</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">16</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/24734/ifonka75" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">ifonka75</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">33%/12</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">17</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/44116/outlaw76" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">outlaw76</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">28%/14</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">18</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/50442/WKDZIK" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">WKDZIK</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">20%/15</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">19</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/47083/Rozsaaa" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Rozsaaa</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">20%/10</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">20</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/42216/pawros" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">pawros</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">18%/16</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">21</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/35996/YOSSARIAN" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">YOSSARIAN</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">14%/14</span>
+                                    </div></div>
+                                        <div class="border-top text-center mt-2 pt-2">
+                                        <button class="btn btn-outline-primary my-1 p-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target=".collapseWidget20X" aria-expanded="false" aria-controls="collapseWidget20X">
+                                            <span class="icon-keyboard_control"></span>
+                                        </button>
+                                    </div>                                </div>
+                            </div>
+                        </div>
+                    
+
+                    <div rel="106_up_220" class="bannerBoxDiv banner banners_up text-center"></div>                        <div class="py-4">
+                            <div class="widget">
+                                <h4 class="typ fw-bold">Skuteczność <span class="d-block small text-muted">20-x typów</span></h4>
+                                <div class="bg-theme border rounded-4 shadow p-2 small overflow-y-auto max-vh-320">
+                                    <div class="d-flex flex-row align-items-center justify-content-start">
+                                    <span class="icon-trophy-one pe-0 text-primary fs-4"></span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/25432/gregory198" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">gregory198</a>
+                                    <span class="fw-bold fs-6 font-monospace pe-md-2">76%/21</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">2</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/36030/BLX" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">BLX</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">63%/30</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">3</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/24999/Ruch1920" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+19">Ruch1920</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">61%/44</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">4</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/24813/kapsel007" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-4">kapsel007</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">60%/33</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">5</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/41737/kep371" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">kep371</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">57%/33</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">6</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/54483/Cobra2407" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-10">Cobra2407</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">54%/22</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">7</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/30348/kaleros" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">kaleros</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">53%/32</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">8</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/61099/Kaczor" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+13">Kaczor</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">52%/48</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">9</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/44175/ABSOLUT" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-3">ABSOLUT</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">48%/29</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">10</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/45260/maer20" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">maer20</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">47%/46</span>
+                                    </div><div class="collapse collapseWidget20X" id="collapseWidget20X"><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">11</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/61054/Bart87" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+9">Bart87</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">47%/23</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">12</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/47875/jaka550" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">jaka550</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">46%/39</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">13</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/54469/weberick" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">weberick</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">44%/49</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">14</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/62758/777bayern" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">777bayern</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">43%/48</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">15</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/39877/Cactus" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+7">Cactus</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">43%/32</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">16</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/27646/zajac" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">zajac</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">43%/30</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">17</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/31886/Mclovin" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">Mclovin</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">40%/25</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">18</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/65223/olek676767" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">olek676767</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">40%/22</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">19</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/47200/ambao" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">ambao</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">38%/26</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">20</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/65292/Elec" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Elec</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">38%/26</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">21</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/64385/Spejs" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-23">Spejs</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">38%/21</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">22</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/25052/Machin1990" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+27">Machin1990</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">36%/44</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">23</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/47808/mazi" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+2">mazi</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">36%/25</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">24</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/60907/Kruk1" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+5">Kruk1</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">35%/34</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">25</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/60849/Iwonka1990" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-14">Iwonka1990</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">34%/49</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">26</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/25744/orlando" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">orlando</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">33%/24</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">27</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/62978/Bukefal" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-5">Bukefal</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">32%/46</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">28</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/27155/pio" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+8">pio</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">31%/47</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">29</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/50239/Rekin1981" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+3">Rekin1981</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">31%/47</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">30</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/51361/DODONI" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-17">DODONI</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">28%/32</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">31</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/51290/Santi07" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Santi07</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">28%/21</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">32</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/29089/ZYGA2000" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-8">ZYGA2000</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">27%/43</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">33</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/63754/Teciech" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">Teciech</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">26%/41</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">34</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/65165/TEWIK" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">TEWIK</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">22%/45</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">35</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/24973/hujek" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-7">hujek</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">22%/44</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">36</span>
+                                    <span class="icon-arrow_drop_up text-warning me-1"></span><a href="/typer/50752/Kolba1" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="+1">Kolba1</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">21%/41</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">37</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/51659/OSTATNI" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">OSTATNI</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">21%/23</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">38</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/25391/andxc" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">andxc</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">19%/31</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">39</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/61487/Matteo" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Matteo</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">16%/25</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">40</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/63004/Pudlo" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Pudlo</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">16%/24</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">41</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/48750/Baloniarz" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Baloniarz</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">15%/32</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">42</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/61428/Tetiana " class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Tetiana </a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">7%/27</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">43</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/58740/Ciechan" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">Ciechan</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">7%/27</span>
+                                    </div></div>
+                                        <div class="border-top text-center mt-2 pt-2">
+                                        <button class="btn btn-outline-primary my-1 p-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target=".collapseWidget20X" aria-expanded="false" aria-controls="collapseWidget20X">
+                                            <span class="icon-keyboard_control"></span>
+                                        </button>
+                                    </div>                                </div>
+                            </div>
+                        </div>
+                    <div rel="106_down_220" class="bannerBoxDiv banner banners_down text-center"></div>
+                    <div class="py-2 sticky-md-top z-1">
+                        <div rel="104_up_220" class="bannerBoxDiv banner banners_up text-center"></div>                            <div class="widget py-3">
+                                <h4 class="typ fw-bold">Skuteczność <span class="text-primary">100%</span></h4>
+                                <div class="bg-theme border rounded-4 shadow p-2 small overflow-y-auto max-vh-320">
+                                    <div class="d-flex flex-row align-items-center justify-content-start">
+                                    <span class="icon-trophy-one pe-0 text-primary fs-4"></span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/24722/special1" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">special1</a>
+                                    <span class="fw-bold fs-6 font-monospace pe-md-2">100%/6</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">2</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/24893/jemni78" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-1">jemni78</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">100%/4</span>
+                                    </div><div class="d-flex flex-row align-items-center justify-content-between">
+                                    <span class="px-2">3</span>
+                                    <span class="icon-arrow_drop_down text-danger me-1"></span><a href="/typer/63187/Onesy254" class="link-underline-warning link-offset-2 link-body-emphasis flex-fill" data-bs-toggle="tooltip" data-bs-title="-2">Onesy254</a>
+                                    <span class="fw-bold fs-6 text-muted font-monospace pe-md-2">100%/4</span>
+                                    </div>                                </div>
+                            </div>
+                        <div rel="104_down_220" class="bannerBoxDiv banner banners_down text-center"></div>                    </div>
+                </aside>
+            </div>
+            <!-- END RIGHT -->
+
+        </div>
+    </div>
+
+    <!-- START FOOTER.php -->
+    <footer class="bg-body border-top">
+        <div class="container py-5 px-xxl-5">
+            <div class="row justify-content-center text-center text-sm-start">
+                <div class="col-sm-6 col-lg-3">
+                    <span class="h3 d-block">Linki</span>
+                    <ul class="list-unstyled lh-lg">
+                        <li><a href="/page/5/Terms-and-conditions" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">Warunki użytkowania</a></li>                        <li><a href="/art/208/Fuksiarz-jak-dobrze-obstawiac" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">Fuksiarz - nagrody</a></li><li><a href="/art/210/Betfan-informacja-o-bukmacherze-i-promocjach" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">Betfan</a></li><li><a href="/art/207/Superbet-informacja-o-bukmacherze" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">Superbet</a></li><li><a href="/ranking" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">Ranking</a></li><li><a href="/news/list" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">News</a></li><li><a href="/art/50/promocje-bukmacherskie-i-bonusy" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">Bonusy bukmacherskie</a></li>                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <span class="h3 d-block">Strony</span>
+                    <ul class="list-unstyled lh-lg">
+                        <li><a href="stat.html" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">Statystyki</a></li><li><a href="art,40,Transmisje.html" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">Transmisje meczów LIVE</a></li><li><a href="art,50,Promocje-bukmacherskie-i-bonusy.html" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">BONUSY BUKMACHERSKIE</a></li><li><a href="art,184,Wyniki-pilki-noznej.html" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">WYNIKI NA ŻYWO :</a></li><li><a href="art,184,Wyniki-pilki-noznej.html" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">- piłka nożna -</a></li><li><a href="art,164,Linki.html" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">Strony sportowe</a></li>                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <span class="h3 d-block">Partnerzy</span>
+                    <ul class="list-unstyled lh-lg">
+                        <li><a href="https://www.tenisbydawid.pl/" rel="noreferrer" target="_blank" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">Typy i analizy na tenis</a></li><li><a href="https://www.surebety.pl/" rel="noreferrer" target="_blank" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">SZKOŁA ZAKŁADÓW</a></li><li><a href="http://betexplorer.com/" rel="noreferrer" target="_blank" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">BetExplorer</a></li><li><a href="http://www.bettinginf.com/" rel="noreferrer" target="_blank" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">Bettinginf.com</a></li><li><a href="http://www.okgoals.com/" rel="noreferrer" target="_blank" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">Soccer Video Highlights</a></li><li><a href="https://galaktycznyfutbol.pl/" rel="noreferrer" target="_blank" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">Piłkarskie newsy</a></li><li><a href="https://www.flashscore.pl/zaklady/bonusy-bukmacherskie/" rel="noreferrer" target="_blank" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">Promocje bukmacherskie</a></li><li><a href="https://www.flashscore.pl/zaklady/najlepsze-zaklady-bukmacherskie/" rel="noreferrer" target="_blank" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">Bukmacherzy w Polsce</a></li>                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                                        <span class="h3 d-block">Typersi.pl</span>
+                    <ul class="list-unstyled lh-lg">
+                        <li><a href="https://twitter.com/Typersi2" rel="noreferrer" target="_blank" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">twitter/x</a></li>
+                        <li><a href="https://www.facebook.com/1179507418891719" rel="noreferrer" target="_blank" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hoverlink-opacity-50-hover">facebook/meta</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-12 small text-muted text-center">
+                <span class="icon-information2 pe-2 text-primary"></span>DARMOWE TYPY BUKMACHERSKIE Z NASZEJ STRONY TO TYLKO PROPOZYCJE. NIE BIERZEMY ODPOWIEDZIALNOŚCI ZA TO W JAKI SPOSÓB TYPY ZOSTANĄ WYKORZYSTANE!            </div>
+        </div>
+    </footer>
+
+    <div class="col-12 small text-muted text-end p-3">
+        © 2003-2026. MK Sport-Webs LTD All rights reserved. Developed by Lech P.
+    </div>
+    <div class="mb-5 d-block d-sm-none"></div>
+    <!-- cookie gdpr -->
+    <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+    <script type="text/javascript" src="//www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            cookieconsent.run({
+                "notice_banner_type": "simple",
+                "consent_type": "express",
+                "palette": "dark",
+                "language": "pl",
+                "page_load_consent_levels": ["strictly-necessary"],
+                "notice_banner_reject_button_hide": false,
+                "preferences_center_close_button_hide": false,
+                "page_refresh_confirmation_buttons": false,
+                "website_name": "Typersi"
+            });
+        });
+    </script>
+
+    <noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
+    <!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+    <!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
+
+    <!-- skrypty JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="/assets/bs/js/bootstrap.min.js"></script>
+    <script src="/assets/js/typersi.js"></script>
+    <script src="/assets/js/baners.js"></script>
+
+    <!-- END FOOTER.php -->
+</body>
+
+</html>
