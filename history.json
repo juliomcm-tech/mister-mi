@@ -2307,10 +2307,19 @@
       "date": "2026-11-27",
       "first_seen": "2026-11-27T11:36:04.804044+00:00",
       "criteria_revision": "84974be650e9",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "loss",
+      "settled_at": "2026-11-27T21:18:20.616040+00:00",
+      "settlement_source": "espn",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        4,
+        4
+      ],
+      "settlement_evidence": {
+        "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/scoreboard?dates=20261127",
+        "source_event_id": "401875833",
+        "verified_at": "2026-11-27T21:18:20.616040+00:00"
+      }
     },
     {
       "id": "1bc1341f655ccb9e",
@@ -2814,6 +2823,65 @@
   ],
   "result_sources": [
     {
+      "id": "openligadb",
+      "name": "OpenLigaDB",
+      "resource": "bl1/2026",
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+      "checked_at": "2026-11-27T21:18:20.616040+00:00",
+      "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
+      "license": "ODbL-1.0",
+      "license_url": "https://www.openligadb.de/en/license",
+      "collected": 0,
+      "status": "ok",
+      "message": "Resultados regulamentares verificados",
+      "next_check_at": "2026-11-28T03:18:20.616040+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "soccer/all/20261128",
+      "checked_at": "2026-11-27T21:18:20.616040+00:00",
+      "collected": 0,
+      "status": "ok",
+      "next_check_at": "2026-11-28T00:18:20.616040+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "soccer/ned.1/20261128",
+      "checked_at": "2026-11-27T21:18:20.616040+00:00",
+      "collected": 0,
+      "status": "ok",
+      "next_check_at": "2026-11-28T00:18:20.616040+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "soccer/all/20261127",
+      "checked_at": "2026-11-27T21:18:20.616040+00:00",
+      "collected": 1,
+      "status": "ok",
+      "next_check_at": "2026-11-28T00:18:20.616040+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "soccer/ned.1/20261127",
+      "checked_at": "2026-11-27T21:18:20.616040+00:00",
+      "collected": 0,
+      "status": "ok",
+      "next_check_at": "2026-11-28T00:18:20.616040+00:00"
+    },
+    {
+      "id": "zulubet_results",
+      "name": "Zulubet (resultados)",
+      "resource": "zulubet/27-11-2026",
+      "checked_at": "2026-11-27T21:18:20.616040+00:00",
+      "collected": 0,
+      "status": "ok",
+      "next_check_at": "2026-11-28T00:18:20.616040+00:00"
+    },
+    {
       "id": "espn",
       "name": "ESPN",
       "resource": "basketball/euroleague/20261120",
@@ -2836,7 +2904,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-27T20:53:11.893801+00:00",
+    "generated_at": "2026-11-27T21:18:20.616040+00:00",
     "window_from": "2026-11-27",
     "window_through": "2026-11-29",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
