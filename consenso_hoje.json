@@ -1,7 +1,7 @@
 {
   "date": "2026-11-28",
   "timezone": "Europe/Lisbon",
-  "updated_at": "2026-11-28T14:48:25.701605+00:00",
+  "updated_at": "2026-11-28T15:13:20.703223+00:00",
   "schema_version": 1,
   "score_is_probability": false,
   "settings": {
@@ -24,14 +24,14 @@
     "history_min_sample": 30,
     "history_warning_roi": -10
   },
-  "total_collected": 2045,
-  "total_eligible": 821,
+  "total_collected": 1820,
+  "total_eligible": 715,
   "total_selected": 6,
   "discarded": {
-    "other_day": 59,
-    "started_or_soon": 17,
+    "other_day": 79,
+    "started_or_soon": 31,
     "stale": 0,
-    "threshold": 1155,
+    "threshold": 1007,
     "conflict": 0,
     "excluded": 0
   },
@@ -48,7 +48,7 @@
       "country": "France",
       "odds": 1.2,
       "odds_source": "olbg",
-      "odds_observed_at": "2026-11-28T14:48:12.858964+00:00",
+      "odds_observed_at": "2026-11-28T15:13:10.552129+00:00",
       "outcome": "HOME",
       "selection": "PSG vence",
       "score": 98,
@@ -65,12 +65,12 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.olbg.com/betting-tips/Football/European_Competitions/France_Ligue_1/PSG_v_Lorient/1?event_id=2047778",
-          "fetched_at": "2026-11-28T14:48:12.858964+00:00",
+          "fetched_at": "2026-11-28T15:13:10.552129+00:00",
           "competition": "France Ligue 1",
           "metric": 100.0,
           "metric_kind": "vote_pct",
-          "votes_for": 17,
-          "votes_total": 17,
+          "votes_for": 18,
+          "votes_total": 18,
           "odds": 1.2,
           "event_id": "",
           "segment": "open",
@@ -87,7 +87,7 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.zulubet.com/tips-28-11-2026.html",
-          "fetched_at": "2026-11-28T14:48:14.672595+00:00",
+          "fetched_at": "2026-11-28T15:13:12.232466+00:00",
           "competition": "France Ligue 1",
           "metric": 86.0,
           "metric_kind": "model_pct",
@@ -109,7 +109,7 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.betclan.com/predictionsdetails/football/1552835/paris-saint-germain-v-lorient-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-28T14:48:23.617278+00:00",
+          "fetched_at": "2026-11-28T15:13:18.186427+00:00",
           "competition": "France Ligue 1",
           "metric": 80.0,
           "metric_kind": "model_pct",
@@ -131,7 +131,7 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.statarea.com/olddevices/prediction/2026-11-28/",
-          "fetched_at": "2026-11-28T14:48:16.856664+00:00",
+          "fetched_at": "2026-11-28T15:13:14.063627+00:00",
           "competition": "France Ligue 1",
           "metric": 65.0,
           "metric_kind": "model_pct",
@@ -153,8 +153,8 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.vitibet.com/index.php?clanek=match-detail&sekce=fotbal&lang=en&fixture_id=1552835&league_id=61",
-          "fetched_at": "2026-11-28T14:48:15.904555+00:00",
-          "competition": "France Ligue 1",
+          "fetched_at": "2026-11-28T15:13:13.337608+00:00",
+          "competition": "",
           "metric": 77.0,
           "metric_kind": "model_pct",
           "votes_for": 0,
@@ -163,333 +163,10 @@
           "event_id": "",
           "segment": "open",
           "status": "scheduled",
-          "country": "France"
+          "country": "Desconhecido"
         }
       ],
       "reason": "5 fontes concordam na mesma seleção e no mesmo mercado.",
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "status": "out_of_scope"
-      }
-    },
-    {
-      "id": "0b7698b0fd213b04",
-      "sport": "football",
-      "home": "Birmingham",
-      "away": "Bolton",
-      "match": "Birmingham vs Bolton",
-      "competition": "England Championship",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "market": "FT_1X2",
-      "country": "England",
-      "odds": 1.47,
-      "odds_source": "zulubet",
-      "odds_observed_at": "2026-11-28T14:48:14.672595+00:00",
-      "outcome": "HOME",
-      "selection": "Birmingham vence",
-      "score": 98,
-      "tier": "gold",
-      "source_count": 4,
-      "sources": [
-        {
-          "source": "olbg",
-          "sport": "football",
-          "home": "Birmingham",
-          "away": "Bolton",
-          "event_date": "2026-11-28",
-          "kickoff": "2026-11-28T15:00:00+00:00",
-          "market": "FT_1X2",
-          "outcome": "HOME",
-          "url": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/Birmingham_v_Bolton/1?event_id=2049420",
-          "fetched_at": "2026-11-28T14:48:12.858964+00:00",
-          "competition": "England Championship",
-          "metric": 84.62,
-          "metric_kind": "vote_pct",
-          "votes_for": 44,
-          "votes_total": 52,
-          "odds": 1.5,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "England"
-        },
-        {
-          "source": "zulubet",
-          "sport": "football",
-          "home": "Birmingham",
-          "away": "Bolton",
-          "event_date": "2026-11-28",
-          "kickoff": "2026-11-28T15:00:00+00:00",
-          "market": "FT_1X2",
-          "outcome": "HOME",
-          "url": "https://www.zulubet.com/tips-28-11-2026.html",
-          "fetched_at": "2026-11-28T14:48:14.672595+00:00",
-          "competition": "England Championship",
-          "metric": 75.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": 1.47,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "England"
-        },
-        {
-          "source": "betclan",
-          "sport": "football",
-          "home": "Birmingham",
-          "away": "Bolton",
-          "event_date": "2026-11-28",
-          "kickoff": null,
-          "market": "FT_1X2",
-          "outcome": "HOME",
-          "url": "https://www.betclan.com/predictionsdetails/football/1563287/birmingham-v-bolton-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-28T14:48:23.365099+00:00",
-          "competition": "England Championship",
-          "metric": 66.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": null,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "England"
-        },
-        {
-          "source": "vitibet",
-          "sport": "football",
-          "home": "Birmingham",
-          "away": "Bolton",
-          "event_date": "2026-11-28",
-          "kickoff": null,
-          "market": "FT_1X2",
-          "outcome": "HOME",
-          "url": "https://www.vitibet.com/index.php?clanek=match-detail&sekce=fotbal&lang=en&fixture_id=1563287&league_id=40",
-          "fetched_at": "2026-11-28T14:48:15.904555+00:00",
-          "competition": "England Championship",
-          "metric": 65.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": null,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "England"
-        }
-      ],
-      "reason": "4 fontes concordam na mesma seleção e no mesmo mercado.",
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "status": "out_of_scope"
-      }
-    },
-    {
-      "id": "4c77be64a3386f55",
-      "sport": "football",
-      "home": "Bodo/Glimt",
-      "away": "KFUM Oslo",
-      "match": "Bodo/Glimt vs KFUM Oslo",
-      "competition": "Norway Eliteserien",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "market": "FT_1X2",
-      "country": "Norway",
-      "odds": 1.08,
-      "odds_source": "zulubet",
-      "odds_observed_at": "2026-11-28T14:48:14.672595+00:00",
-      "outcome": "HOME",
-      "selection": "Bodo/Glimt vence",
-      "score": 95.8,
-      "tier": "gold",
-      "source_count": 4,
-      "sources": [
-        {
-          "source": "zulubet",
-          "sport": "football",
-          "home": "Bodo/Glimt",
-          "away": "KFUM Oslo",
-          "event_date": "2026-11-28",
-          "kickoff": "2026-11-28T15:00:00+00:00",
-          "market": "FT_1X2",
-          "outcome": "HOME",
-          "url": "https://www.zulubet.com/tips-28-11-2026.html",
-          "fetched_at": "2026-11-28T14:48:14.672595+00:00",
-          "competition": "Norway Eliteserien",
-          "metric": 75.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": 1.08,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Norway"
-        },
-        {
-          "source": "betclan",
-          "sport": "football",
-          "home": "Bodo/Glimt",
-          "away": "KFUM Oslo",
-          "event_date": "2026-11-28",
-          "kickoff": null,
-          "market": "FT_1X2",
-          "outcome": "HOME",
-          "url": "https://www.betclan.com/predictionsdetails/football/1494812/bodo-glimt-v-kfum-oslo-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-28T14:48:24.512253+00:00",
-          "competition": "Norway Eliteserien",
-          "metric": 88.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": null,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Norway"
-        },
-        {
-          "source": "statarea",
-          "sport": "football",
-          "home": "Bodo/Glimt",
-          "away": "KFUM Oslo",
-          "event_date": "2026-11-28",
-          "kickoff": null,
-          "market": "FT_1X2",
-          "outcome": "HOME",
-          "url": "https://www.statarea.com/olddevices/prediction/2026-11-28/",
-          "fetched_at": "2026-11-28T14:48:16.856664+00:00",
-          "competition": "Norway Eliteserien",
-          "metric": 76.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": null,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Norway"
-        },
-        {
-          "source": "vitibet",
-          "sport": "football",
-          "home": "Bodo/Glimt",
-          "away": "KFUM Oslo",
-          "event_date": "2026-11-28",
-          "kickoff": null,
-          "market": "FT_1X2",
-          "outcome": "HOME",
-          "url": "https://www.vitibet.com/index.php?clanek=match-detail&sekce=fotbal&lang=en&fixture_id=1494812&league_id=103",
-          "fetched_at": "2026-11-28T14:48:15.904555+00:00",
-          "competition": "Norway Eliteserien",
-          "metric": 87.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": null,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "Norway"
-        }
-      ],
-      "reason": "4 fontes concordam na mesma seleção e no mesmo mercado.",
-      "fixture_verification": {
-        "source": "openligadb_calendar",
-        "counts_as_prediction": false,
-        "status": "out_of_scope"
-      }
-    },
-    {
-      "id": "ded4cb56018f8d0b",
-      "sport": "football",
-      "home": "Leeds",
-      "away": "Coventry",
-      "match": "Leeds vs Coventry",
-      "competition": "England Premier League",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "market": "FT_1X2",
-      "country": "England",
-      "odds": 1.47,
-      "odds_source": "zulubet",
-      "odds_observed_at": "2026-11-28T14:48:14.672595+00:00",
-      "outcome": "HOME",
-      "selection": "Leeds vence",
-      "score": 90.8,
-      "tier": "gold",
-      "source_count": 3,
-      "sources": [
-        {
-          "source": "olbg",
-          "sport": "football",
-          "home": "Leeds",
-          "away": "Coventry",
-          "event_date": "2026-11-28",
-          "kickoff": "2026-11-28T15:00:00+00:00",
-          "market": "FT_1X2",
-          "outcome": "HOME",
-          "url": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Leeds_v_Coventry/1?event_id=2047651",
-          "fetched_at": "2026-11-28T14:48:12.858964+00:00",
-          "competition": "England Premier League",
-          "metric": 78.45,
-          "metric_kind": "vote_pct",
-          "votes_for": 91,
-          "votes_total": 116,
-          "odds": 1.5,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "England"
-        },
-        {
-          "source": "zulubet",
-          "sport": "football",
-          "home": "Leeds",
-          "away": "Coventry",
-          "event_date": "2026-11-28",
-          "kickoff": "2026-11-28T15:00:00+00:00",
-          "market": "FT_1X2",
-          "outcome": "HOME",
-          "url": "https://www.zulubet.com/tips-28-11-2026.html",
-          "fetched_at": "2026-11-28T14:48:14.672595+00:00",
-          "competition": "England Premier League",
-          "metric": 77.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": 1.47,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "England"
-        },
-        {
-          "source": "betclan",
-          "sport": "football",
-          "home": "Leeds",
-          "away": "Coventry",
-          "event_date": "2026-11-28",
-          "kickoff": null,
-          "market": "FT_1X2",
-          "outcome": "HOME",
-          "url": "https://www.betclan.com/predictionsdetails/football/1557483/leeds-v-coventry-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-28T14:48:22.931184+00:00",
-          "competition": "England Premier League",
-          "metric": 65.0,
-          "metric_kind": "model_pct",
-          "votes_for": 0,
-          "votes_total": 0,
-          "odds": null,
-          "event_id": "",
-          "segment": "open",
-          "status": "scheduled",
-          "country": "England"
-        }
-      ],
-      "reason": "3 fontes concordam na mesma seleção e no mesmo mercado.",
       "fixture_verification": {
         "source": "openligadb_calendar",
         "counts_as_prediction": false,
@@ -508,7 +185,7 @@
       "country": "Spain",
       "odds": 1.14,
       "odds_source": "zulubet",
-      "odds_observed_at": "2026-11-28T14:48:14.672595+00:00",
+      "odds_observed_at": "2026-11-28T15:13:12.232466+00:00",
       "outcome": "HOME",
       "selection": "Real Madrid vence",
       "score": 84.1,
@@ -525,7 +202,7 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.zulubet.com/tips-28-11-2026.html",
-          "fetched_at": "2026-11-28T14:48:14.672595+00:00",
+          "fetched_at": "2026-11-28T15:13:12.232466+00:00",
           "competition": "Spain La Liga",
           "metric": 89.0,
           "metric_kind": "model_pct",
@@ -547,7 +224,7 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.betclan.com/predictionsdetails/football/1570470/real-madrid-v-alaves-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-28T14:48:24.144223+00:00",
+          "fetched_at": "2026-11-28T15:13:18.528125+00:00",
           "competition": "Spain La Liga",
           "metric": 85.0,
           "metric_kind": "model_pct",
@@ -569,7 +246,7 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.vitibet.com/index.php?clanek=match-detail&sekce=fotbal&lang=en&fixture_id=1570470&league_id=140",
-          "fetched_at": "2026-11-28T14:48:15.904555+00:00",
+          "fetched_at": "2026-11-28T15:13:13.337608+00:00",
           "competition": "Spain LaLiga",
           "metric": 78.0,
           "metric_kind": "model_pct",
@@ -601,7 +278,7 @@
       "country": "Belgium",
       "odds": 1.56,
       "odds_source": "zulubet",
-      "odds_observed_at": "2026-11-28T14:48:14.672595+00:00",
+      "odds_observed_at": "2026-11-28T15:13:12.232466+00:00",
       "outcome": "HOME",
       "selection": "Charleroi vence",
       "score": 82.2,
@@ -618,7 +295,7 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.zulubet.com/tips-28-11-2026.html",
-          "fetched_at": "2026-11-28T14:48:14.672595+00:00",
+          "fetched_at": "2026-11-28T15:13:12.232466+00:00",
           "competition": "Belgium Jupiler Pro League",
           "metric": 73.0,
           "metric_kind": "model_pct",
@@ -640,7 +317,7 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.betclan.com/predictionsdetails/football/1558691/charleroi-v-sk-beveren-prediction-h2h-tip-and-match-preview/",
-          "fetched_at": "2026-11-28T14:48:23.851380+00:00",
+          "fetched_at": "2026-11-28T15:13:18.263873+00:00",
           "competition": "Belgium Jupiler Pro League",
           "metric": 65.0,
           "metric_kind": "model_pct",
@@ -662,7 +339,7 @@
           "market": "FT_1X2",
           "outcome": "HOME",
           "url": "https://www.vitibet.com/index.php?clanek=match-detail&sekce=fotbal&lang=en&fixture_id=1558691&league_id=144",
-          "fetched_at": "2026-11-28T14:48:15.904555+00:00",
+          "fetched_at": "2026-11-28T15:13:13.337608+00:00",
           "competition": "Belgium Jupiler Pro League",
           "metric": 68.0,
           "metric_kind": "model_pct",
@@ -681,17 +358,235 @@
         "counts_as_prediction": false,
         "status": "out_of_scope"
       }
+    },
+    {
+      "id": "bb77ed04cf7dd06a",
+      "sport": "football",
+      "home": "Elche",
+      "away": "Atletico Madrid",
+      "match": "Elche vs Atletico Madrid",
+      "competition": "Spain Primera Liga",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "market": "FT_1X2",
+      "country": "Spain",
+      "odds": 1.53,
+      "odds_source": "olbg",
+      "odds_observed_at": "2026-11-28T15:13:10.552129+00:00",
+      "outcome": "AWAY",
+      "selection": "Atletico Madrid vence",
+      "score": 76.2,
+      "tier": "silver",
+      "source_count": 2,
+      "sources": [
+        {
+          "source": "olbg",
+          "sport": "football",
+          "home": "Elche",
+          "away": "Atletico Madrid",
+          "event_date": "2026-11-28",
+          "kickoff": "2026-11-28T17:30:00+00:00",
+          "market": "FT_1X2",
+          "outcome": "AWAY",
+          "url": "https://www.olbg.com/betting-tips/Football/European_Competitions/Spain_Primera_Liga/Elche_v_Atletico_Madrid/1?event_id=2047829",
+          "fetched_at": "2026-11-28T15:13:10.552129+00:00",
+          "competition": "Spain Primera Liga",
+          "metric": 96.43,
+          "metric_kind": "vote_pct",
+          "votes_for": 27,
+          "votes_total": 28,
+          "odds": 1.53,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "Spain"
+        },
+        {
+          "source": "betclan",
+          "sport": "football",
+          "home": "Elche",
+          "away": "Atletico Madrid",
+          "event_date": "2026-11-28",
+          "kickoff": null,
+          "market": "FT_1X2",
+          "outcome": "AWAY",
+          "url": "https://www.betclan.com/predictionsdetails/football/1570466/elche-v-atletico-madrid-prediction-h2h-tip-and-match-preview/",
+          "fetched_at": "2026-11-28T15:13:18.232088+00:00",
+          "competition": "Spain La Liga",
+          "metric": 65.0,
+          "metric_kind": "model_pct",
+          "votes_for": 0,
+          "votes_total": 0,
+          "odds": null,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "Spain"
+        }
+      ],
+      "reason": "2 fontes concordam na mesma seleção e no mesmo mercado.",
+      "fixture_verification": {
+        "source": "openligadb_calendar",
+        "counts_as_prediction": false,
+        "status": "out_of_scope"
+      }
+    },
+    {
+      "id": "1d6b46d4d0232ba5",
+      "sport": "football",
+      "home": "Rosenborg",
+      "away": "Molde",
+      "match": "Rosenborg vs Molde",
+      "competition": "Norway Eliteserien",
+      "kickoff": "2026-11-28T17:00:00+00:00",
+      "market": "FT_TOTAL_2.5",
+      "country": "Norway",
+      "odds": null,
+      "odds_source": null,
+      "odds_observed_at": null,
+      "outcome": "OVER",
+      "selection": "Mais de 2.5 golos",
+      "score": 71.7,
+      "tier": "silver",
+      "source_count": 2,
+      "sources": [
+        {
+          "source": "betclan",
+          "sport": "football",
+          "home": "Rosenborg",
+          "away": "Molde",
+          "event_date": "2026-11-28",
+          "kickoff": null,
+          "market": "FT_TOTAL_2.5",
+          "outcome": "OVER",
+          "url": "https://www.betclan.com/predictionsdetails/football/1494816/rosenborg-v-molde-prediction-h2h-tip-and-match-preview/",
+          "fetched_at": "2026-11-28T15:13:19.488151+00:00",
+          "competition": "Norway Eliteserien",
+          "metric": 81.0,
+          "metric_kind": "model_pct",
+          "votes_for": 0,
+          "votes_total": 0,
+          "odds": null,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "Norway"
+        },
+        {
+          "source": "statarea",
+          "sport": "football",
+          "home": "Rosenborg",
+          "away": "Molde",
+          "event_date": "2026-11-28",
+          "kickoff": null,
+          "market": "FT_TOTAL_2.5",
+          "outcome": "OVER",
+          "url": "https://www.statarea.com/olddevices/prediction/2026-11-28/",
+          "fetched_at": "2026-11-28T15:13:14.063627+00:00",
+          "competition": "Norway Eliteserien",
+          "metric": 81.0,
+          "metric_kind": "model_pct",
+          "votes_for": 0,
+          "votes_total": 0,
+          "odds": null,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "Norway"
+        }
+      ],
+      "reason": "2 fontes concordam na mesma seleção e no mesmo mercado.",
+      "fixture_verification": {
+        "source": "openligadb_calendar",
+        "counts_as_prediction": false,
+        "status": "out_of_scope"
+      }
+    },
+    {
+      "id": "02d58835a5d138db",
+      "sport": "football",
+      "home": "VfB Stuttgart",
+      "away": "Eintracht Frankfurt",
+      "match": "VfB Stuttgart vs Eintracht Frankfurt",
+      "competition": "Germany Bundesliga",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "market": "FT_TOTAL_2.5",
+      "country": "Germany",
+      "odds": null,
+      "odds_source": null,
+      "odds_observed_at": null,
+      "outcome": "OVER",
+      "selection": "Mais de 2.5 golos",
+      "score": 71.2,
+      "tier": "silver",
+      "source_count": 2,
+      "sources": [
+        {
+          "source": "betclan",
+          "sport": "football",
+          "home": "VfB Stuttgart",
+          "away": "Eintracht Frankfurt",
+          "event_date": "2026-11-28",
+          "kickoff": null,
+          "market": "FT_TOTAL_2.5",
+          "outcome": "OVER",
+          "url": "https://www.betclan.com/predictionsdetails/football/1575231/vfb-stuttgart-v-eintracht-frankfurt-prediction-h2h-tip-and-match-preview/",
+          "fetched_at": "2026-11-28T15:13:19.112102+00:00",
+          "competition": "Germany Bundesliga",
+          "metric": 78.0,
+          "metric_kind": "model_pct",
+          "votes_for": 0,
+          "votes_total": 0,
+          "odds": null,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "Germany"
+        },
+        {
+          "source": "statarea",
+          "sport": "football",
+          "home": "VfB Stuttgart",
+          "away": "Eintracht Frankfurt",
+          "event_date": "2026-11-28",
+          "kickoff": null,
+          "market": "FT_TOTAL_2.5",
+          "outcome": "OVER",
+          "url": "https://www.statarea.com/olddevices/prediction/2026-11-28/",
+          "fetched_at": "2026-11-28T15:13:14.063627+00:00",
+          "competition": "Germany Bundesliga",
+          "metric": 76.0,
+          "metric_kind": "model_pct",
+          "votes_for": 0,
+          "votes_total": 0,
+          "odds": null,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "Germany"
+        }
+      ],
+      "reason": "2 fontes concordam na mesma seleção e no mesmo mercado.",
+      "fixture_verification": {
+        "source": "openligadb_calendar",
+        "counts_as_prediction": false,
+        "source_event_id": "83247",
+        "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+        "checked_at": "2026-11-28T11:44:38.072518+00:00",
+        "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
+        "license": "ODbL-1.0",
+        "status": "verified"
+      }
     }
   ],
   "watchlist": [
     {
       "sport": "football",
-      "home": "AFC Wimbledon",
-      "away": "Barnsley",
-      "match": "AFC Wimbledon vs Barnsley",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "country": "England",
-      "competition": "England League One",
+      "home": "Moreirense",
+      "away": "Santa Clara",
+      "match": "Moreirense vs Santa Clara",
+      "kickoff": "2026-11-28T15:30:00+00:00",
+      "country": "Portugal",
+      "competition": "Portugal Liga Portugal",
       "market": "FT_TOTAL_1.5",
       "outcome": "OVER",
       "selection": "Mais de 1.5 golos",
@@ -701,16 +596,16 @@
         {
           "source": "statarea",
           "sport": "football",
-          "home": "AFC Wimbledon",
-          "away": "Barnsley",
+          "home": "Moreirense",
+          "away": "Santa Clara",
           "event_date": "2026-11-28",
           "kickoff": null,
           "market": "FT_TOTAL_1.5",
           "outcome": "OVER",
           "url": "https://www.statarea.com/olddevices/prediction/2026-11-28/",
-          "fetched_at": "2026-11-28T14:48:16.856664+00:00",
-          "competition": "England League One",
-          "metric": 77.0,
+          "fetched_at": "2026-11-28T15:13:14.063627+00:00",
+          "competition": "Portugal Liga Portugal",
+          "metric": 65.0,
           "metric_kind": "model_pct",
           "votes_for": 0,
           "votes_total": 0,
@@ -718,7 +613,7 @@
           "event_id": "",
           "segment": "open",
           "status": "scheduled",
-          "country": "England"
+          "country": "Portugal"
         }
       ],
       "status": "awaiting_independent_source",
@@ -731,12 +626,12 @@
     },
     {
       "sport": "football",
-      "home": "AFC Wimbledon",
-      "away": "Barnsley",
-      "match": "AFC Wimbledon vs Barnsley",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "country": "England",
-      "competition": "England League One",
+      "home": "Moreirense",
+      "away": "Santa Clara",
+      "match": "Moreirense vs Santa Clara",
+      "kickoff": "2026-11-28T15:30:00+00:00",
+      "country": "Portugal",
+      "competition": "Portugal Liga Portugal",
       "market": "FT_TOTAL_3.5",
       "outcome": "UNDER",
       "selection": "Menos de 3.5 golos",
@@ -746,16 +641,16 @@
         {
           "source": "statarea",
           "sport": "football",
-          "home": "AFC Wimbledon",
-          "away": "Barnsley",
+          "home": "Moreirense",
+          "away": "Santa Clara",
           "event_date": "2026-11-28",
           "kickoff": null,
           "market": "FT_TOTAL_3.5",
           "outcome": "UNDER",
           "url": "https://www.statarea.com/olddevices/prediction/2026-11-28/",
-          "fetched_at": "2026-11-28T14:48:16.856664+00:00",
-          "competition": "England League One",
-          "metric": 69.0,
+          "fetched_at": "2026-11-28T15:13:14.063627+00:00",
+          "competition": "Portugal Liga Portugal",
+          "metric": 76.0,
           "metric_kind": "model_pct",
           "votes_for": 0,
           "votes_total": 0,
@@ -763,7 +658,7 @@
           "event_id": "",
           "segment": "open",
           "status": "scheduled",
-          "country": "England"
+          "country": "Portugal"
         }
       ],
       "status": "awaiting_independent_source",
@@ -776,12 +671,12 @@
     },
     {
       "sport": "football",
-      "home": "Aberdeen",
-      "away": "Dundee",
-      "match": "Aberdeen vs Dundee",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "country": "Scotland",
-      "competition": "Scotland Premiership",
+      "home": "Cherno More Varna",
+      "away": "Botev Plovdiv",
+      "match": "Cherno More Varna vs Botev Plovdiv",
+      "kickoff": "2026-11-28T15:45:00+00:00",
+      "country": "Bulgaria",
+      "competition": "Bulgaria First Professional League",
       "market": "FT_TOTAL_1.5",
       "outcome": "OVER",
       "selection": "Mais de 1.5 golos",
@@ -791,16 +686,16 @@
         {
           "source": "statarea",
           "sport": "football",
-          "home": "Aberdeen",
-          "away": "Dundee",
+          "home": "Cherno More Varna",
+          "away": "Botev Plovdiv",
           "event_date": "2026-11-28",
           "kickoff": null,
           "market": "FT_TOTAL_1.5",
           "outcome": "OVER",
           "url": "https://www.statarea.com/olddevices/prediction/2026-11-28/",
-          "fetched_at": "2026-11-28T14:48:16.856664+00:00",
-          "competition": "Scotland Premiership",
-          "metric": 86.0,
+          "fetched_at": "2026-11-28T15:13:14.063627+00:00",
+          "competition": "Bulgaria First Professional League",
+          "metric": 75.0,
           "metric_kind": "model_pct",
           "votes_for": 0,
           "votes_total": 0,
@@ -808,7 +703,7 @@
           "event_id": "",
           "segment": "open",
           "status": "scheduled",
-          "country": "Scotland"
+          "country": "Bulgaria"
         }
       ],
       "status": "awaiting_independent_source",
@@ -821,12 +716,12 @@
     },
     {
       "sport": "football",
-      "home": "Aberdeen",
-      "away": "Dundee",
-      "match": "Aberdeen vs Dundee",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "country": "Scotland",
-      "competition": "Scotland Premiership",
+      "home": "Cherno More Varna",
+      "away": "Botev Plovdiv",
+      "match": "Cherno More Varna vs Botev Plovdiv",
+      "kickoff": "2026-11-28T15:45:00+00:00",
+      "country": "Bulgaria",
+      "competition": "Bulgaria First Professional League",
       "market": "FT_TOTAL_3.5",
       "outcome": "UNDER",
       "selection": "Menos de 3.5 golos",
@@ -836,16 +731,16 @@
         {
           "source": "statarea",
           "sport": "football",
-          "home": "Aberdeen",
-          "away": "Dundee",
+          "home": "Cherno More Varna",
+          "away": "Botev Plovdiv",
           "event_date": "2026-11-28",
           "kickoff": null,
           "market": "FT_TOTAL_3.5",
           "outcome": "UNDER",
           "url": "https://www.statarea.com/olddevices/prediction/2026-11-28/",
-          "fetched_at": "2026-11-28T14:48:16.856664+00:00",
-          "competition": "Scotland Premiership",
-          "metric": 70.0,
+          "fetched_at": "2026-11-28T15:13:14.063627+00:00",
+          "competition": "Bulgaria First Professional League",
+          "metric": 71.0,
           "metric_kind": "model_pct",
           "votes_for": 0,
           "votes_total": 0,
@@ -853,7 +748,7 @@
           "event_id": "",
           "segment": "open",
           "status": "scheduled",
-          "country": "Scotland"
+          "country": "Bulgaria"
         }
       ],
       "status": "awaiting_independent_source",
@@ -866,12 +761,12 @@
     },
     {
       "sport": "football",
-      "home": "Altrincham",
-      "away": "Worthing",
-      "match": "Altrincham vs Worthing",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "country": "England",
-      "competition": "England National League",
+      "home": "Hapoel Haifa",
+      "away": "Ironi Tiberias",
+      "match": "Hapoel Haifa vs Ironi Tiberias",
+      "kickoff": "2026-11-28T16:00:00+00:00",
+      "country": "Desconhecido",
+      "competition": "Israel Ligat Haal",
       "market": "FT_BTTS",
       "outcome": "YES",
       "selection": "Ambas marcam: sim",
@@ -881,16 +776,16 @@
         {
           "source": "statarea",
           "sport": "football",
-          "home": "Altrincham",
-          "away": "Worthing",
+          "home": "Hapoel Haifa",
+          "away": "Ironi Tiberias",
           "event_date": "2026-11-28",
           "kickoff": null,
           "market": "FT_BTTS",
           "outcome": "YES",
           "url": "https://www.statarea.com/olddevices/prediction/2026-11-28/",
-          "fetched_at": "2026-11-28T14:48:16.856664+00:00",
-          "competition": "England National League",
-          "metric": 72.0,
+          "fetched_at": "2026-11-28T15:13:14.063627+00:00",
+          "competition": "Israel Ligat Haal",
+          "metric": 65.0,
           "metric_kind": "model_pct",
           "votes_for": 0,
           "votes_total": 0,
@@ -898,7 +793,7 @@
           "event_id": "",
           "segment": "open",
           "status": "scheduled",
-          "country": "England"
+          "country": "Desconhecido"
         }
       ],
       "status": "awaiting_independent_source",
@@ -911,12 +806,12 @@
     },
     {
       "sport": "football",
-      "home": "Altrincham",
-      "away": "Worthing",
-      "match": "Altrincham vs Worthing",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "country": "England",
-      "competition": "England National League",
+      "home": "Hapoel Haifa",
+      "away": "Ironi Tiberias",
+      "match": "Hapoel Haifa vs Ironi Tiberias",
+      "kickoff": "2026-11-28T16:00:00+00:00",
+      "country": "Desconhecido",
+      "competition": "Israel Ligat Haal",
       "market": "FT_TOTAL_1.5",
       "outcome": "OVER",
       "selection": "Mais de 1.5 golos",
@@ -926,16 +821,16 @@
         {
           "source": "statarea",
           "sport": "football",
-          "home": "Altrincham",
-          "away": "Worthing",
+          "home": "Hapoel Haifa",
+          "away": "Ironi Tiberias",
           "event_date": "2026-11-28",
           "kickoff": null,
           "market": "FT_TOTAL_1.5",
           "outcome": "OVER",
           "url": "https://www.statarea.com/olddevices/prediction/2026-11-28/",
-          "fetched_at": "2026-11-28T14:48:16.856664+00:00",
-          "competition": "England National League",
-          "metric": 89.0,
+          "fetched_at": "2026-11-28T15:13:14.063627+00:00",
+          "competition": "Israel Ligat Haal",
+          "metric": 90.0,
           "metric_kind": "model_pct",
           "votes_for": 0,
           "votes_total": 0,
@@ -943,7 +838,7 @@
           "event_id": "",
           "segment": "open",
           "status": "scheduled",
-          "country": "England"
+          "country": "Desconhecido"
         }
       ],
       "status": "awaiting_independent_source",
@@ -956,12 +851,12 @@
     },
     {
       "sport": "football",
-      "home": "Altrincham",
-      "away": "Worthing",
-      "match": "Altrincham vs Worthing",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "country": "England",
-      "competition": "England National League",
+      "home": "Hapoel Haifa",
+      "away": "Ironi Tiberias",
+      "match": "Hapoel Haifa vs Ironi Tiberias",
+      "kickoff": "2026-11-28T16:00:00+00:00",
+      "country": "Desconhecido",
+      "competition": "Israel Ligat Haal",
       "market": "FT_TOTAL_2.5",
       "outcome": "OVER",
       "selection": "Mais de 2.5 golos",
@@ -971,16 +866,16 @@
         {
           "source": "statarea",
           "sport": "football",
-          "home": "Altrincham",
-          "away": "Worthing",
+          "home": "Hapoel Haifa",
+          "away": "Ironi Tiberias",
           "event_date": "2026-11-28",
           "kickoff": null,
           "market": "FT_TOTAL_2.5",
           "outcome": "OVER",
           "url": "https://www.statarea.com/olddevices/prediction/2026-11-28/",
-          "fetched_at": "2026-11-28T14:48:16.856664+00:00",
-          "competition": "England National League",
-          "metric": 74.0,
+          "fetched_at": "2026-11-28T15:13:14.063627+00:00",
+          "competition": "Israel Ligat Haal",
+          "metric": 68.0,
           "metric_kind": "model_pct",
           "votes_for": 0,
           "votes_total": 0,
@@ -988,7 +883,7 @@
           "event_id": "",
           "segment": "open",
           "status": "scheduled",
-          "country": "England"
+          "country": "Desconhecido"
         }
       ],
       "status": "awaiting_independent_source",
@@ -1001,31 +896,31 @@
     },
     {
       "sport": "football",
-      "home": "Birmingham",
-      "away": "Bolton",
-      "match": "Birmingham vs Bolton",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "country": "England",
-      "competition": "England Championship",
-      "market": "FT_TOTAL_1.5",
-      "outcome": "OVER",
-      "selection": "Mais de 1.5 golos",
+      "home": "Angers",
+      "away": "Lens",
+      "match": "Angers vs Lens",
+      "kickoff": "2026-11-28T16:15:00+00:00",
+      "country": "France",
+      "competition": "France Ligue 1",
+      "market": "FT_BTTS",
+      "outcome": "YES",
+      "selection": "Ambas marcam: sim",
       "odds": null,
       "source_count": 1,
       "sources": [
         {
           "source": "statarea",
           "sport": "football",
-          "home": "Birmingham",
-          "away": "Bolton",
+          "home": "Angers",
+          "away": "Lens",
           "event_date": "2026-11-28",
           "kickoff": null,
-          "market": "FT_TOTAL_1.5",
-          "outcome": "OVER",
+          "market": "FT_BTTS",
+          "outcome": "YES",
           "url": "https://www.statarea.com/olddevices/prediction/2026-11-28/",
-          "fetched_at": "2026-11-28T14:48:16.856664+00:00",
-          "competition": "England Championship",
-          "metric": 82.0,
+          "fetched_at": "2026-11-28T15:13:14.063627+00:00",
+          "competition": "France Ligue 1",
+          "metric": 65.0,
           "metric_kind": "model_pct",
           "votes_for": 0,
           "votes_total": 0,
@@ -1033,7 +928,7 @@
           "event_id": "",
           "segment": "open",
           "status": "scheduled",
-          "country": "England"
+          "country": "France"
         }
       ],
       "status": "awaiting_independent_source",
@@ -1050,34 +945,34 @@
   "diagnostics": {
     "coverage": "partial",
     "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
-    "today_forecasts": 1986,
-    "today_events": 514,
-    "eligible_forecasts": 821,
-    "eligible_events": 388,
+    "today_forecasts": 1741,
+    "today_events": 466,
+    "eligible_forecasts": 715,
+    "eligible_events": 343,
     "threshold_reasons": {
-      "insufficient_votes": 74,
-      "below_source_threshold": 1075,
-      "missing_metric": 6
+      "insufficient_votes": 52,
+      "below_source_threshold": 950,
+      "missing_metric": 5
     },
     "comparison_rejections": {
-      "insufficient_sources": 111,
-      "missing_kickoff": 665,
+      "insufficient_sources": 59,
+      "missing_kickoff": 616,
       "odds_filter": 0,
       "below_consensus_score": 0
     },
-    "watchlist_total": 111,
+    "watchlist_total": 59,
     "by_source": [
       {
         "id": "betclan",
         "collected": 48,
         "today": 46,
-        "eligible": 15
+        "eligible": 14
       },
       {
         "id": "olbg",
-        "collected": 152,
-        "today": 96,
-        "eligible": 12
+        "collected": 137,
+        "today": 61,
+        "eligible": 5
       },
       {
         "id": "protipster",
@@ -1087,9 +982,9 @@
       },
       {
         "id": "statarea",
-        "collected": 1658,
-        "today": 1658,
-        "eligible": 747
+        "collected": 1447,
+        "today": 1447,
+        "eligible": 653
       },
       {
         "id": "vitibet",
@@ -1099,17 +994,17 @@
       },
       {
         "id": "zulubet",
-        "collected": 26,
-        "today": 25,
-        "eligible": 9
+        "collected": 27,
+        "today": 26,
+        "eligible": 5
       }
     ],
     "by_sport": [
       {
         "id": "football",
-        "forecasts": 1969,
-        "eligible": 821,
-        "events": 497,
+        "forecasts": 1732,
+        "eligible": 715,
+        "events": 457,
         "confirmed": 6,
         "sources": [
           "betclan",
@@ -1122,9 +1017,9 @@
       },
       {
         "id": "tennis",
-        "forecasts": 2,
+        "forecasts": 1,
         "eligible": 0,
-        "events": 2,
+        "events": 1,
         "confirmed": 0,
         "sources": [
           "olbg"
@@ -1140,9 +1035,9 @@
       },
       {
         "id": "hockey",
-        "forecasts": 15,
+        "forecasts": 8,
         "eligible": 0,
-        "events": 15,
+        "events": 8,
         "confirmed": 0,
         "sources": [
           "olbg"
@@ -1162,7 +1057,7 @@
     {
       "date": "2026-11-29",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-28T14:48:25.701605+00:00",
+      "updated_at": "2026-11-28T15:13:20.703223+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -1185,14 +1080,14 @@
         "history_min_sample": 30,
         "history_warning_roi": -10
       },
-      "total_collected": 2045,
+      "total_collected": 1820,
       "total_eligible": 1,
       "total_selected": 0,
       "discarded": {
-        "other_day": 1998,
+        "other_day": 1766,
         "started_or_soon": 0,
         "stale": 0,
-        "threshold": 46,
+        "threshold": 53,
         "conflict": 0,
         "excluded": 0
       },
@@ -1221,7 +1116,7 @@
               "market": "FT_1X2",
               "outcome": "HOME",
               "url": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Brighton_v_Newcastle/1?event_id=2047658",
-              "fetched_at": "2026-11-28T14:48:12.858964+00:00",
+              "fetched_at": "2026-11-28T15:13:10.552129+00:00",
               "competition": "England Premier League",
               "metric": 84.0,
               "metric_kind": "vote_pct",
@@ -1248,13 +1143,13 @@
       "diagnostics": {
         "coverage": "partial",
         "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
-        "today_forecasts": 47,
-        "today_events": 45,
+        "today_forecasts": 54,
+        "today_events": 52,
         "eligible_forecasts": 1,
         "eligible_events": 1,
         "threshold_reasons": {
-          "below_source_threshold": 5,
-          "insufficient_votes": 41
+          "insufficient_votes": 48,
+          "below_source_threshold": 5
         },
         "comparison_rejections": {
           "insufficient_sources": 1,
@@ -1272,8 +1167,8 @@
           },
           {
             "id": "olbg",
-            "collected": 152,
-            "today": 45,
+            "collected": 137,
+            "today": 52,
             "eligible": 1
           },
           {
@@ -1284,7 +1179,7 @@
           },
           {
             "id": "statarea",
-            "collected": 1658,
+            "collected": 1447,
             "today": 0,
             "eligible": 0
           },
@@ -1296,7 +1191,7 @@
           },
           {
             "id": "zulubet",
-            "collected": 26,
+            "collected": 27,
             "today": 0,
             "eligible": 0
           }
@@ -1304,9 +1199,9 @@
         "by_sport": [
           {
             "id": "football",
-            "forecasts": 18,
+            "forecasts": 28,
             "eligible": 1,
-            "events": 16,
+            "events": 26,
             "confirmed": 0,
             "sources": [
               "betclan",
@@ -1333,9 +1228,9 @@
           },
           {
             "id": "hockey",
-            "forecasts": 18,
+            "forecasts": 15,
             "eligible": 0,
-            "events": 18,
+            "events": 15,
             "confirmed": 0,
             "sources": [
               "olbg"
@@ -1363,7 +1258,7 @@
     {
       "date": "2026-11-30",
       "timezone": "Europe/Lisbon",
-      "updated_at": "2026-11-28T14:48:25.701605+00:00",
+      "updated_at": "2026-11-28T15:13:20.703223+00:00",
       "schema_version": 1,
       "score_is_probability": false,
       "settings": {
@@ -1386,14 +1281,14 @@
         "history_min_sample": 30,
         "history_warning_roi": -10
       },
-      "total_collected": 2045,
+      "total_collected": 1820,
       "total_eligible": 0,
       "total_selected": 0,
       "discarded": {
-        "other_day": 2042,
+        "other_day": 1814,
         "started_or_soon": 0,
         "stale": 0,
-        "threshold": 3,
+        "threshold": 6,
         "conflict": 0,
         "excluded": 0
       },
@@ -1403,12 +1298,12 @@
       "diagnostics": {
         "coverage": "partial",
         "coverage_note": "Apenas previsões publicadas nas fontes acessíveis; não é um calendário completo de jogos.",
-        "today_forecasts": 3,
-        "today_events": 3,
+        "today_forecasts": 6,
+        "today_events": 6,
         "eligible_forecasts": 0,
         "eligible_events": 0,
         "threshold_reasons": {
-          "insufficient_votes": 3
+          "insufficient_votes": 6
         },
         "comparison_rejections": {
           "insufficient_sources": 0,
@@ -1426,8 +1321,8 @@
           },
           {
             "id": "olbg",
-            "collected": 152,
-            "today": 3,
+            "collected": 137,
+            "today": 6,
             "eligible": 0
           },
           {
@@ -1438,7 +1333,7 @@
           },
           {
             "id": "statarea",
-            "collected": 1658,
+            "collected": 1447,
             "today": 0,
             "eligible": 0
           },
@@ -1450,7 +1345,7 @@
           },
           {
             "id": "zulubet",
-            "collected": 26,
+            "collected": 27,
             "today": 0,
             "eligible": 0
           }
@@ -1458,9 +1353,9 @@
         "by_sport": [
           {
             "id": "football",
-            "forecasts": 2,
+            "forecasts": 5,
             "eligible": 0,
-            "events": 2,
+            "events": 5,
             "confirmed": 0,
             "sources": [
               "olbg"
@@ -1532,7 +1427,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-28T14:48:25.701605+00:00",
+    "generated_at": "2026-11-28T15:13:20.703223+00:00",
     "window_from": "2026-11-28",
     "window_through": "2026-11-30",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
@@ -2509,11 +2404,11 @@
   },
   "performance": {
     "overall": {
-      "total": 47,
+      "total": 50,
       "settled": 32,
       "wins": 18,
       "losses": 14,
-      "pending": 15,
+      "pending": 18,
       "void": 0,
       "hit_rate": 56.2,
       "hit_rate_interval_95": [
@@ -2550,11 +2445,11 @@
       },
       {
         "key": "football",
-        "total": 42,
+        "total": 45,
         "settled": 30,
         "wins": 17,
         "losses": 13,
-        "pending": 12,
+        "pending": 15,
         "void": 0,
         "hit_rate": 56.7,
         "hit_rate_interval_95": [
@@ -2692,11 +2587,11 @@
       },
       {
         "key": "Germany",
-        "total": 3,
+        "total": 4,
         "settled": 2,
         "wins": 0,
         "losses": 2,
-        "pending": 1,
+        "pending": 2,
         "void": 0,
         "hit_rate": 0.0,
         "hit_rate_interval_95": [
@@ -2772,11 +2667,11 @@
       },
       {
         "key": "Norway",
-        "total": 1,
+        "total": 2,
         "settled": 0,
         "wins": 0,
         "losses": 0,
-        "pending": 1,
+        "pending": 2,
         "void": 0,
         "hit_rate": null,
         "hit_rate_interval_95": [
@@ -2832,11 +2727,11 @@
       },
       {
         "key": "Spain",
-        "total": 4,
+        "total": 5,
         "settled": 3,
         "wins": 3,
         "losses": 0,
-        "pending": 1,
+        "pending": 2,
         "void": 0,
         "hit_rate": 100.0,
         "hit_rate_interval_95": [
@@ -2874,11 +2769,11 @@
     "by_market": [
       {
         "key": "FT_1X2",
-        "total": 36,
+        "total": 37,
         "settled": 25,
         "wins": 16,
         "losses": 9,
-        "pending": 11,
+        "pending": 12,
         "void": 0,
         "hit_rate": 64.0,
         "hit_rate_interval_95": [
@@ -2914,11 +2809,11 @@
       },
       {
         "key": "FT_TOTAL_2.5",
-        "total": 5,
+        "total": 7,
         "settled": 4,
         "wins": 1,
         "losses": 3,
-        "pending": 1,
+        "pending": 3,
         "void": 0,
         "hit_rate": 25.0,
         "hit_rate_interval_95": [
@@ -3089,11 +2984,11 @@
       {
         "sport": "football",
         "country": "Germany",
-        "total": 3,
+        "total": 4,
         "settled": 2,
         "wins": 0,
         "losses": 2,
-        "pending": 1,
+        "pending": 2,
         "void": 0,
         "hit_rate": 0.0,
         "hit_rate_interval_95": [
@@ -3177,11 +3072,11 @@
       {
         "sport": "football",
         "country": "Norway",
-        "total": 1,
+        "total": 2,
         "settled": 0,
         "wins": 0,
         "losses": 0,
-        "pending": 1,
+        "pending": 2,
         "void": 0,
         "hit_rate": null,
         "hit_rate_interval_95": [
@@ -3243,11 +3138,11 @@
       {
         "sport": "football",
         "country": "Spain",
-        "total": 4,
+        "total": 5,
         "settled": 3,
         "wins": 3,
         "losses": 0,
-        "pending": 1,
+        "pending": 2,
         "void": 0,
         "hit_rate": 100.0,
         "hit_rate_interval_95": [
@@ -3373,6 +3268,26 @@
         "sufficient_sample": false
       },
       {
+        "key": "Spain Primera Liga",
+        "total": 3,
+        "settled": 2,
+        "wins": 2,
+        "losses": 0,
+        "pending": 1,
+        "void": 0,
+        "hit_rate": 100.0,
+        "hit_rate_interval_95": [
+          34.2,
+          100
+        ],
+        "priced_settled": 2,
+        "odds_coverage": 100.0,
+        "paper_profit_units": 0.38,
+        "paper_roi_pct": 19.0,
+        "paper_max_drawdown_units": 0,
+        "sufficient_sample": false
+      },
+      {
         "key": "Europa League",
         "total": 2,
         "settled": 2,
@@ -3430,26 +3345,6 @@
         "paper_profit_units": -0.64,
         "paper_roi_pct": -32.0,
         "paper_max_drawdown_units": 1,
-        "sufficient_sample": false
-      },
-      {
-        "key": "Spain Primera Liga",
-        "total": 2,
-        "settled": 2,
-        "wins": 2,
-        "losses": 0,
-        "pending": 0,
-        "void": 0,
-        "hit_rate": 100.0,
-        "hit_rate_interval_95": [
-          34.2,
-          100
-        ],
-        "priced_settled": 2,
-        "odds_coverage": 100.0,
-        "paper_profit_units": 0.38,
-        "paper_roi_pct": 19.0,
-        "paper_max_drawdown_units": 0,
         "sufficient_sample": false
       },
       {
@@ -3753,6 +3648,46 @@
         "sufficient_sample": false
       },
       {
+        "key": "Germany Bundesliga",
+        "total": 2,
+        "settled": 0,
+        "wins": 0,
+        "losses": 0,
+        "pending": 2,
+        "void": 0,
+        "hit_rate": null,
+        "hit_rate_interval_95": [
+          null,
+          null
+        ],
+        "priced_settled": 0,
+        "odds_coverage": 0,
+        "paper_profit_units": 0,
+        "paper_roi_pct": null,
+        "paper_max_drawdown_units": 0,
+        "sufficient_sample": false
+      },
+      {
+        "key": "Norway Eliteserien",
+        "total": 2,
+        "settled": 0,
+        "wins": 0,
+        "losses": 0,
+        "pending": 2,
+        "void": 0,
+        "hit_rate": null,
+        "hit_rate_interval_95": [
+          null,
+          null
+        ],
+        "priced_settled": 0,
+        "odds_coverage": 0,
+        "paper_profit_units": 0,
+        "paper_roi_pct": null,
+        "paper_max_drawdown_units": 0,
+        "sufficient_sample": false
+      },
+      {
         "key": "Belgium Jupiler Pro League",
         "total": 1,
         "settled": 0,
@@ -3774,46 +3709,6 @@
       },
       {
         "key": "England National League",
-        "total": 1,
-        "settled": 0,
-        "wins": 0,
-        "losses": 0,
-        "pending": 1,
-        "void": 0,
-        "hit_rate": null,
-        "hit_rate_interval_95": [
-          null,
-          null
-        ],
-        "priced_settled": 0,
-        "odds_coverage": 0,
-        "paper_profit_units": 0,
-        "paper_roi_pct": null,
-        "paper_max_drawdown_units": 0,
-        "sufficient_sample": false
-      },
-      {
-        "key": "Germany Bundesliga",
-        "total": 1,
-        "settled": 0,
-        "wins": 0,
-        "losses": 0,
-        "pending": 1,
-        "void": 0,
-        "hit_rate": null,
-        "hit_rate_interval_95": [
-          null,
-          null
-        ],
-        "priced_settled": 0,
-        "odds_coverage": 0,
-        "paper_profit_units": 0,
-        "paper_roi_pct": null,
-        "paper_max_drawdown_units": 0,
-        "sufficient_sample": false
-      },
-      {
-        "key": "Norway Eliteserien",
         "total": 1,
         "settled": 0,
         "wins": 0,
@@ -3856,11 +3751,11 @@
     "by_sources": [
       {
         "key": "betclan + olbg",
-        "total": 23,
+        "total": 24,
         "settled": 19,
         "wins": 12,
         "losses": 7,
-        "pending": 4,
+        "pending": 5,
         "void": 0,
         "hit_rate": 63.2,
         "hit_rate_interval_95": [
@@ -3876,11 +3771,11 @@
       },
       {
         "key": "betclan + statarea",
-        "total": 5,
+        "total": 7,
         "settled": 4,
         "wins": 1,
         "losses": 3,
-        "pending": 1,
+        "pending": 3,
         "void": 0,
         "hit_rate": 25.0,
         "hit_rate_interval_95": [
@@ -4098,11 +3993,11 @@
     "by_tier": [
       {
         "key": "silver",
-        "total": 37,
+        "total": 40,
         "settled": 30,
         "wins": 18,
         "losses": 12,
-        "pending": 7,
+        "pending": 10,
         "void": 0,
         "hit_rate": 60.0,
         "hit_rate_interval_95": [
@@ -4140,11 +4035,11 @@
     "by_score_band": [
       {
         "key": "70–74",
-        "total": 24,
+        "total": 26,
         "settled": 18,
         "wins": 9,
         "losses": 9,
-        "pending": 6,
+        "pending": 8,
         "void": 0,
         "hit_rate": 50.0,
         "hit_rate_interval_95": [
@@ -4160,11 +4055,11 @@
       },
       {
         "key": "75–79",
-        "total": 13,
+        "total": 14,
         "settled": 12,
         "wins": 9,
         "losses": 3,
-        "pending": 1,
+        "pending": 2,
         "void": 0,
         "hit_rate": 75.0,
         "hit_rate_interval_95": [
@@ -4229,7 +4124,7 @@
           "pending": 4,
           "void": 0,
           "status": "lost",
-          "late": 8,
+          "late": 11,
           "combined_odds": null,
           "items": [
             {
@@ -6315,7 +6210,7 @@
       "resource": "soccer/eng.2/20261128",
       "checked_at": "2026-11-28T14:48:25.701605+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T17:48:25.701605+00:00"
     },
     {
@@ -6324,7 +6219,7 @@
       "resource": "soccer/all/20261128",
       "checked_at": "2026-11-28T14:48:25.701605+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T17:48:25.701605+00:00"
     },
     {
@@ -6333,26 +6228,26 @@
       "resource": "zulubet/28-11-2026",
       "checked_at": "2026-11-28T14:48:25.701605+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T17:48:25.701605+00:00"
     },
     {
       "id": "espn",
       "name": "ESPN",
       "resource": "basketball/euroleague/20261120",
-      "checked_at": "2026-11-28T12:09:40.758794+00:00",
+      "checked_at": "2026-11-28T15:13:20.703223+00:00",
       "collected": 0,
-      "status": "cached",
-      "next_check_at": "2026-11-28T15:09:40.758794+00:00"
+      "status": "ok",
+      "next_check_at": "2026-11-28T18:13:20.703223+00:00"
     },
     {
       "id": "espn",
       "name": "ESPN",
       "resource": "basketball/euroleague/20261119",
-      "checked_at": "2026-11-28T12:09:40.758794+00:00",
+      "checked_at": "2026-11-28T15:13:20.703223+00:00",
       "collected": 0,
-      "status": "cached",
-      "next_check_at": "2026-11-28T15:09:40.758794+00:00"
+      "status": "ok",
+      "next_check_at": "2026-11-28T18:13:20.703223+00:00"
     }
   ],
   "analyst": "Mister Mi",
@@ -6361,7 +6256,7 @@
       "id": "olbg",
       "name": "OLBG",
       "status": "ok",
-      "collected": 152,
+      "collected": 137,
       "raw_rows": 182,
       "message": "Recolha concluída",
       "pages": [
@@ -6370,7 +6265,7 @@
           "url": "https://www.olbg.com/betting-tips/American_Football/11",
           "status": "ok",
           "raw_rows": 15,
-          "collected": 15,
+          "collected": 14,
           "missing_scores": 0,
           "message": "Recolha concluída"
         },
@@ -6388,7 +6283,7 @@
           "url": "https://www.olbg.com/betting-tips/Football/1",
           "status": "ok",
           "raw_rows": 100,
-          "collected": 100,
+          "collected": 97,
           "missing_scores": 0,
           "message": "Recolha concluída"
         },
@@ -6397,7 +6292,7 @@
           "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
           "status": "ok",
           "raw_rows": 47,
-          "collected": 33,
+          "collected": 23,
           "missing_scores": 0,
           "message": "Recolha concluída"
         },
@@ -6406,13 +6301,13 @@
           "url": "https://www.olbg.com/betting-tips/Tennis/3",
           "status": "ok",
           "raw_rows": 4,
-          "collected": 2,
+          "collected": 1,
           "missing_scores": 0,
           "message": "Recolha concluída"
         }
       ],
-      "today": 96,
-      "eligible": 12
+      "today": 61,
+      "eligible": 5
     },
     {
       "id": "forebet",
@@ -6511,22 +6406,22 @@
       "id": "zulubet",
       "name": "Zulubet",
       "status": "ok",
-      "collected": 26,
-      "raw_rows": 47,
+      "collected": 27,
+      "raw_rows": 49,
       "message": "Recolha concluída",
       "pages": [
         {
           "id": "zulubet",
           "url": "https://www.zulubet.com/tips-28-11-2026.html",
           "status": "ok",
-          "raw_rows": 47,
-          "collected": 26,
+          "raw_rows": 49,
+          "collected": 27,
           "missing_scores": 0,
           "message": "Recolha concluída"
         }
       ],
-      "today": 25,
-      "eligible": 9
+      "today": 26,
+      "eligible": 5
     },
     {
       "id": "vitibet",
@@ -6553,22 +6448,22 @@
       "id": "statarea",
       "name": "Statarea",
       "status": "ok",
-      "collected": 1658,
-      "raw_rows": 394,
+      "collected": 1447,
+      "raw_rows": 393,
       "message": "Recolha concluída",
       "pages": [
         {
           "id": "statarea",
           "url": "https://www.statarea.com/olddevices/prediction/2026-11-28/",
           "status": "ok",
-          "raw_rows": 394,
-          "collected": 1658,
+          "raw_rows": 393,
+          "collected": 1447,
           "missing_scores": 0,
           "message": "Recolha concluída"
         }
       ],
-      "today": 1658,
-      "eligible": 747
+      "today": 1447,
+      "eligible": 653
     },
     {
       "id": "api_football",
@@ -6591,7 +6486,7 @@
       "indexed_by_date": [
         {
           "date": "2026-11-28",
-          "fixtures": 544
+          "fixtures": 351
         },
         {
           "date": "2026-11-29",
@@ -6606,22 +6501,22 @@
         {
           "date": "2026-11-28",
           "sport": "football",
-          "fixtures": 347
+          "fixtures": 188
         },
         {
           "date": "2026-11-28",
           "sport": "tennis",
-          "fixtures": 3
+          "fixtures": 1
         },
         {
           "date": "2026-11-28",
           "sport": "basketball",
-          "fixtures": 171
+          "fixtures": 147
         },
         {
           "date": "2026-11-28",
           "sport": "hockey",
-          "fixtures": 23
+          "fixtures": 15
         },
         {
           "date": "2026-11-28",
@@ -6737,21 +6632,6 @@
           "indexed_fixtures": 0
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1557483/leeds-v-coventry-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1563287/birmingham-v-bolton-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1563296/west-brom-v-bristol-city-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
           "url": "https://www.betclan.com/predictionsdetails/football/1570466/elche-v-atletico-madrid-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
@@ -6762,32 +6642,12 @@
           "collected": 2
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1563883/salford-city-v-gillingham-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1563881/rochdale-v-barnet-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
           "url": "https://www.betclan.com/predictionsdetails/football/1552835/paris-saint-germain-v-lorient-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         },
         {
           "url": "https://www.betclan.com/predictionsdetails/football/1558691/charleroi-v-sk-beveren-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1564436/stockport-county-v-leyton-orient-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
-          "url": "https://www.betclan.com/predictionsdetails/football/1494812/bodo-glimt-v-kfum-oslo-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         },
@@ -6807,65 +6667,100 @@
           "collected": 2
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1557484/manchester-united-v-brentford-prediction-h2h-tip-and-match-preview/",
-          "status": "ok",
-          "collected": 2
-        },
-        {
           "url": "https://www.betclan.com/predictionsdetails/football/1557482/ipswich-v-aston-villa-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1563291/millwall-v-burnley-prediction-h2h-tip-and-match-preview/",
+          "url": "https://www.betclan.com/predictionsdetails/football/1552828/angers-v-lens-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1563298/wrexham-v-portsmouth-prediction-h2h-tip-and-match-preview/",
+          "url": "https://www.betclan.com/predictionsdetails/football/1552832/le-mans-v-lille-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1563289/derby-v-watford-prediction-h2h-tip-and-match-preview/",
+          "url": "https://www.betclan.com/predictionsdetails/football/1552831/le-havre-v-strasbourg-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1564437/wigan-v-plymouth-prediction-h2h-tip-and-match-preview/",
+          "url": "https://www.betclan.com/predictionsdetails/football/1575231/vfb-stuttgart-v-eintracht-frankfurt-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1563884/shrewsbury-v-cheltenham-prediction-h2h-tip-and-match-preview/",
+          "url": "https://www.betclan.com/predictionsdetails/football/1561972/austria-lustenau-v-rapid-vienna-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1570469/malaga-v-athletic-club-prediction-h2h-tip-and-match-preview/",
+          "url": "https://www.betclan.com/predictionsdetails/football/1575552/moreirense-v-santa-clara-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1564435/stevenage-v-blackpool-prediction-h2h-tip-and-match-preview/",
+          "url": "https://www.betclan.com/predictionsdetails/football/1552236/excelsior-v-telstar-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         },
         {
-          "url": "https://www.betclan.com/predictionsdetails/football/1564438/wycombe-v-bradford-prediction-h2h-tip-and-match-preview/",
+          "url": "https://www.betclan.com/predictionsdetails/football/1585376/hartlepool-v-southend-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1601630/palermo-v-benevento-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1494816/rosenborg-v-molde-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1558690/cercle-brugge-v-kv-mechelen-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1556715/motherwell-v-hibernian-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1575545/academico-viseu-v-alverca-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1551154/cherno-more-varna-v-botev-plovdiv-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1555436/fc-vaduz-v-fc-zurich-prediction-h2h-tip-and-match-preview/",
+          "status": "ok",
+          "collected": 2
+        },
+        {
+          "url": "https://www.betclan.com/predictionsdetails/football/1651122/fc-cincinnati-v-nashville-sc-prediction-h2h-tip-and-match-preview/",
           "status": "ok",
           "collected": 2
         }
       ],
       "today": 46,
-      "eligible": 15
+      "eligible": 14
     }
   ],
   "request_id": "",
-  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/46156499359",
+  "run_url": "https://github.com/juliomcm-tech/mister-mi/actions/runs/46158681084",
   "status": "partial",
   "pipeline_health": {
-    "checked_at": "2026-11-28T14:48:25.701605+00:00",
+    "checked_at": "2026-11-28T15:13:20.703223+00:00",
     "schedule": "13,43 * * * *",
     "timezone": "UTC",
     "workflow_state": "active",
