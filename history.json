@@ -1881,10 +1881,19 @@
       "date": "2026-11-27",
       "first_seen": "2026-11-27T09:52:44.875064+00:00",
       "criteria_revision": "90f2af89cf64",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "win",
+      "settled_at": "2026-11-28T06:44:16.325773+00:00",
+      "settlement_source": "zulubet_results",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        3,
+        2
+      ],
+      "settlement_evidence": {
+        "source_url": "https://www.zulubet.com/tips-27-11-2026.html",
+        "source_event_id": "",
+        "verified_at": "2026-11-28T06:44:16.325773+00:00"
+      }
     },
     {
       "id": "0f7e3fe106035c9b",
@@ -2138,10 +2147,19 @@
       "date": "2026-11-27",
       "first_seen": "2026-11-27T11:14:21.120705+00:00",
       "criteria_revision": "84974be650e9",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "win",
+      "settled_at": "2026-11-28T06:44:16.325773+00:00",
+      "settlement_source": "zulubet_results",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        0,
+        4
+      ],
+      "settlement_evidence": {
+        "source_url": "https://www.zulubet.com/tips-27-11-2026.html",
+        "source_event_id": "",
+        "verified_at": "2026-11-28T06:44:16.325773+00:00"
+      }
     },
     {
       "id": "d55ea8fa8699e75b",
@@ -2521,10 +2539,19 @@
       "date": "2026-11-27",
       "first_seen": "2026-11-27T12:26:14.670627+00:00",
       "criteria_revision": "84974be650e9",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "loss",
+      "settled_at": "2026-11-28T06:44:16.325773+00:00",
+      "settlement_source": "zulubet_results",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        1,
+        1
+      ],
+      "settlement_evidence": {
+        "source_url": "https://www.zulubet.com/tips-27-11-2026.html",
+        "source_event_id": "",
+        "verified_at": "2026-11-28T06:44:16.325773+00:00"
+      }
     },
     {
       "id": "2cbc8f7671730e4e",
@@ -2599,10 +2626,19 @@
       "date": "2026-11-27",
       "first_seen": "2026-11-27T14:12:42.629915+00:00",
       "criteria_revision": "84974be650e9",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "win",
+      "settled_at": "2026-11-28T06:44:16.325773+00:00",
+      "settlement_source": "zulubet_results",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        6,
+        2
+      ],
+      "settlement_evidence": {
+        "source_url": "https://www.zulubet.com/tips-27-11-2026.html",
+        "source_event_id": "",
+        "verified_at": "2026-11-28T06:44:16.325773+00:00"
+      }
     },
     {
       "id": "be79466e83185c4c",
@@ -2851,10 +2887,19 @@
       "date": "2026-11-27",
       "first_seen": "2026-11-27T19:13:07.331039+00:00",
       "criteria_revision": "84974be650e9",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "win",
+      "settled_at": "2026-11-28T06:44:16.325773+00:00",
+      "settlement_source": "zulubet_results",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        1,
+        2
+      ],
+      "settlement_evidence": {
+        "source_url": "https://www.zulubet.com/tips-27-11-2026.html",
+        "source_event_id": "",
+        "verified_at": "2026-11-28T06:44:16.325773+00:00"
+      }
     },
     {
       "id": "280c62f7dd868aca",
@@ -2929,10 +2974,19 @@
       "date": "2026-11-28",
       "first_seen": "2026-11-28T00:19:38.875697+00:00",
       "criteria_revision": "84974be650e9",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "loss",
+      "settled_at": "2026-11-28T06:44:16.325773+00:00",
+      "settlement_source": "espn",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        0,
+        1
+      ],
+      "settlement_evidence": {
+        "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/scoreboard?dates=20261127",
+        "source_event_id": "401933725",
+        "verified_at": "2026-11-28T06:44:16.325773+00:00"
+      }
     },
     {
       "id": "454c98b30dbda37e",
@@ -3630,19 +3684,19 @@
       "id": "espn",
       "name": "ESPN",
       "resource": "soccer/all/20261128",
-      "checked_at": "2026-11-28T03:39:58.834356+00:00",
+      "checked_at": "2026-11-28T06:44:16.325773+00:00",
       "collected": 0,
-      "status": "cached",
-      "next_check_at": "2026-11-28T06:39:58.834356+00:00"
+      "status": "ok",
+      "next_check_at": "2026-11-28T09:44:16.325773+00:00"
     },
     {
       "id": "espn",
       "name": "ESPN",
       "resource": "soccer/ned.1/20261128",
-      "checked_at": "2026-11-28T03:39:58.834356+00:00",
+      "checked_at": "2026-11-28T06:44:16.325773+00:00",
       "collected": 0,
-      "status": "cached",
-      "next_check_at": "2026-11-28T06:39:58.834356+00:00"
+      "status": "ok",
+      "next_check_at": "2026-11-28T09:44:16.325773+00:00"
     },
     {
       "id": "zulubet_results",
@@ -3650,35 +3704,35 @@
       "resource": "zulubet/28-11-2026",
       "checked_at": "2026-11-28T06:19:13.282192+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T09:19:13.282192+00:00"
     },
     {
       "id": "espn",
       "name": "ESPN",
       "resource": "soccer/all/20261127",
-      "checked_at": "2026-11-28T03:39:58.834356+00:00",
-      "collected": 0,
-      "status": "cached",
-      "next_check_at": "2026-11-28T06:39:58.834356+00:00"
+      "checked_at": "2026-11-28T06:44:16.325773+00:00",
+      "collected": 1,
+      "status": "ok",
+      "next_check_at": "2026-11-28T09:44:16.325773+00:00"
     },
     {
       "id": "espn",
       "name": "ESPN",
       "resource": "soccer/ned.1/20261127",
-      "checked_at": "2026-11-28T03:39:58.834356+00:00",
+      "checked_at": "2026-11-28T06:44:16.325773+00:00",
       "collected": 0,
-      "status": "cached",
-      "next_check_at": "2026-11-28T06:39:58.834356+00:00"
+      "status": "ok",
+      "next_check_at": "2026-11-28T09:44:16.325773+00:00"
     },
     {
       "id": "zulubet_results",
       "name": "Zulubet (resultados)",
       "resource": "zulubet/27-11-2026",
-      "checked_at": "2026-11-28T03:39:58.834356+00:00",
-      "collected": 0,
-      "status": "cached",
-      "next_check_at": "2026-11-28T06:39:58.834356+00:00"
+      "checked_at": "2026-11-28T06:44:16.325773+00:00",
+      "collected": 5,
+      "status": "ok",
+      "next_check_at": "2026-11-28T09:44:16.325773+00:00"
     },
     {
       "id": "espn",
@@ -3703,7 +3757,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-28T06:19:13.282192+00:00",
+    "generated_at": "2026-11-28T06:44:16.325773+00:00",
     "window_from": "2026-11-28",
     "window_through": "2026-11-30",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
