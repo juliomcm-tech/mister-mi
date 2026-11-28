@@ -3376,7 +3376,7 @@
       "resource": "soccer/all/20261128",
       "checked_at": "2026-11-28T00:19:38.875697+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T03:19:38.875697+00:00"
     },
     {
@@ -3385,7 +3385,7 @@
       "resource": "soccer/ned.1/20261128",
       "checked_at": "2026-11-28T00:19:38.875697+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T03:19:38.875697+00:00"
     },
     {
@@ -3394,7 +3394,7 @@
       "resource": "soccer/all/20261127",
       "checked_at": "2026-11-28T00:19:38.875697+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T03:19:38.875697+00:00"
     },
     {
@@ -3403,7 +3403,7 @@
       "resource": "soccer/ned.1/20261127",
       "checked_at": "2026-11-28T00:19:38.875697+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T03:19:38.875697+00:00"
     },
     {
@@ -3412,7 +3412,7 @@
       "resource": "zulubet/27-11-2026",
       "checked_at": "2026-11-28T00:19:38.875697+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T03:19:38.875697+00:00"
     },
     {
@@ -3438,7 +3438,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-28T00:19:38.875697+00:00",
+    "generated_at": "2026-11-28T00:44:44.678422+00:00",
     "window_from": "2026-11-28",
     "window_through": "2026-11-30",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
