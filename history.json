@@ -3161,10 +3161,19 @@
       "date": "2026-11-28",
       "first_seen": "2026-11-28T00:19:38.875697+00:00",
       "criteria_revision": "84974be650e9",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "win",
+      "settled_at": "2026-11-28T17:18:30.466339+00:00",
+      "settlement_source": "espn",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        2,
+        1
+      ],
+      "settlement_evidence": {
+        "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/sco.1/scoreboard?dates=20261128",
+        "source_event_id": "401878328",
+        "verified_at": "2026-11-28T17:18:30.466339+00:00"
+      }
     },
     {
       "id": "8aba8b3b42a0a3e7",
@@ -3426,10 +3435,19 @@
       "date": "2026-11-28",
       "first_seen": "2026-11-28T00:19:38.875697+00:00",
       "criteria_revision": "84974be650e9",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "win",
+      "settled_at": "2026-11-28T17:18:30.466339+00:00",
+      "settlement_source": "espn",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        3,
+        0
+      ],
+      "settlement_evidence": {
+        "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261128",
+        "source_event_id": "401879227",
+        "verified_at": "2026-11-28T17:18:30.466339+00:00"
+      }
     },
     {
       "id": "9ef599c72a6d3e71",
@@ -3582,10 +3600,19 @@
       "date": "2026-11-28",
       "first_seen": "2026-11-28T01:59:50.590480+00:00",
       "criteria_revision": "84974be650e9",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "loss",
+      "settled_at": "2026-11-28T17:18:30.466339+00:00",
+      "settlement_source": "espn",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        1,
+        2
+      ],
+      "settlement_evidence": {
+        "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.3/scoreboard?dates=20261128",
+        "source_event_id": "401880721",
+        "verified_at": "2026-11-28T17:18:30.466339+00:00"
+      }
     },
     {
       "id": "0b7698b0fd213b04",
@@ -4009,10 +4036,19 @@
       "date": "2026-11-28",
       "first_seen": "2026-11-28T09:14:38.940590+00:00",
       "criteria_revision": "84974be650e9",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "win",
+      "settled_at": "2026-11-28T17:18:30.466339+00:00",
+      "settlement_source": "espn",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        6,
+        0
+      ],
+      "settlement_evidence": {
+        "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/nor.1/scoreboard?dates=20261128",
+        "source_event_id": "401843492",
+        "verified_at": "2026-11-28T17:18:30.466339+00:00"
+      }
     },
     {
       "id": "c300bc59cf90185e",
@@ -4539,6 +4575,84 @@
       "settled_at": null,
       "settlement_source": null,
       "paper_stake_units": 1.0
+    },
+    {
+      "id": "b68d8b3adf5cf4bc",
+      "sport": "football",
+      "home": "Austria Lustenau",
+      "away": "Rapid Vienna",
+      "match": "Austria Lustenau vs Rapid Vienna",
+      "competition": "Austria Bundesliga",
+      "kickoff": "2026-11-28T18:30:00+00:00",
+      "market": "FT_1X2",
+      "country": "Austria",
+      "odds": null,
+      "odds_source": null,
+      "odds_observed_at": null,
+      "outcome": "AWAY",
+      "selection": "Rapid Vienna vence",
+      "score": 70.8,
+      "tier": "silver",
+      "source_count": 2,
+      "sources": [
+        {
+          "source": "betclan",
+          "sport": "football",
+          "home": "Austria Lustenau",
+          "away": "Rapid Vienna",
+          "event_date": "2026-11-28",
+          "kickoff": null,
+          "market": "FT_1X2",
+          "outcome": "AWAY",
+          "url": "https://www.betclan.com/predictionsdetails/football/1561972/austria-lustenau-v-rapid-vienna-prediction-h2h-tip-and-match-preview/",
+          "fetched_at": "2026-11-28T17:18:28.992574+00:00",
+          "competition": "Austria Bundesliga",
+          "metric": 75.0,
+          "metric_kind": "model_pct",
+          "votes_for": 0,
+          "votes_total": 0,
+          "odds": null,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "Austria"
+        },
+        {
+          "source": "vitibet",
+          "sport": "football",
+          "home": "Austria Lustenau",
+          "away": "Rapid Vienna",
+          "event_date": "2026-11-28",
+          "kickoff": null,
+          "market": "FT_1X2",
+          "outcome": "AWAY",
+          "url": "https://www.vitibet.com/index.php?clanek=match-detail&sekce=fotbal&lang=en&fixture_id=1561972&league_id=218",
+          "fetched_at": "2026-11-28T17:18:23.801678+00:00",
+          "competition": "Austria Bundesliga",
+          "metric": 72.0,
+          "metric_kind": "model_pct",
+          "votes_for": 0,
+          "votes_total": 0,
+          "odds": null,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "Austria"
+        }
+      ],
+      "reason": "2 fontes concordam na mesma seleção e no mesmo mercado.",
+      "fixture_verification": {
+        "source": "openligadb_calendar",
+        "counts_as_prediction": false,
+        "status": "out_of_scope"
+      },
+      "date": "2026-11-28",
+      "first_seen": "2026-11-28T17:18:30.466339+00:00",
+      "criteria_revision": "84974be650e9",
+      "result": "pending",
+      "settled_at": null,
+      "settlement_source": null,
+      "paper_stake_units": 1.0
     }
   ],
   "result_sources": [
@@ -4559,15 +4673,6 @@
     {
       "id": "espn",
       "name": "ESPN",
-      "resource": "soccer/eng.2/20261128",
-      "checked_at": "2026-11-28T14:48:25.701605+00:00",
-      "collected": 0,
-      "status": "cached",
-      "next_check_at": "2026-11-28T17:48:25.701605+00:00"
-    },
-    {
-      "id": "espn",
-      "name": "ESPN",
       "resource": "soccer/all/20261128",
       "checked_at": "2026-11-28T14:48:25.701605+00:00",
       "collected": 0,
@@ -4577,11 +4682,56 @@
     {
       "id": "espn",
       "name": "ESPN",
+      "resource": "soccer/sco.1/20261128",
+      "checked_at": "2026-11-28T17:18:30.466339+00:00",
+      "collected": 1,
+      "status": "ok",
+      "next_check_at": "2026-11-28T20:18:30.466339+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "soccer/eng.1/20261128",
+      "checked_at": "2026-11-28T17:18:30.466339+00:00",
+      "collected": 1,
+      "status": "ok",
+      "next_check_at": "2026-11-28T20:18:30.466339+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "soccer/eng.2/20261128",
+      "checked_at": "2026-11-28T14:48:25.701605+00:00",
+      "collected": 0,
+      "status": "cached",
+      "next_check_at": "2026-11-28T17:48:25.701605+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "soccer/eng.3/20261128",
+      "checked_at": "2026-11-28T17:18:30.466339+00:00",
+      "collected": 1,
+      "status": "ok",
+      "next_check_at": "2026-11-28T20:18:30.466339+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
       "resource": "soccer/ger.1/20261128",
       "checked_at": "2026-11-28T16:53:33.647593+00:00",
       "collected": 0,
-      "status": "ok",
+      "status": "cached",
       "next_check_at": "2026-11-28T19:53:33.647593+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "soccer/nor.1/20261128",
+      "checked_at": "2026-11-28T17:18:30.466339+00:00",
+      "collected": 1,
+      "status": "ok",
+      "next_check_at": "2026-11-28T20:18:30.466339+00:00"
     },
     {
       "id": "zulubet_results",
@@ -4615,7 +4765,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-28T16:53:33.647593+00:00",
+    "generated_at": "2026-11-28T17:18:30.466339+00:00",
     "window_from": "2026-11-28",
     "window_through": "2026-11-30",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
