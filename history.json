@@ -4219,6 +4219,33 @@
     {
       "id": "espn",
       "name": "ESPN",
+      "resource": "soccer/eng.2/20261128",
+      "checked_at": "2026-11-28T14:48:25.701605+00:00",
+      "collected": 0,
+      "status": "ok",
+      "next_check_at": "2026-11-28T17:48:25.701605+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "resource": "soccer/all/20261128",
+      "checked_at": "2026-11-28T14:48:25.701605+00:00",
+      "collected": 0,
+      "status": "ok",
+      "next_check_at": "2026-11-28T17:48:25.701605+00:00"
+    },
+    {
+      "id": "zulubet_results",
+      "name": "Zulubet (resultados)",
+      "resource": "zulubet/28-11-2026",
+      "checked_at": "2026-11-28T14:48:25.701605+00:00",
+      "collected": 0,
+      "status": "ok",
+      "next_check_at": "2026-11-28T17:48:25.701605+00:00"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
       "resource": "basketball/euroleague/20261120",
       "checked_at": "2026-11-28T12:09:40.758794+00:00",
       "collected": 0,
@@ -4239,7 +4266,7 @@
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
     "status": "cached",
-    "generated_at": "2026-11-28T14:23:21.575341+00:00",
+    "generated_at": "2026-11-28T14:48:25.701605+00:00",
     "window_from": "2026-11-28",
     "window_through": "2026-11-30",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
@@ -4937,7 +4964,7 @@
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "scheduled",
+        "status": "started_unconfirmed",
         "checked_at": "2026-11-28T11:44:38.072518+00:00",
         "cache_status": "cached"
       },
@@ -4960,7 +4987,7 @@
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "scheduled",
+        "status": "started_unconfirmed",
         "checked_at": "2026-11-28T11:44:38.072518+00:00",
         "cache_status": "cached"
       },
@@ -4983,7 +5010,7 @@
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "scheduled",
+        "status": "started_unconfirmed",
         "checked_at": "2026-11-28T11:44:38.072518+00:00",
         "cache_status": "cached"
       },
@@ -5006,7 +5033,7 @@
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "scheduled",
+        "status": "started_unconfirmed",
         "checked_at": "2026-11-28T11:44:38.072518+00:00",
         "cache_status": "cached"
       },
@@ -5198,7 +5225,7 @@
     "counts_by_date": [
       {
         "date": "2026-11-28",
-        "scheduled": 6,
+        "scheduled": 2,
         "coverage": "configured_resources_only"
       },
       {
