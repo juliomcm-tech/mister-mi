@@ -3709,10 +3709,19 @@
       "date": "2026-11-28",
       "first_seen": "2026-11-28T02:24:56.243481+00:00",
       "criteria_revision": "84974be650e9",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "loss",
+      "settled_at": "2026-11-28T18:08:31.964786+00:00",
+      "settlement_source": "espn",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        2,
+        4
+      ],
+      "settlement_evidence": {
+        "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/scoreboard?dates=20261128",
+        "source_event_id": "401880136",
+        "verified_at": "2026-11-28T18:08:31.964786+00:00"
+      }
     },
     {
       "id": "60b9470f9969848c",
@@ -3914,10 +3923,19 @@
       "date": "2026-11-28",
       "first_seen": "2026-11-28T07:59:21.382473+00:00",
       "criteria_revision": "84974be650e9",
-      "result": "pending",
-      "settled_at": null,
-      "settlement_source": null,
-      "paper_stake_units": 1.0
+      "result": "loss",
+      "settled_at": "2026-11-28T18:08:31.964786+00:00",
+      "settlement_source": "zulubet_results",
+      "paper_stake_units": 1.0,
+      "final_score": [
+        0,
+        0
+      ],
+      "settlement_evidence": {
+        "source_url": "https://www.zulubet.com/tips-28-11-2026.html",
+        "source_event_id": "",
+        "verified_at": "2026-11-28T18:08:31.964786+00:00"
+      }
     },
     {
       "id": "4c77be64a3386f55",
@@ -4653,6 +4671,84 @@
       "settled_at": null,
       "settlement_source": null,
       "paper_stake_units": 1.0
+    },
+    {
+      "id": "88206c5d485769ad",
+      "sport": "football",
+      "home": "Wisla Krakow",
+      "away": "Motor Lublin",
+      "match": "Wisla Krakow vs Motor Lublin",
+      "competition": "Poland Ekstraklasa",
+      "kickoff": "2026-11-28T19:15:00+00:00",
+      "market": "FT_TOTAL_2.5",
+      "country": "Poland",
+      "odds": null,
+      "odds_source": null,
+      "odds_observed_at": null,
+      "outcome": "OVER",
+      "selection": "Mais de 2.5 golos",
+      "score": 70.7,
+      "tier": "silver",
+      "source_count": 2,
+      "sources": [
+        {
+          "source": "betclan",
+          "sport": "football",
+          "home": "Wisla Krakow",
+          "away": "Motor Lublin",
+          "event_date": "2026-11-28",
+          "kickoff": null,
+          "market": "FT_TOTAL_2.5",
+          "outcome": "OVER",
+          "url": "https://www.betclan.com/predictionsdetails/football/1553244/wisla-krakow-v-motor-lublin-prediction-h2h-tip-and-match-preview/",
+          "fetched_at": "2026-11-28T18:08:31.071077+00:00",
+          "competition": "Poland Ekstraklasa",
+          "metric": 70.0,
+          "metric_kind": "model_pct",
+          "votes_for": 0,
+          "votes_total": 0,
+          "odds": null,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "Poland"
+        },
+        {
+          "source": "statarea",
+          "sport": "football",
+          "home": "Wisla Krakow",
+          "away": "Motor Lublin",
+          "event_date": "2026-11-28",
+          "kickoff": null,
+          "market": "FT_TOTAL_2.5",
+          "outcome": "OVER",
+          "url": "https://www.statarea.com/olddevices/prediction/2026-11-28/",
+          "fetched_at": "2026-11-28T18:08:25.689383+00:00",
+          "competition": "Poland Ekstraklasa",
+          "metric": 75.0,
+          "metric_kind": "model_pct",
+          "votes_for": 0,
+          "votes_total": 0,
+          "odds": null,
+          "event_id": "",
+          "segment": "open",
+          "status": "scheduled",
+          "country": "Poland"
+        }
+      ],
+      "reason": "2 fontes concordam na mesma seleção e no mesmo mercado.",
+      "fixture_verification": {
+        "source": "openligadb_calendar",
+        "counts_as_prediction": false,
+        "status": "out_of_scope"
+      },
+      "date": "2026-11-28",
+      "first_seen": "2026-11-28T18:08:31.964786+00:00",
+      "criteria_revision": "84974be650e9",
+      "result": "pending",
+      "settled_at": null,
+      "settlement_source": null,
+      "paper_stake_units": 1.0
     }
   ],
   "result_sources": [
@@ -4674,19 +4770,19 @@
       "id": "espn",
       "name": "ESPN",
       "resource": "soccer/all/20261128",
-      "checked_at": "2026-11-28T14:48:25.701605+00:00",
-      "collected": 0,
-      "status": "cached",
-      "next_check_at": "2026-11-28T17:48:25.701605+00:00"
+      "checked_at": "2026-11-28T18:08:31.964786+00:00",
+      "collected": 1,
+      "status": "ok",
+      "next_check_at": "2026-11-28T21:08:31.964786+00:00"
     },
     {
       "id": "espn",
       "name": "ESPN",
       "resource": "soccer/eng.2/20261128",
-      "checked_at": "2026-11-28T14:48:25.701605+00:00",
-      "collected": 0,
-      "status": "cached",
-      "next_check_at": "2026-11-28T17:48:25.701605+00:00"
+      "checked_at": "2026-11-28T18:08:31.964786+00:00",
+      "collected": 1,
+      "status": "ok",
+      "next_check_at": "2026-11-28T21:08:31.964786+00:00"
     },
     {
       "id": "espn",
@@ -4701,10 +4797,10 @@
       "id": "zulubet_results",
       "name": "Zulubet (resultados)",
       "resource": "zulubet/28-11-2026",
-      "checked_at": "2026-11-28T14:48:25.701605+00:00",
-      "collected": 0,
-      "status": "cached",
-      "next_check_at": "2026-11-28T17:48:25.701605+00:00"
+      "checked_at": "2026-11-28T18:08:31.964786+00:00",
+      "collected": 2,
+      "status": "ok",
+      "next_check_at": "2026-11-28T21:08:31.964786+00:00"
     },
     {
       "id": "espn",
@@ -4728,8 +4824,8 @@
   "fixture_catalog": {
     "id": "openligadb_calendar",
     "kind": "fixture_calendar",
-    "status": "cached",
-    "generated_at": "2026-11-28T17:43:31.052210+00:00",
+    "status": "ok",
+    "generated_at": "2026-11-28T18:08:31.964786+00:00",
     "window_from": "2026-11-28",
     "window_through": "2026-11-30",
     "scope": "Futebol masculino · Alemanha · Bundesliga 1 e 2",
@@ -4745,13 +4841,13 @@
         "league": "bl1",
         "season": 2026,
         "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "cached",
-        "next_check_at": "2026-11-28T17:44:38.072518+00:00",
+        "status": "ok",
+        "next_check_at": "2026-11-29T00:08:31.964786+00:00",
         "cache_from": "2026-11-28",
         "cache_through": "2026-12-05",
         "fixtures": [
@@ -4768,7 +4864,7 @@
             "away": "1. FC Union Berlin",
             "date": "2026-11-28",
             "kickoff": "2026-11-28T14:30:00+00:00",
-            "provider_finished": false,
+            "provider_finished": true,
             "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
             "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
             "license": "ODbL-1.0",
@@ -4788,7 +4884,7 @@
             "away": "FC Bayern München",
             "date": "2026-11-28",
             "kickoff": "2026-11-28T14:30:00+00:00",
-            "provider_finished": false,
+            "provider_finished": true,
             "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
             "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
             "license": "ODbL-1.0",
@@ -4808,7 +4904,7 @@
             "away": "SV 07 Elversberg",
             "date": "2026-11-28",
             "kickoff": "2026-11-28T14:30:00+00:00",
-            "provider_finished": false,
+            "provider_finished": true,
             "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
             "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
             "license": "ODbL-1.0",
@@ -4828,7 +4924,7 @@
             "away": "FC Schalke 04",
             "date": "2026-11-28",
             "kickoff": "2026-11-28T14:30:00+00:00",
-            "provider_finished": false,
+            "provider_finished": true,
             "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
             "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
             "license": "ODbL-1.0",
@@ -5064,13 +5160,13 @@
         "league": "bl2",
         "season": 2026,
         "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "cached",
-        "next_check_at": "2026-11-28T17:44:38.072518+00:00",
+        "status": "ok",
+        "next_check_at": "2026-11-29T00:08:31.964786+00:00",
         "cache_from": "2026-11-28",
         "cache_through": "2026-12-05",
         "fixtures": [
@@ -5087,7 +5183,7 @@
             "away": "Karlsruher SC",
             "date": "2026-11-28",
             "kickoff": "2026-11-28T12:00:00+00:00",
-            "provider_finished": false,
+            "provider_finished": true,
             "source_url": "https://api.openligadb.de/getmatchdata/bl2/2026",
             "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
             "license": "ODbL-1.0",
@@ -5107,7 +5203,7 @@
             "away": "FC St. Pauli",
             "date": "2026-11-28",
             "kickoff": "2026-11-28T12:00:00+00:00",
-            "provider_finished": false,
+            "provider_finished": true,
             "source_url": "https://api.openligadb.de/getmatchdata/bl2/2026",
             "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
             "license": "ODbL-1.0",
@@ -5127,7 +5223,7 @@
             "away": "1. FC Kaiserslautern",
             "date": "2026-11-28",
             "kickoff": "2026-11-28T12:00:00+00:00",
-            "provider_finished": false,
+            "provider_finished": true,
             "source_url": "https://api.openligadb.de/getmatchdata/bl2/2026",
             "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
             "license": "ODbL-1.0",
@@ -5352,15 +5448,15 @@
         "away": "Karlsruher SC",
         "date": "2026-11-28",
         "kickoff": "2026-11-28T12:00:00+00:00",
-        "provider_finished": false,
+        "provider_finished": true,
         "source_url": "https://api.openligadb.de/getmatchdata/bl2/2026",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "started_unconfirmed",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
-        "cache_status": "cached"
+        "status": "finished",
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
+        "cache_status": "ok"
       },
       {
         "source": "openligadb",
@@ -5375,15 +5471,15 @@
         "away": "FC St. Pauli",
         "date": "2026-11-28",
         "kickoff": "2026-11-28T12:00:00+00:00",
-        "provider_finished": false,
+        "provider_finished": true,
         "source_url": "https://api.openligadb.de/getmatchdata/bl2/2026",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "started_unconfirmed",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
-        "cache_status": "cached"
+        "status": "finished",
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
+        "cache_status": "ok"
       },
       {
         "source": "openligadb",
@@ -5398,15 +5494,15 @@
         "away": "1. FC Kaiserslautern",
         "date": "2026-11-28",
         "kickoff": "2026-11-28T12:00:00+00:00",
-        "provider_finished": false,
+        "provider_finished": true,
         "source_url": "https://api.openligadb.de/getmatchdata/bl2/2026",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "started_unconfirmed",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
-        "cache_status": "cached"
+        "status": "finished",
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
+        "cache_status": "ok"
       },
       {
         "source": "openligadb",
@@ -5421,15 +5517,15 @@
         "away": "1. FC Union Berlin",
         "date": "2026-11-28",
         "kickoff": "2026-11-28T14:30:00+00:00",
-        "provider_finished": false,
+        "provider_finished": true,
         "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "started_unconfirmed",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
-        "cache_status": "cached"
+        "status": "finished",
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
+        "cache_status": "ok"
       },
       {
         "source": "openligadb",
@@ -5444,15 +5540,15 @@
         "away": "FC Bayern München",
         "date": "2026-11-28",
         "kickoff": "2026-11-28T14:30:00+00:00",
-        "provider_finished": false,
+        "provider_finished": true,
         "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "started_unconfirmed",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
-        "cache_status": "cached"
+        "status": "finished",
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
+        "cache_status": "ok"
       },
       {
         "source": "openligadb",
@@ -5467,15 +5563,15 @@
         "away": "SV 07 Elversberg",
         "date": "2026-11-28",
         "kickoff": "2026-11-28T14:30:00+00:00",
-        "provider_finished": false,
+        "provider_finished": true,
         "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "started_unconfirmed",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
-        "cache_status": "cached"
+        "status": "finished",
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
+        "cache_status": "ok"
       },
       {
         "source": "openligadb",
@@ -5490,15 +5586,15 @@
         "away": "FC Schalke 04",
         "date": "2026-11-28",
         "kickoff": "2026-11-28T14:30:00+00:00",
-        "provider_finished": false,
+        "provider_finished": true,
         "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026",
         "attribution": "Data from OpenLigaDB (www.openligadb.de), licensed under ODbL 1.0",
         "license": "ODbL-1.0",
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
-        "status": "started_unconfirmed",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
-        "cache_status": "cached"
+        "status": "finished",
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
+        "cache_status": "ok"
       },
       {
         "source": "openligadb",
@@ -5520,8 +5616,8 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "started_unconfirmed",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
-        "cache_status": "cached"
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
+        "cache_status": "ok"
       },
       {
         "source": "openligadb",
@@ -5543,8 +5639,8 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
-        "cache_status": "cached"
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
+        "cache_status": "ok"
       },
       {
         "source": "openligadb",
@@ -5566,8 +5662,8 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
-        "cache_status": "cached"
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
+        "cache_status": "ok"
       },
       {
         "source": "openligadb",
@@ -5589,8 +5685,8 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
-        "cache_status": "cached"
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
+        "cache_status": "ok"
       },
       {
         "source": "openligadb",
@@ -5612,8 +5708,8 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
-        "cache_status": "cached"
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
+        "cache_status": "ok"
       },
       {
         "source": "openligadb",
@@ -5635,8 +5731,8 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
-        "cache_status": "cached"
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
+        "cache_status": "ok"
       },
       {
         "source": "openligadb",
@@ -5658,8 +5754,8 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
-        "cache_status": "cached"
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
+        "cache_status": "ok"
       },
       {
         "source": "openligadb",
@@ -5681,8 +5777,8 @@
         "license_url": "https://www.openligadb.de/en/license",
         "counts_as_prediction": false,
         "status": "scheduled",
-        "checked_at": "2026-11-28T11:44:38.072518+00:00",
-        "cache_status": "cached"
+        "checked_at": "2026-11-28T18:08:31.964786+00:00",
+        "cache_status": "ok"
       }
     ],
     "counts_by_date": [
@@ -5708,7 +5804,7 @@
     "id": "oddspedia",
     "name": "Oddspedia API",
     "configured": true,
-    "checked_at": "2026-11-28T11:44:38.072518+00:00",
+    "checked_at": "2026-11-28T18:08:31.964786+00:00",
     "url": "https://widgets.oddspedia.com/",
     "counts_as_prediction": false,
     "used_in_analysis": false,
@@ -5717,9 +5813,17 @@
     "status": "error",
     "reason": "provider_challenge",
     "http_status": 403,
-    "message": "A resposta exige verificação de navegador ou recusa tráfego automatizado. O coletor não tenta contornar essa verificação.",
     "response_type": "html",
-    "next_check_at": "2026-11-28T17:44:38.072518+00:00",
-    "deferred": true
+    "message": "A resposta exige verificação de navegador ou recusa tráfego automatizado. O coletor não tenta contornar essa verificação.",
+    "catalogue": {
+      "endpoint": "/api/sports",
+      "status": "error",
+      "reason": "provider_challenge",
+      "http_status": 403,
+      "response_type": "html",
+      "message": "A resposta exige verificação de navegador ou recusa tráfego automatizado. O coletor não tenta contornar essa verificação."
+    },
+    "searches": [],
+    "next_check_at": "2026-11-29T00:08:31.964786+00:00"
   }
 }
